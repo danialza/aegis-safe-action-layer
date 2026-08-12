@@ -1,0 +1,314 @@
+{
+ "goal": [
+  0.21,
+  -0.1
+ ],
+ "pick": [
+  0.3104981572374018,
+  0.1006045372892637
+ ],
+ "sensing": true,
+ "vlm": true,
+ "floor": 0.1214,
+ "events": [
+  "t=001.7s  picking object at (+0.310,+0.101); goal (+0.210,-0.100)",
+  "t=010.2s  holding 5s at start \u2014 place the obstacle / prepare the hand on the path now",
+  "t=015.3s  sensed at start: clear",
+  "t=015.3s  carrying \u2014 reacting to intruders",
+  "t=016.2s  obstacle blocking the path -> holding",
+  "t=016.4s  object entered the path -> re-routing around it",
+  "t=017.4s  path clear -> resuming carry",
+  "t=023.0s  object delivered at goal"
+ ],
+ "log": [
+  {
+   "t": 15.303,
+   "tool": [
+    0.3104981572374018,
+    0.1006045372892637
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 15.782,
+   "tool": [
+    0.305123214360047,
+    0.0898756049535104
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 16.183,
+   "tool": [
+    0.29974827148269223,
+    0.07914667261775708
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.1808751960552583,
+    0.13404255530061146,
+    0.05419972943050562
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.07673676661664734
+  },
+  {
+   "t": 16.315,
+   "tool": [
+    0.29974827148269223,
+    0.07914667261775708
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.1810670206744853,
+    0.13345859647954103,
+    0.05462945464953267
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.07588883666233187
+  },
+  {
+   "t": 16.448,
+   "tool": [
+    0.29974827148269223,
+    0.07914667261775708
+   ],
+   "mode": "route_slow",
+   "state": "route",
+   "haz": [
+    0.1703613752155412,
+    0.13503959692706105,
+    0.053238830770474456
+   ],
+   "cls": "stationary",
+   "vlm": "object",
+   "clr": 0.08770437734361697
+  },
+  {
+   "t": 16.991,
+   "tool": [
+    0.2975087119504611,
+    0.07467628414452654
+   ],
+   "mode": "route_slow",
+   "state": "route",
+   "haz": [
+    0.1703613752155412,
+    0.13503959692706105,
+    0.053238830770474456
+   ],
+   "cls": "stationary",
+   "vlm": "object",
+   "clr": 0.08750979184752916
+  },
+  {
+   "t": 17.415,
+   "tool": [
+    0.29526915241822993,
+    0.070205895671296
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 17.801,
+   "tool": [
+    0.28989420954087514,
+    0.059476963335542685
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 18.161,
+   "tool": [
+    0.28451926666352034,
+    0.048748030999789374
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 18.513,
+   "tool": [
+    0.27914432378616555,
+    0.03801909866403606
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 18.88,
+   "tool": [
+    0.27376938090881076,
+    0.027290166328282753
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 19.222,
+   "tool": [
+    0.26839443803145596,
+    0.016561233992529442
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 19.583,
+   "tool": [
+    0.26301949515410117,
+    0.00583230165677613
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 19.96,
+   "tool": [
+    0.2576445522767464,
+    -0.004896630678977184
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 20.316,
+   "tool": [
+    0.2522696093993916,
+    -0.015625563014730497
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 20.689,
+   "tool": [
+    0.2468946665220368,
+    -0.02635449535048381
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 21.04,
+   "tool": [
+    0.241519723644682,
+    -0.037083427686237125
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 21.406,
+   "tool": [
+    0.2361447807673272,
+    -0.047812360021990435
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 21.817,
+   "tool": [
+    0.2307698378899724,
+    -0.058541292357743746
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 22.162,
+   "tool": [
+    0.2253948950126176,
+    -0.06927022469349706
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 22.536,
+   "tool": [
+    0.22001995213526285,
+    -0.07999915702925038
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  }
+ ]
+}

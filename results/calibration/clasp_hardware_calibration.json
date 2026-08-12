@@ -1,0 +1,99 @@
+{
+ "tcp_offset_base": [
+  -0.006417756135035961,
+  -0.0006922903219347285,
+  -0.046999177642188174
+ ],
+ "std": [
+  3.685933678518592e-05,
+  5.907998083599091e-05,
+  2.2589673123926607e-05
+ ],
+ "n": 6,
+ "region": "top-down over table, varied x/y/z",
+ "date": "2026-07-07",
+ "grasp_tcp_z": 0.12190272248310685,
+ "hover_tcp_z": 0.2,
+ "down_rpy": [
+  -0.741798,
+  1.519542,
+  -0.679326
+ ],
+ "pick_xy": [
+  0.25,
+  0.0
+ ],
+ "note_grasp": "2026-07-22 raised-camera session: user declared current TCP z=0.12190272248310685 as the final floor; never command below it.",
+ "table_homography": [
+  [
+   5.156448720619595e-05,
+   0.002328901378981929,
+   -0.43493242479457495
+  ],
+  [
+   0.0016461068737525242,
+   -0.0001502957949977012,
+   -0.5730794943489037
+  ],
+  [
+   0.00014958851376859538,
+   0.0011913820989633336,
+   1.0
+  ]
+ ],
+ "homography_tcp_z": 0.00578544,
+ "slab_height_m": 0.038,
+ "table_homography_prev": null,
+ "homography_source": "8 free-standing slab placements by the robot on 2026-07-30; the 9th placement was excluded as a physical outlier (slab released ~12 mm off / tipped), identified by its 11.9 mm residual against a 2.4 mm fit over the remaining points.",
+ "homography_grid": {
+  "x": [
+   0.18,
+   0.22,
+   0.26,
+   0.3,
+   0.34
+  ],
+  "y": [
+   -0.14,
+   -0.07,
+   0.0,
+   0.07,
+   0.11
+  ]
+ },
+ "vision_bias_xy": [
+  0.0,
+  0.0
+ ],
+ "vision_bias_note": "Zero by construction: the homography is fitted from free-standing slab centroids.",
+ "meas_rpy_0722": [
+  -0.9120693721264701,
+  1.498943529338497,
+  -0.9759656015074423
+ ],
+ "calibration_status": "valid",
+ "calibrated_workspace_bounds": {
+  "x": [
+   0.21,
+   0.31
+  ],
+  "y": [
+   -0.1,
+   0.1
+  ]
+ },
+ "calibration_quality": {
+  "points": 8,
+  "mean_residual_m": 0.002364250429467713,
+  "max_residual_m": 0.0038150606131838517,
+  "excluded_outlier": {
+   "truth": [
+    0.26,
+    0.0
+   ],
+   "residual_m": 0.01194611873999827
+  },
+  "method": "free-standing slab homography"
+ },
+ "calibration_validated_at": "2026-07-30 free-standing slab homography (8 pts)"
+}

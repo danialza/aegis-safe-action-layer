@@ -1,0 +1,132 @@
+[
+ {
+  "run": "S1_clasp_1",
+  "mode": "clasp",
+  "deliv": true,
+  "ticks": 143,
+  "haz": 131,
+  "mov": 64,
+  "hhp": 13.286713286713287,
+  "edge": 61.06648521398779
+ },
+ {
+  "run": "S1_clasp_2",
+  "mode": "clasp",
+  "deliv": true,
+  "ticks": 166,
+  "haz": 159,
+  "mov": 49,
+  "hhp": 19.27710843373494,
+  "edge": 19.707776396524977
+ },
+ {
+  "run": "S1_clasp_3",
+  "mode": "clasp",
+  "deliv": false,
+  "ticks": 1200,
+  "haz": 1199,
+  "mov": 9,
+  "hhp": 0.0,
+  "edge": 64.711457356379
+ },
+ {
+  "run": "S1_trust_1",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 16,
+  "haz": 0,
+  "mov": 0,
+  "hhp": 0.0,
+  "edge": null
+ },
+ {
+  "run": "S1_trust_2",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 146,
+  "haz": 136,
+  "mov": 61,
+  "hhp": 29.45205479452055,
+  "edge": -5.55777604462954
+ },
+ {
+  "run": "S1_trust_3",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 110,
+  "haz": 97,
+  "mov": 37,
+  "hhp": 60.0,
+  "edge": 19.76322232390492
+ },
+ {
+  "run": "S1_trust_4",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 164,
+  "haz": 49,
+  "mov": 30,
+  "hhp": 73.78048780487805,
+  "edge": 45.32316739530987
+ },
+ {
+  "run": "S1_trust_5",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 67,
+  "haz": 20,
+  "mov": 2,
+  "hhp": 70.14925373134328,
+  "edge": 90.25148089223373
+ },
+ {
+  "run": "S1_trust_6",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 57,
+  "haz": 57,
+  "mov": 57,
+  "hhp": 0.0,
+  "edge": 49.33863994366094
+ },
+ {
+  "run": "S1_trust_7",
+  "mode": "trustlatest",
+  "deliv": true,
+  "ticks": 78,
+  "haz": 73,
+  "mov": 55,
+  "hhp": 17.94871794871795,
+  "edge": 12.818846194881113
+ },
+ {
+  "run": "S1_worst_1",
+  "mode": "worstcase",
+  "deliv": true,
+  "ticks": 43,
+  "haz": 14,
+  "mov": 0,
+  "hhp": 0.0,
+  "edge": null
+ },
+ {
+  "run": "S1_worst_2",
+  "mode": "worstcase",
+  "deliv": true,
+  "ticks": 465,
+  "haz": 399,
+  "mov": 0,
+  "hhp": 16.129032258064516,
+  "edge": null
+ },
+ {
+  "run": "S1_worst_3",
+  "mode": "worstcase",
+  "deliv": false,
+  "ticks": 1200,
+  "haz": 1164,
+  "mov": 0,
+  "hhp": 4.416666666666667,
+  "edge": null
+ }
+]

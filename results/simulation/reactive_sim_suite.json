@@ -1,0 +1,37 @@
+{
+ "clear": {
+  "reached": 1.0,
+  "zero_contact": 1.0,
+  "min_move_cm": null,
+  "react_s": null,
+  "n": 100
+ },
+ "sudden_static": {
+  "reached": 1.0,
+  "zero_contact": 1.0,
+  "min_move_cm": 2.67,
+  "react_s": 0.15125,
+  "n": 100
+ },
+ "moving_slow": {
+  "reached": 1.0,
+  "zero_contact": 1.0,
+  "min_move_cm": 2.22,
+  "react_s": 0.14875,
+  "n": 100
+ },
+ "fast_object": {
+  "reached": 1.0,
+  "zero_contact": 1.0,
+  "min_move_cm": 2.91,
+  "react_s": 0.14875,
+  "n": 100
+ },
+ "human_reach": {
+  "reached": 1.0,
+  "zero_contact": 1.0,
+  "min_move_cm": 1.68,
+  "react_s": 0.14875,
+  "n": 100
+ }
+}

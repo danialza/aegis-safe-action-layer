@@ -1,0 +1,176 @@
+{
+ "model": "mlx-community/SmolVLM-256M-Instruct-4bit",
+ "imgpx": 512,
+ "max_tokens": 6,
+ "latency": {
+  "mean": 0.6587436041794718,
+  "p50": 0.6610496455105022,
+  "p95": 0.680230368312914,
+  "min": 0.6347522079013288
+ },
+ "accuracy": 0.05,
+ "hazard_recall": 0.0,
+ "false_stop_rate": 0.9,
+ "rows": [
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.644,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_00.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.635,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_01.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "safe",
+   "ok": true,
+   "t": 0.642,
+   "raw": "There are no human hands visib",
+   "img": "safe_02.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.639,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_03.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.641,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_04.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.653,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_05.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.656,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_06.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.652,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_07.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.673,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_08.png"
+  },
+  {
+   "lab": "safe",
+   "pred": "hazard",
+   "ok": false,
+   "t": 0.669,
+   "raw": "1.<end_of_utterance>",
+   "img": "safe_09.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.668,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_00.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.665,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_01.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.662,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_02.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.657,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_03.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.662,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_04.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.66,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_05.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.68,
+   "raw": "Two.<end_of_utterance>",
+   "img": "hazard_06.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.666,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_07.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.687,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_08.png"
+  },
+  {
+   "lab": "hazard",
+   "pred": "safe",
+   "ok": false,
+   "t": 0.664,
+   "raw": "One.<end_of_utterance>",
+   "img": "hazard_09.png"
+  }
+ ]
+}

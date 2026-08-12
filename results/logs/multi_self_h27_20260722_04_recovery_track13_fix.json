@@ -1,0 +1,47 @@
+{
+ "success": true,
+ "released": true,
+ "lifted": true,
+ "floor_z": 0.1214,
+ "hover_z": 0.2,
+ "start_pose": [
+  0.26288666241420633,
+  0.007979269808581014,
+  0.19989675113646702,
+  -0.948296898446942,
+  1.4993920325422576,
+  -1.0118637234933099
+ ],
+ "floor_pose": [
+  0.2631484209975798,
+  0.007992848546655103,
+  0.12239263524640825,
+  -0.8659254932479349,
+  1.4979870813835587,
+  -0.9297598602497942
+ ],
+ "final_pose": [
+  0.2631260831029072,
+  0.007836370372411729,
+  0.19724975481563833,
+  -1.0805856570855918,
+  1.503883873773059,
+  -1.1444134563397306
+ ],
+ "fixed_xy": [
+  0.26288666241420633,
+  0.007979269808581014
+ ],
+ "error": null,
+ "events": [
+  "t=002.7s  fixed-XY vertical descent at (+0.2629,+0.0080) to z=0.1214",
+  "t=008.5s  floor reached -> opening gripper",
+  "t=010.4s  fixed-XY vertical lift to z=0.2000",
+  "t=016.2s  recovery release complete"
+ ],
+ "video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/expriment codex 22 jul/videos/multi_self_h27_20260722_04_recovery_track13_fix.mp4",
+ "path_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/expriment codex 22 jul/videos/multi_self_h27_20260722_04_recovery_track13_fix_paths.mp4",
+ "video_frames": 199,
+ "path_video_frames": 199,
+ "recorder_error": null
+}

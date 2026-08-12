@@ -25,7 +25,7 @@ This repo collects the **public reproducibility material** that backs the claims
 The manuscript text, LaTeX source and the published PDF are **not** distributed here. The
 article, its DOI and a direct PDF link will be available from the project landing page.
 
-**Project page:** *(to be added)*
+**Project page:** <https://danielz.co.uk/projects/aegis-age-aware-safe-action-layer/>
 
 If you use the public figures, videos, logs or experimental methodology, please cite the
 manuscript above and link back to the project page. For full code access, please email the
@@ -96,5 +96,5 @@ Figures, videos, logs and documentation are released under **CC BY 4.0**. See `L
 
 ## Contact
 
-- Danial Zafaranchizadeh Moghaddam — dz24aaf@herts.ac.uk
+- Danial Zafaranchizadeh Moghaddam — danial.za@outlook.com
 - Abolfazl Zaraki (corresponding) — a.zaraki@herts.ac.uk

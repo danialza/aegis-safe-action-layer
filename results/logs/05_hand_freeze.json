@@ -1,0 +1,1966 @@
+{
+ "goal": [
+  0.21,
+  -0.1
+ ],
+ "pick": [
+  0.30883293317584387,
+  0.099489989238643
+ ],
+ "sensing": true,
+ "vlm": true,
+ "floor": 0.1214,
+ "events": [
+  "t=001.7s  picking object at (+0.309,+0.099); goal (+0.210,-0.100)",
+  "t=014.1s  holding 8s at start \u2014 place the obstacle / prepare the hand on the path now",
+  "t=022.2s  sensed at start: clear",
+  "t=022.2s  carrying \u2014 reacting to intruders",
+  "t=022.2s  human hand detected by VLM -> protective STOP, holding",
+  "t=038.4s  path clear -> resuming carry",
+  "t=040.0s  obstacle blocking the path -> holding",
+  "t=040.5s  path clear -> resuming carry",
+  "t=045.7s  object delivered at goal"
+ ],
+ "log": [
+  {
+   "t": 22.197,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.327,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.457,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.583,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.709,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.834,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 22.962,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.088,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.217,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.346,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.474,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.602,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.729,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.859,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 23.989,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.114,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.243,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.373,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.501,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.629,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.759,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 24.887,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.013,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.138,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.268,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.393,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.523,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.651,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.781,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 25.909,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.038,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.167,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.294,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.42,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.548,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.674,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.801,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 26.928,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.057,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.186,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.313,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.44,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.565,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.695,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.821,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 27.948,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.076,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.202,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.331,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.457,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.587,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.715,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.844,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 28.971,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.102,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.232,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.359,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.485,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.616,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.744,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 29.873,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.001,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.13,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.26,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.39,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.519,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.647,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.773,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 30.9,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.03,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.155,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.285,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.41,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.536,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.666,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.792,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 31.919,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.044,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.169,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.295,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.422,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.548,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.675,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.805,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 32.936,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.065,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.193,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.319,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.449,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.578,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.708,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.837,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 33.962,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.088,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.215,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.345,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.472,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.603,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.731,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.856,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 34.983,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.112,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.237,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.367,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.496,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.623,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.751,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 35.877,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.006,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.133,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.263,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.392,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.522,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.647,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.777,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 36.905,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.034,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.16,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.288,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.415,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.544,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.671,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.801,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 37.929,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 38.054,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 38.182,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 38.308,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "clr": null
+  },
+  {
+   "t": 38.434,
+   "tool": [
+    0.30883293317584387,
+    0.099489989238643
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 39.064,
+   "tool": [
+    0.3035057349087476,
+    0.08873727057669305
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 39.589,
+   "tool": [
+    0.29817853664165134,
+    0.0779845519147431
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 39.979,
+   "tool": [
+    0.29285133837455507,
+    0.06723183325279315
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17010714125798904,
+    0.13332399992163518,
+    0.05287001441155783
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.08653698835649687
+  },
+  {
+   "t": 40.109,
+   "tool": [
+    0.29285133837455507,
+    0.06723183325279315
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17010714125798904,
+    0.13332399992163518,
+    0.05287001441155783
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.08653698835649687
+  },
+  {
+   "t": 40.236,
+   "tool": [
+    0.29285133837455507,
+    0.06723183325279315
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17010714125798904,
+    0.13332399992163518,
+    0.05287001441155783
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.08653698835649687
+  },
+  {
+   "t": 40.366,
+   "tool": [
+    0.29285133837455507,
+    0.06723183325279315
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17010714125798904,
+    0.13332399992163518,
+    0.05287001441155783
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "clr": 0.08653698835649687
+  },
+  {
+   "t": 40.493,
+   "tool": [
+    0.29285133837455507,
+    0.06723183325279315
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 40.866,
+   "tool": [
+    0.2875241401074588,
+    0.056479114590843205
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 41.238,
+   "tool": [
+    0.28219694184036254,
+    0.04572639592889326
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 41.6,
+   "tool": [
+    0.27686974357326627,
+    0.03497367726694331
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 41.962,
+   "tool": [
+    0.27154254530617,
+    0.024220958604993355
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 42.38,
+   "tool": [
+    0.26621534703907374,
+    0.013468239943043402
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 42.78,
+   "tool": [
+    0.26088814877197747,
+    0.0027155212810934474
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 43.145,
+   "tool": [
+    0.25556095050488126,
+    -0.008037197380856507
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 43.543,
+   "tool": [
+    0.250233752237785,
+    -0.01878991604280646
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 43.926,
+   "tool": [
+    0.24490655397068875,
+    -0.029542634704756418
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 44.278,
+   "tool": [
+    0.2395793557035925,
+    -0.04029535336670637
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 44.667,
+   "tool": [
+    0.23425215743649627,
+    -0.05104807202865633
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 45.015,
+   "tool": [
+    0.22892495916940003,
+    -0.06180079069060628
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  },
+  {
+   "t": 45.353,
+   "tool": [
+    0.2235977609023038,
+    -0.07255350935255624
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "clr": null
+  }
+ ]
+}

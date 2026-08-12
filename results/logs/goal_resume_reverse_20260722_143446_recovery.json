@@ -1,0 +1,14 @@
+{
+ "success": true,
+ "released": true,
+ "lifted": true,
+ "error": null,
+ "events": [
+  "t=002.8s  vertical descent at fixed XY (+0.3114,+0.1007) to z=0.1214",
+  "t=007.6s  floor reached -> opening gripper",
+  "t=009.6s  vertical lift at fixed XY to z=0.2000",
+  "t=015.4s  recovery release complete"
+ ],
+ "video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/expriment codex 22 jul/videos/goal_resume_reverse_20260722_143446_recovery.mp4",
+ "path_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/expriment codex 22 jul/videos/goal_resume_reverse_20260722_143446_recovery_paths.mp4"
+}

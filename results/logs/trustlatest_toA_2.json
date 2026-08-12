@@ -1,0 +1,1928 @@
+{
+ "goal": [
+  0.31,
+  0.1
+ ],
+ "pick": [
+  0.2094014889537451,
+  -0.09595068790533376
+ ],
+ "sensing": true,
+ "vlm": true,
+ "floor": 0.00578544,
+ "clasp_params": {
+  "mode": "trustlatest",
+  "r_human": 0.06,
+  "d_mech": 0.012,
+  "epi": 0.012
+ },
+ "arm_pause_s": 15.0,
+ "depth_enabled": false,
+ "video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/trustlatest_toA_2.mp4",
+ "path_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/trustlatest_toA_2_paths.mp4",
+ "raw_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/trustlatest_toA_2_raw.mp4",
+ "events": [
+  "t=000.0s  preloading FastVLM before pick",
+  "t=007.0s  picking object at (+0.209,-0.096); goal (+0.310,+0.100)",
+  "t=017.0s  Depth unavailable -> preserving RGB sensing fallback",
+  "t=017.0s  CLASP hold-radius active: mode=trustlatest (R_human=0.060 d_mech=0.012 epi=0.012)",
+  "t=017.1s  holding 15s at start \u2014 place the obstacle / prepare the hand on the path now",
+  "t=032.1s  sensed at start: clear",
+  "t=032.1s  carrying \u2014 reacting to intruders",
+  "t=034.6s  human hand detected by VLM -> protective STOP, holding",
+  "t=040.6s  path clear -> resuming carry",
+  "t=042.5s  obstacle blocking the path -> holding",
+  "t=043.1s  human hand detected by VLM -> protective STOP, holding",
+  "t=044.9s  object entered the path -> re-routing around it",
+  "t=055.1s  object delivered at goal"
+ ],
+ "log": [
+  {
+   "t": 32.14,
+   "tool": [
+    0.2094014889537451,
+    -0.09595068790533376
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.211,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 32.579,
+   "tool": [
+    0.21488207532746956,
+    -0.0852753343748812
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.65,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 32.825,
+   "tool": [
+    0.220362661701194,
+    -0.07459998084442865
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.038,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 33.071,
+   "tool": [
+    0.22584324807491848,
+    -0.06392462731397609
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.283,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 33.294,
+   "tool": [
+    0.23132383444864296,
+    -0.053249273783523544
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.506,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 33.543,
+   "tool": [
+    0.2368044208223674,
+    -0.042573920253070996
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.755,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 33.753,
+   "tool": [
+    0.2422850071960919,
+    -0.03189856672261844
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.104,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 34.072,
+   "tool": [
+    0.24776559356981634,
+    -0.02122321319216589
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.423,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 34.303,
+   "tool": [
+    0.2532461799435408,
+    -0.010547859661713338
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.654,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 34.625,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.113,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 34.753,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.241,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 34.879,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.367,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.006,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.494,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.136,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.623,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.261,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.749,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.387,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.014,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.515,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.142,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.645,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.271,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.772,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.399,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 35.9,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.526,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.025,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.652,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.155,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.781,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.282,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.052,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.408,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.178,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.538,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.308,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.668,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.438,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.798,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.568,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 36.924,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.695,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.062,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.832,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.192,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.105,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.319,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.232,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.449,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.362,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.575,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.488,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.7,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.613,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.828,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.741,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 37.956,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.009,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.083,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.137,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.213,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.266,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.338,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.391,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.466,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.519,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.596,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.649,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.724,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.777,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.851,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.048,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 38.981,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.178,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.106,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.303,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.234,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.431,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.361,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.558,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.489,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.686,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.619,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.816,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.745,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.081,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.871,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.207,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 39.997,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.333,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 40.126,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.462,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 40.254,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.59,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 40.381,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.717,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 40.511,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": null,
+   "cls": "none",
+   "vlm": "human",
+   "vlm_age": 0.847,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 40.636,
+   "tool": [
+    0.25872676631726527,
+    0.0001274938687392136
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.116,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 41.018,
+   "tool": [
+    0.2642073526909897,
+    0.010802847399191764
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.498,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 41.234,
+   "tool": [
+    0.26968793906471417,
+    0.021478200929644316
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.713,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 41.493,
+   "tool": [
+    0.2751685254384386,
+    0.032153554460096864
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.112,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 41.703,
+   "tool": [
+    0.28064911181216307,
+    0.04282890799054941
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.322,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 41.941,
+   "tool": [
+    0.2861296981858875,
+    0.05350426152100196
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.56,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 42.209,
+   "tool": [
+    0.29161028455961197,
+    0.0641796150514545
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.828,
+   "clr": null,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 42.502,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.27169069529531265,
+    -0.03656603297777214,
+    0.03528562476420634
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.249,
+   "clr": 0.07899389444638752,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0353,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 42.628,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.2710381778200172,
+    -0.03203429953339462,
+    0.039881664616435886
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.375,
+   "clr": 0.07013678136732467,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0399,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 42.759,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.2710644150388362,
+    -0.028103822393530882,
+    0.041079380348033066
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.505,
+   "clr": 0.06511802567279346,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0411,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 42.886,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.2710644150388362,
+    -0.028103822393530882,
+    0.041079380348033066
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.632,
+   "clr": 0.06511802567279346,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0411,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.012,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.2710644150388362,
+    -0.028103822393530882,
+    0.041079380348033066
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.759,
+   "clr": 0.06511802567279346,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0411,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.138,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2710644150388362,
+    -0.028103822393530882,
+    0.041079380348033066
+   ],
+   "cls": "new",
+   "vlm": "human",
+   "vlm_age": 0.008,
+   "clr": 0.06511802567279346,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0891,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.267,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.3497762498702154,
+    -0.0697451422458109,
+    0.098155479142437
+   ],
+   "cls": "new",
+   "vlm": "human",
+   "vlm_age": 0.137,
+   "clr": 0.05574364757734279,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.1462,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.392,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.3491539600872147,
+    -0.06972327220763992,
+    0.09844490990158586
+   ],
+   "cls": "new",
+   "vlm": "human",
+   "vlm_age": 0.262,
+   "clr": 0.055221719403689445,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.1464,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.518,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.34977427791319643,
+    -0.0654357358312368,
+    0.0961079079224501
+   ],
+   "cls": "new",
+   "vlm": "human",
+   "vlm_age": 0.388,
+   "clr": 0.0537487673234049,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.1441,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.648,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.34977304621924177,
+    -0.06274405960396717,
+    0.09442931080019472
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.518,
+   "clr": 0.052910107382964464,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.1424,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.777,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.3497720612952684,
+    -0.06059166092179755,
+    0.09309816474618325
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.647,
+   "clr": 0.05223282734381772,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.1411,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 43.906,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.29345525547894297,
+    -0.006316104889387239,
+    0.04530236543255706
+   ],
+   "cls": "moving",
+   "vlm": "human",
+   "vlm_age": 0.776,
+   "clr": 0.03595008602716493,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0933,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.034,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.29563203151459827,
+    -0.004036568315465288,
+    0.043539296139500354
+   ],
+   "cls": "moving",
+   "vlm": "human",
+   "vlm_age": 0.045,
+   "clr": 0.03536572782272352,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0915,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.164,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2965177805206579,
+    -0.00409971068325697,
+    0.04293982527061518
+   ],
+   "cls": "moving",
+   "vlm": "human",
+   "vlm_age": 0.175,
+   "clr": 0.03601693384781638,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0909,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.292,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2957893455306164,
+    -0.003879153495247133,
+    0.043415158304010604
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.304,
+   "clr": 0.03532972056207276,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0914,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.42,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2961062198655323,
+    -0.003562046895480096,
+    0.04316606362254236
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.432,
+   "clr": 0.03525713354580893,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0912,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.55,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.296696723579246,
+    -0.002971059214187384,
+    0.04270544383683688
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.561,
+   "clr": 0.03512158202600333,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0907,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.68,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2984312708186329,
+    -0.0008545417415126846,
+    0.041355872598231716
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.691,
+   "clr": 0.03436550235801496,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0894,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.807,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "stop",
+   "state": "hold_human",
+   "haz": [
+    0.2984312708186329,
+    -0.0008545417415126846,
+    0.041355872598231716
+   ],
+   "cls": "stationary",
+   "vlm": "human",
+   "vlm_age": 0.818,
+   "clr": 0.03436550235801496,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 1.0,
+   "clasp_R": 0.0894,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 44.935,
+   "tool": [
+    0.29709087093333647,
+    0.07485496858190704
+   ],
+   "mode": "route_slow",
+   "state": "route",
+   "haz": [
+    0.2984312708186329,
+    -0.0008545417415126846,
+    0.041355856452329164
+   ],
+   "cls": "stationary",
+   "vlm": "object",
+   "vlm_age": 0.088,
+   "clr": 0.03436551850391751,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0414,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 45.191,
+   "tool": [
+    0.29700236224698,
+    0.07985418514177314
+   ],
+   "mode": "route_slow",
+   "state": "route",
+   "haz": [
+    0.29875036078722367,
+    -0.0003133654050457737,
+    0.04110626299520573
+   ],
+   "cls": "stationary",
+   "vlm": "object",
+   "vlm_age": 0.344,
+   "clr": 0.039080342242660895,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0411,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 45.427,
+   "tool": [
+    0.29691385356062355,
+    0.08485340170163924
+   ],
+   "mode": "route_slow",
+   "state": "route",
+   "haz": [
+    0.2989557579072504,
+    3.4950361110755985e-05,
+    0.0409479153652238
+   ],
+   "cls": "stationary",
+   "vlm": "object",
+   "vlm_age": 0.58,
+   "clr": 0.04389511063671918,
+   "clasp_mode": "trustlatest",
+   "clasp_p": 0.0,
+   "clasp_R": 0.0409,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  }
+ ],
+ "result": {
+  "termination_reason": "delivered",
+  "pick_succeeded": true,
+  "reached": true,
+  "place_succeeded": true,
+  "object_held": false,
+  "goal_occupied": false,
+  "goal_resumed": false,
+  "goal_resume_count": 0,
+  "goal_clear_confirmations": 0,
+  "depth_enabled": false,
+  "recovery_lifted": false,
+  "error": null
+ }
+}

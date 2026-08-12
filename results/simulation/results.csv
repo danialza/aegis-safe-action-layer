@@ -1,0 +1,5 @@
+policy,task,safety,episodes,SR,CC_mean,CC_std,rho_c,V_geom,clipped,rejected,e_stop,veto_rate,steps
+planner,place,none,40,0.65,96.625,165.716,0.13804,28.475,0,0,0,0.0,28000
+planner,place,cmdp,40,0.925,6.025,3.037,0.00861,6.025,1174,177,0,0.0,28000
+scripted,place,none,40,0.0,3.575,0.833,0.00511,3.575,0,0,0,0.0,28000
+scripted,place,cmdp,40,0.0,2.775,1.275,0.00396,2.775,0,13,0,0.0,28000

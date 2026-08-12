@@ -1,0 +1,296 @@
+{
+ "goal": [
+  0.22,
+  -0.08
+ ],
+ "pick": [
+  0.2610107632903709,
+  0.0010467346232060446
+ ],
+ "sensing": true,
+ "vlm": true,
+ "floor": 0.00614941,
+ "arm_pause_s": 4.0,
+ "depth_enabled": false,
+ "video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/sanity.mp4",
+ "path_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/sanity_paths.mp4",
+ "raw_video": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/clasp_hardware/videos/sanity_raw.mp4",
+ "events": [
+  "t=000.0s  preloading FastVLM before pick",
+  "t=006.7s  picking object at (+0.261,+0.001); goal (+0.220,-0.080)",
+  "t=018.9s  Depth unavailable -> preserving RGB sensing fallback",
+  "t=019.1s  holding 4s at start \u2014 place the obstacle / prepare the hand on the path now",
+  "t=023.2s  sensed at start: clear",
+  "t=023.2s  carrying \u2014 reacting to intruders",
+  "t=024.4s  obstacle blocking the path -> holding",
+  "t=025.0s  path clear -> resuming carry",
+  "t=035.0s  object delivered at goal"
+ ],
+ "log": [
+  {
+   "t": 23.157,
+   "tool": [
+    0.2610107632903709,
+    0.0010467346232060446
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.474,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 23.597,
+   "tool": [
+    0.25559274926571474,
+    -0.009660511709471149
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.049,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.035,
+   "tool": [
+    0.2501747352410586,
+    -0.02036775804214834
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.487,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.382,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17162018983026145,
+    0.04004982883807716,
+    0.03
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.833,
+   "clr": 0.07201810683775313,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.51,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17162018983026145,
+    0.04004982883807716,
+    0.03
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.014,
+   "clr": 0.07201810683775313,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.639,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17162018983026145,
+    0.04004982883807716,
+    0.03
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.143,
+   "clr": 0.07201810683775313,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.764,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17162018983026145,
+    0.04004982883807716,
+    0.03
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.268,
+   "clr": 0.07201810683775313,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 24.892,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "stop",
+   "state": "hold_obj",
+   "haz": [
+    0.17162018983026145,
+    0.04004982883807716,
+    0.03
+   ],
+   "cls": "new",
+   "vlm": "object",
+   "vlm_age": 0.396,
+   "clr": 0.07201810683775313,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "rgb",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 25.018,
+   "tool": [
+    0.24475672121640243,
+    -0.03107500437482553
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.521,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 25.255,
+   "tool": [
+    0.23933870719174627,
+    -0.04178225070750272
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.759,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  },
+  {
+   "t": 25.497,
+   "tool": [
+    0.2339206931670901,
+    -0.05248949704017991
+   ],
+   "mode": "full",
+   "state": "carry",
+   "haz": null,
+   "cls": "none",
+   "vlm": "object",
+   "vlm_age": 0.07,
+   "clr": null,
+   "clasp_mode": null,
+   "clasp_p": null,
+   "clasp_R": null,
+   "sensor": "none",
+   "depth_only": false,
+   "depth_delta_m": null,
+   "depth_available": false
+  }
+ ],
+ "result": {
+  "termination_reason": "delivered",
+  "pick_succeeded": true,
+  "reached": true,
+  "place_succeeded": true,
+  "object_held": false,
+  "goal_occupied": false,
+  "goal_resumed": false,
+  "goal_resume_count": 0,
+  "goal_clear_confirmations": 0,
+  "depth_enabled": false,
+  "recovery_lifted": false,
+  "error": null
+ }
+}

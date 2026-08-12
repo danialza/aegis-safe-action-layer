@@ -1,0 +1,219 @@
+{
+ "goal": [
+  0.21,
+  -0.1
+ ],
+ "pick": [
+  0.3106730341863336,
+  0.09875758347094038
+ ],
+ "sensing": false,
+ "vlm": false,
+ "floor": 0.1214,
+ "log": [
+  {
+   "t": 9.383,
+   "tool": [
+    0.3106730341863336,
+    0.09875758347094038
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 9.609,
+   "tool": [
+    0.3052507770818818,
+    0.0880524852512498
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 9.83,
+   "tool": [
+    0.29982851997743004,
+    0.07734738703155922
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 10.032,
+   "tool": [
+    0.2944062628729783,
+    0.06664228881186864
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 10.236,
+   "tool": [
+    0.2889840057685265,
+    0.055937190592178054
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 10.473,
+   "tool": [
+    0.28356174866407474,
+    0.04523209237248747
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 10.672,
+   "tool": [
+    0.278139491559623,
+    0.03452699415279689
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 10.876,
+   "tool": [
+    0.2727172344551712,
+    0.023821895933106303
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 11.09,
+   "tool": [
+    0.26729497735071944,
+    0.013116797713415717
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 11.413,
+   "tool": [
+    0.2618727202462677,
+    0.00241169949372513
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 11.663,
+   "tool": [
+    0.2564504631418159,
+    -0.008293398725965458
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 11.964,
+   "tool": [
+    0.25102820603736414,
+    -0.018998496945656047
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 12.281,
+   "tool": [
+    0.2456059489329124,
+    -0.02970359516534664
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 12.551,
+   "tool": [
+    0.24018369182846067,
+    -0.04040869338503723
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 12.774,
+   "tool": [
+    0.23476143472400893,
+    -0.051113791604727815
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 12.965,
+   "tool": [
+    0.2293391776195572,
+    -0.06181888982441841
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  },
+  {
+   "t": 13.195,
+   "tool": [
+    0.22391692051510545,
+    -0.072523988044109
+   ],
+   "mode": "full",
+   "haz": null,
+   "cls": "none",
+   "vlm": null,
+   "haz_dist": null
+  }
+ ]
+}

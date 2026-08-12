@@ -1,0 +1,7 @@
+{
+ "floor_z": 0.12190272248310685,
+ "hover_z": 0.2,
+ "meas_rpy": [-0.9120693721264701, 1.498943529338497, -0.9759656015074423],
+ "floor_source": "User-declared final Z at the raised-camera pose on 2026-07-22; never command below this value.",
+ "floor_reference_pose": [0.24124526961336054, -0.11194890121882409, 0.12190272248310685, -1.116676056893489, 1.5236470270301052, -1.2115045444277137]
+}

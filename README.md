@@ -1,82 +1,100 @@
-# AEGIS — Age-Aware, Evidence-Guarded Safe-Action Layer
+# AEGIS: Age-Aware, Evidence-Guarded Safe-Action Layer on the Niryo NED3 Pro
 
-Companion data and media for the manuscript
+Companion data repository for the manuscript:
 
 > **AEGIS: An Age-Aware, Evidence-Guarded Safe-Action Layer Fusing RGB-D Sensing with
 > Vision–Language Monitoring for Collision-Aware Robotic Manipulation**
-> Danial Zafaranchizadeh Moghaddam, Maryam Banitalebi Dehkordi, Hamed Rahimi Nohooji, Abolfazl Zaraki
+> Danial Zafaranchizadeh Moghaddam, Maryam Banitalebi Dehkordi, Hamed Rahimi Nohooji,
+> Abolfazl Zaraki — University of Hertfordshire and University of Luxembourg, 2026.
 
-A semantic verdict is stale the moment after it is emitted. AEGIS makes the robot's hold
-radius an explicit function of a vision–language belief **and of the age of the verdict that
-produced it**, so the margin widens on its own as the evidence goes stale and collapses again
-on a fresh one. It runs on a low-cost Niryo NED3 Pro from a single fixed RealSense D435i.
+A semantic verdict is stale the moment after it is emitted. AEGIS makes the robot's hold radius
+an explicit function of a vision–language belief **and of the age of the verdict that produced
+it**, so the margin widens on its own as evidence goes stale and collapses again on a fresh one.
+It runs on a low-cost six-axis arm from a single fixed RealSense D435i, with no safety scanner
+and no motion capture.
 
-## What is in this repository
+This repo collects the **public reproducibility material** that backs the claims of the paper:
 
-| Path | Contents |
-|---|---|
-| `figures/` | Every figure in the paper, plus the graphical abstract and workspace photos |
-| `results/logs/` | Per-control-tick logs for every physical run: tool pose, sensed hazard, verdict, belief, enforced radius, clearance |
-| `results/calibration/` | Homography calibration reports with their residuals, per session |
-| `results/vlm/` | On-device vision–language benchmark, per-frame latency and verdict |
-| `results/simulation/` | Per-episode simulation records (success, cumulative cost, cost rate, violations) |
-| `RUN_MANIFEST.md` | Every reported physical number traced to its run ID, calibration, parameters and outcome |
-| `NARRATION.md` | Shot-by-shot description of the video supplement, with times read from the control logs |
-| `CLAIMS_TO_CODE.md` | Each paper claim mapped to the code that produces it |
+- the publication figures used in the article (`figures/`),
+- the per-control-tick logs of every physical run, the calibration reports, the on-device
+  vision–language benchmark and the simulation episode records (`data/`),
+- the scripts that regenerate the frame-strip figures from those logs (`scripts/`),
+- a manifest linking every reported physical number to the run that produced it
+  (`RUN_MANIFEST.md`).
 
-**Videos** are attached to the [latest release](../../releases/latest) rather than tracked in
-git: 19 clips, ~21 minutes, every one a real run on the physical arm.
+The manuscript text, LaTeX source and the published PDF are **not** distributed here. The
+article, its DOI and a direct PDF link will be available from the project landing page.
+
+**Project page:** *(to be added)*
+
+If you use the public figures, videos, logs or experimental methodology, please cite the
+manuscript above and link back to the project page. For full code access, please email the
+authors listed below.
+
+---
+
+## Repository layout
+
+```
+.
+├── figures/            Publication figures (PDF / PNG, exact versions used in the paper)
+├── scripts/            Scripts that rebuild the frame-strip figures from the run logs
+│   ├── README.md
+│   ├── mk_fig5_contrast.py
+│   ├── mk_fig6_rgbd.py
+│   └── mk_rr_figures.py
+├── data/               Run logs, calibration, VLM benchmark, simulation records, video index
+│   ├── README.md
+│   ├── hardware_runs/
+│   ├── calibration/
+│   ├── vlm_benchmark/
+│   ├── simulation/
+│   └── videos/README.md
+├── RUN_MANIFEST.md     Every physical number traced to its run, calibration and parameters
+├── LICENSE
+└── README.md           This file
+```
+
+---
 
 ## Headline results
 
-| | Result |
+| Quantity | Result |
 |---|---|
-| Cost reduction, sampling-based planner | per-step cost rate **0.138 → 0.0086** (16×), Wilcoxon *p* = 1×10⁻⁶, *n* = 36 paired episodes |
-| Task success, same comparison | **65% → 92%** (exact McNemar, *p* = 0.007) |
+| Per-step unsafe cost, sampling-based planner | 0.138 → 0.0086 (16×), Wilcoxon *p* = 1×10⁻⁶, *n* = 36 paired episodes |
+| Task success, same comparison | 65% → 92%, exact McNemar *p* = 0.007 |
 | Physical AEGIS runs | minimum moving clearance **+19.7 mm**, never negative |
 | Physical trust-latest baseline | one run entered the detected footprint at **−5.6 mm** |
 | Physical worst-case baseline | never commanded motion while a hazard was tracked |
-| On-device semantic verdict | FastVLM-0.5B, **0.236 s** mean, 0.238 s p95 over 20 timed queries |
-| Image-to-table calibration | 0.92 mm mean fitting residual over nine points (22 July session) |
+| On-device semantic verdict | FastVLM-0.5B, 0.236 s mean, 0.238 s p95, 20 timed queries |
+| Image-to-table calibration | 0.92 mm mean fitting residual over nine points |
+| Hand-to-freeze reaction | 1.73 s mean, 2.67 s worst, *n* = 5 intrusions, hosted backend |
 
-Every one of these traces to a file in `results/` — see `RUN_MANIFEST.md`.
+Every figure above traces to a file under `data/` — see `RUN_MANIFEST.md` for the mapping.
+Success rises rather than trading off: the projection removes the boundary- and
+obstacle-grazing commands that were also causing the planner to fail.
 
-## How to read a run log
+## Videos
 
-```python
-import json
-d = json.load(open("results/logs/S1_clasp_2.json"))
-d["clasp_params"]          # policy and its constants
-d["events"]                # narrated transitions with timestamps
-d["log"][0]                # one control tick
-# {'t':…, 'tool':[x,y], 'mode':'route', 'state':'carry', 'haz':[x,y,r],
-#  'vlm':'object', 'clr':…, 'clasp_p':…, 'clasp_R':…, 'sensor':'rgbd', …}
-```
+Nineteen clips, about 21 minutes, every one a real run on the physical arm. Attached to the
+[v1.0 release](../../releases/tag/v1.0); `data/videos/README.md` indexes them.
 
-`clr` is the tool-to-detected-footprint distance. **Clearance is reported over ticks on which
-the policy commands motion**; including protective holds turns some runs momentarily negative
-because the operator advanced the obstacle onto a stationary tool, which is not an incursion
-the policy commanded.
+## Scope and caveats
 
-## Video timebases
-
-The recorder tags every file 12 fps but sustains ≈11.6. Two clips are re-timed so that player
-time equals the robot's clock: the Figure 5 source at 11.607 fps with a 0.51 s start offset,
-the Figure 6 source at 11.622 fps with 0.64 s. Extracting frames at the tagged rate places
-every frame about 4% late. Constants were fitted against the clock the recorder burns into
-each frame.
-
-## Implementation
-
-The safe-action layer, the sensing pipeline and the hardware bridge are kept in a private
-repository. They are available to researchers on request — please email the corresponding
-author. This repository carries the data, media and provenance needed to check every reported
-result.
+The clearance result is established for the constrained grasp site, not the whole arm; a
+whole-arm audit found the forearm crossing the hazard sphere in 7 of 120 simulated episodes,
+which is why the title says *collision-aware* rather than *collision-free*. Verdict age is
+measured from when inference returns rather than when the image was captured, which under-sizes
+the enforced radius by up to 29.6 mm of which the 25 mm epistemic buffer absorbs most. The
+physical runs were conducted below the sufficient buffer-sizing condition the paper proves, so
+the hardware outcome is empirical rather than an instance of the guarantee. Section 5 of the
+paper states each of these in full.
 
 ## Licence
 
-Figures, videos, logs and documentation: **CC BY 4.0**. Please cite the paper if you use them.
+Figures, videos, logs and documentation are released under **CC BY 4.0**. See `LICENSE`.
 
-## Citation
+## Contact
 
-A BibTeX entry will be added here once the article is published.
+- Danial Zafaranchizadeh Moghaddam — dz24aaf@herts.ac.uk
+- Abolfazl Zaraki (corresponding) — a.zaraki@herts.ac.uk

@@ -25,6 +25,11 @@ This repo collects the **public reproducibility material** that backs the claims
 The manuscript text, LaTeX source and the published PDF are **not** distributed here. The
 article, its DOI and a direct PDF link will be available from the project landing page.
 
+**Watch the summary first:** <https://www.youtube.com/watch?v=GJ71RKZZlPI>
+A narrated walkthrough of the whole study in one piece, on the real arm: the task, the three
+margin policies run on the same carry, and what happens when the semantic evidence goes stale.
+The raw clips behind it are attached to the [v1.0 release](../../releases/tag/v1.0).
+
 **Project page:** <https://danielz.co.uk/projects/aegis-age-aware-safe-action-layer/>
 
 If you use the public figures, videos, logs or experimental methodology, please cite the

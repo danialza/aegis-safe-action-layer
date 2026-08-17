@@ -3,8 +3,9 @@
 Nineteen clips, about 21 minutes. **Every clip is a real run on the physical Niryo NED3 Pro.**
 Nothing is simulated and nothing is re-enacted.
 
-The files are attached to the [v1.0 release](../../releases/tag/v1.0) rather than tracked in
-git. Clips whose source recording ends in `_paths` carry a live overlay: blue is the nominal
+A narrated summary of the whole study is on YouTube:
+<https://www.youtube.com/watch?v=GJ71RKZZlPI>. The raw clips indexed below are attached to the
+[v1.0 release](../../releases/tag/v1.0) rather than tracked in git. Clips whose source recording ends in `_paths` carry a live overlay: blue is the nominal
 straight carry, orange the current re-plan, green the executed path, and the red circle is the
 sensed hazard drawn at the radius the policy is enforcing at that instant. Clips 03, 06 and 08
 were recorded without the overlay.

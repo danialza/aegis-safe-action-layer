@@ -2,3 +2,7 @@ __pycache__/
 .DS_Store
 *.mp4
 .venv/
+
+# local tooling artefacts, never published
+.memsearch/
+.claude/

@@ -31,10 +31,10 @@ def t_event(events, pat):
             return float(re.match(r"t=(\d+\.\d+)s", e.strip()).group(1))
 
 clamp = lambda x: min(1.0, max(0.0, x))
-runs = []
-for f in sorted(glob.glob(str(LOGS / "*.json"))):
-    name = os.path.basename(f)[:-5]
-    m = re.match(r"(AEGIS|Trust12|Trust32)-(normal|slow)", name)
+
+
+def analyse_run(f, method, rate):
+    """Per-run inputs, predictions and observed hold share; identical for primary and hold-out runs."""
     D = json.load(open(f)); t0 = t_event(D["events"], "carrying")
     car = [e for e in D["log"] if e["t"] >= t0]
     bundles = {}
@@ -42,6 +42,8 @@ for f in sorted(glob.glob(str(LOGS / "*.json"))):
         if e.get("ev_t_infer_start") is not None:
             bundles[e.get("ev_seq", e["ev_t_infer_start"])] = (e["ev_t_infer_start"], e["ev_t_infer_end"], e["ev_t_capture"])
     starts = sorted(v[0] for v in bundles.values())
+    if len(starts) < 3:
+        return None
     P = st.median(b - a for a, b in zip(starts, starts[1:]))
     L = st.mean(v[1] - v[2] for v in bundles.values())
     hold = move = 0.0; dms = []; dhs = []
@@ -52,26 +54,37 @@ for f in sorted(glob.glob(str(LOGS / "*.json"))):
             elif a.get("mode") != "stop":
                 move += b["t"] - a["t"]; dms.append(b["t"] - a["t"])
     dm = st.mean(dms) if dms else 0.0; dh = st.mean(dhs) if dhs else None
-    runs.append({"run": name, "method": m[1], "rate": m[2], "P_s": P, "L_s": L,
-                 "predicted_hold_fraction": clamp((P + L - T_INF) / P) if m[1] == "AEGIS" else 0.0,
-                 "d_move_s": dm, "d_hold_s": dh,
-                 "predicted_hold_fraction_sampled": clamp((P + L - T_INF - dm / 2 + (dh or 0.0) / 2) / P) if m[1] == "AEGIS" else 0.0,
-                 "observed_hold_fraction": hold / (hold + move) if hold + move else None,
-                 "hold_s": hold, "move_s": move, "source_sha256": hashlib.sha256(Path(f).read_bytes()).hexdigest()})
-cells = {}
-for r in runs:
-    cells.setdefault(f'{r["method"]}-{r["rate"]}', []).append(r)
-summary = {k: {"P_ms": 1000 * st.mean(r["P_s"] for r in v), "L_ms": 1000 * st.mean(r["L_s"] for r in v),
-               "P_plus_L_ms": 1000 * st.mean(r["P_s"] + r["L_s"] for r in v),
-               "predicted_hold_fraction": st.mean(r["predicted_hold_fraction"] for r in v),
-               "predicted_hold_fraction_range": [min(r["predicted_hold_fraction"] for r in v), max(r["predicted_hold_fraction"] for r in v)],
-               "predicted_at_cell_means": clamp((st.mean(r["P_s"] for r in v) + st.mean(r["L_s"] for r in v) - T_INF) / st.mean(r["P_s"] for r in v)) if v[0]["method"] == "AEGIS" else 0.0,
-               "d_move_ms": 1000 * st.mean(r["d_move_s"] for r in v), "d_hold_ms": (1000 * st.mean(r["d_hold_s"] for r in v if r["d_hold_s"] is not None)) if any(r["d_hold_s"] is not None for r in v) else None,
-               "predicted_hold_fraction_sampled": st.mean(r["predicted_hold_fraction_sampled"] for r in v),
-               "observed_hold_fraction_equal_run": st.mean(r["observed_hold_fraction"] for r in v),
-               "observed_hold_fraction_range": [min(r["observed_hold_fraction"] for r in v), max(r["observed_hold_fraction"] for r in v)]}
-           for k, v in sorted(cells.items())}
-out = {"T_inf_s": T_INF, "model": __doc__, "cells": summary, "runs": runs}
-(HERE / "duty_cycle_results.json").write_text(json.dumps(out, indent=2) + "\n")
-for k, v in summary.items():
-    print(f'{k:15} P={v["P_ms"]:.0f} L={v["L_ms"]:.0f} P+L={v["P_plus_L_ms"]:.0f} pred={v["predicted_hold_fraction"]:.3f} {v["predicted_hold_fraction_range"]} plugin={v["predicted_at_cell_means"]:.3f} dm={v["d_move_ms"]:.0f} dh={v["d_hold_ms"]} pred_s={v["predicted_hold_fraction_sampled"]:.3f} obs={v["observed_hold_fraction_equal_run"]:.3f} range={v["observed_hold_fraction_range"][0]:.3f}-{v["observed_hold_fraction_range"][1]:.3f}')
+    return {"run": os.path.basename(f)[:-5], "method": method, "rate": rate, "P_s": P, "L_s": L,
+            "predicted_hold_fraction": clamp((P + L - T_INF) / P) if method == "AEGIS" else 0.0,
+            "d_move_s": dm, "d_hold_s": dh,
+            "predicted_hold_fraction_sampled": clamp((P + L - T_INF - dm / 2 + (dh or 0.0) / 2) / P) if method == "AEGIS" else 0.0,
+            "observed_hold_fraction": hold / (hold + move) if hold + move else None,
+            "hold_s": hold, "move_s": move, "source_sha256": hashlib.sha256(Path(f).read_bytes()).hexdigest()}
+
+
+def main():
+    runs = []
+    for f in sorted(glob.glob(str(LOGS / "*.json"))):
+        m = re.match(r"(AEGIS|Trust12|Trust32)-(normal|slow)", os.path.basename(f))
+        runs.append(analyse_run(f, m[1], m[2]))
+    cells = {}
+    for r in runs:
+        cells.setdefault(f'{r["method"]}-{r["rate"]}', []).append(r)
+    summary = {k: {"P_ms": 1000 * st.mean(r["P_s"] for r in v), "L_ms": 1000 * st.mean(r["L_s"] for r in v),
+                   "P_plus_L_ms": 1000 * st.mean(r["P_s"] + r["L_s"] for r in v),
+                   "predicted_hold_fraction": st.mean(r["predicted_hold_fraction"] for r in v),
+                   "predicted_hold_fraction_range": [min(r["predicted_hold_fraction"] for r in v), max(r["predicted_hold_fraction"] for r in v)],
+                   "predicted_at_cell_means": clamp((st.mean(r["P_s"] for r in v) + st.mean(r["L_s"] for r in v) - T_INF) / st.mean(r["P_s"] for r in v)) if v[0]["method"] == "AEGIS" else 0.0,
+                   "d_move_ms": 1000 * st.mean(r["d_move_s"] for r in v), "d_hold_ms": (1000 * st.mean(r["d_hold_s"] for r in v if r["d_hold_s"] is not None)) if any(r["d_hold_s"] is not None for r in v) else None,
+                   "predicted_hold_fraction_sampled": st.mean(r["predicted_hold_fraction_sampled"] for r in v),
+                   "observed_hold_fraction_equal_run": st.mean(r["observed_hold_fraction"] for r in v),
+                   "observed_hold_fraction_range": [min(r["observed_hold_fraction"] for r in v), max(r["observed_hold_fraction"] for r in v)]}
+               for k, v in sorted(cells.items())}
+    out = {"T_inf_s": T_INF, "model": __doc__, "cells": summary, "runs": runs}
+    (HERE / "duty_cycle_results.json").write_text(json.dumps(out, indent=2) + "\n")
+    for k, v in summary.items():
+        print(f'{k:15} P={v["P_ms"]:.0f} L={v["L_ms"]:.0f} P+L={v["P_plus_L_ms"]:.0f} pred={v["predicted_hold_fraction"]:.3f} {v["predicted_hold_fraction_range"]} plugin={v["predicted_at_cell_means"]:.3f} dm={v["d_move_ms"]:.0f} dh={v["d_hold_ms"]} pred_s={v["predicted_hold_fraction_sampled"]:.3f} obs={v["observed_hold_fraction_equal_run"]:.3f} range={v["observed_hold_fraction_range"][0]:.3f}-{v["observed_hold_fraction_range"][1]:.3f}')
+
+
+if __name__ == "__main__":
+    main()

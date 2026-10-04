@@ -1,0 +1,99 @@
+{
+  "note": "Checks on the existing records that bound single-session risks (no new trials).\n\n1. Session drift: VLM inference duration across all 92 eligible transports versus wall-clock time.\n2. Obstruction timing: time from carry start to the first carry decision with a detected hazard (primary).\n3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).\n4. Hand appearances: human-verdict hold occupancy per run by policy (primary).\n5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.\n6. Annotation stability: presence labels of the 115 rechecked frames, first versus second pass.\n",
+  "session_drift": {
+    "runs": 92,
+    "span_h": 2.934068399733967,
+    "inference_mean_ms": 247.74993554038224,
+    "inference_sd_ms": 8.558236932473934,
+    "inference_range_ms": [
+      239.26951551773385,
+      279.9838402195636
+    ],
+    "slope_ms_per_h": 3.03371895207576
+  },
+  "obstruction_timing": {
+    "runs": 24,
+    "max_first_hazard_s": 0.34299999999999997
+  },
+  "operator_placement": {
+    "x": {
+      "method_means_mm": {
+        "AEGIS": 0.8912500000000101,
+        "Trust12": -0.6399999999999899,
+        "Trust32": -0.2512499999999953
+      },
+      "max_between_method_difference_mm": 1.53125,
+      "p": {
+        "AEGIS vs Trust12": 0.31717171717171716,
+        "AEGIS vs Trust32": 0.4456876456876457,
+        "Trust12 vs Trust32": 0.813986013986014
+      }
+    },
+    "y": {
+      "method_means_mm": {
+        "AEGIS": 0.8733333333333345,
+        "Trust12": -0.8741666666666654,
+        "Trust32": 0.0008333333333343518
+      },
+      "max_between_method_difference_mm": 1.7475,
+      "p": {
+        "AEGIS vs Trust12": 0.45376845376845376,
+        "AEGIS vs Trust32": 0.5794871794871795,
+        "Trust12 vs Trust32": 0.7132867132867133
+      }
+    },
+    "r": {
+      "method_means_mm": {
+        "AEGIS": -0.007916666666665684,
+        "Trust12": 0.07833333333333403,
+        "Trust32": -0.07041666666666746
+      },
+      "max_between_method_difference_mm": 0.1487500000000015,
+      "p": {
+        "AEGIS vs Trust12": 0.7047397047397047,
+        "AEGIS vs Trust32": 0.744988344988345,
+        "Trust12 vs Trust32": 0.5507381507381507
+      }
+    }
+  },
+  "human_hold_s": {
+    "AEGIS-normal": 0.3574793958105147,
+    "AEGIS-slow": 0.6823372712824494,
+    "Trust12-normal": 0.6473474686499685,
+    "Trust12-slow": 0.4193497395608574,
+    "Trust32-normal": 0.5509022499900311,
+    "Trust32-slow": 0.4540804789867252
+  },
+  "pilot_replication": {
+    "mean_moving_age_ms": {
+      "AEGIS_minus_Trust12": -279.6640047402963,
+      "interval": [
+        -327.6751436921768,
+        -195.7370032841734
+      ],
+      "p": 0.02857142857142857
+    },
+    "minimum_command_estimated_separation_mm": {
+      "AEGIS_minus_Trust12": 17.9962890337071,
+      "interval": [
+        9.115864307543482,
+        27.278855943949495
+      ],
+      "p": 0.02857142857142857
+    },
+    "carry_to_delivery_s": {
+      "AEGIS_minus_Trust12": 20.985793665749952,
+      "interval": [
+        -2.4340354185551405,
+        35.98528949916363
+      ],
+      "p": 0.05714285714285714
+    }
+  },
+  "annotation_stability": {
+    "rechecked": 115,
+    "unchanged": 111,
+    "definite_reversals": 0,
+    "to_or_from_uncertain": 4
+  }
+}

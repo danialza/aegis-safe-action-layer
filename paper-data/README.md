@@ -32,6 +32,8 @@ python build_supp_tables.py
 python build_primary_figure_legend.py   # Figure 3
 python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)
 python buffer_rationale.py              # median AEGIS margin behind the 32 mm Trust32 buffer (S2)
+python duty_cycle_holdout.py            # duty-cycle relation on held-out pilot and exploratory runs (S18)
+python robustness_checks.py             # session drift, operator placement, replication, annotation stability (S20)
 ```
 
 The remaining tables and figures are produced by the scripts in `analysis/` and

@@ -148,9 +148,33 @@ def static_constants(path):
     return result
 
 
+# Public-release note: the controller source is not public. When provenance_code/safebench/ is absent,
+# the constants and file hashes are read from provenance_code/controller_constants.json, which was
+# generated from the same archived files; computations and outputs are otherwise unchanged.
+PUBLIC_CONSTANTS = PACKAGE / "provenance_code/controller_constants.json"
+
+
+def _code_available():
+    return all((PACKAGE / "provenance_code/safebench" / name).exists() for name in CODE_FILES)
+
+
+def _archived_constants(name):
+    path = PACKAGE / "provenance_code/safebench" / name
+    if path.exists():
+        return static_constants(path)
+    return json.loads(PUBLIC_CONSTANTS.read_text())["files"]["safebench/" + name]["constants"]
+
+
+def _archived_digest(name):
+    path = PACKAGE / "provenance_code/safebench" / name
+    if path.exists():
+        return digest(path)
+    return json.loads(PUBLIC_CONSTANTS.read_text())["files"]["safebench/" + name]["sha256"]
+
+
 def validate_archived_constants():
-    clasp = static_constants(PACKAGE / "provenance_code/safebench/clasp_policy.py")
-    clock = static_constants(PACKAGE / "provenance_code/safebench/aegis_time.py")
+    clasp = _archived_constants("clasp_policy.py")
+    clock = _archived_constants("aegis_time.py")
     assert all(clasp[name] == value for name, value in (("P_PRIOR", P_PRIOR), ("P_STOP", P_STOP),
                ("T_DECAY", T_DECAY), ("RELIABILITY", RELIABILITY)))
     assert clock["CLOCK_TOL_S"] == CLOCK_TOL_S and clock["SENSING_STALE_S"] == SENSING_STALE_S
@@ -174,8 +198,7 @@ def load_run(meta):
     params = data["clasp_params"]
     assert params["r_human"] == .06 and params["d_mech"] == .012 and params["epi"] == .012
     for name in CODE_FILES:
-        archived = PACKAGE / "provenance_code/safebench" / name
-        assert digest(archived) == data["provenance"]["files_sha256"]["safebench/" + name]
+        assert _archived_digest(name) == data["provenance"]["files_sha256"]["safebench/" + name]
     return data["log"], source, sidecar
 
 
@@ -250,8 +273,7 @@ def main():
     protected = {PACKAGE / name: value for name, value in manifest["archived_data"].items()}
     before = {path: digest(path) for path in protected}
     assert before == protected and len(before) == 184
-    code_paths = [PACKAGE / "provenance_code/safebench" / name for name in CODE_FILES]
-    code_before = {path: digest(path) for path in code_paths}
+    code_before = {name: _archived_digest(name) for name in CODE_FILES}
     selected = [v for v in summary["all_included_records"] if v["method"] == "AEGIS"
                 and v["campaign"] in ("timed_margin_compare", "timed_compare_slow")]
     assert len(selected) == 12
@@ -264,7 +286,7 @@ def main():
         all_rows.extend(derived_rows)
     cells = aggregate(runs)
     assert {path: digest(path) for path in protected} == before
-    assert {path: digest(path) for path in code_paths} == code_before
+    assert {name: _archived_digest(name) for name in CODE_FILES} == code_before
     output = {
         "date": "2026-10-03", "analysis_type": "On-policy, same-input semantic-gate shadow assay; not a new trial",
         "selection": {"genuine_primary_AEGIS_runs": 8, "genuine_pilot_AEGIS_runs_separate": 4,
@@ -295,7 +317,7 @@ def main():
         "provenance": {"analysis_script_sha256": digest(Path(__file__)), "hardware_summary_sha256": digest(summary_path),
                        "existing_manifest_sha256": digest(manifest_path), "archived_sources_verified": 184,
                        "archived_sources_unchanged": True, "selected_source_hashes": selected_hashes,
-                       "archived_code_sha256": {str(p.relative_to(PACKAGE)): value for p, value in code_before.items()},
+                       "archived_code_sha256": {f"provenance_code/safebench/{name}": value for name, value in code_before.items()},
                        "archived_code_constants_and_claimed_run_hashes_verified": True},
     }
     json_path = HERE / "shadow_timeout_results.json"

@@ -1,0 +1,68 @@
+{
+  "note": "Module-level literal constants of the four archived controller files used by the analyses, and the SHA-256 of each file. The hashes equal the values recorded in every primary and pilot run log (provenance.files_sha256). The controller source itself is not public; it is available from the corresponding author.",
+  "files": {
+    "safebench/clasp_policy.py": {
+      "sha256": "e3aac5c1fce5349dd54d98d2295c6948da224c7c3e829641ccf3a2d0c4957929",
+      "constants": {
+        "R_HUMAN": 0.1,
+        "D_MECH": 0.02,
+        "P_PRIOR": 0.65,
+        "P_STOP": 0.5,
+        "T_DECAY": 0.4,
+        "EPI": 0.025,
+        "RELIABILITY": 0.95,
+        "MODES": [
+          "clasp",
+          "worstcase",
+          "trustlatest"
+        ]
+      }
+    },
+    "safebench/aegis_time.py": {
+      "sha256": "59cac96216914fe8b54c2a4edce327d22be95af607ef71e40fe217e0f9f503dd",
+      "constants": {
+        "TIME_BASE": "capture_proxy",
+        "TIME_BASE_NOTE": "capture proxy = t_request - source_age_s from the camera packet, host perf_counter clock: frame arrival at the Pi; excludes sensor exposure -> Pi, includes the request's one-way latency",
+        "CLOCK_TOL_S": 0.005,
+        "SEMANTIC_FRESH_S": 1.0,
+        "SENSING_STALE_S": 0.6,
+        "OK": "ok",
+        "NO_VERDICT": "no_verdict",
+        "VLM_ERROR": "vlm_error",
+        "INVALID_TIME": "invalid_time",
+        "OUT_OF_ORDER": "out_of_order"
+      }
+    },
+    "safebench/timed_variants.py": {
+      "sha256": "c5ec1452be6b8d30344ad690ce7b74ea5bfa74430c43acade790cc330cfa5ac7",
+      "constants": {
+        "AEGIS": "AEGIS-sensor-time",
+        "TRUST": "Trust-time",
+        "TRUST_SENSOR": "Trust-sensor-time",
+        "CODE_FILES": [
+          "safebench/timed_variants.py",
+          "safebench/timed_compare_run.py",
+          "safebench/aegis_time.py",
+          "safebench/reactive_run.py",
+          "safebench/reactive_exec.py",
+          "safebench/clasp_policy.py",
+          "safebench/rs_stream.py",
+          "safebench/fastvlm_monitor.py",
+          "safebench/arm_mask.py",
+          "safebench/table_cam.py",
+          "safebench/ssm_exec.py"
+        ],
+        "CONFIG_FILES": [
+          "calibration.json",
+          "data/real_runs/cal_session_0722.json"
+        ]
+      }
+    },
+    "safebench/timed_compare_run.py": {
+      "sha256": "8f44194dac0ad119b34c4b207f020f6815085ef7912dea523561f9a0720ec192",
+      "constants": {
+        "_STOP": "stop"
+      }
+    }
+  }
+}

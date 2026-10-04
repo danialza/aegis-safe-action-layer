@@ -1,0 +1,20 @@
+{
+  "note": "How often the permissive monitor parser was exercised in the frozen 2158-frame FastVLM replay.\n\nThe deployed parser maps a reply without a readable count to zero hands (OBJECT). Live raw replies\nwere not logged, so this check uses the frozen replay with the archived prompt and parser. It counts\nreplies that the strict numeric parser rejects, lists their wording, and joins the sampled ones to\nthe final human labels. It characterizes the replay only; it does not remove the failure path.\n",
+  "replies": 2158,
+  "errors_or_empty": 0,
+  "replies_without_numeral": 701,
+  "their_parsed_count": {
+    "0": 688,
+    "1": 13
+  },
+  "their_wording": {
+    "There are no human hands visible": 688,
+    "The image shows only one human": 12,
+    "The image contains one human hand": 1
+  },
+  "sampled_among_them": 120,
+  "human_labels_of_sampled": {
+    "no_hand": 107,
+    "hand": 13
+  }
+}

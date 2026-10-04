@@ -1,19 +1,32 @@
 {
-  "note": "Checks on the existing records that bound single-session risks (no new trials).\n\n1. Session drift: VLM inference duration across all 92 eligible transports versus wall-clock time.\n2. Obstruction timing: time from carry start to the first carry decision with a detected hazard (primary).\n3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).\n4. Hand appearances: human-verdict hold occupancy per run by policy (primary).\n5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.\n6. Annotation stability: presence labels of the 115 rechecked frames, first versus second pass.\n",
+  "note": "Checks on the existing records that bound single-session risks (no new trials).\n\n1. Session drift: per-run mean VLM inference duration and capture-proxy-to-inference-end latency across all\n   92 eligible transports versus wall-clock time (run-level means; exposure-to-server delay is not measured).\n2. Obstruction detection timing: index and time of the first carry decision with a detected hazard (primary).\n   This does not record when the object physically entered the scene.\n3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).\n4. Hand appearances: human-verdict hold occupancy per run by policy (primary).\n5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.\n6. Annotation stability: presence labels of the 115 rechecked frames, first versus second pass.\n",
   "session_drift": {
     "runs": 92,
     "span_h": 2.934068399733967,
+    "basis": "run-level means",
     "inference_mean_ms": 247.74993554038224,
     "inference_sd_ms": 8.558236932473934,
     "inference_range_ms": [
       239.26951551773385,
       279.9838402195636
     ],
-    "slope_ms_per_h": 3.03371895207576
+    "slope_ms_per_h": 3.03371895207576,
+    "proxy_to_inference_end_mean_ms": 292.5708415484328,
+    "proxy_to_inference_end_sd_ms": 9.686445350782144,
+    "proxy_to_inference_end_slope_ms_per_h": 4.601572367474637
   },
   "obstruction_timing": {
     "runs": 24,
-    "max_first_hazard_s": 0.34299999999999997
+    "first_decision_with_hazard": 21,
+    "second_decision_with_hazard": 3,
+    "later": 0,
+    "runs_not_at_first_decision": [
+      "Trust12-normal_toB_1",
+      "Trust32-normal_toA_2",
+      "Trust12-slow_toB_2"
+    ],
+    "max_first_hazard_s": 0.34299999999999997,
+    "note": "Detection timing only; the physical entry time of the obstruction was not recorded."
   },
   "operator_placement": {
     "x": {

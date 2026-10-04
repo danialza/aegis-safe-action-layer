@@ -1,0 +1,42 @@
+{
+  "note": "Mean evidence age at moving decisions versus the sweep value L + P/2 (no fitted parameter).\n\nIf verdicts start every P seconds and each becomes available L seconds after its capture proxy, and a\npolicy moves regardless of age, the age consumed at moving decisions sweeps from L to P + L, so its\nmean is about L + P/2 (assuming decisions are spread evenly over the sweep). The age-aware rule departs\nfrom this value when it refuses motion on old evidence. P and L come from each run's evidence bundles\n(duty_cycle_results.json); observed mean moving age comes from the frozen run-level audit.\n",
+  "cells": {
+    "AEGIS-normal": {
+      "L_plus_half_P_ms": 438.8647038845675,
+      "observed_mean_moving_age_ms": 432.7215722888443,
+      "difference_ms": -6.143131595723219,
+      "run_level_max_abs_difference_ms": 30.899038307585215
+    },
+    "Trust12-normal": {
+      "L_plus_half_P_ms": 438.8628673445483,
+      "observed_mean_moving_age_ms": 448.0689486486469,
+      "difference_ms": 9.206081304098575,
+      "run_level_max_abs_difference_ms": 27.668810041461086
+    },
+    "Trust32-normal": {
+      "L_plus_half_P_ms": 424.50029228322023,
+      "observed_mean_moving_age_ms": 421.5843766792356,
+      "difference_ms": -2.9159156039846152,
+      "run_level_max_abs_difference_ms": 18.039560295688375
+    },
+    "AEGIS-slow": {
+      "L_plus_half_P_ms": 703.029163192723,
+      "observed_mean_moving_age_ms": 423.5150999167176,
+      "difference_ms": -279.5140632760054,
+      "run_level_max_abs_difference_ms": 306.3169854992469
+    },
+    "Trust12-slow": {
+      "L_plus_half_P_ms": 702.0315556630403,
+      "observed_mean_moving_age_ms": 682.6442840319112,
+      "difference_ms": -19.387271631129124,
+      "run_level_max_abs_difference_ms": 27.43488626250678
+    },
+    "Trust32-slow": {
+      "L_plus_half_P_ms": 703.2861152020964,
+      "observed_mean_moving_age_ms": 687.5867881862758,
+      "difference_ms": -15.699327015820586,
+      "run_level_max_abs_difference_ms": 36.87058256140779
+    }
+  },
+  "fixed_buffer_and_normal_AEGIS_max_abs_cell_difference_ms": 19.387271631129124
+}

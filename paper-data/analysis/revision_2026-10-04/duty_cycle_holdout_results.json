@@ -1,5 +1,5 @@
 {
-  "note": "Hold-out check of the duty-cycle relation on AEGIS runs that were not used to formulate it.\n\nThe relation and its decision-sampling refinement were formulated on the 24-run primary campaign.\nHere the identical per-run function (duty_cycle.analyse_run) is applied, unchanged and with no\nfitted parameter, to the AEGIS runs of the separate slow-update pilot (minimum period 0.8 s) and of\nthe exploratory campaign (normal cadence). Runs with fewer than three evidence bundles or without\neligible hazard-present OBJECT intervals are counted and excluded.\n",
+  "note": "Hold-out check of the duty-cycle relation on AEGIS runs that were not used to formulate it.\n\nThe relation and its decision-sampling refinement were formulated on the 24-run primary campaign.\nHere the identical per-run function (duty_cycle.analyse_run) is applied, unchanged and with no\nfitted parameter, to the AEGIS runs of the separate slow-update pilot (minimum period 0.8 s) and of\nthe exploratory campaign (normal cadence). Runs with fewer than three evidence bundles or without\neligible hazard-present OBJECT intervals are counted and excluded.\n\nTwo sampled forms are reported. phi_s(own) uses each held-out run's own decision intervals, which are\nrealized behaviour of that run. phi_s(fixed) uses the primary-campaign mean intervals for the same\ncadence, so the only inputs taken from a held-out run are its update period P and latency L; this is\nthe pre-specified conditional prediction. The half-interval terms assume that the onset crossing is\nuniformly distributed within a decision interval and independent of decision timing.\n",
   "T_inf_s": 0.5865348275173708,
   "sets": {
     "timed_compare_slow": {
@@ -16,6 +16,16 @@
       "observed_time_weighted": 0.5457700060888739,
       "predicted_first_order_time_weighted": 0.6541209713709853,
       "predicted_sampled_time_weighted": 0.5563784008972441,
+      "predicted_sampled_fixed_intervals_time_weighted": 0.5527443345110555,
+      "fixed_intervals_from_primary_s": {
+        "d_move": 0.292663171132665,
+        "d_hold": 0.12973086224080604
+      },
+      "run_level_abs_error_fixed": {
+        "runs_with_at_least_10s_eligible": 4,
+        "mean": 0.025984797879499644,
+        "max": 0.049302227110078034
+      },
       "observed_equal_run_mean": 0.5465469947276322,
       "runs_P_plus_L_above_T_inf": 4,
       "observed_time_weighted_above": 0.545770006088874,
@@ -35,7 +45,8 @@
           "observed_hold_fraction": 0.5611295034079845,
           "hold_s": 28.81400000000001,
           "move_s": 22.535999999999994,
-          "source_sha256": "83e4eed32ce6a6972d79a74dfb65a20022c7775f47e18d33509412c69de17a48"
+          "source_sha256": "83e4eed32ce6a6972d79a74dfb65a20022c7775f47e18d33509412c69de17a48",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.5724791211040129
         },
         {
           "run": "AEGIS-slowupdates-0.8s_toA_2",
@@ -50,7 +61,8 @@
           "observed_hold_fraction": 0.562701701055612,
           "hold_s": 27.025999999999986,
           "move_s": 21.003000000000004,
-          "source_sha256": "4beb28df2f56ea047626163c746457316061347eb9ecb469e499a32bfd769e39"
+          "source_sha256": "4beb28df2f56ea047626163c746457316061347eb9ecb469e499a32bfd769e39",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.5436597184107057
         },
         {
           "run": "AEGIS-slowupdates-0.8s_toB_1",
@@ -65,7 +77,8 @@
           "observed_hold_fraction": 0.564859299931366,
           "hold_s": 14.814000000000007,
           "move_s": 11.411999999999999,
-          "source_sha256": "2c7855e540ea99d0ce431da1b0ff5a8f78d32c6a29afe552fbefeae281d02f4d"
+          "source_sha256": "2c7855e540ea99d0ce431da1b0ff5a8f78d32c6a29afe552fbefeae281d02f4d",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.5406139358643801
         },
         {
           "run": "AEGIS-slowupdates-0.8s_toB_2",
@@ -80,7 +93,8 @@
           "observed_hold_fraction": 0.4974974745155665,
           "hold_s": 21.669000000000015,
           "move_s": 21.88699999999999,
-          "source_sha256": "cba9036816675d7ebcbe55703e64ca40e21a75955fd3b9307ec6d341e08a8592"
+          "source_sha256": "cba9036816675d7ebcbe55703e64ca40e21a75955fd3b9307ec6d341e08a8592",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.5467997016256445
         }
       ]
     },
@@ -108,6 +122,16 @@
       "observed_time_weighted": 0.01611915572618777,
       "predicted_first_order_time_weighted": 0.009226693743744692,
       "predicted_sampled_time_weighted": 8.917020761152246e-05,
+      "predicted_sampled_fixed_intervals_time_weighted": 0.0,
+      "fixed_intervals_from_primary_s": {
+        "d_move": 0.2814606534934525,
+        "d_hold": 0.12885714285714198
+      },
+      "run_level_abs_error_fixed": {
+        "runs_with_at_least_10s_eligible": 19,
+        "mean": 0.014377579422962432,
+        "max": 0.0592706429639475
+      },
       "observed_equal_run_mean": 0.057729257263396776,
       "runs_P_plus_L_above_T_inf": 3,
       "observed_time_weighted_above": 0.048797758225864844,
@@ -127,7 +151,8 @@
           "observed_hold_fraction": 0.0077374115940276895,
           "hold_s": 0.1280000000000001,
           "move_s": 16.415000000000006,
-          "source_sha256": "636ef42baa90d1014a27744ffb31c97757f768bfb610175287e1db36dac1b3e6"
+          "source_sha256": "636ef42baa90d1014a27744ffb31c97757f768bfb610175287e1db36dac1b3e6",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_11",
@@ -142,7 +167,8 @@
           "observed_hold_fraction": 0.004526763191540589,
           "hold_s": 0.13099999999999312,
           "move_s": 28.808000000000007,
-          "source_sha256": "f34add36bc0eb2f2ee74d7682217e223da1dd7d8d77dbcb2e02f8fe864ad7fee"
+          "source_sha256": "f34add36bc0eb2f2ee74d7682217e223da1dd7d8d77dbcb2e02f8fe864ad7fee",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_12",
@@ -157,7 +183,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 6.056999999999999,
-          "source_sha256": "d61004167d1e88a40ba15f0e410349553147b0dba699a262d7dd8b52497aad15"
+          "source_sha256": "d61004167d1e88a40ba15f0e410349553147b0dba699a262d7dd8b52497aad15",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_13",
@@ -172,7 +199,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 11.317,
-          "source_sha256": "4a2ddc91eb2e443c65f6fabe49e9db6b7fb46fce13792ce30691a7a51f04799a"
+          "source_sha256": "4a2ddc91eb2e443c65f6fabe49e9db6b7fb46fce13792ce30691a7a51f04799a",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_15",
@@ -187,7 +215,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 0.21799999999999997,
-          "source_sha256": "bc22882ed71501d5b01452135e25c6f7d090a4da0f742b5059867c386105da1d"
+          "source_sha256": "bc22882ed71501d5b01452135e25c6f7d090a4da0f742b5059867c386105da1d",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_17",
@@ -202,7 +231,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 13.271999999999995,
-          "source_sha256": "cb63fc502bff2b09fbfcff95b8b0ae0113d669e97ca2f103f93c7487b51d2f5d"
+          "source_sha256": "cb63fc502bff2b09fbfcff95b8b0ae0113d669e97ca2f103f93c7487b51d2f5d",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_18",
@@ -217,7 +247,8 @@
           "observed_hold_fraction": 0.005427521710086948,
           "hold_s": 0.13000000000000256,
           "move_s": 23.821999999999996,
-          "source_sha256": "f4b4050140a281a293d605aed86bc4f7e8258ab36947714c931df0b4aa1e25fb"
+          "source_sha256": "f4b4050140a281a293d605aed86bc4f7e8258ab36947714c931df0b4aa1e25fb",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_19",
@@ -232,7 +263,8 @@
           "observed_hold_fraction": 0.021406602419520426,
           "hold_s": 0.5220000000000056,
           "move_s": 23.862999999999992,
-          "source_sha256": "bc7daf899586566cef929848c2aad87a0861b7a7ae327e8bb62f3540fdba1803"
+          "source_sha256": "bc7daf899586566cef929848c2aad87a0861b7a7ae327e8bb62f3540fdba1803",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_2",
@@ -247,7 +279,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 25.202999999999996,
-          "source_sha256": "fc7c9a52aa0492aaa9bec8301c69e438482a5f8641d6409d8dcb7a2b8b66954a"
+          "source_sha256": "fc7c9a52aa0492aaa9bec8301c69e438482a5f8641d6409d8dcb7a2b8b66954a",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_20",
@@ -262,7 +295,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 14.411999999999995,
-          "source_sha256": "e0a1e6b9ca093f1dd1fefda46e4a17c696be9d86d5a36229bebaf955419a6252"
+          "source_sha256": "e0a1e6b9ca093f1dd1fefda46e4a17c696be9d86d5a36229bebaf955419a6252",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_21",
@@ -277,7 +311,8 @@
           "observed_hold_fraction": 0.019090774030604503,
           "hold_s": 0.2569999999999979,
           "move_s": 13.205000000000005,
-          "source_sha256": "221bf7591bff92952ff5efb25345ca874c7e88333f4520e6ef81c3e762fa3ac1"
+          "source_sha256": "221bf7591bff92952ff5efb25345ca874c7e88333f4520e6ef81c3e762fa3ac1",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_3",
@@ -292,7 +327,8 @@
           "observed_hold_fraction": 0.0411457149352126,
           "hold_s": 0.9050000000000011,
           "move_s": 21.089999999999996,
-          "source_sha256": "3c79c1e33d1fb27815b78906aa6dbb6ff05d0cba5cc520ba6c7da668d96285d8"
+          "source_sha256": "3c79c1e33d1fb27815b78906aa6dbb6ff05d0cba5cc520ba6c7da668d96285d8",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_5",
@@ -307,7 +343,8 @@
           "observed_hold_fraction": 1.0,
           "hold_s": 0.254999999999999,
           "move_s": 0.0,
-          "source_sha256": "e7f5f4ba539ebee969966a6c19c27733a6565aa3a455250d3fde68afd0fec20b"
+          "source_sha256": "e7f5f4ba539ebee969966a6c19c27733a6565aa3a455250d3fde68afd0fec20b",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_6",
@@ -322,7 +359,8 @@
           "observed_hold_fraction": 0.01637595683272656,
           "hold_s": 0.2609999999999957,
           "move_s": 15.676999999999992,
-          "source_sha256": "6344772d6b3af39f5aae4de0d4b9063927313febd04b6b0b9c59ec821517fd6b"
+          "source_sha256": "6344772d6b3af39f5aae4de0d4b9063927313febd04b6b0b9c59ec821517fd6b",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toA_7",
@@ -337,7 +375,8 @@
           "observed_hold_fraction": 0.054598908021839664,
           "hold_s": 0.39000000000000057,
           "move_s": 6.752999999999997,
-          "source_sha256": "aa7008b6b0401fa3328e65ad75a5dfbdca09b9492cf6f854a2dd04118e876563"
+          "source_sha256": "aa7008b6b0401fa3328e65ad75a5dfbdca09b9492cf6f854a2dd04118e876563",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_1",
@@ -352,7 +391,8 @@
           "observed_hold_fraction": 0.04466880078798342,
           "hold_s": 0.9070000000000036,
           "move_s": 19.398,
-          "source_sha256": "223ad7cfda871145b001ac5613849cdfb05c5f31e292de376c811a855662bfd1"
+          "source_sha256": "223ad7cfda871145b001ac5613849cdfb05c5f31e292de376c811a855662bfd1",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_11",
@@ -367,7 +407,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 25.008,
-          "source_sha256": "d4949b3c3747095177ee41d30747ae3f0551678e9cfb570d22b2f554802e6444"
+          "source_sha256": "d4949b3c3747095177ee41d30747ae3f0551678e9cfb570d22b2f554802e6444",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_12",
@@ -382,7 +423,8 @@
           "observed_hold_fraction": 0.0592706429639475,
           "hold_s": 1.4269999999999996,
           "move_s": 22.648999999999994,
-          "source_sha256": "721cdfbea8cf30398c92c3a5a9d2c28f3971ce1dfe8a27545e56583584939805"
+          "source_sha256": "721cdfbea8cf30398c92c3a5a9d2c28f3971ce1dfe8a27545e56583584939805",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_13",
@@ -397,7 +439,8 @@
           "observed_hold_fraction": 0.011486128291217283,
           "hold_s": 0.25999999999999446,
           "move_s": 22.37600000000001,
-          "source_sha256": "9da584ed7544a55ddafaee96bc05f4f7a139ad049c44dc8b92ce94f5f7ac600d"
+          "source_sha256": "9da584ed7544a55ddafaee96bc05f4f7a139ad049c44dc8b92ce94f5f7ac600d",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_14",
@@ -412,7 +455,8 @@
           "observed_hold_fraction": 0.005433192627575353,
           "hold_s": 0.12999999999999545,
           "move_s": 23.797000000000004,
-          "source_sha256": "338b87bb2ac4b3fbaeb59540cf5c38e67261a7d46fd865dc61ac24985134ae0e"
+          "source_sha256": "338b87bb2ac4b3fbaeb59540cf5c38e67261a7d46fd865dc61ac24985134ae0e",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_5",
@@ -427,7 +471,8 @@
           "observed_hold_fraction": 0.029564915528812925,
           "hold_s": 0.5110000000000028,
           "move_s": 16.773000000000003,
-          "source_sha256": "b1ec99ba96e8d7bd19b6a1ab2d658a40ebc4adce2497a67024613133e4f9526c"
+          "source_sha256": "b1ec99ba96e8d7bd19b6a1ab2d658a40ebc4adce2497a67024613133e4f9526c",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_6",
@@ -442,7 +487,8 @@
           "observed_hold_fraction": 0.0,
           "hold_s": 0.0,
           "move_s": 18.775000000000002,
-          "source_sha256": "07d23c325ebb6de8a97b2ddf477ac1795df68dcba68f5d053911afb916bcd2b9"
+          "source_sha256": "07d23c325ebb6de8a97b2ddf477ac1795df68dcba68f5d053911afb916bcd2b9",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         },
         {
           "run": "AEGIS-sensor-time_toB_9",
@@ -457,7 +503,8 @@
           "observed_hold_fraction": 0.007039584123030405,
           "hold_s": 0.13000000000000256,
           "move_s": 18.337000000000007,
-          "source_sha256": "6970e26f48647f5ce5435694ff3b542967b8456681c9e29d3aef4bd2904edb62"
+          "source_sha256": "6970e26f48647f5ce5435694ff3b542967b8456681c9e29d3aef4bd2904edb62",
+          "predicted_hold_fraction_sampled_fixed_intervals": 0.0
         }
       ]
     }

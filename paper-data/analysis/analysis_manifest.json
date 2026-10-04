@@ -394,9 +394,9 @@
     "analysis/primary_table_rows.tex": "33d29fedc91af52bd3c9cf2018e5fc391b0478b23eb9d8895b9108fe0fe285fe",
     "analysis/results_table.tex": "61c42cd841b3d104dbcf8b02780ba2d666cd8065531ce93d05d1dec2f3c5d69a",
     "analysis/supplementary_table.tex": "edf6d160e2e979115c1a6cfd183cf6c8f423f67b6add3dbc60a77f4b6d49c906",
-    "figures/evidence_age_threshold_sensitivity.pdf": "2f5c7c26c2af94367fd50db2760128864b712545e1a6efd0d6c1a21c74399948",
+    "figures/evidence_age_threshold_sensitivity.pdf": "a661193f34a2cc1570271e22321cc61df0eda0ed518144d04ce37efb269290b7",
     "figures/hardware_primary_comparison.pdf": "5acf99a91c20700144992a73750dabb9de47acece21109670c800e6724f00a19",
-    "figures/evidence_age_threshold_sensitivity.png": "81f2a1ea764ff1e717c906a0f8c6a5f233126bbf74fd18bed435206e5dad779c",
+    "figures/evidence_age_threshold_sensitivity.png": "e8248cb3a08cfa63948fcdfaabbd9be90447c35359578de9a49dfae780de77fb",
     "figures/hardware_primary_comparison.png": "9e2305a560125aeb06d8d17f66ce9b480a6ebea35f86e33cf17e6c339a8300f8",
     "figures/aegis_workflow.pdf": "0e5a455f65a543ce97e15ed1b5757fdff0e12f3d29d0d682c9a19fe57011fbc0",
     "figures/aegis_workflow.png": "1669b400fa263536ad41ad7d05287f1da08cb01f178ab8047e3892ea7340ff61",
@@ -405,8 +405,8 @@
     "figures/laboratory_apparatus.png": "487f3a457844729d7badf1e050287e48adfe30bea48c4eecd3e3d5e32c1028c4",
     "figures/primary_camera_frame.png": "aaef65915ac4b6711ce44df734fd71650bb1eef2937c224352610daf08677990",
     "figures/cadence_response_patterns.png": "8523dcabff1de92fecb04ed58e162e4455b578bfc7a2167541c7a328330308ca",
-    "figures/hardware_primary_with_age.pdf": "8a7705c2980f7462fa8a95f16d582889bcd2cc9181ee6090317f54607a7932bf",
-    "figures/hardware_primary_with_age.png": "a112e86eb02a6fac84d4af7abe98fd971539376d1dd9942c908c89f3c18a4471"
+    "figures/hardware_primary_with_age.pdf": "bdf426158fa559e66cff3d1b314d8ae412e7a5fe4dddaad5466a24f0cb595937",
+    "figures/hardware_primary_with_age.png": "f5473f4bd0bbd424dec582f55a76303b6e7b10996fb48f00940b6fd1d898733c"
   },
   "presentation_sources": {
     "analysis/build_workflow.py": "c7854e1cca597adf7704d2f3b8cb50fdfce00746a4887771001abd7178ae467a",
@@ -419,5 +419,34 @@
     "sensitivity_plot": "Palatino regular-weight serif type; distinct navy, burnt-orange and purple solid/dashed/dotted curves with circle/square/triangle method markers; method key and explanatory notes moved outside image into manuscript caption; neutral conditional-onset band and grey dashed reporting reference; all six 101-point curves unchanged.",
     "primary_plot": "Four stacked monochrome point panels for moving-decision evidence age, command-estimated separation, carry-to-delivery time, and older-evidence fraction; normal and slow cadence groups side by side; circle/square/triangle distinguish methods, filled means and open individual runs, horizontal jitter only; Palatino serif type, no bars, grids, or connecting lines.",
     "restored_context": "Corrected four-stage workflow with confirmed depth-only hold wording, historical apparatus photo, raw primary-camera frame, and current calibration geometry."
+  },
+  "release_updates_2026-10-05": {
+    "reason": "Figures 3 and 4 were redrawn for the October 2026 revision (method legend; general 0.555-0.587 s onset band) from the same run-level values; data and tables unchanged.",
+    "updated": [
+      {
+        "section": "output_hashes",
+        "path": "figures/evidence_age_threshold_sensitivity.pdf",
+        "previous_sha256": "2f5c7c26c2af94367fd50db2760128864b712545e1a6efd0d6c1a21c74399948",
+        "sha256": "a661193f34a2cc1570271e22321cc61df0eda0ed518144d04ce37efb269290b7"
+      },
+      {
+        "section": "output_hashes",
+        "path": "figures/evidence_age_threshold_sensitivity.png",
+        "previous_sha256": "81f2a1ea764ff1e717c906a0f8c6a5f233126bbf74fd18bed435206e5dad779c",
+        "sha256": "e8248cb3a08cfa63948fcdfaabbd9be90447c35359578de9a49dfae780de77fb"
+      },
+      {
+        "section": "output_hashes",
+        "path": "figures/hardware_primary_with_age.pdf",
+        "previous_sha256": "8a7705c2980f7462fa8a95f16d582889bcd2cc9181ee6090317f54607a7932bf",
+        "sha256": "bdf426158fa559e66cff3d1b314d8ae412e7a5fe4dddaad5466a24f0cb595937"
+      },
+      {
+        "section": "output_hashes",
+        "path": "figures/hardware_primary_with_age.png",
+        "previous_sha256": "a112e86eb02a6fac84d4af7abe98fd971539376d1dd9942c908c89f3c18a4471",
+        "sha256": "f5473f4bd0bbd424dec582f55a76303b6e7b10996fb48f00940b6fd1d898733c"
+      }
+    ]
   }
 }

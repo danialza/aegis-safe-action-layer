@@ -63,7 +63,8 @@ for ref in ("Trust12", "Trust32"):
 for k in ("age", "time", "sep"):
     a, b = val("AEGIS", "slow", k), val("AEGIS", "normal", k)
     d, p, n = exact_p(a, b)
-    out.setdefault("within_AEGIS_slow_minus_normal", []).append({"metric": k, "diff": d, "p": p})
+    out.setdefault("within_AEGIS_slow_minus_normal", []).append({"metric": k, "diff": d, "p": p,
+        "compatibility_interval": [min(a) - max(b), max(a) - min(b)]})
 (HERE / "exact_permutation_results.json").write_text(json.dumps(out, indent=2) + "\n")
 
 iv = lambda x: "[" + f"{x[0]:.1f}, {x[1]:.1f}".replace("-", "$-$") + "]"

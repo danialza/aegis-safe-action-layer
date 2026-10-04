@@ -1,0 +1,13 @@
+{
+  "scope": "Generated manuscript fragments; descriptive post-hoc audit, no new trial or altered observation.",
+  "builder_sha256": "beb24594d8a7310e0bede55a2ce1ba0166a26205d1e77319e26a940030d5ca1a",
+  "pattern_results_sha256": "c6c9223067f2d31351bf1f5b8a6a30951df57e5ec5443a897854570afeb69af2",
+  "source_hashes_verified": 64,
+  "sources_unchanged": true,
+  "outputs": {
+    "analysis/motion_freshness_primary_rows.tex": "8838a046858a88714373d6380a6ac79ec9e5902ded379fdb97b392d5baff99d8",
+    "analysis/motion_freshness_per_run_table.tex": "0b71d6ada5f39d76daeade2be96ca35560595480bff26e435b6e4e7575418d0a",
+    "analysis/motion_freshness_nominal_block_table.tex": "fd1d3e00a785b6bdd596cee3114b2e63b09d5d9dfa543eb6f433101c26364641",
+    "figures/cadence_response_patterns.png": "8523dcabff1de92fecb04ed58e162e4455b578bfc7a2167541c7a328330308ca"
+  }
+}

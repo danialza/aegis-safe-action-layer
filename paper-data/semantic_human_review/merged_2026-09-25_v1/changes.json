@@ -1,0 +1,1325 @@
+{
+  "schema_version": "aegis-human-merged-analysis-v1",
+  "definition": "One ledger row per rechecked case. Label changes exclude notes, timestamps and export-level identity metadata.",
+  "rows": [
+    {
+      "case_id": "case_61efeefabd98b1341d94",
+      "changed_fields": {
+        "label": {
+          "from": "no_hand",
+          "to": "uncertain"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:39:08.272Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:27.646Z"
+    },
+    {
+      "case_id": "case_80f8df3f7b3a83dc69f8",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:39:23.305Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:34.549Z"
+    },
+    {
+      "case_id": "case_4b548a2cf54145fee749",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:39:27.638Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:36.842Z"
+    },
+    {
+      "case_id": "case_9f99e29501eb55b248d8",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:39:33.238Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:42.650Z"
+    },
+    {
+      "case_id": "case_85451fca06d14a07f632",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:39:51.871Z",
+      "recheck_reviewed_at": "2026-09-24T22:51:49.974Z"
+    },
+    {
+      "case_id": "case_4717cc57bc157887567c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:05.792Z",
+      "recheck_reviewed_at": "2026-09-24T22:51:59.128Z"
+    },
+    {
+      "case_id": "case_4cb1a5b776241bf5417c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:14.642Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:02.697Z"
+    },
+    {
+      "case_id": "case_401184f200a145de9050",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:17.792Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:04.337Z"
+    },
+    {
+      "case_id": "case_30e534f34c92bf9d06bd",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:26.475Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:05.895Z"
+    },
+    {
+      "case_id": "case_4c48d609fcc733358df1",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:33.725Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:11.570Z"
+    },
+    {
+      "case_id": "case_3a55d448d46a9a6d9586",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:46.471Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:18.624Z"
+    },
+    {
+      "case_id": "case_9a6e1939df9601f83992",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:40:53.788Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:23.728Z"
+    },
+    {
+      "case_id": "case_7807b58aaee4516b0b26",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:00.871Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:30.741Z"
+    },
+    {
+      "case_id": "case_121e4489d27af3c34d23",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:07.895Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:38.332Z"
+    },
+    {
+      "case_id": "case_45968f1d2556c5f134bf",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:15.329Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:44.728Z"
+    },
+    {
+      "case_id": "case_9652972103af642e89f5",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:27.196Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:52.328Z"
+    },
+    {
+      "case_id": "case_dd7056971db7a0dfca49",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:38.663Z",
+      "recheck_reviewed_at": "2026-09-24T22:52:54.245Z"
+    },
+    {
+      "case_id": "case_f24e9c0aa5567df57825",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:43.121Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:07.382Z"
+    },
+    {
+      "case_id": "case_705cfa651833c31f93b1",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:51.101Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:12.944Z"
+    },
+    {
+      "case_id": "case_26cbc2947c078203217d",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:52.900Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:14.666Z"
+    },
+    {
+      "case_id": "case_3fb6aa5b4f339b1952db",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:41:56.267Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:15.807Z"
+    },
+    {
+      "case_id": "case_27b73cf65a4fdef9c16b",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:04.558Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:20.707Z"
+    },
+    {
+      "case_id": "case_8f9ffdef9456c057240e",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:13.083Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:25.778Z"
+    },
+    {
+      "case_id": "case_73c3a0411b2a752b5306",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:22.325Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:30.882Z"
+    },
+    {
+      "case_id": "case_b5c07a132e05e6e515ca",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:27.999Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:32.461Z"
+    },
+    {
+      "case_id": "case_89b77d51ffeeeac7c5a2",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:40.083Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:37.607Z"
+    },
+    {
+      "case_id": "case_3d051a7a75886faaf0e3",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:42:47.400Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:42.353Z"
+    },
+    {
+      "case_id": "case_043cdef387cf0ec70d71",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:01.383Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:49.370Z"
+    },
+    {
+      "case_id": "case_8e2ee4466a3dd4eda6fa",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:12.466Z",
+      "recheck_reviewed_at": "2026-09-24T22:53:54.073Z"
+    },
+    {
+      "case_id": "case_f09b2309cc1e3fb2d709",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:20.724Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:00.449Z"
+    },
+    {
+      "case_id": "case_562c47cd3e1b097abb4c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:25.024Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:01.819Z"
+    },
+    {
+      "case_id": "case_d73d22916145dc727af5",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:33.283Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:06.853Z"
+    },
+    {
+      "case_id": "case_c3daefcb962a1f142103",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:35.033Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:08.237Z"
+    },
+    {
+      "case_id": "case_56c3531167ef609b13f1",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:43:55.108Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:13.390Z"
+    },
+    {
+      "case_id": "case_d176b2948bf0b7ab8459",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:04.774Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:18.402Z"
+    },
+    {
+      "case_id": "case_dcf1bac570fc2dd0ed9a",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:05.916Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:19.524Z"
+    },
+    {
+      "case_id": "case_b4f10133380972e244ff",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:10.995Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:24.232Z"
+    },
+    {
+      "case_id": "case_1ee3e3950d0fa68215cc",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:21.603Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:34.381Z"
+    },
+    {
+      "case_id": "case_80c75ca398e9e6aa7676",
+      "changed_fields": {
+        "cover": {
+          "from": "glove",
+          "to": "bare"
+        },
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:29.662Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:03.108Z"
+    },
+    {
+      "case_id": "case_74939e2a20bac2560fb4",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:41.519Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:39.810Z"
+    },
+    {
+      "case_id": "case_7f426cb0b1e9731ee75d",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:44:53.137Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:12.017Z"
+    },
+    {
+      "case_id": "case_8c3a7f0e8d80bb71950f",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:00.136Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:48.274Z"
+    },
+    {
+      "case_id": "case_a3cd915674e3f877fc34",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:01.312Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:49.923Z"
+    },
+    {
+      "case_id": "case_aa978340c8dce9285f83",
+      "changed_fields": {
+        "label": {
+          "from": "hand",
+          "to": "uncertain"
+        },
+        "cover": {
+          "from": "bare",
+          "to": null
+        },
+        "visibility": {
+          "from": "partial",
+          "to": null
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:08.870Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:52.482Z"
+    },
+    {
+      "case_id": "case_772708cdc4bae2549dde",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:14.761Z",
+      "recheck_reviewed_at": "2026-09-24T22:54:57.774Z"
+    },
+    {
+      "case_id": "case_d52f26620ccc70b59dd2",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:24.345Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:02.889Z"
+    },
+    {
+      "case_id": "case_91726f33c40eb4857f2f",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:31.961Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:07.374Z"
+    },
+    {
+      "case_id": "case_5c7268045c74da4a2ac0",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:37.961Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:11.769Z"
+    },
+    {
+      "case_id": "case_5d5e9b1de4862a276fb4",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:45.011Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:17.019Z"
+    },
+    {
+      "case_id": "case_3b788bccc6c7ba9962d7",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:52.428Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:19.779Z"
+    },
+    {
+      "case_id": "case_30a0d3a41023d6f1d787",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:45:58.653Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:28.044Z"
+    },
+    {
+      "case_id": "case_23e8f7145b8a933c07f3",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:07.402Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:33.289Z"
+    },
+    {
+      "case_id": "case_ae1dc38b28f10331f52c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:17.169Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:37.464Z"
+    },
+    {
+      "case_id": "case_3bcd872012739b234c8b",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:25.320Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:42.306Z"
+    },
+    {
+      "case_id": "case_5bf192179ac3e524c3ed",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:30.353Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:47.215Z"
+    },
+    {
+      "case_id": "case_e0d2d75ecba975524f44",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:36.082Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:52.852Z"
+    },
+    {
+      "case_id": "case_889b700cf27fdfbc5667",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:43.324Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:27.758Z"
+    },
+    {
+      "case_id": "case_cacb52721e6da86a4b39",
+      "changed_fields": {
+        "cover": {
+          "from": "glove",
+          "to": "bare"
+        },
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:46:51.032Z",
+      "recheck_reviewed_at": "2026-09-24T22:55:57.364Z"
+    },
+    {
+      "case_id": "case_8fa012f4e92caa0296a2",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:00.648Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:36.213Z"
+    },
+    {
+      "case_id": "case_77acb448123b90aadb19",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:09.499Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:01.764Z"
+    },
+    {
+      "case_id": "case_0d372dbb2d38754f5a9b",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:15.874Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:05.939Z"
+    },
+    {
+      "case_id": "case_ccbf837c9982d45c63e2",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:26.065Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:09.906Z"
+    },
+    {
+      "case_id": "case_95082fe38ec4c0a6a421",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:31.865Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:15.506Z"
+    },
+    {
+      "case_id": "case_339e754e02748a69ae2f",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:51.065Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:21.856Z"
+    },
+    {
+      "case_id": "case_27a81b7585ceb0dfc9f6",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:47:58.073Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:28.385Z"
+    },
+    {
+      "case_id": "case_fc2cebc43b5dfed07e0e",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:02.515Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:34.685Z"
+    },
+    {
+      "case_id": "case_9245d155e1f4ed04ba23",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:10.890Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:43.002Z"
+    },
+    {
+      "case_id": "case_21492a8623896678bc95",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:15.807Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:44.561Z"
+    },
+    {
+      "case_id": "case_435ed04339ed37fa0999",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:17.240Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:45.502Z"
+    },
+    {
+      "case_id": "case_9ee17300ece679845f03",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:20.948Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:50.961Z"
+    },
+    {
+      "case_id": "case_f835c3f6f7144f18434d",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:34.615Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:43.038Z"
+    },
+    {
+      "case_id": "case_f024f250db672e973362",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:48:54.207Z",
+      "recheck_reviewed_at": "2026-09-24T22:56:55.727Z"
+    },
+    {
+      "case_id": "case_148c1ced3152daa8ee69",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:01.215Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:01.268Z"
+    },
+    {
+      "case_id": "case_1090a77dec6bbd2ada25",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:16.498Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:06.952Z"
+    },
+    {
+      "case_id": "case_bf025d9e276b3106997e",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:24.249Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:11.227Z"
+    },
+    {
+      "case_id": "case_8b7acaa2e44a4f56b178",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:25.865Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:12.602Z"
+    },
+    {
+      "case_id": "case_04472459734713eb2d4f",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:29.548Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:18.230Z"
+    },
+    {
+      "case_id": "case_abfd35ec1ee8eb607d64",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:34.648Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:26.776Z"
+    },
+    {
+      "case_id": "case_7d4fa6578146e33ad772",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:43.006Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:32.456Z"
+    },
+    {
+      "case_id": "case_4be8e122d5f0b1d6e966",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:48.573Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:49.308Z"
+    },
+    {
+      "case_id": "case_22fa52fcb2cd00427a61",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:54.798Z",
+      "recheck_reviewed_at": "2026-09-24T22:22:56.875Z"
+    },
+    {
+      "case_id": "case_2e8288b56f1c696970d8",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:49:59.273Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:37.860Z"
+    },
+    {
+      "case_id": "case_3cc19e181a1d07fcd496",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:03.265Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:47.570Z"
+    },
+    {
+      "case_id": "case_a5c92faa192ffb2a4202",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:17.239Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:52.460Z"
+    },
+    {
+      "case_id": "case_68995763f5eb6d70601a",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:25.405Z",
+      "recheck_reviewed_at": "2026-09-24T22:57:56.551Z"
+    },
+    {
+      "case_id": "case_6bb0539cf8cad0be26e6",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:31.113Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:03.987Z"
+    },
+    {
+      "case_id": "case_b822cb645d29b727e16f",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:47.996Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:09.162Z"
+    },
+    {
+      "case_id": "case_1aeff1894d90f77ae365",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:50:57.021Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:01.201Z"
+    },
+    {
+      "case_id": "case_20b530ce217c332e1b9c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:03.238Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:06.060Z"
+    },
+    {
+      "case_id": "case_18c73e0e31e5bd08d1d9",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:10.875Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:14.700Z"
+    },
+    {
+      "case_id": "case_fa51835e6d513ef096da",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:18.867Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:10.072Z"
+    },
+    {
+      "case_id": "case_863a4818bff52d49923c",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:26.125Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:16.443Z"
+    },
+    {
+      "case_id": "case_3b0d59cb65d0d457ca73",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:34.775Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:20.872Z"
+    },
+    {
+      "case_id": "case_0b675da9438f39710bf2",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:41.933Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:26.426Z"
+    },
+    {
+      "case_id": "case_1a9270a5e38d3b14179b",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:51:53.325Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:30.905Z"
+    },
+    {
+      "case_id": "case_8410c05f64890958ed65",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:00.134Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:36.147Z"
+    },
+    {
+      "case_id": "case_361b215e7efde2b5840b",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:09.512Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:40.589Z"
+    },
+    {
+      "case_id": "case_e00cc710753080511aa5",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:12.846Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:41.923Z"
+    },
+    {
+      "case_id": "case_a49366f24da82c179c0e",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:15.412Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:43.481Z"
+    },
+    {
+      "case_id": "case_663709e56aca1d2c6314",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:26.271Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:48.459Z"
+    },
+    {
+      "case_id": "case_26d9f1fced2274821027",
+      "changed_fields": {
+        "visibility": {
+          "from": "uncertain",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:33.179Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:19.800Z"
+    },
+    {
+      "case_id": "case_8003a1df8ff86f016593",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:39.012Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:53.343Z"
+    },
+    {
+      "case_id": "case_70dbaa032da9c4f9b266",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:40.937Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:54.859Z"
+    },
+    {
+      "case_id": "case_3443325d8c5cf28584ad",
+      "changed_fields": {
+        "label": {
+          "from": "hand",
+          "to": "uncertain"
+        },
+        "cover": {
+          "from": "bare",
+          "to": null
+        },
+        "visibility": {
+          "from": "uncertain",
+          "to": null
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:46.929Z",
+      "recheck_reviewed_at": "2026-09-24T22:23:23.817Z"
+    },
+    {
+      "case_id": "case_b580df3265e2ad2f442e",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:48.229Z",
+      "recheck_reviewed_at": "2026-09-24T22:58:55.693Z"
+    },
+    {
+      "case_id": "case_bc18640de2ad837f4f86",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:55.437Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:02.247Z"
+    },
+    {
+      "case_id": "case_0982b2ce70184541f5dd",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:52:59.529Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:07.305Z"
+    },
+    {
+      "case_id": "case_0d3a448bb412d5ad7b4a",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:14.395Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:12.088Z"
+    },
+    {
+      "case_id": "case_f30d75742116295fd6cf",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:16.345Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:13.513Z"
+    },
+    {
+      "case_id": "case_464bcb3e052ff9ebbb94",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:25.153Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:24.231Z"
+    },
+    {
+      "case_id": "case_bf1f29998d152a4945da",
+      "changed_fields": {
+        "label": {
+          "from": "uncertain",
+          "to": "no_hand"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:43.270Z",
+      "recheck_reviewed_at": "2026-09-24T22:21:50.401Z"
+    },
+    {
+      "case_id": "case_4f5ee03a56cfd636fb49",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:46.120Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:25.419Z"
+    },
+    {
+      "case_id": "case_b4075b7d9e1cecfb0811",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:53:52.878Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:30.272Z"
+    },
+    {
+      "case_id": "case_a1623d3eb7ff18f646c5",
+      "changed_fields": {},
+      "label_changed": false,
+      "annotation_changed": false,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:54:13.137Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:35.026Z"
+    },
+    {
+      "case_id": "case_ffc3160bd82f9f24559e",
+      "changed_fields": {
+        "visibility": {
+          "from": "full",
+          "to": "partial"
+        }
+      },
+      "label_changed": true,
+      "annotation_changed": true,
+      "reviewed_at_changed": true,
+      "original_reviewed_at": "2026-09-24T21:54:19.128Z",
+      "recheck_reviewed_at": "2026-09-24T22:59:40.226Z"
+    }
+  ],
+  "field_transitions": {
+    "label": [
+      {
+        "from": "hand",
+        "to": "hand",
+        "count": 90
+      },
+      {
+        "from": "hand",
+        "to": "uncertain",
+        "count": 2
+      },
+      {
+        "from": "no_hand",
+        "to": "no_hand",
+        "count": 21
+      },
+      {
+        "from": "no_hand",
+        "to": "uncertain",
+        "count": 1
+      },
+      {
+        "from": "uncertain",
+        "to": "no_hand",
+        "count": 1
+      }
+    ],
+    "cover": [
+      {
+        "from": "bare",
+        "to": "bare",
+        "count": 87
+      },
+      {
+        "from": "bare",
+        "to": null,
+        "count": 2
+      },
+      {
+        "from": "glove",
+        "to": "bare",
+        "count": 2
+      },
+      {
+        "from": "glove",
+        "to": "glove",
+        "count": 1
+      },
+      {
+        "from": null,
+        "to": null,
+        "count": 23
+      }
+    ],
+    "visibility": [
+      {
+        "from": "full",
+        "to": "full",
+        "count": 53
+      },
+      {
+        "from": "full",
+        "to": "partial",
+        "count": 16
+      },
+      {
+        "from": "partial",
+        "to": "partial",
+        "count": 9
+      },
+      {
+        "from": "partial",
+        "to": null,
+        "count": 1
+      },
+      {
+        "from": "uncertain",
+        "to": "partial",
+        "count": 12
+      },
+      {
+        "from": "uncertain",
+        "to": null,
+        "count": 1
+      },
+      {
+        "from": null,
+        "to": null,
+        "count": 23
+      }
+    ],
+    "note": [
+      {
+        "from": "",
+        "to": "",
+        "count": 115
+      }
+    ]
+  }
+}

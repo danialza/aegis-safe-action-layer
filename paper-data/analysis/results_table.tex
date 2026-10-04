@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Primary hardware comparison, conditional on successful pickup. Values are unweighted run means [minimum, maximum]; $n=4$ per cell (two runs in each direction). Separation is command--estimated obstacle-edge separation, not independently measured physical clearance. The age threshold is an analysis reference, not a safety limit.}
+\label{tab:hardware-primary}
+\begin{tabular}{llrccc}
+\toprule
+Setting & Method & $n$ & \shortstack{Min. separation\\(mm)} & \shortstack{Carry-to-delivery\\(s)} & \shortstack{Moving age $>0.6$ s\\(\%)} \\
+\midrule
+Normal & AEGIS & 4 & 75.5 [68.9, 83.3] & 31.4 [26.5, 35.1] & 0.0 [0.0, 0.0] \\
+Normal & Trust12 & 4 & 57.5 [53.2, 63.9] & 28.3 [25.3, 31.3] & 1.9 [0.0, 7.6] \\
+Normal & Trust32 & 4 & 72.5 [66.1, 80.3] & 30.6 [26.8, 35.5] & 0.3 [0.0, 1.1] \\
+Slow & AEGIS & 4 & 77.2 [68.4, 81.1] & 54.4 [42.6, 61.1] & 4.8 [0.0, 19.0] \\
+Slow & Trust12 & 4 & 54.0 [51.6, 59.3] & 28.0 [25.2, 32.5] & 60.8 [58.5, 64.5] \\
+Slow & Trust32 & 4 & 72.8 [69.5, 79.9] & 33.4 [27.5, 42.8] & 61.3 [58.0, 64.6] \\
+\bottomrule
+\end{tabular}
+\end{table}

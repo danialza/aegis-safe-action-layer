@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Software decision-interval occupancy in seconds, averaged over four runs per cell. Each interval is assigned to its earlier decision's final recorded reason. These are not measured robot standstill times. The unassigned tail includes final command execution and placement; totals include the small initial gap and reproduce carry-to-delivery time. Evidence-error and other-hold categories are zero in every cell.}
+\label{tab:decision-occupancy}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Setting & Method & Move & Score & Geom. & Human & Goal & Depth & Tail & Total \\
+\midrule
+Normal & AEGIS & 21.49 & 0.32 & 0.42 & 0.36 & 0.91 & 0.00 & 7.92 & 31.42 \\
+Normal & Trust12 & 18.43 & 0.00 & 0.74 & 0.65 & 0.45 & 0.00 & 8.03 & 28.30 \\
+Normal & Trust32 & 21.08 & 0.00 & 0.42 & 0.55 & 0.45 & 0.13 & 7.97 & 30.61 \\
+Slow & AEGIS & 21.23 & 22.84 & 0.13 & 0.68 & 1.36 & 0.00 & 8.13 & 54.37 \\
+Slow & Trust12 & 16.49 & 0.00 & 0.62 & 0.42 & 2.79 & 0.00 & 7.70 & 28.02 \\
+Slow & Trust32 & 18.78 & 0.00 & 0.65 & 0.45 & 2.14 & 3.54 & 7.80 & 33.36 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,174 @@
+{
+  "updated_at_utc": "2026-10-04T01:07:06.414748+00:00",
+  "passed_document_consistency_checks": true,
+  "item_8_completed_scope": "Feasible editorial, claim-boundary and local publication-document work only.",
+  "correct_original_reviewer_comment_counts": {
+    "R1": 7,
+    "R2": 3,
+    "R3": 6
+  },
+  "reviewer_response_is_local_unsent_draft": true,
+  "all_primary_and_adverse_in_scope_observations_retained": true,
+  "archived_log_files_checked_byte_identical": 184,
+  "available_original_json_jsonl_hashes_checked_unchanged": 192,
+  "original_video_log_controller_or_human_export_edits": false,
+  "test_suites": [
+    {
+      "directory": "analysis",
+      "modules": [
+        "test_primary_figure",
+        "test_sensitivity_figure",
+        "test_semantic_paper",
+        "test_semantic_human_merge",
+        "test_semantic_human_review",
+        "test_semantic_human_recheck",
+        "test_semantic_auto_report",
+        "test_semantic_auto_audit"
+      ],
+      "tests_passed": 58,
+      "passed": true
+    },
+    {
+      "directory": "analysis/exploratory_patterns_2026-10-02",
+      "modules": [
+        "test_pattern_audit"
+      ],
+      "tests_passed": 6,
+      "passed": true
+    },
+    {
+      "directory": "analysis/offline_review_2026-10-03",
+      "modules": [
+        "test_shadow_timeout",
+        "test_stage_age_audit",
+        "test_proxy_sensitivity",
+        "test_review_figure"
+      ],
+      "tests_passed": 33,
+      "passed": true
+    },
+    {
+      "directory": "analysis",
+      "modules": [
+        "test_remedy8"
+      ],
+      "tests_passed": 8,
+      "passed": true
+    },
+    {
+      "directory": "analysis",
+      "modules": [
+        "test_method_clarifications"
+      ],
+      "tests_passed": 4,
+      "passed": true
+    }
+  ],
+  "total_tests_passed": 109,
+  "method_clarifications_checked": [
+    "RGB precedence and confirmed depth-only fallback",
+    "Planning-centre cache regeneration versus current-radius target guard",
+    "Non-score residual includes move-labelled occupancy change"
+  ],
+  "document_sha256": {
+    "README_FA.md": "042adc2feeb130d356c48d9dd25d5a51af7e6751b9086472793cfdfc4ed97ebe",
+    "manuscript/main.tex": "f13698d5adb128f1dd960f8aefe586df80bf7ae91dc6598742d5bb467339606d",
+    "manuscript/supplementary.tex": "a8b8b2fc4484a52c1d660a4ff9a8df199a0c8173b00397318bde26f63003a52d",
+    "review/CURRENT_REVIEWER_RESPONSE.md": "4a2f9db0f71c85e62807c35c1360a32ebaa023d8e18ddb4955189d7b5c785798",
+    "review/SUBMISSION_CHECKLIST.md": "7e99a4980987dd8ab8ba65e8960b8ee2f80620ad9d59769b048c630724575ea8",
+    "review/DATA_RELEASE_CHECKLIST.md": "fdc23667a9edc2d749a1579f8c5c170ad57b76a95b6e8e0d2feb96a6374b1b6a",
+    "review/COVER_LETTER_DRAFT.md": "30fb6ccf250629b54d2e42798b98474d54459643ac803f56b764693eaa1545aa",
+    "review/REVIEWER_RESPONSE_UPDATE_2026-09-25.md": "f1ecdf3a5e1e6a3d4da704cbe8353062f6f74cbd6061be02638249e3f99c3a17",
+    "review/FINAL_QA.md": "531fa7a245dae70361278c9fa32cd6cd174ae25886f99752f9a22593414e39af",
+    "review/PROPOSAL_RESPONSE_FA.md": "f33f37fa17ba333f3ad3ccc54c60333924e0c0c2959c18316a20e5b0c205f07f",
+    "review/EDITORIAL_AUDIT.md": "4f0e5a3feba64d8864c2cba9e996f3ad9ee160c4a9533b61eaba6768e5905185",
+    "review/REVISION_DECISIONS_FA.md": "74d60bc704c91e30ff0054f6b69fedc9f8af1bc4d7a2244b6a56ceb238e853ea",
+    "analysis/check_remedy8.py": "27a6549835e3245c0e50a4340e79d040da6b95c74b3446705415ed8d7592819d",
+    "analysis/test_remedy8.py": "d022b331337ad82695ea6812b94819d3680e15d678179f7a91eb1455a4c1408a",
+    "analysis/check_manuscript.py": "e89a44111d1c4d159aca595e40d869cd0d1369eb5243832123e36a130503c553",
+    "analysis/test_method_clarifications.py": "3aaffd33ef1ba140221fe8682c507e261b343ffa63e78a5b005c7fcc858aeda3",
+    "analysis/build_workflow.py": "c7854e1cca597adf7704d2f3b8cb50fdfce00746a4887771001abd7178ae467a"
+  },
+  "pdfs": {
+    "main": {
+      "pages": 22,
+      "pdf_sha256": "373d9afa614b6c5a98d56d3a7988014d83382d56d0e8c1f48f344205352d9000",
+      "tex_sha256": "f13698d5adb128f1dd960f8aefe586df80bf7ae91dc6598742d5bb467339606d",
+      "defined_cross_references": 15,
+      "defined_citations": 26,
+      "missing_glyphs_or_unresolved_references": false,
+      "unmodified_submission_template_unassigned_doi_stub": true
+    },
+    "supplementary": {
+      "pages": 16,
+      "pdf_sha256": "ba917a81bb84e2456aac4f63431af68200f6a166897fea47cd4a9e565660eb0d",
+      "tex_sha256": "a8b8b2fc4484a52c1d660a4ff9a8df199a0c8173b00397318bde26f63003a52d",
+      "defined_cross_references": 12,
+      "defined_citations": 0,
+      "missing_glyphs_or_unresolved_references": false,
+      "unmodified_submission_template_unassigned_doi_stub": false
+    }
+  },
+  "visual_review": {
+    "reported_complete": true,
+    "scope": "Manual inspection of rendered pages, not physical validation.",
+    "directory": "tmp/pdfs/offline-review-20261003-atolu9le",
+    "all_pages_inspected_via_contact_sheets": true,
+    "documents": {
+      "main": {
+        "pages_rendered_and_inspected": 22,
+        "pdf_sha256": "373d9afa614b6c5a98d56d3a7988014d83382d56d0e8c1f48f344205352d9000",
+        "enlarged_page_inspections": [
+          3,
+          8,
+          14,
+          15,
+          16,
+          20
+        ],
+        "contact_sheet_sha256": {
+          "main-contact-1.png": "2739d0481c3ae8ed83ba78664ba66d6f714980c2b4b148c4d4fdd2072e7de1df",
+          "main-contact-2.png": "3699af67c8399f1e79a5757aa9e59efabb0de746d5b133b25f1bf370961ad77c",
+          "main-contact-3.png": "73bf41974cdd7b7d7ec5cbaad8755087b345ace908e646e9698793749522d8e8",
+          "main-contact-4.png": "ce706e8446291f5395f5b7d311f9763cbf4d73d19fd7a81977630c8a513104b5",
+          "main-contact-5.png": "cc7084121281d28499d9c8eec839fbb9e3d92cb8296cee9613afdd6efde2c683",
+          "main-contact-6.png": "da4a19626dfeb038c9a30a400019fa00241409d8064be9658db0a7118a5f6289"
+        }
+      },
+      "supplementary": {
+        "pages_rendered_and_inspected": 16,
+        "pdf_sha256": "ba917a81bb84e2456aac4f63431af68200f6a166897fea47cd4a9e565660eb0d",
+        "enlarged_page_inspections": [
+          1,
+          2,
+          5,
+          6,
+          13,
+          15
+        ],
+        "contact_sheet_sha256": {
+          "supplementary-contact-1.png": "9cbedd2821d62ead3cb0fa2eb691cba36d6538effad72ed5810a2e8a9ace1d30",
+          "supplementary-contact-2.png": "ef47a6a7a9b65c5d2db2dc1c1d938a5eab6c276d4508f9ee00f5ca53b543ab33",
+          "supplementary-contact-3.png": "bc66ed14bda4d90d8f21c425cb21b502640a5eae4c6b9fb6907ee6b3cf8b6456",
+          "supplementary-contact-4.png": "e9903c0e4a76446cb99514ac2223d657bdec7ba2be2c34ac3a52eb72415af665"
+        }
+      }
+    }
+  },
+  "external_author_confirmations_still_open": [
+    "Institutional ethics applicability and supporting basis",
+    "Operator consent and identifiable media distribution permissions",
+    "All-author approval, contribution roles and declaration/AI-use details",
+    "Concrete permitted recipient-accessible data route and licences",
+    "Actual submission/resubmission route, manuscript ID and author declarations"
+  ],
+  "broader_scientific_requests_not_created_by_editing": [
+    "Independent exposure-time and physical clearance/stopping measurements",
+    "More diverse independent hardware sessions and semantic validation",
+    "Prospectively labeled first-human-intrusion validation",
+    "Executed published delay-aware comparator and closed-loop timeout comparison"
+  ],
+  "no_external_submission_deposit_or_author_approval_claimed": true,
+  "portable_source_status": "See analysis/portable_source_validation.json and the tested source-ZIP hash.",
+  "scope": "These are reproducibility and editorial checks, not new physical evidence or a guarantee of journal acceptance."
+}

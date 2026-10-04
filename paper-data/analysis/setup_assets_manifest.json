@@ -1,0 +1,28 @@
+{
+  "apparatus_photo": {
+    "source": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/source_received/Danial___Safety_Awareness_Robot/figures/fig_setup_photo.png",
+    "sha256": "487f3a457844729d7badf1e050287e48adfe30bea48c4eecd3e3d5e32c1028c4",
+    "original_exif_datetime": "2026:07:30 13:11:23",
+    "role": "Representative historical apparatus photograph; not September scene ground truth."
+  },
+  "camera_frame": {
+    "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/videos/AEGIS-normal_toB_1_raw.mp4",
+    "source_sha256": "838ba50e4e0eb7443f8fbeb831cf5efb83f794b5c56d07e3fe41c8fe2197533f",
+    "source_run": "AEGIS-normal_toB_1",
+    "zero_based_frame_index": 270,
+    "container_fps": 12.0,
+    "container_frame_count": 576,
+    "clock_note": "Frame index identifies an illustration, not a synchronized controller event or exposure timestamp.",
+    "transformation": "Decoded raw frame saved as PNG; no cropping, retouching, or overlay.",
+    "png_sha256": "aaef65915ac4b6711ce44df734fd71650bb1eef2937c224352610daf08677990"
+  },
+  "calibration_record": {
+    "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/calibration/free_slab_calibration.json",
+    "sha256": "df76b5086af5d853cb6448829cc4cd64c06118654e6697f649923f76b0cf57e2",
+    "role": "Recorded September fitting inputs; in-sample fit only, not external validation."
+  },
+  "figures": {
+    "calibration_geometry.pdf": "6e7f94f692aa9d78e4b89c866e559235a8b2aaf7bdf57fbf293928424bc45cf1",
+    "calibration_geometry.png": "c29f261f7ddc1e5fab1027ceb6407f2e38f24cd0adc7ec0996c208266f411b69"
+  }
+}

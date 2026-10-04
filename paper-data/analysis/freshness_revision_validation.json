@@ -1,0 +1,50 @@
+{
+  "revision_date": "2026-10-02",
+  "scope": "Manuscript revision around the verified motion-conditioned freshness pattern; no robot run, new physical trial, or altered observation.",
+  "previous_sources_and_pdfs_backup": "tmp/pre-freshness-revision-20261002-MuIqHR",
+  "core_findings": [
+    "Spatial command-estimated separation and motion-conditioned semantic freshness are distinct observed operating properties.",
+    "The observed AEGIS completion-time cost increases under the tested slow update cadence.",
+    "Additional score-held software intervals account arithmetically for most of the recorded time increase, not independently measured physical standstill."
+  ],
+  "manuscript_changes": [
+    "Abstract, introduction, outcome definition, results, discussion and conclusions aligned with the three findings.",
+    "Main Table 2 includes cutoff-free mean moving-decision age, generated from the verified post-hoc audit.",
+    "Supplement S14 adds all 24 primary per-run mean ages, nominal contrast sensitivity, pilot consistency and retained older-evidence exceptions.",
+    "Supplement Figure S2 shows all nominal normal-to-slow changes; main Figures 1-4 and their measured values are preserved.",
+    "Assumption-dependent sign-reference p-values removed from the active article and supplementary table; descriptive differences retained.",
+    "The definition-sensitive first-detection diagnostic remains in the supplement rather than serving as the main result."
+  ],
+  "scientific_boundaries_retained": [
+    "Capture-proxy age rather than independently validated sensor-exposure age.",
+    "Software-state occupancy rather than physical stopping or hazard-exposure duration.",
+    "No universal age bound; all missing-detection old-evidence exceptions remain included.",
+    "No demonstrated collision-risk reduction, whole-arm guarantee, or superiority over fixed-buffer-plus-timeout.",
+    "Small nonrandomized same-session experiment; nominal matching and leave-one-out checks are descriptive.",
+    "Human-reviewed replay remains same-session, model-stratified and operator-reviewed.",
+    "Author ethics-applicability and public-data permissions are not fabricated or declared resolved."
+  ],
+  "automated_checks": {
+    "existing_python_tests_passed": 58,
+    "new_pattern_audit_tests_passed": 6,
+    "main_table_displayed_values_verified": 24,
+    "unchanged_original_json_jsonl_hashes_verified": 192,
+    "byte_identical_archived_data_files_verified": 184,
+    "new_primary_and_pilot_source_hashes_verified_by_table_builder": 64,
+    "abstract_whitespace_word_count": 183,
+    "main_citations_defined_and_used": 26,
+    "undefined_cross_references_or_missing_pdf_glyphs": false
+  },
+  "visual_qa": {
+    "latest_main_pages_rendered_and_reviewed": 19,
+    "latest_supplement_pages_rendered_and_reviewed": 12,
+    "main_table_2_and_supplement_table_S13_and_figure_S2_reviewed_enlarged": true,
+    "observed_clipping_or_overlap": false,
+    "known_nonfatal_compiler_warnings": [
+      "Cached lineno.sty encoding warning; no replacement glyph in final PDF text.",
+      "Main table heading and one bibliography line generate underfull-box warnings without observed clipping or overlap."
+    ],
+    "temporary_render_directory": "tmp/pdfs/freshness-revision-20261002-K2JaYz"
+  },
+  "limitations": "These checks verify file, numerical and visual consistency. They do not establish causal effects, independent physical safety, or journal acceptance. Portable-source compilation is recorded separately in analysis/portable_source_validation.json."
+}

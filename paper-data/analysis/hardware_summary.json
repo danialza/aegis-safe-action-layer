@@ -1,0 +1,7314 @@
+{
+  "scope": "Hardware only; no legacy-clock or simulation evidence",
+  "aggregation": "Unweighted mean across runs; no decision-count pooling across runs",
+  "selection": "All 24 transport runs in timed_margin_compare, with all four runs per cell displayed",
+  "inference": "Descriptive; no randomization assumption, significance test or confidence interval",
+  "definitions": {
+    "time": "First carrying event to object-delivered event; includes final placement and intervening holds, excludes pickup and initial pause.",
+    "separation": "Per-run minimum of logged clr on mode != stop decisions with a hazard; clr is distance from internal command accumulator to estimated obstacle center minus estimated radius. Not actual TCP, whole-arm, continuous-path or independently measured separation.",
+    "older_evidence": "Per-run fraction of mode != stop decisions whose capture-proxy age is strictly greater than threshold; includes decisions with no detected hazard. Not time-weighted and not a probability of harm.",
+    "rate": "normal: zero imposed minimum inference-start period; slow: 0.8 s minimum start-to-start period, not an added 0.8 s inference latency.",
+    "scope": "Conditional transport comparison after successful pickup, not an end-to-end success-rate estimate."
+  },
+  "primary_cells": [
+    {
+      "method": "AEGIS",
+      "rate": "normal",
+      "run_ids": [
+        "AEGIS-normal_toA_1",
+        "AEGIS-normal_toA_2",
+        "AEGIS-normal_toB_1",
+        "AEGIS-normal_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 75.4983501905918,
+        "median": 74.90723176091946,
+        "min": 68.9068069939402,
+        "max": 83.27213024658806,
+        "sample_sd": 6.368999201801053,
+        "individual_values": [
+          71.98203839726797,
+          68.9068069939402,
+          77.83242512457095,
+          83.27213024658806
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 31.423446343978867,
+        "median": 32.048305187840015,
+        "min": 26.468241000548005,
+        "max": 35.12893399968743,
+        "sample_sd": 3.9403792220946867,
+        "individual_values": [
+          30.109985125251114,
+          26.468241000548005,
+          33.986625250428915,
+          35.12893399968743
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 0,
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "sample_sd": 0.0,
+        "individual_values": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "method": "Trust12",
+      "rate": "normal",
+      "run_ids": [
+        "Trust12-normal_toA_1",
+        "Trust12-normal_toA_2",
+        "Trust12-normal_toB_1",
+        "Trust12-normal_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 57.51227342652806,
+        "median": 56.45780174246869,
+        "min": 53.24692608615855,
+        "max": 63.88656413501632,
+        "sample_sd": 5.1488986882069305,
+        "individual_values": [
+          53.24692608615855,
+          53.417663417575056,
+          59.49794006736232,
+          63.88656413501632
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 28.298899052431807,
+        "median": 28.315282479394227,
+        "min": 25.314365417696536,
+        "max": 31.250665833242238,
+        "sample_sd": 3.24806471127185,
+        "individual_values": [
+          25.66680479142815,
+          25.314365417696536,
+          30.963760167360306,
+          31.250665833242238
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 1.89873417721519,
+        "median": 0.0,
+        "min": 0,
+        "max": 7.59493670886076,
+        "sample_sd": 3.79746835443038,
+        "individual_values": [
+          0,
+          0,
+          0,
+          7.59493670886076
+        ]
+      }
+    },
+    {
+      "method": "Trust32",
+      "rate": "normal",
+      "run_ids": [
+        "Trust32-normal_toA_1",
+        "Trust32-normal_toA_2",
+        "Trust32-normal_toB_1",
+        "Trust32-normal_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 72.50972144171736,
+        "median": 71.82589503528787,
+        "min": 66.12543771525128,
+        "max": 80.26165798104243,
+        "sample_sd": 6.217132547145809,
+        "individual_values": [
+          69.16399952566171,
+          66.12543771525128,
+          74.48779054491403,
+          80.26165798104243
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 30.607874510344118,
+        "median": 30.098708666395396,
+        "min": 26.777103000320494,
+        "max": 35.456977708265185,
+        "sample_sd": 3.821368233444468,
+        "individual_values": [
+          26.777103000320494,
+          28.501609166152775,
+          35.456977708265185,
+          31.695808166638017
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 0.28735632183908044,
+        "median": 0.0,
+        "min": 0,
+        "max": 1.1494252873563218,
+        "sample_sd": 0.5747126436781609,
+        "individual_values": [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ]
+      }
+    },
+    {
+      "method": "AEGIS",
+      "rate": "slow",
+      "run_ids": [
+        "AEGIS-slow_toA_1",
+        "AEGIS-slow_toA_2",
+        "AEGIS-slow_toB_1",
+        "AEGIS-slow_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 77.16153620968718,
+        "median": 79.56215461691629,
+        "min": 68.43558908769185,
+        "max": 81.08624651722432,
+        "sample_sd": 5.896457338357339,
+        "individual_values": [
+          80.34738890711351,
+          68.43558908769185,
+          81.08624651722432,
+          78.77692032671906
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 54.36822698940523,
+        "median": 56.89790691668168,
+        "min": 42.60758829116821,
+        "max": 61.06950583308935,
+        "sample_sd": 8.099820100823509,
+        "individual_values": [
+          57.5315216248855,
+          42.60758829116821,
+          61.06950583308935,
+          56.264292208477855
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 4.761904761904762,
+        "median": 0.0,
+        "min": 0,
+        "max": 19.047619047619047,
+        "sample_sd": 9.523809523809524,
+        "individual_values": [
+          0,
+          19.047619047619047,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "method": "Trust12",
+      "rate": "slow",
+      "run_ids": [
+        "Trust12-slow_toA_1",
+        "Trust12-slow_toA_2",
+        "Trust12-slow_toB_1",
+        "Trust12-slow_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 53.99103672952469,
+        "median": 52.49716700076327,
+        "min": 51.63754549563759,
+        "max": 59.33226742093462,
+        "sample_sd": 3.5915260693292956,
+        "individual_values": [
+          51.63754549563759,
+          52.20888007758295,
+          59.33226742093462,
+          52.78545392394359
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 28.015190364560112,
+        "median": 27.190432104747742,
+        "min": 25.22417749930173,
+        "max": 32.45571974944323,
+        "sample_sd": 3.3645529208251466,
+        "individual_values": [
+          25.22417749930173,
+          25.594790750183165,
+          32.45571974944323,
+          28.78607345931232
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 60.817844156249514,
+        "median": 60.132340777502066,
+        "min": 58.490566037735846,
+        "max": 64.51612903225806,
+        "sample_sd": 2.7516787568316348,
+        "individual_values": [
+          61.29032258064516,
+          64.51612903225806,
+          58.97435897435898,
+          58.490566037735846
+        ]
+      }
+    },
+    {
+      "method": "Trust32",
+      "rate": "slow",
+      "run_ids": [
+        "Trust32-slow_toA_1",
+        "Trust32-slow_toA_2",
+        "Trust32-slow_toB_1",
+        "Trust32-slow_toB_2"
+      ],
+      "min_command_estimated_edge_separation_mm": {
+        "n": 4,
+        "mean": 72.76562635692761,
+        "median": 70.83114493945284,
+        "min": 69.53327677975507,
+        "max": 79.86693876904971,
+        "sample_sd": 4.887533488146558,
+        "individual_values": [
+          69.54607834185082,
+          69.53327677975507,
+          79.86693876904971,
+          72.11621153705487
+        ]
+      },
+      "carry_to_delivery_s": {
+        "n": 4,
+        "mean": 33.360318114748225,
+        "median": 31.59887637477368,
+        "min": 27.484304167330265,
+        "max": 42.75921554211527,
+        "sample_sd": 6.894863069379748,
+        "individual_values": [
+          28.996450250037014,
+          27.484304167330265,
+          34.20130249951035,
+          42.75921554211527
+        ]
+      },
+      "moving_age_above_0p6_percent": {
+        "n": 4,
+        "mean": 61.285018993352324,
+        "median": 61.25,
+        "min": 58.0246913580247,
+        "max": 64.61538461538461,
+        "sample_sd": 2.8779925947256113,
+        "individual_values": [
+          60.0,
+          62.5,
+          58.0246913580247,
+          64.61538461538461
+        ]
+      }
+    }
+  ],
+  "inventory": {
+    "aegis_time": 1,
+    "timed_compare": 59,
+    "timed_compare_slow": 8,
+    "timed_margin_compare": 24
+  },
+  "included_transport_runs": 92,
+  "excluded_pretransport_or_no_carry_runs": 4,
+  "decision_records": 10199,
+  "all_included_records": [
+    {
+      "run": "AEGIS-time_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/aegis_time/logs/AEGIS-time_toB_1.json",
+      "campaign": "aegis_time",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 94,
+      "moving_decisions": 74,
+      "hazard_moving_decisions": 69,
+      "carry_to_delivery_s": 31.574376791715622,
+      "min_command_estimated_edge_separation_mm": 74.41694921376337,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.432821675644231,
+      "max_moving_evidence_age_s": 0.5723808463662863,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_1.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 85,
+      "moving_decisions": 66,
+      "hazard_moving_decisions": 58,
+      "carry_to_delivery_s": 28.87909762468189,
+      "min_command_estimated_edge_separation_mm": 21.546037560139744,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4251804430686841,
+      "max_moving_evidence_age_s": 0.5830382537096739,
+      "below_own_margin_hazard_moving_decisions": 3,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 1.3877787807814457e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_10",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_10.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 36,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 15.729968125000596,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.44561829701389954,
+      "max_moving_evidence_age_s": 0.5774527322500944,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_11",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_11.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 121,
+      "moving_decisions": 109,
+      "hazard_moving_decisions": 108,
+      "carry_to_delivery_s": 38.04706991650164,
+      "min_command_estimated_edge_separation_mm": 21.721471253609376,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.423866549173558,
+      "max_moving_evidence_age_s": 0.5636330414563417,
+      "below_own_margin_hazard_moving_decisions": 4,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_12",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_12.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 69,
+      "moving_decisions": 38,
+      "hazard_moving_decisions": 18,
+      "carry_to_delivery_s": 22.05884391721338,
+      "min_command_estimated_edge_separation_mm": 77.37715171822302,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4198308924066001,
+      "max_moving_evidence_age_s": 0.5694613894447684,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_13",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_13.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 189,
+      "moving_decisions": 62,
+      "hazard_moving_decisions": 45,
+      "carry_to_delivery_s": 40.882804417051375,
+      "min_command_estimated_edge_separation_mm": 61.32677204619602,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42002678588934,
+      "max_moving_evidence_age_s": 0.5909719951450825,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_14",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_14.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 23,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 13.370874625630677,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4104076567632349,
+      "max_moving_evidence_age_s": 0.5567357130348682,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_15",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_15.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 86,
+      "moving_decisions": 38,
+      "hazard_moving_decisions": 1,
+      "carry_to_delivery_s": 24.379040708765388,
+      "min_command_estimated_edge_separation_mm": 48.52350863405305,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.41119270514402734,
+      "max_moving_evidence_age_s": 0.564097935333848,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_16",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_16.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 72,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 20.16586645785719,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.42537647404748463,
+      "max_moving_evidence_age_s": 0.5598534718155861,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_17",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_17.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 112,
+      "moving_decisions": 68,
+      "hazard_moving_decisions": 49,
+      "carry_to_delivery_s": 31.753551333211362,
+      "min_command_estimated_edge_separation_mm": 61.7308382151141,
+      "moving_age_above_0p6_percent": 1.4705882352941175,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4414698988719679,
+      "max_moving_evidence_age_s": 0.6043895464390516,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_18",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_18.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 105,
+      "moving_decisions": 87,
+      "hazard_moving_decisions": 87,
+      "carry_to_delivery_s": 33.78989233262837,
+      "min_command_estimated_edge_separation_mm": 78.26985401190939,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.418868664512946,
+      "max_moving_evidence_age_s": 0.571397652849555,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_19",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_19.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 97,
+      "moving_decisions": 88,
+      "hazard_moving_decisions": 88,
+      "carry_to_delivery_s": 32.38006858434528,
+      "min_command_estimated_edge_separation_mm": 78.82751814634729,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.40650643017778004,
+      "max_moving_evidence_age_s": 0.5794048067182302,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_2.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 114,
+      "moving_decisions": 98,
+      "hazard_moving_decisions": 93,
+      "carry_to_delivery_s": 36.05335579160601,
+      "min_command_estimated_edge_separation_mm": 23.949315817220374,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42917056662049524,
+      "max_moving_evidence_age_s": 0.5766697647050023,
+      "below_own_margin_hazard_moving_decisions": 2,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_20",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_20.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 74,
+      "moving_decisions": 69,
+      "hazard_moving_decisions": 54,
+      "carry_to_delivery_s": 25.957109209150076,
+      "min_command_estimated_edge_separation_mm": 68.56061101410454,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.40749422553926706,
+      "max_moving_evidence_age_s": 0.572831985540688,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_21",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_21.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 76,
+      "moving_decisions": 66,
+      "hazard_moving_decisions": 50,
+      "carry_to_delivery_s": 26.413038208149374,
+      "min_command_estimated_edge_separation_mm": 67.48756070820032,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4167794846562725,
+      "max_moving_evidence_age_s": 0.5650411117821932,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_3",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_3.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 117,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 74,
+      "carry_to_delivery_s": 34.75410049967468,
+      "min_command_estimated_edge_separation_mm": 42.18616026552126,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.44041000279144216,
+      "max_moving_evidence_age_s": 0.578900707885623,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_5",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_5.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 88,
+      "moving_decisions": 31,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 24.103524249978364,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4147129425658814,
+      "max_moving_evidence_age_s": 0.5462234076112509,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_6",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_6.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 167,
+      "moving_decisions": 65,
+      "hazard_moving_decisions": 54,
+      "carry_to_delivery_s": 39.50970162451267,
+      "min_command_estimated_edge_separation_mm": 77.46230535057036,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42478676829487083,
+      "max_moving_evidence_age_s": 0.5638495972380042,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_7",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_7.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 123,
+      "moving_decisions": 50,
+      "hazard_moving_decisions": 23,
+      "carry_to_delivery_s": 32.46469716541469,
+      "min_command_estimated_edge_separation_mm": 31.128661195240532,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.41103420915082095,
+      "max_moving_evidence_age_s": 0.5523162223398685,
+      "below_own_margin_hazard_moving_decisions": 1,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 1.3877787807814457e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_8",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_8.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 126,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 27.51797941699624,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.43488209929479205,
+      "max_moving_evidence_age_s": 0.5718530546873808,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toA_9",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_9.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 41,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 16.176520165987313,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.41599094244125095,
+      "max_moving_evidence_age_s": 0.5548711391165853,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_1.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 103,
+      "moving_decisions": 80,
+      "hazard_moving_decisions": 71,
+      "carry_to_delivery_s": 32.6852460000664,
+      "min_command_estimated_edge_separation_mm": 27.038920774180706,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42482521558413283,
+      "max_moving_evidence_age_s": 0.5736587680876255,
+      "below_own_margin_hazard_moving_decisions": 2,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_11",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_11.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 101,
+      "moving_decisions": 91,
+      "hazard_moving_decisions": 90,
+      "carry_to_delivery_s": 35.44246012531221,
+      "min_command_estimated_edge_separation_mm": 82.97329058923951,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4382388376027018,
+      "max_moving_evidence_age_s": 0.5768495975062251,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_12",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_12.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 103,
+      "moving_decisions": 85,
+      "hazard_moving_decisions": 85,
+      "carry_to_delivery_s": 33.374318374320865,
+      "min_command_estimated_edge_separation_mm": 82.68143727707526,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.438542978553211,
+      "max_moving_evidence_age_s": 0.5822844160720706,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_13",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_13.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 98,
+      "moving_decisions": 82,
+      "hazard_moving_decisions": 82,
+      "carry_to_delivery_s": 32.767307166941464,
+      "min_command_estimated_edge_separation_mm": 82.09813320857606,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43439514695371434,
+      "max_moving_evidence_age_s": 0.5798785937950015,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_14",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_14.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 101,
+      "moving_decisions": 86,
+      "hazard_moving_decisions": 86,
+      "carry_to_delivery_s": 34.185387750156224,
+      "min_command_estimated_edge_separation_mm": 81.93477664349567,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4293557653355217,
+      "max_moving_evidence_age_s": 0.5842193095013499,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_2.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 20,
+      "moving_decisions": 20,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 14.29547091666609,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.46339093232527373,
+      "max_moving_evidence_age_s": 0.5527037773281336,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_4",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_4.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 48,
+      "moving_decisions": 24,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 18.08354412484914,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.42367232978964847,
+      "max_moving_evidence_age_s": 0.5953825125470757,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_5",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_5.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 119,
+      "moving_decisions": 67,
+      "hazard_moving_decisions": 62,
+      "carry_to_delivery_s": 33.31179758347571,
+      "min_command_estimated_edge_separation_mm": 76.67306591813802,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4204456765315871,
+      "max_moving_evidence_age_s": 0.5587799269706011,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_6",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_6.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 127,
+      "moving_decisions": 75,
+      "hazard_moving_decisions": 73,
+      "carry_to_delivery_s": 35.24324599932879,
+      "min_command_estimated_edge_separation_mm": 81.51489394748776,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43251094764719406,
+      "max_moving_evidence_age_s": 0.5605080062523484,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_7",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_7.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 81,
+      "moving_decisions": 28,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 23.622057917527854,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4130641314467149,
+      "max_moving_evidence_age_s": 0.568132545799017,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_8",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_8.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 158,
+      "moving_decisions": 36,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 33.41460529062897,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4424594722222537,
+      "max_moving_evidence_age_s": 0.5981048783287406,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_9",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_9.json",
+      "campaign": "timed_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 141,
+      "moving_decisions": 103,
+      "hazard_moving_decisions": 73,
+      "carry_to_delivery_s": 40.97713941708207,
+      "min_command_estimated_edge_separation_mm": 46.414094135681346,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43884934047327456,
+      "max_moving_evidence_age_s": 0.5768133094534278,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_1.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 93,
+      "moving_decisions": 83,
+      "hazard_moving_decisions": 82,
+      "carry_to_delivery_s": 31.32889320794493,
+      "min_command_estimated_edge_separation_mm": 45.5328898278069,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43470336140010013,
+      "max_moving_evidence_age_s": 0.5906034735962749,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_10",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_10.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 72,
+      "moving_decisions": 63,
+      "hazard_moving_decisions": 51,
+      "carry_to_delivery_s": 26.0288012502715,
+      "min_command_estimated_edge_separation_mm": 51.922036446637456,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4323279626430973,
+      "max_moving_evidence_age_s": 0.5915408851578832,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 1.3877787807814457e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_2.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 107,
+      "moving_decisions": 67,
+      "hazard_moving_decisions": 67,
+      "carry_to_delivery_s": 30.07353737577796,
+      "min_command_estimated_edge_separation_mm": 63.899344770274354,
+      "moving_age_above_0p6_percent": 1.4925373134328357,
+      "hazard_moving_age_above_0p6_percent": 1.4925373134328357,
+      "mean_moving_evidence_age_s": 0.4266982099541755,
+      "max_moving_evidence_age_s": 0.6323307370766997,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_3",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_3.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 121,
+      "moving_decisions": 63,
+      "hazard_moving_decisions": 60,
+      "carry_to_delivery_s": 31.853081374429166,
+      "min_command_estimated_edge_separation_mm": 55.24239806458962,
+      "moving_age_above_0p6_percent": 1.5873015873015872,
+      "hazard_moving_age_above_0p6_percent": 1.6666666666666667,
+      "mean_moving_evidence_age_s": 0.4294833213918739,
+      "max_moving_evidence_age_s": 0.6274547772482038,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_4",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_4.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 141,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 75,
+      "carry_to_delivery_s": 36.52086029201746,
+      "min_command_estimated_edge_separation_mm": 55.41097655586218,
+      "moving_age_above_0p6_percent": 5.263157894736842,
+      "hazard_moving_age_above_0p6_percent": 5.333333333333334,
+      "mean_moving_evidence_age_s": 0.4453084693216768,
+      "max_moving_evidence_age_s": 0.6524385279044509,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_5",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_5.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 78,
+      "moving_decisions": 23,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 21.050016957335174,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.44572789149115916,
+      "max_moving_evidence_age_s": 0.5786967305466533,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "Trust-sensor-time_toA_6",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_6.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 114,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 61,
+      "carry_to_delivery_s": 33.62066449970007,
+      "min_command_estimated_edge_separation_mm": 47.87362596351087,
+      "moving_age_above_0p6_percent": 1.3157894736842104,
+      "hazard_moving_age_above_0p6_percent": 1.639344262295082,
+      "mean_moving_evidence_age_s": 0.43650631697260234,
+      "max_moving_evidence_age_s": 0.6635525459423661,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_7",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_7.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 89,
+      "moving_decisions": 80,
+      "hazard_moving_decisions": 80,
+      "carry_to_delivery_s": 31.514265665784478,
+      "min_command_estimated_edge_separation_mm": 58.578145480177255,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42148919973988086,
+      "max_moving_evidence_age_s": 0.599141082726419,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_8",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_8.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 86,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 29.255344916135073,
+      "min_command_estimated_edge_separation_mm": 60.79455017439129,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4162211630923244,
+      "max_moving_evidence_age_s": 0.5543652679771185,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toA_9",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toA_9.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 76,
+      "moving_decisions": 58,
+      "hazard_moving_decisions": 40,
+      "carry_to_delivery_s": 26.400514957495034,
+      "min_command_estimated_edge_separation_mm": 51.83380188175363,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42745803840908,
+      "max_moving_evidence_age_s": 0.5665526064112782,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_1.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 85,
+      "moving_decisions": 73,
+      "hazard_moving_decisions": 68,
+      "carry_to_delivery_s": 29.446138584055007,
+      "min_command_estimated_edge_separation_mm": 53.73895735972738,
+      "moving_age_above_0p6_percent": 6.8493150684931505,
+      "hazard_moving_age_above_0p6_percent": 5.88235294117647,
+      "mean_moving_evidence_age_s": 0.4722532816103672,
+      "max_moving_evidence_age_s": 0.656544778496027,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_10",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_10.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 84,
+      "moving_decisions": 46,
+      "hazard_moving_decisions": 29,
+      "carry_to_delivery_s": 27.055133000016212,
+      "min_command_estimated_edge_separation_mm": 70.62166049812261,
+      "moving_age_above_0p6_percent": 2.1739130434782608,
+      "hazard_moving_age_above_0p6_percent": 3.4482758620689653,
+      "mean_moving_evidence_age_s": 0.41965088665323413,
+      "max_moving_evidence_age_s": 0.6234883377328515,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_11",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_11.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 103,
+      "moving_decisions": 44,
+      "hazard_moving_decisions": 26,
+      "carry_to_delivery_s": 26.85605966579169,
+      "min_command_estimated_edge_separation_mm": 72.41653027644234,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43042067042551935,
+      "max_moving_evidence_age_s": 0.5639577684924006,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_12",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_12.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 142,
+      "moving_decisions": 28,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 30.156226917169988,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4149551364327116,
+      "max_moving_evidence_age_s": 0.5563315600156784,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "Trust-sensor-time_toB_13",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_13.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 94,
+      "moving_decisions": 48,
+      "hazard_moving_decisions": 34,
+      "carry_to_delivery_s": 27.901697125285864,
+      "min_command_estimated_edge_separation_mm": 38.80223305644087,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.41879634227370843,
+      "max_moving_evidence_age_s": 0.5731238601729274,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_15",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_15.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 81,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 75,
+      "carry_to_delivery_s": 30.225477958098054,
+      "min_command_estimated_edge_separation_mm": 62.68116269765936,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42066968199306803,
+      "max_moving_evidence_age_s": 0.5786324394866824,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_16",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_16.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 89,
+      "moving_decisions": 79,
+      "hazard_moving_decisions": 79,
+      "carry_to_delivery_s": 30.843647957779467,
+      "min_command_estimated_edge_separation_mm": 61.74243972320975,
+      "moving_age_above_0p6_percent": 1.2658227848101267,
+      "hazard_moving_age_above_0p6_percent": 1.2658227848101267,
+      "mean_moving_evidence_age_s": 0.4573881214578884,
+      "max_moving_evidence_age_s": 0.6167896101251245,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_17",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_17.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 91,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 31.668612624518573,
+      "min_command_estimated_edge_separation_mm": 63.09285960262637,
+      "moving_age_above_0p6_percent": 2.564102564102564,
+      "hazard_moving_age_above_0p6_percent": 2.564102564102564,
+      "mean_moving_evidence_age_s": 0.43555283634804,
+      "max_moving_evidence_age_s": 0.600434310734272,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_18",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_18.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 89,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 30.700008999556303,
+      "min_command_estimated_edge_separation_mm": 61.822061152206686,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42136256403934497,
+      "max_moving_evidence_age_s": 0.563918573781848,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_2.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 96,
+      "moving_decisions": 81,
+      "hazard_moving_decisions": 76,
+      "carry_to_delivery_s": 31.37697191722691,
+      "min_command_estimated_edge_separation_mm": 38.32331716605988,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43128069062475805,
+      "max_moving_evidence_age_s": 0.5851910458877683,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_3",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_3.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 97,
+      "moving_decisions": 73,
+      "hazard_moving_decisions": 70,
+      "carry_to_delivery_s": 31.567051082849503,
+      "min_command_estimated_edge_separation_mm": 62.83958525490049,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.44351372157210767,
+      "max_moving_evidence_age_s": 0.5967406844720244,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_4",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_4.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 74,
+      "moving_decisions": 64,
+      "hazard_moving_decisions": 59,
+      "carry_to_delivery_s": 27.90010037459433,
+      "min_command_estimated_edge_separation_mm": 46.03202049607423,
+      "moving_age_above_0p6_percent": 3.125,
+      "hazard_moving_age_above_0p6_percent": 3.389830508474576,
+      "mean_moving_evidence_age_s": 0.4329629107378423,
+      "max_moving_evidence_age_s": 0.637568193487823,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_5",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_5.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 130,
+      "moving_decisions": 43,
+      "hazard_moving_decisions": 20,
+      "carry_to_delivery_s": 31.875520249828696,
+      "min_command_estimated_edge_separation_mm": 64.69343139118556,
+      "moving_age_above_0p6_percent": 4.651162790697675,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.424226799784878,
+      "max_moving_evidence_age_s": 0.6338100545108318,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-sensor-time_toB_6",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_6.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 32,
+      "moving_decisions": 24,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 15.891361792571843,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4244358620295922,
+      "max_moving_evidence_age_s": 0.5561191281303763,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "Trust-sensor-time_toB_7",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_7.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 46,
+      "moving_decisions": 24,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 16.93056020885706,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.4315466181530307,
+      "max_moving_evidence_age_s": 0.5533708557486534,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "Trust-sensor-time_toB_8",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_8.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 44,
+      "moving_decisions": 24,
+      "hazard_moving_decisions": 0,
+      "carry_to_delivery_s": 17.66564575023949,
+      "min_command_estimated_edge_separation_mm": null,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": null,
+      "mean_moving_evidence_age_s": 0.42439239433345693,
+      "max_moving_evidence_age_s": 0.5729710832238197,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 0.0
+    },
+    {
+      "run": "Trust-sensor-time_toB_9",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_9.json",
+      "campaign": "timed_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 100,
+      "moving_decisions": 90,
+      "hazard_moving_decisions": 85,
+      "carry_to_delivery_s": 33.64782708324492,
+      "min_command_estimated_edge_separation_mm": 32.21039662803421,
+      "moving_age_above_0p6_percent": 5.555555555555555,
+      "hazard_moving_age_above_0p6_percent": 5.88235294117647,
+      "mean_moving_evidence_age_s": 0.4617976187831826,
+      "max_moving_evidence_age_s": 0.6453936761245131,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slowupdates-0.8s_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/AEGIS-slowupdates-0.8s_toA_1.json",
+      "campaign": "timed_compare_slow",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 305,
+      "moving_decisions": 77,
+      "hazard_moving_decisions": 77,
+      "carry_to_delivery_s": 59.63433187454939,
+      "min_command_estimated_edge_separation_mm": 79.08847767520462,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4146735683059344,
+      "max_moving_evidence_age_s": 0.579957184381783,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slowupdates-0.8s_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/AEGIS-slowupdates-0.8s_toA_2.json",
+      "campaign": "timed_compare_slow",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 289,
+      "moving_decisions": 75,
+      "hazard_moving_decisions": 75,
+      "carry_to_delivery_s": 56.358544499613345,
+      "min_command_estimated_edge_separation_mm": 79.59778262860786,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.40260700296610596,
+      "max_moving_evidence_age_s": 0.5821487260982394,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slowupdates-0.8s_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/AEGIS-slowupdates-0.8s_toB_1.json",
+      "campaign": "timed_compare_slow",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 210,
+      "moving_decisions": 59,
+      "hazard_moving_decisions": 42,
+      "carry_to_delivery_s": 44.120424665510654,
+      "min_command_estimated_edge_separation_mm": 71.08071323071653,
+      "moving_age_above_0p6_percent": 16.94915254237288,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.48485881825751165,
+      "max_moving_evidence_age_s": 1.0748410876840353,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slowupdates-0.8s_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/AEGIS-slowupdates-0.8s_toB_2.json",
+      "campaign": "timed_compare_slow",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 248,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 52.272909791208804,
+      "min_command_estimated_edge_separation_mm": 76.05290355425106,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.41773290370996946,
+      "max_moving_evidence_age_s": 0.5859695198014379,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-slowupdates-0.8s_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/Trust-slowupdates-0.8s_toA_1.json",
+      "campaign": "timed_compare_slow",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 86,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 76,
+      "carry_to_delivery_s": 28.870644125156105,
+      "min_command_estimated_edge_separation_mm": 61.35794156923429,
+      "moving_age_above_0p6_percent": 59.210526315789465,
+      "hazard_moving_age_above_0p6_percent": 59.210526315789465,
+      "mean_moving_evidence_age_s": 0.6805958215416851,
+      "max_moving_evidence_age_s": 1.100652763620019,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-slowupdates-0.8s_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/Trust-slowupdates-0.8s_toA_2.json",
+      "campaign": "timed_compare_slow",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 73,
+      "moving_decisions": 53,
+      "hazard_moving_decisions": 35,
+      "carry_to_delivery_s": 23.64904237538576,
+      "min_command_estimated_edge_separation_mm": 52.318926684658365,
+      "moving_age_above_0p6_percent": 56.60377358490566,
+      "hazard_moving_age_above_0p6_percent": 60.0,
+      "mean_moving_evidence_age_s": 0.7028412934533268,
+      "max_moving_evidence_age_s": 1.1193952029570937,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-slowupdates-0.8s_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/Trust-slowupdates-0.8s_toB_1.json",
+      "campaign": "timed_compare_slow",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 88,
+      "moving_decisions": 80,
+      "hazard_moving_decisions": 80,
+      "carry_to_delivery_s": 29.368889583274722,
+      "min_command_estimated_edge_separation_mm": 61.964848923173044,
+      "moving_age_above_0p6_percent": 68.75,
+      "hazard_moving_age_above_0p6_percent": 68.75,
+      "mean_moving_evidence_age_s": 0.7302821466582827,
+      "max_moving_evidence_age_s": 1.0887679252773523,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust-slowupdates-0.8s_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare_slow/logs/Trust-slowupdates-0.8s_toB_2.json",
+      "campaign": "timed_compare_slow",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 224,
+      "moving_decisions": 74,
+      "hazard_moving_decisions": 74,
+      "carry_to_delivery_s": 46.554460084065795,
+      "min_command_estimated_edge_separation_mm": 58.193003776885966,
+      "moving_age_above_0p6_percent": 64.86486486486487,
+      "hazard_moving_age_above_0p6_percent": 64.86486486486487,
+      "mean_moving_evidence_age_s": 0.7248090505474121,
+      "max_moving_evidence_age_s": 1.1357751237228513,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-normal_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-normal_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 91,
+      "moving_decisions": 73,
+      "hazard_moving_decisions": 60,
+      "carry_to_delivery_s": 30.109985125251114,
+      "min_command_estimated_edge_separation_mm": 71.98203839726797,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42414464751794323,
+      "max_moving_evidence_age_s": 0.5750769255682826,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-normal_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-normal_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 74,
+      "moving_decisions": 68,
+      "hazard_moving_decisions": 54,
+      "carry_to_delivery_s": 26.468241000548005,
+      "min_command_estimated_edge_separation_mm": 68.9068069939402,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.44230853953837035,
+      "max_moving_evidence_age_s": 0.5842798510566354,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-normal_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-normal_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 105,
+      "moving_decisions": 89,
+      "hazard_moving_decisions": 89,
+      "carry_to_delivery_s": 33.986625250428915,
+      "min_command_estimated_edge_separation_mm": 77.83242512457095,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4332392272131329,
+      "max_moving_evidence_age_s": 0.5854539768770337,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-normal_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-normal_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 107,
+      "moving_decisions": 85,
+      "hazard_moving_decisions": 85,
+      "carry_to_delivery_s": 35.12893399968743,
+      "min_command_estimated_edge_separation_mm": 83.27213024658806,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.43119387488593075,
+      "max_moving_evidence_age_s": 0.5818917416036129,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slow_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-slow_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 288,
+      "moving_decisions": 80,
+      "hazard_moving_decisions": 80,
+      "carry_to_delivery_s": 57.5315216248855,
+      "min_command_estimated_edge_separation_mm": 80.34738890711351,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.40605458768550307,
+      "max_moving_evidence_age_s": 0.583985572680831,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slow_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-slow_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 193,
+      "moving_decisions": 63,
+      "hazard_moving_decisions": 49,
+      "carry_to_delivery_s": 42.60758829116821,
+      "min_command_estimated_edge_separation_mm": 68.43558908769185,
+      "moving_age_above_0p6_percent": 19.047619047619047,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4924729698529792,
+      "max_moving_evidence_age_s": 1.084318419918418,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slow_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-slow_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 312,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 61.06950583308935,
+      "min_command_estimated_edge_separation_mm": 81.08624651722432,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.40024303185204285,
+      "max_moving_evidence_age_s": 0.5812366446480155,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "AEGIS-slow_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/AEGIS-slow_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "AEGIS",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 275,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 76,
+      "carry_to_delivery_s": 56.264292208477855,
+      "min_command_estimated_edge_separation_mm": 78.77692032671906,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.3952898102763452,
+      "max_moving_evidence_age_s": 0.5818009078502655,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-normal_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-normal_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 79,
+      "moving_decisions": 60,
+      "hazard_moving_decisions": 43,
+      "carry_to_delivery_s": 25.66680479142815,
+      "min_command_estimated_edge_separation_mm": 53.24692608615855,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4538348465381811,
+      "max_moving_evidence_age_s": 0.5853018285706639,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-normal_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-normal_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 74,
+      "moving_decisions": 59,
+      "hazard_moving_decisions": 47,
+      "carry_to_delivery_s": 25.314365417696536,
+      "min_command_estimated_edge_separation_mm": 53.417663417575056,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4415508987129492,
+      "max_moving_evidence_age_s": 0.5949688078835607,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-normal_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-normal_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 90,
+      "moving_decisions": 76,
+      "hazard_moving_decisions": 75,
+      "carry_to_delivery_s": 30.963760167360306,
+      "min_command_estimated_edge_separation_mm": 59.49794006736232,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4250975453760475,
+      "max_moving_evidence_age_s": 0.5451347455382347,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-normal_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-normal_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 88,
+      "moving_decisions": 79,
+      "hazard_moving_decisions": 79,
+      "carry_to_delivery_s": 31.250665833242238,
+      "min_command_estimated_edge_separation_mm": 63.88656413501632,
+      "moving_age_above_0p6_percent": 7.59493670886076,
+      "hazard_moving_age_above_0p6_percent": 7.59493670886076,
+      "mean_moving_evidence_age_s": 0.4717925039674096,
+      "max_moving_evidence_age_s": 0.6610867083072662,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-slow_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-slow_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 73,
+      "moving_decisions": 62,
+      "hazard_moving_decisions": 47,
+      "carry_to_delivery_s": 25.22417749930173,
+      "min_command_estimated_edge_separation_mm": 51.63754549563759,
+      "moving_age_above_0p6_percent": 61.29032258064516,
+      "hazard_moving_age_above_0p6_percent": 61.702127659574465,
+      "mean_moving_evidence_age_s": 0.6968793122758788,
+      "max_moving_evidence_age_s": 1.0850413786247373,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-slow_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-slow_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 80,
+      "moving_decisions": 62,
+      "hazard_moving_decisions": 49,
+      "carry_to_delivery_s": 25.594790750183165,
+      "min_command_estimated_edge_separation_mm": 52.20888007758295,
+      "moving_age_above_0p6_percent": 64.51612903225806,
+      "hazard_moving_age_above_0p6_percent": 61.224489795918366,
+      "mean_moving_evidence_age_s": 0.681245528987699,
+      "max_moving_evidence_age_s": 1.075984994880855,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-slow_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-slow_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 108,
+      "moving_decisions": 78,
+      "hazard_moving_decisions": 78,
+      "carry_to_delivery_s": 32.45571974944323,
+      "min_command_estimated_edge_separation_mm": 59.33226742093462,
+      "moving_age_above_0p6_percent": 58.97435897435898,
+      "hazard_moving_age_above_0p6_percent": 58.97435897435898,
+      "mean_moving_evidence_age_s": 0.6770427614116133,
+      "max_moving_evidence_age_s": 1.0760818850249052,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust12-slow_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust12-slow_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust12",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 112,
+      "moving_decisions": 53,
+      "hazard_moving_decisions": 36,
+      "carry_to_delivery_s": 28.78607345931232,
+      "min_command_estimated_edge_separation_mm": 52.78545392394359,
+      "moving_age_above_0p6_percent": 58.490566037735846,
+      "hazard_moving_age_above_0p6_percent": 58.333333333333336,
+      "mean_moving_evidence_age_s": 0.6754095334524535,
+      "max_moving_evidence_age_s": 1.0822047172114253,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 1.3877787807814457e-17
+    },
+    {
+      "run": "Trust32-normal_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-normal_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 81,
+      "moving_decisions": 66,
+      "hazard_moving_decisions": 53,
+      "carry_to_delivery_s": 26.777103000320494,
+      "min_command_estimated_edge_separation_mm": 69.16399952566171,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4353586648111091,
+      "max_moving_evidence_age_s": 0.5895078331232071,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-normal_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-normal_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "A",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 81,
+      "moving_decisions": 70,
+      "hazard_moving_decisions": 54,
+      "carry_to_delivery_s": 28.501609166152775,
+      "min_command_estimated_edge_separation_mm": 66.12543771525128,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.4079844344274274,
+      "max_moving_evidence_age_s": 0.5467172274366021,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-normal_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-normal_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 108,
+      "moving_decisions": 90,
+      "hazard_moving_decisions": 90,
+      "carry_to_delivery_s": 35.456977708265185,
+      "min_command_estimated_edge_separation_mm": 74.48779054491403,
+      "moving_age_above_0p6_percent": 0,
+      "hazard_moving_age_above_0p6_percent": 0,
+      "mean_moving_evidence_age_s": 0.42277299284728037,
+      "max_moving_evidence_age_s": 0.5816124966368079,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-normal_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-normal_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "B",
+      "rate": "normal",
+      "vlm_start_to_start_min_period_s": 0.0,
+      "decisions": 91,
+      "moving_decisions": 87,
+      "hazard_moving_decisions": 87,
+      "carry_to_delivery_s": 31.695808166638017,
+      "min_command_estimated_edge_separation_mm": 80.26165798104243,
+      "moving_age_above_0p6_percent": 1.1494252873563218,
+      "hazard_moving_age_above_0p6_percent": 1.1494252873563218,
+      "mean_moving_evidence_age_s": 0.42022141463112556,
+      "max_moving_evidence_age_s": 0.6325309071689844,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-slow_toA_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-slow_toA_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 94,
+      "moving_decisions": 70,
+      "hazard_moving_decisions": 57,
+      "carry_to_delivery_s": 28.996450250037014,
+      "min_command_estimated_edge_separation_mm": 69.54607834185082,
+      "moving_age_above_0p6_percent": 60.0,
+      "hazard_moving_age_above_0p6_percent": 57.89473684210527,
+      "mean_moving_evidence_age_s": 0.670543054983552,
+      "max_moving_evidence_age_s": 1.1310870228335261,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-slow_toA_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-slow_toA_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "A",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 85,
+      "moving_decisions": 72,
+      "hazard_moving_decisions": 59,
+      "carry_to_delivery_s": 27.484304167330265,
+      "min_command_estimated_edge_separation_mm": 69.53327677975507,
+      "moving_age_above_0p6_percent": 62.5,
+      "hazard_moving_age_above_0p6_percent": 61.016949152542374,
+      "mean_moving_evidence_age_s": 0.687467437910123,
+      "max_moving_evidence_age_s": 1.09590769931674,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": false,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-slow_toB_1",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-slow_toB_1.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 117,
+      "moving_decisions": 81,
+      "hazard_moving_decisions": 81,
+      "carry_to_delivery_s": 34.20130249951035,
+      "min_command_estimated_edge_separation_mm": 79.86693876904971,
+      "moving_age_above_0p6_percent": 58.0246913580247,
+      "hazard_moving_age_above_0p6_percent": 58.0246913580247,
+      "mean_moving_evidence_age_s": 0.6825445634830329,
+      "max_moving_evidence_age_s": 1.0987271945923567,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    },
+    {
+      "run": "Trust32-slow_toB_2",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/logs/Trust32-slow_toB_2.json",
+      "campaign": "timed_margin_compare",
+      "method": "Trust32",
+      "direction": "B",
+      "rate": "slow",
+      "vlm_start_to_start_min_period_s": 0.8,
+      "decisions": 201,
+      "moving_decisions": 65,
+      "hazard_moving_decisions": 50,
+      "carry_to_delivery_s": 42.75921554211527,
+      "min_command_estimated_edge_separation_mm": 72.11621153705487,
+      "moving_age_above_0p6_percent": 64.61538461538461,
+      "hazard_moving_age_above_0p6_percent": 62.0,
+      "mean_moving_evidence_age_s": 0.7097920963683954,
+      "max_moving_evidence_age_s": 1.094106912612915,
+      "below_own_margin_hazard_moving_decisions": 0,
+      "human_verdict_moving_decisions": 0,
+      "goal_resumed": true,
+      "calculated_clr_max_residual_m": 2.7755575615628914e-17
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "method": "AEGIS",
+      "rate": "normal",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.71910112359551,
+        99.37663537017085,
+        98.12990611051254,
+        97.20046129888001,
+        95.69599996378419,
+        91.85257449139421,
+        86.95782668924119,
+        83.53039638204058,
+        80.1513141812058,
+        77.3014128692881,
+        75.2471163161278,
+        70.00537578429864,
+        65.52662314733497,
+        61.009470434318104,
+        56.968623527600975,
+        52.744332225733146,
+        48.57090150205072,
+        44.053748789033854,
+        41.716040887649505,
+        38.046111780097604,
+        34.68150458582694,
+        32.46567420257313,
+        30.288243895372524,
+        26.191613323796503,
+        22.189166493132575,
+        18.398616103359924,
+        14.397425508605782,
+        12.256380773026464,
+        9.784832818767033,
+        4.94838115329247,
+        3.123364629829152,
+        1.6779576999339063,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          98.87640449438202,
+          100
+        ],
+        [
+          98.63013698630137,
+          100,
+          98.87640449438202,
+          100
+        ],
+        [
+          95.8904109589041,
+          100,
+          96.62921348314607,
+          100
+        ],
+        [
+          95.8904109589041,
+          98.52941176470588,
+          94.3820224719101,
+          100
+        ],
+        [
+          95.8904109589041,
+          97.05882352941177,
+          91.01123595505618,
+          98.82352941176471
+        ],
+        [
+          90.41095890410958,
+          94.11764705882352,
+          88.76404494382022,
+          94.11764705882352
+        ],
+        [
+          83.56164383561644,
+          88.23529411764706,
+          84.26966292134831,
+          91.76470588235294
+        ],
+        [
+          79.45205479452055,
+          86.76470588235294,
+          82.02247191011236,
+          85.88235294117646
+        ],
+        [
+          76.71232876712328,
+          85.29411764705883,
+          79.7752808988764,
+          78.82352941176471
+        ],
+        [
+          75.34246575342466,
+          80.88235294117648,
+          74.15730337078652,
+          78.82352941176471
+        ],
+        [
+          73.97260273972603,
+          80.88235294117648,
+          69.66292134831461,
+          76.47058823529412
+        ],
+        [
+          67.12328767123287,
+          75.0,
+          69.66292134831461,
+          68.23529411764706
+        ],
+        [
+          61.64383561643836,
+          70.58823529411765,
+          65.1685393258427,
+          64.70588235294117
+        ],
+        [
+          57.534246575342465,
+          64.70588235294117,
+          61.79775280898876,
+          60.0
+        ],
+        [
+          54.794520547945204,
+          55.88235294117647,
+          59.55056179775281,
+          57.647058823529406
+        ],
+        [
+          49.31506849315068,
+          51.470588235294116,
+          58.42696629213483,
+          51.76470588235295
+        ],
+        [
+          47.94520547945205,
+          50.0,
+          52.80898876404494,
+          43.529411764705884
+        ],
+        [
+          43.83561643835616,
+          44.11764705882353,
+          49.43820224719101,
+          38.82352941176471
+        ],
+        [
+          39.726027397260275,
+          41.17647058823529,
+          48.31460674157304,
+          37.64705882352941
+        ],
+        [
+          34.24657534246575,
+          41.17647058823529,
+          43.82022471910113,
+          32.94117647058823
+        ],
+        [
+          32.87671232876712,
+          38.23529411764706,
+          38.20224719101123,
+          29.411764705882355
+        ],
+        [
+          30.136986301369863,
+          36.76470588235294,
+          37.07865168539326,
+          25.882352941176475
+        ],
+        [
+          26.027397260273972,
+          36.76470588235294,
+          34.831460674157306,
+          23.52941176470588
+        ],
+        [
+          21.91780821917808,
+          32.35294117647059,
+          26.96629213483146,
+          23.52941176470588
+        ],
+        [
+          17.80821917808219,
+          25.0,
+          23.595505617977526,
+          22.35294117647059
+        ],
+        [
+          12.32876712328767,
+          22.058823529411764,
+          16.853932584269664,
+          22.35294117647059
+        ],
+        [
+          9.58904109589041,
+          19.11764705882353,
+          11.235955056179774,
+          17.647058823529413
+        ],
+        [
+          8.21917808219178,
+          17.647058823529413,
+          7.865168539325842,
+          15.294117647058824
+        ],
+        [
+          4.10958904109589,
+          17.647058823529413,
+          5.617977528089887,
+          11.76470588235294
+        ],
+        [
+          1.36986301369863,
+          10.294117647058822,
+          2.247191011235955,
+          5.88235294117647
+        ],
+        [
+          1.36986301369863,
+          8.823529411764707,
+          1.1235955056179776,
+          1.1764705882352942
+        ],
+        [
+          0,
+          4.411764705882353,
+          1.1235955056179776,
+          1.1764705882352942
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "AEGIS-normal_toA_1",
+        "AEGIS-normal_toA_2",
+        "AEGIS-normal_toB_1",
+        "AEGIS-normal_toB_2"
+      ]
+    },
+    {
+      "method": "Trust12",
+      "rate": "normal",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.57627118644068,
+        98.8235950044603,
+        97.32530478739221,
+        95.17618198037466,
+        92.77876895628903,
+        90.55821542700346,
+        88.02990096997482,
+        84.74727770939901,
+        81.01757491239363,
+        79.20825852444887,
+        74.19317912352217,
+        71.32885515117982,
+        68.37681188059184,
+        65.06377575025313,
+        59.12764371774749,
+        55.40337044606797,
+        53.58862453279735,
+        49.864351261117825,
+        47.40963180854948,
+        43.99468621672181,
+        40.358132243287905,
+        35.71280634002943,
+        31.571866401683245,
+        28.176540498424778,
+        24.944161519439017,
+        19.855487114052025,
+        16.48677717679739,
+        10.005453050132303,
+        8.841539726811128,
+        6.427626403489953,
+        4.7451369520131585,
+        2.6389186869770436,
+        1.89873417721519,
+        1.89873417721519,
+        1.2658227848101267,
+        0.31645569620253167,
+        0.31645569620253167,
+        0.31645569620253167,
+        0.31645569620253167,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          98.30508474576271,
+          100,
+          100
+        ],
+        [
+          100,
+          96.61016949152543,
+          98.68421052631578,
+          100
+        ],
+        [
+          98.33333333333333,
+          94.91525423728814,
+          96.05263157894737,
+          100
+        ],
+        [
+          95.0,
+          94.91525423728814,
+          90.78947368421053,
+          100
+        ],
+        [
+          95.0,
+          93.22033898305084,
+          82.89473684210526,
+          100
+        ],
+        [
+          95.0,
+          88.13559322033898,
+          82.89473684210526,
+          96.20253164556962
+        ],
+        [
+          90.0,
+          88.13559322033898,
+          81.57894736842105,
+          92.40506329113924
+        ],
+        [
+          88.33333333333333,
+          83.05084745762711,
+          80.26315789473685,
+          87.34177215189874
+        ],
+        [
+          83.33333333333334,
+          79.66101694915254,
+          75.0,
+          86.07594936708861
+        ],
+        [
+          83.33333333333334,
+          76.27118644067797,
+          73.68421052631578,
+          83.54430379746836
+        ],
+        [
+          80.0,
+          71.1864406779661,
+          67.10526315789474,
+          78.48101265822784
+        ],
+        [
+          76.66666666666667,
+          69.49152542372882,
+          64.47368421052632,
+          74.68354430379746
+        ],
+        [
+          71.66666666666667,
+          67.79661016949152,
+          63.1578947368421,
+          70.88607594936708
+        ],
+        [
+          68.33333333333333,
+          64.40677966101694,
+          57.89473684210527,
+          69.62025316455697
+        ],
+        [
+          60.0,
+          59.32203389830508,
+          52.63157894736842,
+          64.55696202531645
+        ],
+        [
+          56.666666666666664,
+          54.23728813559322,
+          48.68421052631579,
+          62.0253164556962
+        ],
+        [
+          55.00000000000001,
+          52.54237288135594,
+          46.05263157894737,
+          60.75949367088608
+        ],
+        [
+          51.66666666666667,
+          47.45762711864407,
+          42.10526315789473,
+          58.22784810126582
+        ],
+        [
+          51.66666666666667,
+          44.06779661016949,
+          39.473684210526315,
+          54.43037974683544
+        ],
+        [
+          48.333333333333336,
+          44.06779661016949,
+          34.21052631578947,
+          49.36708860759494
+        ],
+        [
+          46.666666666666664,
+          38.983050847457626,
+          28.947368421052634,
+          46.835443037974684
+        ],
+        [
+          38.333333333333336,
+          33.89830508474576,
+          26.31578947368421,
+          44.303797468354425
+        ],
+        [
+          33.33333333333333,
+          28.8135593220339,
+          22.36842105263158,
+          41.77215189873418
+        ],
+        [
+          30.0,
+          23.728813559322035,
+          19.736842105263158,
+          39.24050632911392
+        ],
+        [
+          30.0,
+          18.64406779661017,
+          13.157894736842104,
+          37.9746835443038
+        ],
+        [
+          21.666666666666668,
+          16.94915254237288,
+          7.894736842105263,
+          32.91139240506329
+        ],
+        [
+          15.0,
+          15.254237288135593,
+          6.578947368421052,
+          29.11392405063291
+        ],
+        [
+          8.333333333333332,
+          10.16949152542373,
+          0,
+          21.518987341772153
+        ],
+        [
+          8.333333333333332,
+          6.779661016949152,
+          0,
+          20.253164556962027
+        ],
+        [
+          3.3333333333333335,
+          3.389830508474576,
+          0,
+          18.9873417721519
+        ],
+        [
+          1.6666666666666667,
+          3.389830508474576,
+          0,
+          13.924050632911392
+        ],
+        [
+          0,
+          1.694915254237288,
+          0,
+          8.860759493670885
+        ],
+        [
+          0,
+          0,
+          0,
+          7.59493670886076
+        ],
+        [
+          0,
+          0,
+          0,
+          7.59493670886076
+        ],
+        [
+          0,
+          0,
+          0,
+          5.063291139240507
+        ],
+        [
+          0,
+          0,
+          0,
+          1.2658227848101267
+        ],
+        [
+          0,
+          0,
+          0,
+          1.2658227848101267
+        ],
+        [
+          0,
+          0,
+          0,
+          1.2658227848101267
+        ],
+        [
+          0,
+          0,
+          0,
+          1.2658227848101267
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "Trust12-normal_toA_1",
+        "Trust12-normal_toA_2",
+        "Trust12-normal_toB_1",
+        "Trust12-normal_toB_2"
+      ]
+    },
+    {
+      "method": "Trust32",
+      "rate": "normal",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.72222222222223,
+        99.07772304324028,
+        96.59824849480022,
+        94.79088918744091,
+        89.89314325521222,
+        86.3315420211972,
+        81.38341543513957,
+        76.09979101358411,
+        71.76257650395581,
+        69.2302333681644,
+        66.19520326416878,
+        61.152162014230974,
+        57.76732845698363,
+        55.913195999402895,
+        52.73386575110713,
+        50.254391202667065,
+        46.152783997611586,
+        43.98716226302433,
+        40.97862865104244,
+        38.178086281534554,
+        35.933099467582224,
+        32.14298153953327,
+        27.197342886998058,
+        24.087799174006072,
+        20.850748867990248,
+        17.5728964522068,
+        12.991491267353336,
+        8.016868189281983,
+        3.6650992685475448,
+        2.5444096133751306,
+        1.221699756182515,
+        0.943921978404737,
+        0.28735632183908044,
+        0.28735632183908044,
+        0.28735632183908044,
+        0.28735632183908044,
+        0.28735632183908044,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          98.88888888888889,
+          100
+        ],
+        [
+          100,
+          98.57142857142858,
+          98.88888888888889,
+          98.85057471264368
+        ],
+        [
+          100,
+          94.28571428571428,
+          95.55555555555556,
+          96.55172413793103
+        ],
+        [
+          98.48484848484848,
+          88.57142857142857,
+          95.55555555555556,
+          96.55172413793103
+        ],
+        [
+          92.42424242424242,
+          82.85714285714286,
+          88.88888888888889,
+          95.40229885057471
+        ],
+        [
+          90.9090909090909,
+          81.42857142857143,
+          83.33333333333334,
+          89.65517241379311
+        ],
+        [
+          83.33333333333334,
+          77.14285714285715,
+          80.0,
+          85.0574712643678
+        ],
+        [
+          77.27272727272727,
+          70.0,
+          76.66666666666667,
+          80.45977011494253
+        ],
+        [
+          74.24242424242425,
+          61.42857142857143,
+          76.66666666666667,
+          74.71264367816092
+        ],
+        [
+          71.21212121212122,
+          60.0,
+          74.44444444444444,
+          71.26436781609196
+        ],
+        [
+          71.21212121212122,
+          55.714285714285715,
+          68.88888888888889,
+          68.96551724137932
+        ],
+        [
+          66.66666666666666,
+          51.42857142857142,
+          64.44444444444444,
+          62.06896551724138
+        ],
+        [
+          63.63636363636363,
+          50.0,
+          61.111111111111114,
+          56.32183908045977
+        ],
+        [
+          63.63636363636363,
+          47.14285714285714,
+          60.0,
+          52.87356321839081
+        ],
+        [
+          59.09090909090909,
+          45.714285714285715,
+          55.55555555555556,
+          50.57471264367817
+        ],
+        [
+          59.09090909090909,
+          41.42857142857143,
+          52.22222222222223,
+          48.275862068965516
+        ],
+        [
+          54.54545454545454,
+          38.57142857142858,
+          46.666666666666664,
+          44.827586206896555
+        ],
+        [
+          51.515151515151516,
+          38.57142857142858,
+          43.333333333333336,
+          42.5287356321839
+        ],
+        [
+          48.484848484848484,
+          38.57142857142858,
+          37.77777777777778,
+          39.08045977011494
+        ],
+        [
+          45.45454545454545,
+          37.142857142857146,
+          33.33333333333333,
+          36.7816091954023
+        ],
+        [
+          42.42424242424242,
+          35.714285714285715,
+          31.11111111111111,
+          34.48275862068966
+        ],
+        [
+          40.909090909090914,
+          30.0,
+          27.77777777777778,
+          29.88505747126437
+        ],
+        [
+          34.84848484848485,
+          24.285714285714285,
+          26.666666666666668,
+          22.988505747126435
+        ],
+        [
+          30.303030303030305,
+          24.285714285714285,
+          22.22222222222222,
+          19.54022988505747
+        ],
+        [
+          27.27272727272727,
+          20.0,
+          18.88888888888889,
+          17.24137931034483
+        ],
+        [
+          22.727272727272727,
+          17.142857142857142,
+          17.77777777777778,
+          12.643678160919542
+        ],
+        [
+          15.151515151515152,
+          14.285714285714285,
+          13.333333333333334,
+          9.195402298850574
+        ],
+        [
+          10.606060606060606,
+          5.714285714285714,
+          10.0,
+          5.747126436781609
+        ],
+        [
+          4.545454545454546,
+          0,
+          6.666666666666667,
+          3.4482758620689653
+        ],
+        [
+          4.545454545454546,
+          0,
+          3.3333333333333335,
+          2.2988505747126435
+        ],
+        [
+          1.5151515151515151,
+          0,
+          2.2222222222222223,
+          1.1494252873563218
+        ],
+        [
+          1.5151515151515151,
+          0,
+          1.1111111111111112,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          1.1494252873563218
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "Trust32-normal_toA_1",
+        "Trust32-normal_toA_2",
+        "Trust32-normal_toB_1",
+        "Trust32-normal_toB_2"
+      ]
+    },
+    {
+      "method": "AEGIS",
+      "rate": "slow",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.2063492063492,
+        97.51861625216888,
+        92.54058624124414,
+        85.47757615191826,
+        78.819826007326,
+        71.30890125955915,
+        63.28099897178844,
+        56.868212197159565,
+        52.066504402030716,
+        46.69080553948975,
+        42.42125747059958,
+        38.73329156223893,
+        36.572842362316045,
+        33.15395861448493,
+        31.58344579397211,
+        30.56162039714671,
+        29.14296960349592,
+        28.83046960349592,
+        28.1131313861577,
+        27.79261856564488,
+        27.075280348306663,
+        25.38754739412634,
+        24.738087205192468,
+        23.15112701625859,
+        19.488043024227235,
+        16.829915333204806,
+        15.158629747445536,
+        11.4192331791016,
+        10.128747349142085,
+        7.158963112910481,
+        4.761904761904762,
+        4.761904761904762,
+        4.365079365079365,
+        4.365079365079365,
+        3.968253968253968,
+        3.968253968253968,
+        3.968253968253968,
+        3.968253968253968,
+        3.968253968253968,
+        3.968253968253968,
+        3.968253968253968,
+        3.571428571428571,
+        3.571428571428571,
+        3.571428571428571,
+        3.571428571428571,
+        3.1746031746031744,
+        3.1746031746031744,
+        3.1746031746031744,
+        3.1746031746031744,
+        3.1746031746031744,
+        3.1746031746031744,
+        2.7777777777777777,
+        2.7777777777777777,
+        2.7777777777777777,
+        2.380952380952381,
+        2.380952380952381,
+        2.380952380952381,
+        2.380952380952381,
+        2.380952380952381,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.984126984126984,
+        1.5873015873015872,
+        1.1904761904761905,
+        0.7936507936507936,
+        0.7936507936507936,
+        0.7936507936507936,
+        0.7936507936507936,
+        0.3968253968253968,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          96.82539682539682,
+          100,
+          100
+        ],
+        [
+          98.75,
+          95.23809523809523,
+          98.71794871794873,
+          97.36842105263158
+        ],
+        [
+          96.25,
+          92.06349206349206,
+          89.74358974358975,
+          92.10526315789474
+        ],
+        [
+          91.25,
+          85.71428571428571,
+          82.05128205128204,
+          82.89473684210526
+        ],
+        [
+          86.25,
+          80.95238095238095,
+          73.07692307692307,
+          75.0
+        ],
+        [
+          76.25,
+          77.77777777777779,
+          64.1025641025641,
+          67.10526315789474
+        ],
+        [
+          62.5,
+          69.84126984126983,
+          60.256410256410255,
+          60.526315789473685
+        ],
+        [
+          55.00000000000001,
+          69.84126984126983,
+          50.0,
+          52.63157894736842
+        ],
+        [
+          52.5,
+          63.49206349206349,
+          43.58974358974359,
+          48.68421052631579
+        ],
+        [
+          47.5,
+          58.730158730158735,
+          39.743589743589745,
+          40.78947368421053
+        ],
+        [
+          43.75,
+          57.14285714285714,
+          35.8974358974359,
+          32.89473684210527
+        ],
+        [
+          40.0,
+          53.96825396825397,
+          33.33333333333333,
+          27.631578947368425
+        ],
+        [
+          40.0,
+          49.2063492063492,
+          30.76923076923077,
+          26.31578947368421
+        ],
+        [
+          35.0,
+          44.44444444444444,
+          29.48717948717949,
+          23.684210526315788
+        ],
+        [
+          30.0,
+          44.44444444444444,
+          28.205128205128204,
+          23.684210526315788
+        ],
+        [
+          27.500000000000004,
+          42.857142857142854,
+          28.205128205128204,
+          23.684210526315788
+        ],
+        [
+          25.0,
+          39.682539682539684,
+          28.205128205128204,
+          23.684210526315788
+        ],
+        [
+          23.75,
+          39.682539682539684,
+          28.205128205128204,
+          23.684210526315788
+        ],
+        [
+          23.75,
+          38.095238095238095,
+          26.923076923076923,
+          23.684210526315788
+        ],
+        [
+          23.75,
+          38.095238095238095,
+          25.64102564102564,
+          23.684210526315788
+        ],
+        [
+          23.75,
+          36.507936507936506,
+          24.358974358974358,
+          23.684210526315788
+        ],
+        [
+          22.5,
+          34.92063492063492,
+          23.076923076923077,
+          21.052631578947366
+        ],
+        [
+          22.5,
+          34.92063492063492,
+          21.794871794871796,
+          19.736842105263158
+        ],
+        [
+          18.75,
+          34.92063492063492,
+          20.51282051282051,
+          18.421052631578945
+        ],
+        [
+          13.750000000000002,
+          31.746031746031743,
+          16.666666666666664,
+          15.789473684210526
+        ],
+        [
+          11.25,
+          30.158730158730158,
+          15.384615384615385,
+          10.526315789473683
+        ],
+        [
+          8.75,
+          28.57142857142857,
+          14.102564102564102,
+          9.210526315789473
+        ],
+        [
+          3.75,
+          23.809523809523807,
+          11.538461538461538,
+          6.578947368421052
+        ],
+        [
+          3.75,
+          23.809523809523807,
+          7.6923076923076925,
+          5.263157894736842
+        ],
+        [
+          2.5,
+          22.22222222222222,
+          1.282051282051282,
+          2.631578947368421
+        ],
+        [
+          0,
+          19.047619047619047,
+          0,
+          0
+        ],
+        [
+          0,
+          19.047619047619047,
+          0,
+          0
+        ],
+        [
+          0,
+          17.46031746031746,
+          0,
+          0
+        ],
+        [
+          0,
+          17.46031746031746,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          15.873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          14.285714285714285,
+          0,
+          0
+        ],
+        [
+          0,
+          14.285714285714285,
+          0,
+          0
+        ],
+        [
+          0,
+          14.285714285714285,
+          0,
+          0
+        ],
+        [
+          0,
+          14.285714285714285,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          12.698412698412698,
+          0,
+          0
+        ],
+        [
+          0,
+          11.11111111111111,
+          0,
+          0
+        ],
+        [
+          0,
+          11.11111111111111,
+          0,
+          0
+        ],
+        [
+          0,
+          11.11111111111111,
+          0,
+          0
+        ],
+        [
+          0,
+          9.523809523809524,
+          0,
+          0
+        ],
+        [
+          0,
+          9.523809523809524,
+          0,
+          0
+        ],
+        [
+          0,
+          9.523809523809524,
+          0,
+          0
+        ],
+        [
+          0,
+          9.523809523809524,
+          0,
+          0
+        ],
+        [
+          0,
+          9.523809523809524,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          7.936507936507936,
+          0,
+          0
+        ],
+        [
+          0,
+          6.349206349206349,
+          0,
+          0
+        ],
+        [
+          0,
+          4.761904761904762,
+          0,
+          0
+        ],
+        [
+          0,
+          3.1746031746031744,
+          0,
+          0
+        ],
+        [
+          0,
+          3.1746031746031744,
+          0,
+          0
+        ],
+        [
+          0,
+          3.1746031746031744,
+          0,
+          0
+        ],
+        [
+          0,
+          3.1746031746031744,
+          0,
+          0
+        ],
+        [
+          0,
+          1.5873015873015872,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "AEGIS-slow_toA_1",
+        "AEGIS-slow_toA_2",
+        "AEGIS-slow_toB_1",
+        "AEGIS-slow_toB_2"
+      ]
+    },
+    {
+      "method": "Trust12",
+      "rate": "slow",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.67948717948718,
+        98.23200992555832,
+        96.63334737893472,
+        95.11739781824993,
+        94.07314637077266,
+        93.60144825756512,
+        92.39177083821028,
+        90.40412316431794,
+        87.45883858482763,
+        86.6523869719244,
+        85.20490971799553,
+        85.20490971799553,
+        83.28573435085913,
+        81.68707180423553,
+        80.56010737081948,
+        79.75365575791625,
+        77.66905441890225,
+        76.22157716497338,
+        74.60867393916693,
+        74.60867393916693,
+        73.34476489223903,
+        71.42558952510261,
+        71.10507670458979,
+        69.43794185121027,
+        66.49265727171996,
+        65.36569283830391,
+        64.89399472509636,
+        64.17025609813193,
+        62.654306537447134,
+        61.22106996270112,
+        60.817844156249514,
+        59.13646862368713,
+        57.400861463551664,
+        56.67712283658723,
+        54.67523448351203,
+        53.145044243644364,
+        51.614854003776706,
+        50.405176584421866,
+        49.44363812288341,
+        49.04041231643179,
+        48.568714203224246,
+        47.76226259032102,
+        45.843087223184604,
+        43.53492672877944,
+        42.49067528130218,
+        42.49067528130218,
+        40.557259234982915,
+        38.95859668835932,
+        37.680446962248546,
+        37.27722115579694,
+        35.6100863024174,
+        33.370398114768165,
+        33.04988529425535,
+        31.368509761692962,
+        29.21543611592303,
+        27.46558827660471,
+        25.143187103016682,
+        22.500273108915835,
+        21.37330867549979,
+        20.649570048535356,
+        20.649570048535356,
+        19.53684629430217,
+        18.0893690403733,
+        17.617670927165754,
+        16.49070649374971,
+        14.017120027466953,
+        14.017120027466953,
+        13.696607206954134,
+        13.055581565928492,
+        13.055581565928492,
+        12.263370632208124,
+        11.456919019304898,
+        9.858256472681305,
+        9.537743652168484,
+        8.410779218752438,
+        6.394650186494374,
+        6.074137365981554,
+        3.9895360269675546,
+        1.2781497261107728,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          98.71794871794873,
+          100
+        ],
+        [
+          98.38709677419355,
+          98.38709677419355,
+          96.15384615384616,
+          100
+        ],
+        [
+          96.7741935483871,
+          96.7741935483871,
+          94.87179487179486,
+          98.11320754716981
+        ],
+        [
+          96.7741935483871,
+          95.16129032258065,
+          92.3076923076923,
+          96.22641509433963
+        ],
+        [
+          96.7741935483871,
+          93.54838709677419,
+          89.74358974358975,
+          96.22641509433963
+        ],
+        [
+          96.7741935483871,
+          93.54838709677419,
+          89.74358974358975,
+          94.33962264150944
+        ],
+        [
+          93.54838709677419,
+          91.93548387096774,
+          89.74358974358975,
+          94.33962264150944
+        ],
+        [
+          91.93548387096774,
+          91.93548387096774,
+          87.17948717948718,
+          90.56603773584906
+        ],
+        [
+          91.93548387096774,
+          87.09677419354838,
+          85.8974358974359,
+          84.90566037735849
+        ],
+        [
+          88.70967741935483,
+          87.09677419354838,
+          85.8974358974359,
+          84.90566037735849
+        ],
+        [
+          87.09677419354838,
+          85.48387096774194,
+          83.33333333333334,
+          84.90566037735849
+        ],
+        [
+          87.09677419354838,
+          85.48387096774194,
+          83.33333333333334,
+          84.90566037735849
+        ],
+        [
+          85.48387096774194,
+          83.87096774193549,
+          80.76923076923077,
+          83.01886792452831
+        ],
+        [
+          82.25806451612904,
+          83.87096774193549,
+          79.48717948717949,
+          81.13207547169812
+        ],
+        [
+          82.25806451612904,
+          80.64516129032258,
+          78.2051282051282,
+          81.13207547169812
+        ],
+        [
+          80.64516129032258,
+          79.03225806451613,
+          78.2051282051282,
+          81.13207547169812
+        ],
+        [
+          79.03225806451613,
+          74.19354838709677,
+          78.2051282051282,
+          79.24528301886792
+        ],
+        [
+          77.41935483870968,
+          72.58064516129032,
+          75.64102564102564,
+          79.24528301886792
+        ],
+        [
+          72.58064516129032,
+          70.96774193548387,
+          75.64102564102564,
+          79.24528301886792
+        ],
+        [
+          72.58064516129032,
+          70.96774193548387,
+          75.64102564102564,
+          79.24528301886792
+        ],
+        [
+          72.58064516129032,
+          70.96774193548387,
+          74.35897435897436,
+          75.47169811320755
+        ],
+        [
+          70.96774193548387,
+          69.35483870967742,
+          71.7948717948718,
+          73.58490566037736
+        ],
+        [
+          70.96774193548387,
+          69.35483870967742,
+          70.51282051282051,
+          73.58490566037736
+        ],
+        [
+          69.35483870967742,
+          69.35483870967742,
+          69.23076923076923,
+          69.81132075471697
+        ],
+        [
+          67.74193548387096,
+          66.12903225806451,
+          67.94871794871796,
+          64.15094339622641
+        ],
+        [
+          66.12903225806451,
+          64.51612903225806,
+          66.66666666666666,
+          64.15094339622641
+        ],
+        [
+          66.12903225806451,
+          64.51612903225806,
+          66.66666666666666,
+          62.264150943396224
+        ],
+        [
+          64.51612903225806,
+          64.51612903225806,
+          65.38461538461539,
+          62.264150943396224
+        ],
+        [
+          62.903225806451616,
+          64.51612903225806,
+          62.82051282051282,
+          60.37735849056604
+        ],
+        [
+          62.903225806451616,
+          64.51612903225806,
+          58.97435897435898,
+          58.490566037735846
+        ],
+        [
+          61.29032258064516,
+          64.51612903225806,
+          58.97435897435898,
+          58.490566037735846
+        ],
+        [
+          61.29032258064516,
+          59.67741935483871,
+          58.97435897435898,
+          56.60377358490566
+        ],
+        [
+          61.29032258064516,
+          59.67741935483871,
+          57.692307692307686,
+          50.943396226415096
+        ],
+        [
+          61.29032258064516,
+          58.06451612903226,
+          56.41025641025641,
+          50.943396226415096
+        ],
+        [
+          59.67741935483871,
+          54.83870967741935,
+          55.12820512820513,
+          49.056603773584904
+        ],
+        [
+          58.06451612903226,
+          51.61290322580645,
+          53.84615384615385,
+          49.056603773584904
+        ],
+        [
+          54.83870967741935,
+          50.0,
+          52.56410256410257,
+          49.056603773584904
+        ],
+        [
+          51.61290322580645,
+          48.38709677419355,
+          52.56410256410257,
+          49.056603773584904
+        ],
+        [
+          51.61290322580645,
+          48.38709677419355,
+          48.717948717948715,
+          49.056603773584904
+        ],
+        [
+          50.0,
+          48.38709677419355,
+          48.717948717948715,
+          49.056603773584904
+        ],
+        [
+          50.0,
+          48.38709677419355,
+          48.717948717948715,
+          47.16981132075472
+        ],
+        [
+          46.774193548387096,
+          48.38709677419355,
+          48.717948717948715,
+          47.16981132075472
+        ],
+        [
+          45.16129032258064,
+          46.774193548387096,
+          46.15384615384615,
+          45.28301886792453
+        ],
+        [
+          43.54838709677419,
+          46.774193548387096,
+          42.30769230769231,
+          41.509433962264154
+        ],
+        [
+          43.54838709677419,
+          45.16129032258064,
+          39.743589743589745,
+          41.509433962264154
+        ],
+        [
+          43.54838709677419,
+          45.16129032258064,
+          39.743589743589745,
+          41.509433962264154
+        ],
+        [
+          43.54838709677419,
+          38.70967741935484,
+          38.46153846153847,
+          41.509433962264154
+        ],
+        [
+          41.935483870967744,
+          37.096774193548384,
+          37.17948717948718,
+          39.62264150943396
+        ],
+        [
+          40.32258064516129,
+          35.483870967741936,
+          37.17948717948718,
+          37.735849056603776
+        ],
+        [
+          38.70967741935484,
+          35.483870967741936,
+          37.17948717948718,
+          37.735849056603776
+        ],
+        [
+          37.096774193548384,
+          35.483870967741936,
+          35.8974358974359,
+          33.9622641509434
+        ],
+        [
+          33.87096774193548,
+          35.483870967741936,
+          32.05128205128205,
+          32.075471698113205
+        ],
+        [
+          33.87096774193548,
+          35.483870967741936,
+          30.76923076923077,
+          32.075471698113205
+        ],
+        [
+          32.25806451612903,
+          32.25806451612903,
+          30.76923076923077,
+          30.18867924528302
+        ],
+        [
+          30.64516129032258,
+          29.03225806451613,
+          30.76923076923077,
+          26.41509433962264
+        ],
+        [
+          30.64516129032258,
+          25.806451612903224,
+          30.76923076923077,
+          22.641509433962266
+        ],
+        [
+          25.806451612903224,
+          25.806451612903224,
+          28.205128205128204,
+          20.754716981132077
+        ],
+        [
+          24.193548387096776,
+          22.58064516129032,
+          24.358974358974358,
+          18.867924528301888
+        ],
+        [
+          24.193548387096776,
+          19.35483870967742,
+          23.076923076923077,
+          18.867924528301888
+        ],
+        [
+          22.58064516129032,
+          19.35483870967742,
+          21.794871794871796,
+          18.867924528301888
+        ],
+        [
+          22.58064516129032,
+          19.35483870967742,
+          21.794871794871796,
+          18.867924528301888
+        ],
+        [
+          22.58064516129032,
+          19.35483870967742,
+          19.230769230769234,
+          16.9811320754717
+        ],
+        [
+          22.58064516129032,
+          16.129032258064516,
+          16.666666666666664,
+          16.9811320754717
+        ],
+        [
+          22.58064516129032,
+          16.129032258064516,
+          16.666666666666664,
+          15.09433962264151
+        ],
+        [
+          19.35483870967742,
+          16.129032258064516,
+          15.384615384615385,
+          15.09433962264151
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          14.102564102564102,
+          11.320754716981133
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          14.102564102564102,
+          11.320754716981133
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          12.82051282051282,
+          11.320754716981133
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          10.256410256410255,
+          11.320754716981133
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          10.256410256410255,
+          11.320754716981133
+        ],
+        [
+          17.741935483870968,
+          12.903225806451612,
+          8.974358974358974,
+          9.433962264150944
+        ],
+        [
+          16.129032258064516,
+          11.29032258064516,
+          8.974358974358974,
+          9.433962264150944
+        ],
+        [
+          12.903225806451612,
+          11.29032258064516,
+          7.6923076923076925,
+          7.547169811320755
+        ],
+        [
+          12.903225806451612,
+          11.29032258064516,
+          6.41025641025641,
+          7.547169811320755
+        ],
+        [
+          9.67741935483871,
+          11.29032258064516,
+          5.128205128205128,
+          7.547169811320755
+        ],
+        [
+          8.064516129032258,
+          4.838709677419355,
+          5.128205128205128,
+          7.547169811320755
+        ],
+        [
+          8.064516129032258,
+          4.838709677419355,
+          3.8461538461538463,
+          7.547169811320755
+        ],
+        [
+          4.838709677419355,
+          1.6129032258064515,
+          3.8461538461538463,
+          5.660377358490567
+        ],
+        [
+          3.225806451612903,
+          0,
+          0,
+          1.8867924528301887
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "Trust12-slow_toA_1",
+        "Trust12-slow_toA_2",
+        "Trust12-slow_toB_1",
+        "Trust12-slow_toB_2"
+      ]
+    },
+    {
+      "method": "Trust32",
+      "rate": "slow",
+      "thresholds_s": [
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.31,
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.39,
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6,
+        0.61,
+        0.62,
+        0.63,
+        0.64,
+        0.65,
+        0.66,
+        0.67,
+        0.68,
+        0.69,
+        0.7,
+        0.71,
+        0.72,
+        0.73,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.83,
+        0.84,
+        0.85,
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.97,
+        0.98,
+        0.99,
+        1.0,
+        1.01,
+        1.02,
+        1.03,
+        1.04,
+        1.05,
+        1.06,
+        1.07,
+        1.08,
+        1.09,
+        1.1,
+        1.11,
+        1.12,
+        1.13,
+        1.14,
+        1.15,
+        1.16,
+        1.17,
+        1.18,
+        1.19,
+        1.2
+      ],
+      "mean_run_fraction_percent": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        99.64285714285714,
+        99.28571428571428,
+        99.28571428571428,
+        97.96406525573192,
+        97.29828042328042,
+        95.66798941798942,
+        94.30776014109347,
+        93.25617283950618,
+        91.51132817799484,
+        88.80197734364401,
+        87.75157712657713,
+        86.72864943698276,
+        86.34403405236738,
+        85.2936338353005,
+        84.63776963776964,
+        82.86545244878579,
+        79.92589200922535,
+        78.0676807760141,
+        76.29655067155068,
+        75.67926672093338,
+        74.29156491656491,
+        73.93442205942206,
+        72.96991588658256,
+        72.35263193596526,
+        71.62079432912766,
+        70.55928639261973,
+        68.50579975579976,
+        66.799535341202,
+        66.0852496269163,
+        64.61165377832044,
+        62.866809116809115,
+        62.24952516619183,
+        61.285018993352324,
+        60.23343169176503,
+        59.14445122778456,
+        56.929097137430475,
+        56.27323293989961,
+        54.55704789038122,
+        53.58262108262108,
+        53.22547822547823,
+        51.79046262379596,
+        50.05553859720526,
+        49.35117351784019,
+        47.61743657576991,
+        45.602530185863515,
+        44.860771944105274,
+        43.85768552435219,
+        42.84467846967847,
+        40.71640550807217,
+        39.664818206484874,
+        38.21869488536155,
+        37.20568783068783,
+        35.585317460317455,
+        34.54483787817121,
+        31.701092117758783,
+        29.542972459639124,
+        28.117877492877493,
+        27.733262108262107,
+        26.758835300501968,
+        26.044549586216252,
+        24.598426265092932,
+        22.88224121557455,
+        21.907814407814406,
+        20.808913308913308,
+        18.387176095509428,
+        17.693918735585402,
+        16.692019400352734,
+        16.34479717813051,
+        15.688932980599647,
+        15.380291005291005,
+        14.4157848324515,
+        13.299331840998509,
+        12.643467643467643,
+        11.901709401709402,
+        11.245845204178538,
+        9.473528015194681,
+        7.625237416904083,
+        5.475936100936101,
+        5.128713878713879,
+        4.002340252340252,
+        2.410629493962827,
+        2.101987518654185,
+        0.35714285714285715,
+        0.35714285714285715,
+        0.35714285714285715,
+        0.35714285714285715,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "individual_run_fractions_percent": [
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          100,
+          100,
+          100,
+          100
+        ],
+        [
+          98.57142857142858,
+          100,
+          100,
+          100
+        ],
+        [
+          97.14285714285714,
+          100,
+          100,
+          100
+        ],
+        [
+          97.14285714285714,
+          100,
+          100,
+          100
+        ],
+        [
+          95.71428571428572,
+          98.61111111111111,
+          97.53086419753086,
+          100
+        ],
+        [
+          94.28571428571428,
+          98.61111111111111,
+          96.29629629629629,
+          100
+        ],
+        [
+          92.85714285714286,
+          97.22222222222221,
+          92.5925925925926,
+          100
+        ],
+        [
+          91.42857142857143,
+          94.44444444444444,
+          91.35802469135803,
+          100
+        ],
+        [
+          90.0,
+          91.66666666666666,
+          91.35802469135803,
+          100
+        ],
+        [
+          88.57142857142857,
+          88.88888888888889,
+          90.12345679012346,
+          98.46153846153847
+        ],
+        [
+          87.14285714285714,
+          84.72222222222221,
+          86.41975308641975,
+          96.92307692307692
+        ],
+        [
+          85.71428571428571,
+          84.72222222222221,
+          85.18518518518519,
+          95.38461538461539
+        ],
+        [
+          82.85714285714286,
+          84.72222222222221,
+          83.9506172839506,
+          95.38461538461539
+        ],
+        [
+          82.85714285714286,
+          84.72222222222221,
+          83.9506172839506,
+          93.84615384615384
+        ],
+        [
+          81.42857142857143,
+          84.72222222222221,
+          82.71604938271605,
+          92.3076923076923
+        ],
+        [
+          81.42857142857143,
+          83.33333333333334,
+          81.48148148148148,
+          92.3076923076923
+        ],
+        [
+          81.42857142857143,
+          80.55555555555556,
+          80.24691358024691,
+          89.23076923076924
+        ],
+        [
+          74.28571428571429,
+          80.55555555555556,
+          80.24691358024691,
+          84.61538461538461
+        ],
+        [
+          72.85714285714285,
+          79.16666666666666,
+          80.24691358024691,
+          80.0
+        ],
+        [
+          72.85714285714285,
+          79.16666666666666,
+          77.77777777777779,
+          75.38461538461539
+        ],
+        [
+          72.85714285714285,
+          79.16666666666666,
+          75.30864197530865,
+          75.38461538461539
+        ],
+        [
+          72.85714285714285,
+          76.38888888888889,
+          74.07407407407408,
+          73.84615384615385
+        ],
+        [
+          71.42857142857143,
+          76.38888888888889,
+          74.07407407407408,
+          73.84615384615385
+        ],
+        [
+          71.42857142857143,
+          75.0,
+          71.60493827160494,
+          73.84615384615385
+        ],
+        [
+          71.42857142857143,
+          75.0,
+          69.1358024691358,
+          73.84615384615385
+        ],
+        [
+          71.42857142857143,
+          73.61111111111111,
+          69.1358024691358,
+          72.3076923076923
+        ],
+        [
+          68.57142857142857,
+          72.22222222222221,
+          69.1358024691358,
+          72.3076923076923
+        ],
+        [
+          67.14285714285714,
+          69.44444444444444,
+          66.66666666666666,
+          70.76923076923077
+        ],
+        [
+          65.71428571428571,
+          68.05555555555556,
+          64.19753086419753,
+          69.23076923076923
+        ],
+        [
+          62.857142857142854,
+          68.05555555555556,
+          64.19753086419753,
+          69.23076923076923
+        ],
+        [
+          61.42857142857143,
+          66.66666666666666,
+          64.19753086419753,
+          66.15384615384615
+        ],
+        [
+          60.0,
+          63.888888888888886,
+          62.96296296296296,
+          64.61538461538461
+        ],
+        [
+          60.0,
+          63.888888888888886,
+          60.49382716049383,
+          64.61538461538461
+        ],
+        [
+          60.0,
+          62.5,
+          58.0246913580247,
+          64.61538461538461
+        ],
+        [
+          58.57142857142858,
+          59.72222222222222,
+          58.0246913580247,
+          64.61538461538461
+        ],
+        [
+          57.14285714285714,
+          58.333333333333336,
+          58.0246913580247,
+          63.07692307692307
+        ],
+        [
+          54.285714285714285,
+          56.94444444444444,
+          58.0246913580247,
+          58.46153846153847
+        ],
+        [
+          54.285714285714285,
+          55.55555555555556,
+          56.79012345679012,
+          58.46153846153847
+        ],
+        [
+          51.42857142857142,
+          55.55555555555556,
+          54.32098765432099,
+          56.92307692307692
+        ],
+        [
+          50.0,
+          55.55555555555556,
+          51.85185185185185,
+          56.92307692307692
+        ],
+        [
+          48.57142857142857,
+          55.55555555555556,
+          51.85185185185185,
+          56.92307692307692
+        ],
+        [
+          47.14285714285714,
+          55.55555555555556,
+          50.617283950617285,
+          53.84615384615385
+        ],
+        [
+          47.14285714285714,
+          51.388888888888886,
+          49.382716049382715,
+          52.307692307692314
+        ],
+        [
+          45.714285714285715,
+          50.0,
+          49.382716049382715,
+          52.307692307692314
+        ],
+        [
+          45.714285714285715,
+          48.61111111111111,
+          46.913580246913575,
+          49.23076923076923
+        ],
+        [
+          44.285714285714285,
+          47.22222222222222,
+          43.20987654320987,
+          47.69230769230769
+        ],
+        [
+          42.857142857142854,
+          47.22222222222222,
+          43.20987654320987,
+          46.15384615384615
+        ],
+        [
+          42.857142857142854,
+          44.44444444444444,
+          41.9753086419753,
+          46.15384615384615
+        ],
+        [
+          41.42857142857143,
+          43.05555555555556,
+          40.74074074074074,
+          46.15384615384615
+        ],
+        [
+          40.0,
+          43.05555555555556,
+          38.2716049382716,
+          41.53846153846154
+        ],
+        [
+          38.57142857142858,
+          40.27777777777778,
+          38.2716049382716,
+          41.53846153846154
+        ],
+        [
+          35.714285714285715,
+          38.88888888888889,
+          38.2716049382716,
+          40.0
+        ],
+        [
+          34.285714285714285,
+          37.5,
+          37.03703703703704,
+          40.0
+        ],
+        [
+          34.285714285714285,
+          34.72222222222222,
+          33.33333333333333,
+          40.0
+        ],
+        [
+          34.285714285714285,
+          33.33333333333333,
+          32.098765432098766,
+          38.46153846153847
+        ],
+        [
+          30.0,
+          30.555555555555557,
+          30.864197530864196,
+          35.38461538461539
+        ],
+        [
+          30.0,
+          25.0,
+          30.864197530864196,
+          32.30769230769231
+        ],
+        [
+          30.0,
+          23.61111111111111,
+          29.629629629629626,
+          29.230769230769234
+        ],
+        [
+          30.0,
+          23.61111111111111,
+          29.629629629629626,
+          27.692307692307693
+        ],
+        [
+          28.57142857142857,
+          23.61111111111111,
+          27.160493827160494,
+          27.692307692307693
+        ],
+        [
+          25.71428571428571,
+          23.61111111111111,
+          27.160493827160494,
+          27.692307692307693
+        ],
+        [
+          22.857142857142858,
+          22.22222222222222,
+          27.160493827160494,
+          26.153846153846157
+        ],
+        [
+          20.0,
+          22.22222222222222,
+          24.691358024691358,
+          24.615384615384617
+        ],
+        [
+          18.571428571428573,
+          22.22222222222222,
+          22.22222222222222,
+          24.615384615384617
+        ],
+        [
+          15.714285714285714,
+          22.22222222222222,
+          22.22222222222222,
+          23.076923076923077
+        ],
+        [
+          11.428571428571429,
+          18.055555555555554,
+          20.98765432098765,
+          23.076923076923077
+        ],
+        [
+          11.428571428571429,
+          18.055555555555554,
+          19.753086419753085,
+          21.53846153846154
+        ],
+        [
+          11.428571428571429,
+          18.055555555555554,
+          17.28395061728395,
+          20.0
+        ],
+        [
+          11.428571428571429,
+          16.666666666666664,
+          17.28395061728395,
+          20.0
+        ],
+        [
+          11.428571428571429,
+          15.277777777777779,
+          16.049382716049383,
+          20.0
+        ],
+        [
+          11.428571428571429,
+          15.277777777777779,
+          14.814814814814813,
+          20.0
+        ],
+        [
+          11.428571428571429,
+          13.88888888888889,
+          12.345679012345679,
+          20.0
+        ],
+        [
+          11.428571428571429,
+          12.5,
+          12.345679012345679,
+          16.923076923076923
+        ],
+        [
+          11.428571428571429,
+          11.11111111111111,
+          11.11111111111111,
+          16.923076923076923
+        ],
+        [
+          10.0,
+          11.11111111111111,
+          11.11111111111111,
+          15.384615384615385
+        ],
+        [
+          10.0,
+          9.722222222222223,
+          9.876543209876543,
+          15.384615384615385
+        ],
+        [
+          10.0,
+          6.944444444444445,
+          8.641975308641975,
+          12.307692307692308
+        ],
+        [
+          10.0,
+          4.166666666666666,
+          8.641975308641975,
+          7.6923076923076925
+        ],
+        [
+          5.714285714285714,
+          4.166666666666666,
+          7.4074074074074066,
+          4.615384615384616
+        ],
+        [
+          5.714285714285714,
+          2.7777777777777777,
+          7.4074074074074066,
+          4.615384615384616
+        ],
+        [
+          4.285714285714286,
+          2.7777777777777777,
+          7.4074074074074066,
+          1.5384615384615385
+        ],
+        [
+          2.857142857142857,
+          2.7777777777777777,
+          2.4691358024691357,
+          1.5384615384615385
+        ],
+        [
+          2.857142857142857,
+          2.7777777777777777,
+          1.2345679012345678,
+          1.5384615384615385
+        ],
+        [
+          1.4285714285714286,
+          0,
+          0,
+          0
+        ],
+        [
+          1.4285714285714286,
+          0,
+          0,
+          0
+        ],
+        [
+          1.4285714285714286,
+          0,
+          0,
+          0
+        ],
+        [
+          1.4285714285714286,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "run_ids": [
+        "Trust32-slow_toA_1",
+        "Trust32-slow_toA_2",
+        "Trust32-slow_toB_1",
+        "Trust32-slow_toB_2"
+      ]
+    }
+  ],
+  "cautions": [
+    "Capture proxy does not validate sensor-exposure-to-Pi delay.",
+    "Exploratory and pilot runs are not pooled into the 24-run main comparison.",
+    "All transport outcomes retained, including unfavorable metrics.",
+    "Delivery is a logged outcome, not independent proof of physical safety."
+  ]
+}

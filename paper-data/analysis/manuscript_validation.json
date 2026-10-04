@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "main_table_cells_match_run_summary_to_displayed_precision": 24,
+  "motion_freshness_tables_and_figure_hashes_verified": true,
+  "three_finding_sections_and_cutoff_free_age_definition_present": true,
+  "score_hold_time_decomposition_matches_posthoc_audit": true,
+  "semantic_presence_table_matches_merged_human_review": true,
+  "semantic_table_and_result_hashes_verified": true,
+  "obsolete_pending_annotation_claims_removed": true,
+  "abstract_whitespace_word_count": 192,
+  "official_mdpi_class_sha256": "658dbb5b2db2f6560bf3de3ecff7efac310a5817721eebd7539c1990b5345f01",
+  "pdfs": {
+    "main": {
+      "pages": 22,
+      "pdf_sha256": "373d9afa614b6c5a98d56d3a7988014d83382d56d0e8c1f48f344205352d9000",
+      "tex_sha256": "f13698d5adb128f1dd960f8aefe586df80bf7ae91dc6598742d5bb467339606d",
+      "defined_cross_references": 15,
+      "defined_citations": 26,
+      "missing_glyphs_or_unresolved_references": false,
+      "unmodified_submission_template_unassigned_doi_stub": true
+    },
+    "supplementary": {
+      "pages": 16,
+      "pdf_sha256": "ba917a81bb84e2456aac4f63431af68200f6a166897fea47cd4a9e565660eb0d",
+      "tex_sha256": "a8b8b2fc4484a52c1d660a4ff9a8df199a0c8173b00397318bde26f63003a52d",
+      "defined_cross_references": 12,
+      "defined_citations": 0,
+      "missing_glyphs_or_unresolved_references": false,
+      "unmodified_submission_template_unassigned_doi_stub": false
+    }
+  },
+  "offline_review": {
+    "remedies_1_2_3_5_integrated": true,
+    "shadow_primary_eligible_rows": 1302,
+    "shadow_primary_semantic_gate_disagreements": 0,
+    "timing_stage_decisions_reconciled": 4530,
+    "new_analysis_source_and_product_hashes_verified": true,
+    "hypothetical_offsets_and_on_policy_scope_explicit": true,
+    "four_panel_figure_includes_individual_mean_age_values": true
+  },
+  "evidence_boundaries_table_and_software_motion_definition_present": true,
+  "local_data_availability_not_external_deposition": true,
+  "scope": "File and text consistency only, not independent physical or statistical validation. Current visual checks are recorded in analysis/remedy8_validation.json; earlier checks remain archived."
+}

@@ -1,0 +1,177 @@
+{
+  "status": "provisional_first_pass_pending_targeted_human_recheck",
+  "caution": "Provisional first-pass human labels. Model disagreement is not a human error. Targeted re-review is adjudication, not another independent test sample. Uncertain labels are retained. Prior model exposure needs user clarification; the original declaration is preserved and no blinding claim is made.",
+  "original_human_metadata": {
+    "schema_version": "aegis-human-review-v1",
+    "label_source": "human",
+    "review_manifest_sha256": "b62a451ddfc5347d2ae8f75f361e6a5c8ef9573a3a37fed961099ecefcac7a44",
+    "annotator": "Dan",
+    "prior_model_exposure": "no",
+    "saved_at": "2026-09-24T21:55:53.540Z"
+  },
+  "exposure_status": "Original declaration retained verbatim; pending user clarification. Do not claim blinded assessment.",
+  "original_human_counts": {
+    "no_hand": 322,
+    "hand": 103,
+    "uncertain": 1
+  },
+  "original_hand_cover_counts": {
+    "bare": 91,
+    "glove": 12
+  },
+  "original_hand_visibility_counts": {
+    "full": 79,
+    "partial": 11,
+    "uncertain": 13
+  },
+  "sample_size": 426,
+  "flag_counts_nonexclusive": {
+    "human_presence_uncertain": 1,
+    "human_condition_uncertain": 13,
+    "human_vs_reference_presence": 53,
+    "human_vs_monitor_presence": 22,
+    "cover_disagreement": 0,
+    "visibility_disagreement": 38
+  },
+  "recheck_unique_count": 115,
+  "priority_counts": {
+    "0": 1,
+    "1": 13,
+    "2": 101
+  },
+  "flag_overlap_pattern_counts": {
+    "human_vs_monitor_presence": 22,
+    "human_vs_reference_presence": 41,
+    "visibility_disagreement": 38,
+    "human_condition_uncertain|human_vs_reference_presence": 12,
+    "human_condition_uncertain": 1,
+    "human_presence_uncertain": 1
+  },
+  "raw_unweighted_tables": {
+    "monitor": {
+      "hand": {
+        "HUMAN": 103,
+        "OBJECT": 0,
+        "ERROR": 0
+      },
+      "no_hand": {
+        "HUMAN": 22,
+        "OBJECT": 300,
+        "ERROR": 0
+      },
+      "uncertain": {
+        "HUMAN": 1,
+        "OBJECT": 0,
+        "ERROR": 0
+      }
+    },
+    "reference": {
+      "hand": {
+        "hand": 50,
+        "no_hand": 53,
+        "uncertain": 0,
+        "error": 0
+      },
+      "no_hand": {
+        "hand": 0,
+        "no_hand": 322,
+        "uncertain": 0,
+        "error": 0
+      },
+      "uncertain": {
+        "hand": 0,
+        "no_hand": 1,
+        "uncertain": 0,
+        "error": 0
+      }
+    }
+  },
+  "weighted_finite_population_counts": {
+    "interpretation": "Design-weighted point counts over the original 2158-frame population, NOT counts directly reviewed. No confidence interval or independence claim.",
+    "human_presence": {
+      "no_hand": 2053.999999999995,
+      "hand": 103.0,
+      "uncertain": 1.0
+    },
+    "tables": {
+      "monitor": {
+        "hand": {
+          "HUMAN": 103.0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 22.0,
+          "OBJECT": 2031.9999999999948,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 1.0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference": {
+        "hand": {
+          "hand": 50.0,
+          "no_hand": 53.0,
+          "uncertain": 0,
+          "error": 0
+        },
+        "no_hand": {
+          "hand": 0,
+          "no_hand": 2053.999999999995,
+          "uncertain": 0,
+          "error": 0
+        },
+        "uncertain": {
+          "hand": 0,
+          "no_hand": 1.0,
+          "uncertain": 0,
+          "error": 0
+        }
+      }
+    }
+  },
+  "metric_limitations": [
+    "Raw sample is enriched by model strata; raw agreement is not population accuracy.",
+    "Zero observed false negatives does not establish perfect recall, especially in unsampled jointly negative frames.",
+    "Uncertain presence and conditions are retained, not imputed from either model.",
+    "Frames are correlated within runs; no per-frame independent-binomial inference is provided.",
+    "Single-session retrospective current-checkpoint video replay is not independent-session or live-input validation.",
+    "Targeted queue must be merged by case ID back into the original sample; do not analyze it as a new representative sample."
+  ],
+  "provenance": {
+    "original_sample_manifest": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_human_review/review_426_v1/manifest.json",
+    "original_sample_manifest_sha256": "b62a451ddfc5347d2ae8f75f361e6a5c8ef9573a3a37fed961099ecefcac7a44",
+    "original_human_export": "/Users/danial/Downloads/human_review_426_2026-09-24T21-55-53-540Z.json",
+    "original_human_export_sha256": "25d7fb5f0f65e2e4968856ba1aa99742106f648e093221e857e5d9adbbaee904",
+    "original_human_export_preserved_copy": "original_human_export.json",
+    "automatic_audit_directory": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_auto_audit/run_20260924_203640",
+    "automatic_audit_hashes": {
+      "spec.json": "5a3de974b2b3630f6d5ad1064fbc7c9c398e8ba2e0ea75512ad5cd584b8d48e6",
+      "frame_mapping.json": "152b4afe0fa785bac17f50007e98584ae8f6532bb0e627db455c33d226b60b02",
+      "reference.jsonl": "f818d9ec9fd15b2c5d513b557e9c516da593e1d54506244a6d9bc3414493d6c6",
+      "monitor.jsonl": "4bb1cd14f87c6b6a9001616eb0f1ff720c2706ed233d07855db508c0dfe744f3",
+      "reference.sealed.json": "7453b6eeffdd3d495f01c0de06088b088c589552a6c6cfec52c6f05c2488c4bb",
+      "monitor.sealed.json": "1293a83ce01c4708e1c4a55a6d3c1c1b3e733cf5223ab843df0d8d3edbd12789",
+      "summary.json": "d8ee0255490ea6f9573af44a5272dec7aea930ba0d4cb3fb3002473ff6500c6d",
+      "reference_checkpoint.json": "de2e91ac1d0772d49c16af9f5c9f12055ad5f2ae617d0bb5bd24c22d73a0c4b7",
+      "monitor_checkpoint.json": "bf5a064489c8d8d255bf090ff6ce0f4f629c2599edce8e235addce8ead820a94"
+    },
+    "queue_code_sha256": "0b7feea6015b740961c56b94f9a8370e0208d8472398362662927e3c69b0a1e2",
+    "template_sha256_at_freeze": "3232925bc9b1349b487d2cdbbb2293641cd17e8faf4f21418fcdb0f578302afe"
+  },
+  "original_export_validation": {
+    "valid": true,
+    "human_declaration_only": true,
+    "annotator": "Dan",
+    "prior_model_exposure": "no",
+    "reviewed": 426,
+    "total": 426,
+    "complete": true,
+    "uncertain_count": 1,
+    "status": "export integrity verified; no accuracy or safety estimate computed"
+  },
+  "recheck_manifest_sha256": "ba41bcafb5bf3d6f766c4a7e9101f986c701ad11791247e294621885c6c883d4"
+}

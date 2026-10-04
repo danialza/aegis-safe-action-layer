@@ -1,0 +1,930 @@
+{
+  "schema_version": "aegis-human-review-v1",
+  "label_source": "human",
+  "review_manifest_sha256": "ba41bcafb5bf3d6f766c4a7e9101f986c701ad11791247e294621885c6c883d4",
+  "annotator": "Dan 2",
+  "prior_model_exposure": "no",
+  "labels": [
+    {
+      "id": "case_bf1f29998d152a4945da",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:21:50.401Z"
+    },
+    {
+      "id": "case_80c75ca398e9e6aa7676",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:03.108Z"
+    },
+    {
+      "id": "case_7f426cb0b1e9731ee75d",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:12.017Z"
+    },
+    {
+      "id": "case_3b788bccc6c7ba9962d7",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:19.779Z"
+    },
+    {
+      "id": "case_889b700cf27fdfbc5667",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:27.758Z"
+    },
+    {
+      "id": "case_8fa012f4e92caa0296a2",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:36.213Z"
+    },
+    {
+      "id": "case_f835c3f6f7144f18434d",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:43.038Z"
+    },
+    {
+      "id": "case_4be8e122d5f0b1d6e966",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:49.308Z"
+    },
+    {
+      "id": "case_22fa52fcb2cd00427a61",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:22:56.875Z"
+    },
+    {
+      "id": "case_6bb0539cf8cad0be26e6",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:03.987Z"
+    },
+    {
+      "id": "case_b822cb645d29b727e16f",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:09.162Z"
+    },
+    {
+      "id": "case_18c73e0e31e5bd08d1d9",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:14.700Z"
+    },
+    {
+      "id": "case_26d9f1fced2274821027",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:19.800Z"
+    },
+    {
+      "id": "case_3443325d8c5cf28584ad",
+      "label": "uncertain",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:23.817Z"
+    },
+    {
+      "id": "case_61efeefabd98b1341d94",
+      "label": "uncertain",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:27.646Z"
+    },
+    {
+      "id": "case_80f8df3f7b3a83dc69f8",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:34.549Z"
+    },
+    {
+      "id": "case_4b548a2cf54145fee749",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:36.842Z"
+    },
+    {
+      "id": "case_9f99e29501eb55b248d8",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:23:42.650Z"
+    },
+    {
+      "id": "case_85451fca06d14a07f632",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:51:49.974Z"
+    },
+    {
+      "id": "case_4717cc57bc157887567c",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:51:59.128Z"
+    },
+    {
+      "id": "case_4cb1a5b776241bf5417c",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:02.697Z"
+    },
+    {
+      "id": "case_401184f200a145de9050",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:04.337Z"
+    },
+    {
+      "id": "case_30e534f34c92bf9d06bd",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:05.895Z"
+    },
+    {
+      "id": "case_4c48d609fcc733358df1",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:11.570Z"
+    },
+    {
+      "id": "case_3a55d448d46a9a6d9586",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:18.624Z"
+    },
+    {
+      "id": "case_9a6e1939df9601f83992",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:23.728Z"
+    },
+    {
+      "id": "case_7807b58aaee4516b0b26",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:30.741Z"
+    },
+    {
+      "id": "case_121e4489d27af3c34d23",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:38.332Z"
+    },
+    {
+      "id": "case_45968f1d2556c5f134bf",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:44.728Z"
+    },
+    {
+      "id": "case_9652972103af642e89f5",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:52.328Z"
+    },
+    {
+      "id": "case_dd7056971db7a0dfca49",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:52:54.245Z"
+    },
+    {
+      "id": "case_f24e9c0aa5567df57825",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:07.382Z"
+    },
+    {
+      "id": "case_705cfa651833c31f93b1",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:12.944Z"
+    },
+    {
+      "id": "case_26cbc2947c078203217d",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:14.666Z"
+    },
+    {
+      "id": "case_3fb6aa5b4f339b1952db",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:15.807Z"
+    },
+    {
+      "id": "case_27b73cf65a4fdef9c16b",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:20.707Z"
+    },
+    {
+      "id": "case_8f9ffdef9456c057240e",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:25.778Z"
+    },
+    {
+      "id": "case_73c3a0411b2a752b5306",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:30.882Z"
+    },
+    {
+      "id": "case_b5c07a132e05e6e515ca",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:32.461Z"
+    },
+    {
+      "id": "case_89b77d51ffeeeac7c5a2",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:37.607Z"
+    },
+    {
+      "id": "case_3d051a7a75886faaf0e3",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:42.353Z"
+    },
+    {
+      "id": "case_043cdef387cf0ec70d71",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:49.370Z"
+    },
+    {
+      "id": "case_8e2ee4466a3dd4eda6fa",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:53:54.073Z"
+    },
+    {
+      "id": "case_f09b2309cc1e3fb2d709",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:00.449Z"
+    },
+    {
+      "id": "case_562c47cd3e1b097abb4c",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:01.819Z"
+    },
+    {
+      "id": "case_d73d22916145dc727af5",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:06.853Z"
+    },
+    {
+      "id": "case_c3daefcb962a1f142103",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:08.237Z"
+    },
+    {
+      "id": "case_56c3531167ef609b13f1",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:13.390Z"
+    },
+    {
+      "id": "case_d176b2948bf0b7ab8459",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:18.402Z"
+    },
+    {
+      "id": "case_dcf1bac570fc2dd0ed9a",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:19.524Z"
+    },
+    {
+      "id": "case_b4f10133380972e244ff",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:24.232Z"
+    },
+    {
+      "id": "case_1ee3e3950d0fa68215cc",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:34.381Z"
+    },
+    {
+      "id": "case_74939e2a20bac2560fb4",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:39.810Z"
+    },
+    {
+      "id": "case_8c3a7f0e8d80bb71950f",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:48.274Z"
+    },
+    {
+      "id": "case_a3cd915674e3f877fc34",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:49.923Z"
+    },
+    {
+      "id": "case_aa978340c8dce9285f83",
+      "label": "uncertain",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:52.482Z"
+    },
+    {
+      "id": "case_772708cdc4bae2549dde",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:54:57.774Z"
+    },
+    {
+      "id": "case_d52f26620ccc70b59dd2",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:02.889Z"
+    },
+    {
+      "id": "case_91726f33c40eb4857f2f",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:07.374Z"
+    },
+    {
+      "id": "case_5c7268045c74da4a2ac0",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:11.769Z"
+    },
+    {
+      "id": "case_5d5e9b1de4862a276fb4",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:17.019Z"
+    },
+    {
+      "id": "case_30a0d3a41023d6f1d787",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:28.044Z"
+    },
+    {
+      "id": "case_23e8f7145b8a933c07f3",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:33.289Z"
+    },
+    {
+      "id": "case_ae1dc38b28f10331f52c",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:37.464Z"
+    },
+    {
+      "id": "case_3bcd872012739b234c8b",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:42.306Z"
+    },
+    {
+      "id": "case_5bf192179ac3e524c3ed",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:47.215Z"
+    },
+    {
+      "id": "case_e0d2d75ecba975524f44",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:52.852Z"
+    },
+    {
+      "id": "case_cacb52721e6da86a4b39",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:55:57.364Z"
+    },
+    {
+      "id": "case_77acb448123b90aadb19",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:01.764Z"
+    },
+    {
+      "id": "case_0d372dbb2d38754f5a9b",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:05.939Z"
+    },
+    {
+      "id": "case_ccbf837c9982d45c63e2",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:09.906Z"
+    },
+    {
+      "id": "case_95082fe38ec4c0a6a421",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:15.506Z"
+    },
+    {
+      "id": "case_339e754e02748a69ae2f",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:21.856Z"
+    },
+    {
+      "id": "case_27a81b7585ceb0dfc9f6",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:28.385Z"
+    },
+    {
+      "id": "case_fc2cebc43b5dfed07e0e",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:34.685Z"
+    },
+    {
+      "id": "case_9245d155e1f4ed04ba23",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:43.002Z"
+    },
+    {
+      "id": "case_21492a8623896678bc95",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:44.561Z"
+    },
+    {
+      "id": "case_435ed04339ed37fa0999",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:45.502Z"
+    },
+    {
+      "id": "case_9ee17300ece679845f03",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:50.961Z"
+    },
+    {
+      "id": "case_f024f250db672e973362",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:56:55.727Z"
+    },
+    {
+      "id": "case_148c1ced3152daa8ee69",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:01.268Z"
+    },
+    {
+      "id": "case_1090a77dec6bbd2ada25",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:06.952Z"
+    },
+    {
+      "id": "case_bf025d9e276b3106997e",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:11.227Z"
+    },
+    {
+      "id": "case_8b7acaa2e44a4f56b178",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:12.602Z"
+    },
+    {
+      "id": "case_04472459734713eb2d4f",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:18.230Z"
+    },
+    {
+      "id": "case_abfd35ec1ee8eb607d64",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:26.776Z"
+    },
+    {
+      "id": "case_7d4fa6578146e33ad772",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:32.456Z"
+    },
+    {
+      "id": "case_2e8288b56f1c696970d8",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:37.860Z"
+    },
+    {
+      "id": "case_3cc19e181a1d07fcd496",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:47.570Z"
+    },
+    {
+      "id": "case_a5c92faa192ffb2a4202",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:52.460Z"
+    },
+    {
+      "id": "case_68995763f5eb6d70601a",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:57:56.551Z"
+    },
+    {
+      "id": "case_1aeff1894d90f77ae365",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:01.201Z"
+    },
+    {
+      "id": "case_20b530ce217c332e1b9c",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:06.060Z"
+    },
+    {
+      "id": "case_fa51835e6d513ef096da",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:10.072Z"
+    },
+    {
+      "id": "case_863a4818bff52d49923c",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:16.443Z"
+    },
+    {
+      "id": "case_3b0d59cb65d0d457ca73",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:20.872Z"
+    },
+    {
+      "id": "case_0b675da9438f39710bf2",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:26.426Z"
+    },
+    {
+      "id": "case_1a9270a5e38d3b14179b",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:30.905Z"
+    },
+    {
+      "id": "case_8410c05f64890958ed65",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:36.147Z"
+    },
+    {
+      "id": "case_361b215e7efde2b5840b",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:40.589Z"
+    },
+    {
+      "id": "case_e00cc710753080511aa5",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:41.923Z"
+    },
+    {
+      "id": "case_a49366f24da82c179c0e",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:43.481Z"
+    },
+    {
+      "id": "case_663709e56aca1d2c6314",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:48.459Z"
+    },
+    {
+      "id": "case_8003a1df8ff86f016593",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:53.343Z"
+    },
+    {
+      "id": "case_70dbaa032da9c4f9b266",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:54.859Z"
+    },
+    {
+      "id": "case_b580df3265e2ad2f442e",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:58:55.693Z"
+    },
+    {
+      "id": "case_bc18640de2ad837f4f86",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:02.247Z"
+    },
+    {
+      "id": "case_0982b2ce70184541f5dd",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:07.305Z"
+    },
+    {
+      "id": "case_0d3a448bb412d5ad7b4a",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:12.088Z"
+    },
+    {
+      "id": "case_f30d75742116295fd6cf",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:13.513Z"
+    },
+    {
+      "id": "case_464bcb3e052ff9ebbb94",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:24.231Z"
+    },
+    {
+      "id": "case_4f5ee03a56cfd636fb49",
+      "label": "no_hand",
+      "cover": null,
+      "visibility": null,
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:25.419Z"
+    },
+    {
+      "id": "case_b4075b7d9e1cecfb0811",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "full",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:30.272Z"
+    },
+    {
+      "id": "case_a1623d3eb7ff18f646c5",
+      "label": "hand",
+      "cover": "glove",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:35.026Z"
+    },
+    {
+      "id": "case_ffc3160bd82f9f24559e",
+      "label": "hand",
+      "cover": "bare",
+      "visibility": "partial",
+      "note": "",
+      "reviewed_at": "2026-09-24T22:59:40.226Z"
+    }
+  ],
+  "saved_at": "2026-09-24T23:04:48.112Z"
+}

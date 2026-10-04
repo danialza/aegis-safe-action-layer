@@ -1,0 +1,19 @@
+{
+  "scope": "New presentation of existing 24 primary transports; four runs per cell.",
+  "script_sha256": "28d472ff032a15cdf5e0c341e4bd69180fc379e49dc6c6b9abd43247920ca808",
+  "pattern_results_sha256": "c6c9223067f2d31351bf1f5b8a6a30951df57e5ec5443a897854570afeb69af2",
+  "observations_unchanged": true,
+  "verified_source_files": 64,
+  "font": "Palatino",
+  "metrics": [
+    "mean_moving_age_ms",
+    "minimum_command_estimated_separation_mm",
+    "carry_to_delivery_s",
+    "moving_old_evidence_percent"
+  ],
+  "outputs": {
+    "figures/hardware_primary_with_age.pdf": "8a7705c2980f7462fa8a95f16d582889bcd2cc9181ee6090317f54607a7932bf",
+    "figures/hardware_primary_with_age.png": "a112e86eb02a6fac84d4af7abe98fd971539376d1dd9942c908c89f3c18a4471"
+  },
+  "style": "Monochrome, regular serif fonts, no bars/connecting lines/in-image explanation; all run values preserved."
+}

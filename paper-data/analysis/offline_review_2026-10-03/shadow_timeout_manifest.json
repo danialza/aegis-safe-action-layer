@@ -1,0 +1,9 @@
+{
+  "analysis_script_sha256": "3d2f86dd75c1e831a9155c255f5065e1aec42cb219e4388dc8f214bb604c710f",
+  "derived_artifact_sha256": {
+    "analysis/offline_review_2026-10-03/shadow_timeout_results.json": "33d41c549053964710c317479e0a9760a5130c48f0a672b47b540095324ea8e3",
+    "analysis/offline_review_2026-10-03/shadow_timeout_decisions.jsonl": "05ce53cde157aeaa916eea60f57652d34c230e8566cba8219c7ce939b4eed5a7",
+    "analysis/offline_review_2026-10-03/shadow_timeout_table.tex": "d8b2f47eb76f0259a90825f8ee6df6600e0f3f40b08e579ee3ea92267f8d68df"
+  },
+  "raw_sources_unchanged": true
+}

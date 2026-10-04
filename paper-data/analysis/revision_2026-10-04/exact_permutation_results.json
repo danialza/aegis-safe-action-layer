@@ -1,0 +1,436 @@
+{
+  "source": "pattern_results.json",
+  "source_sha256": "c6c9223067f2d31351bf1f5b8a6a30951df57e5ec5443a897854570afeb69af2",
+  "test": "exact two-sided permutation of run-level means, 4 vs 4, 70 reassignments, unadjusted",
+  "minimum_attainable_p": 0.02857142857142857,
+  "compatibility_interval": "inversion of the same test for a location shift: shifts that do not completely separate the shifted runs, [min A - max B, max A - min B]; coverage 1 - 2/70 = 0.971 under exchangeability",
+  "between_method": [
+    {
+      "rate": "normal",
+      "reference": "Trust12",
+      "metric": "age",
+      "AEGIS_minus_ref": -15.347376359802581,
+      "p": 0.2,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -47.64785644946642,
+        17.210994162322834
+      ],
+      "AEGIS_range": [
+        424.1446475179432,
+        442.3085395383703
+      ],
+      "ref_range": [
+        425.0975453760475,
+        471.79250396740963
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust12",
+      "metric": "sep",
+      "AEGIS_minus_ref": 17.986076764063732,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        5.020242858923872,
+        30.02520416042951
+      ],
+      "AEGIS_range": [
+        68.9068069939402,
+        83.27213024658806
+      ],
+      "ref_range": [
+        53.24692608615855,
+        63.88656413501632
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust12",
+      "metric": "time",
+      "AEGIS_minus_ref": 3.12454729154706,
+      "p": 0.2857142857142857,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -4.7824248326942325,
+        9.814568581990898
+      ],
+      "AEGIS_range": [
+        26.468241000548005,
+        35.12893399968743
+      ],
+      "ref_range": [
+        25.314365417696536,
+        31.250665833242238
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust12",
+      "metric": "old",
+      "AEGIS_minus_ref": -1.89873417721519,
+      "p": 1.0,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -7.59493670886076,
+        0
+      ],
+      "AEGIS_range": [
+        0,
+        0
+      ],
+      "ref_range": [
+        0,
+        7.59493670886076
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust32",
+      "metric": "age",
+      "AEGIS_minus_ref": 11.137195609608682,
+      "p": 0.2,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -11.214017293165853,
+        34.324105110942924
+      ],
+      "AEGIS_range": [
+        424.1446475179432,
+        442.3085395383703
+      ],
+      "ref_range": [
+        407.9844344274274,
+        435.35866481110907
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust32",
+      "metric": "sep",
+      "AEGIS_minus_ref": 2.988628748874433,
+      "p": 0.4857142857142857,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -11.354850987102239,
+        17.146692531336782
+      ],
+      "AEGIS_range": [
+        68.9068069939402,
+        83.27213024658806
+      ],
+      "ref_range": [
+        66.12543771525128,
+        80.26165798104243
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust32",
+      "metric": "time",
+      "AEGIS_minus_ref": 0.815571833634749,
+      "p": 0.8,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -8.98873670771718,
+        8.351830999366939
+      ],
+      "AEGIS_range": [
+        26.468241000548005,
+        35.12893399968743
+      ],
+      "ref_range": [
+        26.777103000320494,
+        35.456977708265185
+      ]
+    },
+    {
+      "rate": "normal",
+      "reference": "Trust32",
+      "metric": "old",
+      "AEGIS_minus_ref": -0.28735632183908044,
+      "p": 1.0,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -1.1494252873563218,
+        0
+      ],
+      "AEGIS_range": [
+        0,
+        0
+      ],
+      "ref_range": [
+        0,
+        1.1494252873563218
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust12",
+      "metric": "age",
+      "AEGIS_minus_ref": -259.1291841151936,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        -301.5895019995337,
+        -182.93656359947425
+      ],
+      "AEGIS_range": [
+        395.2898102763452,
+        492.47296985297925
+      ],
+      "ref_range": [
+        675.4095334524535,
+        696.8793122758789
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust12",
+      "metric": "sep",
+      "AEGIS_minus_ref": 23.170499480162498,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        9.103321666757232,
+        29.448701021586736
+      ],
+      "AEGIS_range": [
+        68.43558908769185,
+        81.08624651722432
+      ],
+      "ref_range": [
+        51.63754549563759,
+        59.33226742093462
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust12",
+      "metric": "time",
+      "AEGIS_minus_ref": 26.353036624845117,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        10.15186854172498,
+        35.84532833378762
+      ],
+      "AEGIS_range": [
+        42.60758829116821,
+        61.06950583308935
+      ],
+      "ref_range": [
+        25.22417749930173,
+        32.45571974944323
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust12",
+      "metric": "old",
+      "AEGIS_minus_ref": -56.055939394344755,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        -64.51612903225806,
+        -39.442946990116795
+      ],
+      "AEGIS_range": [
+        0,
+        19.047619047619047
+      ],
+      "ref_range": [
+        58.490566037735846,
+        64.51612903225806
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust32",
+      "metric": "age",
+      "AEGIS_minus_ref": -264.07168826955825,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        -314.5022860920502,
+        -178.07008513057275
+      ],
+      "AEGIS_range": [
+        395.2898102763452,
+        492.47296985297925
+      ],
+      "ref_range": [
+        670.543054983552,
+        709.7920963683954
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust32",
+      "metric": "sep",
+      "AEGIS_minus_ref": 4.395909852759573,
+      "p": 0.37142857142857144,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -11.431349681357858,
+        11.552969737469255
+      ],
+      "AEGIS_range": [
+        68.43558908769185,
+        81.08624651722432
+      ],
+      "ref_range": [
+        69.53327677975507,
+        79.86693876904971
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust32",
+      "metric": "time",
+      "AEGIS_minus_ref": 21.007908874657005,
+      "p": 0.05714285714285714,
+      "complete_separation": false,
+      "compatibility_interval": [
+        -0.1516272509470582,
+        33.58520166575909
+      ],
+      "AEGIS_range": [
+        42.60758829116821,
+        61.06950583308935
+      ],
+      "ref_range": [
+        27.484304167330265,
+        42.75921554211527
+      ]
+    },
+    {
+      "rate": "slow",
+      "reference": "Trust32",
+      "metric": "old",
+      "AEGIS_minus_ref": -56.523114231447565,
+      "p": 0.02857142857142857,
+      "complete_separation": true,
+      "compatibility_interval": [
+        -64.61538461538461,
+        -38.977072310405646
+      ],
+      "AEGIS_range": [
+        0,
+        19.047619047619047
+      ],
+      "ref_range": [
+        58.0246913580247,
+        64.61538461538461
+      ]
+    }
+  ],
+  "cadence_change": [
+    {
+      "reference": "Trust12",
+      "metric": "age",
+      "AEGIS_change_minus_ref_change": -243.78180775539101,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        -287.84928064515145,
+        -153.45259917043495
+      ],
+      "complete_separation": true
+    },
+    {
+      "reference": "Trust12",
+      "metric": "sep",
+      "AEGIS_change_minus_ref_change": 5.184422716098771,
+      "p": 0.22857142857142856,
+      "compatibility_interval": [
+        -4.3295372734412965,
+        19.46646072091827
+      ],
+      "complete_separation": false
+    },
+    {
+      "reference": "Trust12",
+      "metric": "time",
+      "AEGIS_change_minus_ref_change": 23.228489333298057,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        14.64738770853728,
+        29.886128873564303
+      ],
+      "complete_separation": true
+    },
+    {
+      "reference": "Trust12",
+      "metric": "old",
+      "AEGIS_change_minus_ref_change": -54.157205217129565,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        -64.51612903225806,
+        -31.84801028125604
+      ],
+      "complete_separation": true
+    },
+    {
+      "reference": "Trust32",
+      "metric": "age",
+      "AEGIS_change_minus_ref_change": -275.20888387916693,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        -325.4747463468554,
+        -185.019959857834
+      ],
+      "complete_separation": true
+    },
+    {
+      "reference": "Trust32",
+      "metric": "sep",
+      "AEGIS_change_minus_ref_change": 1.4072811038851434,
+      "p": 0.7714285714285715,
+      "compatibility_interval": [
+        -9.874358144004674,
+        16.510796953833108
+      ],
+      "complete_separation": false
+    },
+    {
+      "reference": "Trust32",
+      "metric": "time",
+      "AEGIS_change_minus_ref_change": 20.192337041022256,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        5.075939915142953,
+        28.677211708389223
+      ],
+      "complete_separation": true
+    },
+    {
+      "reference": "Trust32",
+      "metric": "old",
+      "AEGIS_change_minus_ref_change": -56.23575790960849,
+      "p": 0.02857142857142857,
+      "compatibility_interval": [
+        -63.46595932802829,
+        -38.977072310405646
+      ],
+      "complete_separation": true
+    }
+  ],
+  "within_AEGIS_slow_minus_normal": [
+    {
+      "metric": "age",
+      "diff": -9.206472372126711,
+      "p": 0.7428571428571429
+    },
+    {
+      "metric": "time",
+      "diff": 22.944780645426363,
+      "p": 0.02857142857142857
+    },
+    {
+      "metric": "sep",
+      "diff": 1.6631860190953915,
+      "p": 0.8
+    }
+  ]
+}

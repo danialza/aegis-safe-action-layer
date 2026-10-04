@@ -1,0 +1,15 @@
+{
+  "binary": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_auto_audit/bin/semantic_hand_pose",
+  "binary_sha256": "6c9bc9e47f86409048d312db63f815c080fd01065448a7c08027789acdd60980",
+  "blind_manifest_sha256": "627e735d070362d27689268617a09cf1c2e8daf98c8c6b8b53bbdeed3846ec96",
+  "frame_count": 2158,
+  "helper_source": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/analysis/semantic_hand_pose.swift",
+  "helper_source_sha256": "0b481db705970ed1acf1ca37b32a73806d6e3e54e79fd707c0cdbfc08388463b",
+  "interpretation": "Supplemental detector output only. no_detection is NOT no_hand. Not reference ground truth or accuracy validation.",
+  "label_source": "automated_detector",
+  "orchestrator_source_sha256": "ee18559e3889fc1420a547d38d41fd2e478f21df91fe8929bedd81c7bc7826aa",
+  "selection": "All frames in the frozen original manifest, in original order; no semantic selection",
+  "source_manifest": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_audit/manifest.json",
+  "source_manifest_sha256": "14e24d829648505172060ab7e950410e4d8a80de05a0748fd5a203c0ebafb0c2",
+  "started_at_utc": "2026-09-24T19:35:52.399674+00:00"
+}

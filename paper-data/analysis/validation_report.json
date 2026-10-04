@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "included_runs": 92,
+  "excluded_runs": 4,
+  "primary_runs": 24,
+  "decision_records": 10199,
+  "source_json_jsonl_hashes_checked_unchanged": 192,
+  "byte_identical_included_copy_files_checked": 184,
+  "primary_cell_count": 6,
+  "runs_per_primary_cell": 4,
+  "all_prior_audit_metrics_reproduced": true,
+  "sensitivity_monotonic_and_agrees_at_0p6": true,
+  "all_declared_figure_and_presentation_hashes_match": true,
+  "limitation": "Internal consistency checks, not independent physical safety or sensor-exposure validation."
+}

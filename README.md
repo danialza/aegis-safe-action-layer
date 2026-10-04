@@ -1,5 +1,11 @@
 # AEGIS: Age-Aware, Evidence-Guarded Safe-Action Layer on the Niryo NED3 Pro
 
+> **Data for the hardware study (submitted to *Sensors*, October 2026):**
+> *Evidence Age Versus Spatial Margin in Vision–Language-Gated Robotic Transport: A Hardware Study.*
+> All logs, analysis scripts, human-review exports and figures for that manuscript are in
+> [`paper-data/`](paper-data/); start with [`paper-data/README.md`](paper-data/README.md).
+> The material below documents the earlier version of the system.
+
 Companion data repository for the manuscript:
 
 > **AEGIS: An Age-Aware, Evidence-Guarded Safe-Action Layer Fusing RGB-D Sensing with

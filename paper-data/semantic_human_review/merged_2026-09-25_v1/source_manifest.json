@@ -1,0 +1,61 @@
+{
+  "schema_version": "aegis-human-merged-analysis-v1",
+  "created_utc": "2026-09-24T23:06:01.641850+00:00",
+  "sources": {
+    "original": {
+      "path": "/Users/danial/Downloads/human_review_426_2026-09-24T21-55-53-540Z.json",
+      "sha256": "25d7fb5f0f65e2e4968856ba1aa99742106f648e093221e857e5d9adbbaee904",
+      "preserved_copy": "sources/original.json"
+    },
+    "recheck": {
+      "path": "/Users/danial/Downloads/human_recheck_115_2026-09-24T23-04-48-113Z.json",
+      "sha256": "a0bb7281615dab978f4aea53bef9651360deb2e614dfe3006a0e92b38fccb6c3",
+      "preserved_copy": "sources/recheck.json"
+    },
+    "original_manifest": {
+      "path": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_human_review/review_426_v1/manifest.json",
+      "sha256": "b62a451ddfc5347d2ae8f75f361e6a5c8ef9573a3a37fed961099ecefcac7a44",
+      "preserved_copy": "sources/original_manifest.json"
+    },
+    "recheck_manifest": {
+      "path": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_human_review/recheck_115_v1/manifest.json",
+      "sha256": "ba41bcafb5bf3d6f766c4a7e9101f986c701ad11791247e294621885c6c883d4",
+      "preserved_copy": "sources/recheck_manifest.json"
+    }
+  },
+  "automatic_audit_directory": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/semantic_auto_audit/run_20260924_203640",
+  "automatic_audit_hashes": {
+    "spec.json": "5a3de974b2b3630f6d5ad1064fbc7c9c398e8ba2e0ea75512ad5cd584b8d48e6",
+    "frame_mapping.json": "152b4afe0fa785bac17f50007e98584ae8f6532bb0e627db455c33d226b60b02",
+    "reference.jsonl": "f818d9ec9fd15b2c5d513b557e9c516da593e1d54506244a6d9bc3414493d6c6",
+    "monitor.jsonl": "4bb1cd14f87c6b6a9001616eb0f1ff720c2706ed233d07855db508c0dfe744f3",
+    "reference.sealed.json": "7453b6eeffdd3d495f01c0de06088b088c589552a6c6cfec52c6f05c2488c4bb",
+    "monitor.sealed.json": "1293a83ce01c4708e1c4a55a6d3c1c1b3e733cf5223ab843df0d8d3edbd12789",
+    "summary.json": "d8ee0255490ea6f9573af44a5272dec7aea930ba0d4cb3fb3002473ff6500c6d",
+    "reference_checkpoint.json": "de2e91ac1d0772d49c16af9f5c9f12055ad5f2ae617d0bb5bd24c22d73a0c4b7",
+    "monitor_checkpoint.json": "bf5a064489c8d8d255bf090ff6ce0f4f629c2599edce8e235addce8ead820a94"
+  },
+  "automatic_preserved_copies_directory": "sources/automatic",
+  "code_hashes": {
+    "semantic_human_merge.py": "a7afa64d7842d9f7c28b43358c402cb4595a5f5c140308b433dc31ddebc1eb53",
+    "semantic_human_review.py": "f19208734c87a95d428617d4e13f66ac72421d8ca03b2dcbc5730270092e24bc",
+    "semantic_human_recheck.py": "0b7feea6015b740961c56b94f9a8370e0208d8472398362662927e3c69b0a1e2",
+    "semantic_auto_report.py": "bdb2fb00def8c23ea92e9d089a53ca9f436e9254af88cf4e2ea376a4af3c58c6"
+  },
+  "output_hashes": {
+    "joined_records.json": "b205d5fb04401139cc61a2937f8c0cf70a8f820224f4c2bcb188a7305705f1e8",
+    "changes.json": "3de61accb1ee83e54d1cfc851d44e8144b0af3e0a34008c520a79b7051c3ac93",
+    "summary.json": "03b38b9f61dc74805aed29edf83af339acdc0b53a8b853af5e8bab2925b5bafd"
+  },
+  "limitations": [
+    "Analysis-only merge of two human-declared exports, not a new single human export.",
+    "The original sample is model-stratified and enriched; raw fractions are not population accuracy.",
+    "Design-weighted counts are finite-population point estimates, not directly reviewed counts; no confidence intervals are calculated.",
+    "The targeted recheck is not an independent or representative sample and has no separate population estimator.",
+    "Reviewer names do not establish whether this was the same person or a second independent reviewer; that relationship is unknown.",
+    "Both prior_model_exposure declarations are preserved verbatim; no blinded or independent assessment is claimed.",
+    "Uncertain human labels remain uncertain, never replaced by model answers. Persistent model disagreement is not unresolved human error.",
+    "Correlated, same-session video frames do not establish new-session generalization, exact historical live input, timing, or physical safety.",
+    "Zero observed misses does not prove zero misses among unsampled frames."
+  ]
+}

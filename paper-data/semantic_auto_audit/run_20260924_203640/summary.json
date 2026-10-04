@@ -1,0 +1,1175 @@
+{
+  "report_type": "automatic_cross_model_agreement",
+  "independent_ground_truth_available": false,
+  "scope": "Automatic cross-model agreement, not independently validated detection accuracy. Reference labels and condition strata are model estimates, not human ground truth. Correlated errors can make agreement high while both models are wrong. Current-checkpoint replay of lossy video-derived frames is not the historical live VLM input stream, live reaction latency, or evidence of physical/whole-arm safety. The available videos do not establish subject/session-disjoint generalization.",
+  "scope_fa": "این گزارش توافق دو مدل را می‌سنجد، نه دقت تأییدشده با مرجع انسانی مستقل. برچسب دست، دستکش و پوشیدگی همگی تخمین مدل مرجع هستند. دو مدل ممکن است هم‌زمان اشتباه کنند؛ توافق بالا اثبات صحت یا ایمنی نیست. این بازپخش آفلاینِ نسخهٔ فعلی مدل روی فریم‌های استخراج‌شده از ویدیو است، نه بازسازی دقیق ورودی زنده، زمان واکنش ربات یا آزمون تعمیم به افراد و جلسه‌های مستقل.",
+  "input_hashes": {
+    "spec.json": "5a3de974b2b3630f6d5ad1064fbc7c9c398e8ba2e0ea75512ad5cd584b8d48e6",
+    "frame_mapping.json": "152b4afe0fa785bac17f50007e98584ae8f6532bb0e627db455c33d226b60b02",
+    "reference.jsonl": "f818d9ec9fd15b2c5d513b557e9c516da593e1d54506244a6d9bc3414493d6c6",
+    "monitor.jsonl": "4bb1cd14f87c6b6a9001616eb0f1ff720c2706ed233d07855db508c0dfe744f3",
+    "reference.sealed.json": "7453b6eeffdd3d495f01c0de06088b088c589552a6c6cfec52c6f05c2488c4bb",
+    "monitor.sealed.json": "1293a83ce01c4708e1c4a55a6d3c1c1b3e733cf5223ab843df0d8d3edbd12789"
+  },
+  "overall": {
+    "frame_count": 2158,
+    "run_count": 96,
+    "accounting_disjoint": {
+      "all_frames": 2158,
+      "both_definite_and_successful": 2158,
+      "definite_reference_monitor_error": 0,
+      "reference_uncertain_any_monitor": 0,
+      "reference_error_any_monitor": 0
+    },
+    "raw_contingency_reference_by_monitor": {
+      "hand": {
+        "HUMAN": 50,
+        "OBJECT": 0,
+        "ERROR": 0
+      },
+      "no_hand": {
+        "HUMAN": 76,
+        "OBJECT": 2032,
+        "ERROR": 0
+      },
+      "uncertain": {
+        "HUMAN": 0,
+        "OBJECT": 0,
+        "ERROR": 0
+      },
+      "error": {
+        "HUMAN": 0,
+        "OBJECT": 0,
+        "ERROR": 0
+      }
+    },
+    "reference_code_counts": {
+      "B0": 1,
+      "B1": 40,
+      "G0": 9,
+      "N": 2108
+    },
+    "reference_definite_coverage": {
+      "numerator": 2158,
+      "denominator": 2158,
+      "value": 1.0
+    },
+    "both_successful_definite_coverage": {
+      "numerator": 2158,
+      "denominator": 2158,
+      "value": 1.0
+    },
+    "reference_uncertain_fraction": {
+      "numerator": 0,
+      "denominator": 2158,
+      "value": 0.0
+    },
+    "reference_error_fraction": {
+      "numerator": 0,
+      "denominator": 2158,
+      "value": 0.0
+    },
+    "monitor_error_fraction_all_frames": {
+      "numerator": 0,
+      "denominator": 2158,
+      "value": 0.0
+    },
+    "agreement_among_successful_definite_pairs": {
+      "numerator": 2082,
+      "denominator": 2158,
+      "value": 0.9647822057460612
+    },
+    "agreement_among_all_definite_reference_including_monitor_errors": {
+      "numerator": 2082,
+      "denominator": 2158,
+      "value": 0.9647822057460612
+    },
+    "disagreement_among_successful_definite_pairs": {
+      "numerator": 76,
+      "denominator": 2158,
+      "value": 0.03521779425393883
+    },
+    "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+      "numerator": 50,
+      "denominator": 50,
+      "value": 1.0
+    },
+    "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+      "numerator": 2032,
+      "denominator": 2108,
+      "value": 0.9639468690702088
+    },
+    "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+      "numerator": 76,
+      "denominator": 2108,
+      "value": 0.036053130929791274
+    },
+    "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+      "numerator": 0,
+      "denominator": 50,
+      "value": 0.0
+    },
+    "monitor_noncanonical_successful_responses": 2153,
+    "reference_error_details": {},
+    "monitor_error_details": {}
+  },
+  "by_campaign": {
+    "aegis_time": {
+      "frame_count": 23,
+      "run_count": 1,
+      "accounting_disjoint": {
+        "all_frames": 23,
+        "both_definite_and_successful": 23,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 1,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 0,
+          "OBJECT": 22,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B1": 1,
+        "N": 22
+      },
+      "reference_definite_coverage": {
+        "numerator": 23,
+        "denominator": 23,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 23,
+        "denominator": 23,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 23,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 23,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 23,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 23,
+        "denominator": 23,
+        "value": 1.0
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 23,
+        "denominator": 23,
+        "value": 1.0
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 0,
+        "denominator": 23,
+        "value": 0.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 22,
+        "denominator": 22,
+        "value": 1.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 22,
+        "value": 0.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 23,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "timed_compare": {
+      "frame_count": 1322,
+      "run_count": 63,
+      "accounting_disjoint": {
+        "all_frames": 1322,
+        "both_definite_and_successful": 1322,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 40,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 65,
+          "OBJECT": 1217,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B1": 31,
+        "G0": 9,
+        "N": 1282
+      },
+      "reference_definite_coverage": {
+        "numerator": 1322,
+        "denominator": 1322,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 1322,
+        "denominator": 1322,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 1322,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 1322,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 1322,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 1257,
+        "denominator": 1322,
+        "value": 0.9508320726172466
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 1257,
+        "denominator": 1322,
+        "value": 0.9508320726172466
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 65,
+        "denominator": 1322,
+        "value": 0.049167927382753406
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 1217,
+        "denominator": 1282,
+        "value": 0.9492979719188768
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 65,
+        "denominator": 1282,
+        "value": 0.05070202808112324
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 1317,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "timed_compare_slow": {
+      "frame_count": 227,
+      "run_count": 8,
+      "accounting_disjoint": {
+        "all_frames": 227,
+        "both_definite_and_successful": 227,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 2,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 1,
+          "OBJECT": 224,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B1": 2,
+        "N": 225
+      },
+      "reference_definite_coverage": {
+        "numerator": 227,
+        "denominator": 227,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 227,
+        "denominator": 227,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 227,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 227,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 227,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 226,
+        "denominator": 227,
+        "value": 0.9955947136563876
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 226,
+        "denominator": 227,
+        "value": 0.9955947136563876
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 1,
+        "denominator": 227,
+        "value": 0.004405286343612335
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 224,
+        "denominator": 225,
+        "value": 0.9955555555555555
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 1,
+        "denominator": 225,
+        "value": 0.0044444444444444444
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 227,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "timed_margin_compare": {
+      "frame_count": 586,
+      "run_count": 24,
+      "accounting_disjoint": {
+        "all_frames": 586,
+        "both_definite_and_successful": 586,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 7,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 10,
+          "OBJECT": 569,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B0": 1,
+        "B1": 6,
+        "N": 579
+      },
+      "reference_definite_coverage": {
+        "numerator": 586,
+        "denominator": 586,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 586,
+        "denominator": 586,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 586,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 586,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 586,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 576,
+        "denominator": 586,
+        "value": 0.9829351535836177
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 576,
+        "denominator": 586,
+        "value": 0.9829351535836177
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 10,
+        "denominator": 586,
+        "value": 0.017064846416382253
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 7,
+        "denominator": 7,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 569,
+        "denominator": 579,
+        "value": 0.9827288428324698
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 10,
+        "denominator": 579,
+        "value": 0.017271157167530225
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 7,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 586,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    }
+  },
+  "by_model_estimated_cover": {
+    "bare": {
+      "frame_count": 41,
+      "run_count": 34,
+      "accounting_disjoint": {
+        "all_frames": 41,
+        "both_definite_and_successful": 41,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 41,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B0": 1,
+        "B1": 40
+      },
+      "reference_definite_coverage": {
+        "numerator": 41,
+        "denominator": 41,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 41,
+        "denominator": 41,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 41,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 41,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 41,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 41,
+        "denominator": 41,
+        "value": 1.0
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 41,
+        "denominator": 41,
+        "value": 1.0
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 0,
+        "denominator": 41,
+        "value": 0.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 41,
+        "denominator": 41,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 41,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 39,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "glove": {
+      "frame_count": 9,
+      "run_count": 4,
+      "accounting_disjoint": {
+        "all_frames": 9,
+        "both_definite_and_successful": 9,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 9,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "G0": 9
+      },
+      "reference_definite_coverage": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 7,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "not_assigned": {
+      "frame_count": 2108,
+      "run_count": 96,
+      "accounting_disjoint": {
+        "all_frames": 2108,
+        "both_definite_and_successful": 2108,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 76,
+          "OBJECT": 2032,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "N": 2108
+      },
+      "reference_definite_coverage": {
+        "numerator": 2108,
+        "denominator": 2108,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 2108,
+        "denominator": 2108,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 76,
+        "denominator": 2108,
+        "value": 0.036053130929791274
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 76,
+        "denominator": 2108,
+        "value": 0.036053130929791274
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_noncanonical_successful_responses": 2107,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    }
+  },
+  "by_model_estimated_visibility": {
+    "full": {
+      "frame_count": 10,
+      "run_count": 5,
+      "accounting_disjoint": {
+        "all_frames": 10,
+        "both_definite_and_successful": 10,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 10,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B0": 1,
+        "G0": 9
+      },
+      "reference_definite_coverage": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 8,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "not_assigned": {
+      "frame_count": 2108,
+      "run_count": 96,
+      "accounting_disjoint": {
+        "all_frames": 2108,
+        "both_definite_and_successful": 2108,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 76,
+          "OBJECT": 2032,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "N": 2108
+      },
+      "reference_definite_coverage": {
+        "numerator": 2108,
+        "denominator": 2108,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 2108,
+        "denominator": 2108,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 2108,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 76,
+        "denominator": 2108,
+        "value": 0.036053130929791274
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 2032,
+        "denominator": 2108,
+        "value": 0.9639468690702088
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 76,
+        "denominator": 2108,
+        "value": 0.036053130929791274
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_noncanonical_successful_responses": 2107,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    },
+    "partial": {
+      "frame_count": 40,
+      "run_count": 33,
+      "accounting_disjoint": {
+        "all_frames": 40,
+        "both_definite_and_successful": 40,
+        "definite_reference_monitor_error": 0,
+        "reference_uncertain_any_monitor": 0,
+        "reference_error_any_monitor": 0
+      },
+      "raw_contingency_reference_by_monitor": {
+        "hand": {
+          "HUMAN": 40,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "no_hand": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "uncertain": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        },
+        "error": {
+          "HUMAN": 0,
+          "OBJECT": 0,
+          "ERROR": 0
+        }
+      },
+      "reference_code_counts": {
+        "B1": 40
+      },
+      "reference_definite_coverage": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "both_successful_definite_coverage": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "reference_uncertain_fraction": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "reference_error_fraction": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "monitor_error_fraction_all_frames": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "agreement_among_successful_definite_pairs": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "agreement_among_all_definite_reference_including_monitor_errors": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "disagreement_among_successful_definite_pairs": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "monitor_HUMAN_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 40,
+        "denominator": 40,
+        "value": 1.0
+      },
+      "monitor_OBJECT_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_HUMAN_rate_among_model_reference_no_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "monitor_OBJECT_rate_among_model_reference_hand_including_monitor_errors": {
+        "numerator": 0,
+        "denominator": 40,
+        "value": 0.0
+      },
+      "monitor_noncanonical_successful_responses": 38,
+      "reference_error_details": {},
+      "monitor_error_details": {}
+    }
+  },
+  "intervals": "No independent-frame confidence intervals are reported; frames share runs, an operator, and a session.",
+  "run_spec": {
+    "created_utc": "2026-09-24T19:36:40.583357+00:00",
+    "label_source": "model",
+    "total_frames": 2158,
+    "source_manifest_sha256": "14e24d829648505172060ab7e950410e4d8a80de05a0748fd5a203c0ebafb0c2",
+    "human_ui_sha256": "e56a1959ac26d2619fc808b6779c3c2db2942625bf5d12cfb4662941c7452c43",
+    "blind_manifest_sha256": "627e735d070362d27689268617a09cf1c2e8daf98c8c6b8b53bbdeed3846ec96",
+    "mapping_sha256": "152b4afe0fa785bac17f50007e98584ae8f6532bb0e627db455c33d226b60b02",
+    "runner_sha256": "5fa08528a53524f705344ec8ddcd9babdda9a55ce01967f563117c06d8c28f89",
+    "helper_sha256": "52c972b2a5cff5b673310b1ac52af0e8efdc778f43f35926fbdb970f56489bad",
+    "frozen_monitor_sha256": "d00018f62e29ebea4d3c956e58819207eb4233f2882972dc3ceb37e3554ce2a4",
+    "environment": {
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:34:53) [Clang 19.1.7 ]",
+      "python_executable": "/Users/danial/.ned3pro-venv/bin/python",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "machine": "arm64",
+      "libraries": {
+        "mlx": "0.32.0",
+        "mlx-vlm": "0.6.5",
+        "transformers": "5.14.1",
+        "huggingface-hub": "1.23.0",
+        "tokenizers": "0.22.2",
+        "Pillow": "12.2.0",
+        "opencv-python": "5.0.0.93",
+        "numpy": "2.4.6",
+        "safetensors": "0.8.0"
+      }
+    },
+    "reference_checkpoint_record_sha256": "de2e91ac1d0772d49c16af9f5c9f12055ad5f2ae617d0bb5bd24c22d73a0c4b7",
+    "monitor_checkpoint_record_sha256": "bf5a064489c8d8d255bf090ff6ce0f4f629c2599edce8e235addce8ead820a94",
+    "reference": {
+      "model_id": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit",
+      "revision": "46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+      "prompt": "Inspect this single photograph for a visible human hand or fingers.\nA hand wearing a glove counts as a human hand. Robot arms, robot grippers,\nobjects, empty gloves, and an isolated forearm with no visible hand do not count.\nDo not infer a hidden hand just because an arm or an object is present.\nClassify only what is visibly supported. Reply with exactly ONE code:\nN = no visible human hand or fingers.\nU = cannot determine whether any human hand or fingers are visible.\nB0 = visible bare hand; at least one hand is fully visible.\nB1 = visible bare hand; every visible hand is partly hidden or cut off by the image edge.\nG0 = visible worn glove; at least one gloved hand is fully visible.\nG1 = visible worn glove; every visible gloved hand is partly hidden or cut off by the image edge.\nH0 = visible hand but covering is mixed or unclear; at least one hand is fully visible.\nH1 = visible hand but covering is mixed or unclear; every visible hand is partly hidden or cut off.\nA glove covering skin is not by itself an occlusion: partial means physically\nhidden behind something or cropped by the image boundary. Reply only the code.",
+      "image_max_dimension": 448,
+      "max_tokens": 8,
+      "batch_size": 8,
+      "greedy_sampling": true,
+      "parser": "strict exact code; invalid is error, not absence"
+    },
+    "monitor": {
+      "model_id": "mlx-community/FastVLM-0.5B-bf16",
+      "prompt": "How many human hands do you see in this image? Answer with a number.",
+      "image_max_dimension": 256,
+      "max_tokens": 6,
+      "temperature": 0,
+      "parser": "archived permissive count parser, unchanged"
+    },
+    "scope": "Automatic cross-model agreement on same-session lossy video frames. No verified human truth, live error rate, independent-session generalization or physical-safety inference.",
+    "reference_blinding": "Image pixels and opaque hash IDs only; no method, run name, log, label or FastVLM output given to reference model.",
+    "historical_weights_verified": false,
+    "robot_connection": false,
+    "network_during_inference": false
+  }
+}

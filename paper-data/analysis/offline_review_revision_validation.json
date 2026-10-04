@@ -1,0 +1,65 @@
+{
+  "revision_date": "2026-10-03",
+  "scope": "Offline remedies 1, 2, 3 and 5; no new physical trial, no robot/model execution, and no rewritten historical observation.",
+  "previous_sources_and_pdfs_backup": "tmp/pre-offline-review-20261003-dkVBkL",
+  "implemented": [
+    "On-policy semantic-gate assay against analytically derived hazard-conditional timeouts, with fixed 12/32 mm margins and transparent threshold sweep.",
+    "Producing-bundle timing-stage decomposition, all/moving/hazard-conditioned populations, and distinct used-evidence summaries.",
+    "All 24 primary run means, median/P95, between-run dispersion, direction summaries, no-hazard sample support and a four-panel scientific figure.",
+    "Explicitly hypothetical common and differential proxy-clock offsets with movement masks frozen; no sensor-exposure correction claimed.",
+    "Abstract, methods, results, discussion and conclusions updated with the comparator's exact gate agreement and corresponding novelty limits.",
+    "Supplementary material expanded while preserving exclusions, adverse observations, human-label uncertainty and primary/pilot separation.",
+    "Portable-source packager includes nested LaTeX analysis fragments; source archive tested separately by fresh local compilation."
+  ],
+  "key_findings": {
+    "primary_shadow_eligible_decisions": 1302,
+    "primary_shadow_semantic_gate_disagreements": 0,
+    "separate_pilot_eligible_decisions": 987,
+    "separate_pilot_disagreements": 1,
+    "analytic_timeout_s": 0.5865348275173708,
+    "timing_stage_decisions": 4530,
+    "timing_stage_moving_decisions": 2314,
+    "maximum_stage_reconciliation_residual_ms": 0.0,
+    "slow_inference_component_ms_AEGIS_Trust12_Trust32": [255.2, 251.8, 251.4],
+    "slow_reuse_component_ms_AEGIS_Trust12_Trust32": [122.8, 382.3, 389.4],
+    "slow_all_valid_decision_age_ms_AEGIS_Trust12_Trust32": [733.3, 697.0, 692.9],
+    "hypothetical_slow_mean_gap_break_even_ms_Trust12_Trust32": [259.129184, 264.071688]
+  },
+  "automated_checks": {
+    "existing_python_tests_passed": 58,
+    "earlier_pattern_audit_tests_passed": 6,
+    "new_tests_passed": 33,
+    "total_tests_passed": 97,
+    "unchanged_original_json_jsonl_hashes_verified": 192,
+    "byte_identical_archived_data_files_verified": 184,
+    "new_timing_and_offset_selected_source_files_verified": 64,
+    "independent_read_only_audit_of_stage_and_offset_results": true,
+    "independent_read_only_numeric_and_scientific_manuscript_review": true,
+    "main_citations_defined_and_used": 26,
+    "undefined_cross_references_or_missing_pdf_glyphs": false,
+    "full_manuscript_numeric_hash_checks": "analysis/manuscript_validation.json"
+  },
+  "visual_qa": {
+    "latest_main_pages_rendered_and_reviewed": 21,
+    "latest_supplementary_pages_rendered_and_reviewed": 15,
+    "main_tables_2_3_and_figure_3_reviewed_enlarged": true,
+    "new_supplementary_tables_S14_S15_S16_S17_reviewed_enlarged": true,
+    "observed_clipping_or_overlap": false,
+    "render_directory": "tmp/pdfs/offline-review-20261003-s3gb5g5l",
+    "known_nonfatal_compiler_warnings": [
+      "Cached lineno.sty encoding warning; no replacement glyph in final extracted PDF text.",
+      "Underfull boxes in table headings/timeout alignment and one bibliography line; no observed overflow, clipping or overlap."
+    ]
+  },
+  "not_closed": [
+    "Exposure-to-proxy interval and clock/network asymmetry remain unmeasured; offset scenarios are not timing-error bounds.",
+    "Shadow comparison is on-policy semantic permission only, not executed comparator trajectories, throughput or physical safety.",
+    "No independent physical clearance, swept-volume, stopping or collision-risk validation.",
+    "No controller parser/new-hazard patch deployed or retrospectively attributed to these historical runs.",
+    "No broad controller-parameter sensitivity experiment executed.",
+    "No independent second annotator or subject/session-disjoint semantic test set.",
+    "Small same-session nonrandomized physical sample remains; offline ticks do not increase experimental n.",
+    "Institutional ethics applicability and public media distribution remain author-confirmation items."
+  ],
+  "limits": "File, numerical and visual consistency checks do not prove causal effects, physical-risk reduction, unique algorithmic benefit or journal acceptance. Final PDF/source hashes are recorded by manuscript_validation.json and package_manifest.json; fresh-source portability is checked by portable_source_validation.json."
+}

@@ -1,0 +1,43 @@
+{
+  "complete_original_order": true,
+  "detector_metadata": {
+    "detector": "Apple Vision VNDetectHumanHandPoseRequest",
+    "frame_count": 2158,
+    "image_orientation": "up",
+    "interpretation": "Detector observations only. no_detection does NOT mean no_hand. Confidences are not calibrated probabilities. Not ground truth or independent accuracy validation.",
+    "label_source": "automated_detector",
+    "manifest_sha256": "627e735d070362d27689268617a09cf1c2e8daf98c8c6b8b53bbdeed3846ec96",
+    "maximum_hand_count": 6,
+    "model_weights_sha256": null,
+    "os_version": "Version 27.0 (Build 26A428)",
+    "record_type": "metadata",
+    "request_revision": 1,
+    "schema_version": 1,
+    "started_at_utc": "2026-09-24T19:35:52Z",
+    "weight_provenance_limit": "OS-managed Vision model weights are not separately fingerprinted. Pin OS build and request revision."
+  },
+  "detector_summary": {
+    "elapsed_s": 8.184329166659154,
+    "finished_at_utc": "2026-09-24T19:36:00Z",
+    "frames_with_detection": 78,
+    "frames_with_error": 0,
+    "interpretation": "Counts describe detector output, not hand prevalence or detection accuracy.",
+    "processed_frames": 2158,
+    "record_type": "summary"
+  },
+  "exit_code": 0,
+  "expected_frames": 2158,
+  "finished_at_utc": "2026-09-24T19:36:00.619023+00:00",
+  "interpretation": "These are detector-output counts, not true hand prevalence, recall, precision or accuracy. no_detection is NOT no_hand.",
+  "label_source": "automated_detector",
+  "outputs_sha256": "0a0ef3a921fd494a8416c5f7d975079dcef11642e14578c8077f7ba2cb74117c",
+  "processed_frames": 2158,
+  "runtime_wall_s": 8.21204170800047,
+  "status_counts": {
+    "detection": 78,
+    "error": 0,
+    "no_detection": 2080,
+    "partial_error": 0
+  },
+  "total_returned_hand_observations": 78
+}

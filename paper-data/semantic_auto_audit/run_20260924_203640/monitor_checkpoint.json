@@ -1,0 +1,85 @@
+{
+  "model_id": "mlx-community/FastVLM-0.5B-bf16",
+  "local_snapshot": "/Users/danial/.cache/huggingface/hub/models--mlx-community--FastVLM-0.5B-bf16/snapshots/81ffe929046666c43de53691147b1669ba0f3a4c",
+  "cache_revision": "81ffe929046666c43de53691147b1669ba0f3a4c",
+  "files": [
+    {
+      "path": "added_tokens.json",
+      "bytes": 80,
+      "sha256": "6a475432c61f8d6154d10d28c37671a36e5717daf3d15002a988968fee54a500"
+    },
+    {
+      "path": "chat_template.jinja",
+      "bytes": 1027,
+      "sha256": "cbc511d5547eae0ce255aff4f2f3e43c1cc54052045c380db0fe4980b28f879b"
+    },
+    {
+      "path": "config.json",
+      "bytes": 4885,
+      "sha256": "a840566375c5dee59aea43fae958365800669f285ee5884ac3267e0ee2cad31d"
+    },
+    {
+      "path": "llava_qwen.py",
+      "bytes": 82344,
+      "sha256": "5078a9dd0688a69db3200461edcc359aebbaecb1108ad8964f58ebe218ef944b"
+    },
+    {
+      "path": "merges.txt",
+      "bytes": 1670344,
+      "sha256": "455e0caaa06abffc663e9282dfe71dde07fd1991eaf24146bf08793c4dba4497"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 1245513874,
+      "sha256": "cf7eafb090c64f4bef1a8ba959903a34dc58919170ad506e750e57643bff9bcd"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 79238,
+      "sha256": "862060b2f3b6c6ae122dee61e524b5c64a1036fa45e395d2df94e2f3bcf15ab4"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 788,
+      "sha256": "1d5f2ff72cc04005b39937f5d30c45f50fd0c5bb38665981d3dc3e3530504a5d"
+    },
+    {
+      "path": "processing_fastvlm.py",
+      "bytes": 3889,
+      "sha256": "1fc2d894a8128c713980c69e544d434a5cbe82f5c6c938260bd9c689b3c37de2"
+    },
+    {
+      "path": "processor_config.json",
+      "bytes": 124,
+      "sha256": "d6d041694e1027714e8a34907e060a698fc295fad7043b8e989b91535a02f439"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 367,
+      "sha256": "f4f79e08d97f4d1c87f8d89264f525c8789da3b73b3bb55d1e12f692f41a7b1b"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 11413100,
+      "sha256": "22a32bc7af1fc17ed370988966140a379f0421b0a508e4ae3fe4bcf7a86644e1"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 1120,
+      "sha256": "8b378d862a44633d5838f13a6605b996ce4b3fc5a39a40728e3d8362c0927eeb"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 6817275,
+      "sha256": "11fc1a6ede9a51e5e0adfc5f6b431f564ad862697f8f6bbe00745fbf4c3434d0"
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  ],
+  "file_manifest_sha256": "113edf38033dcd7c4497d44cf8c29c8d4b9e479a512257af3d13c2b00eda6f86",
+  "historical_weights_verified": false,
+  "scope": "Current cached checkpoint replay; no historical checkpoint fingerprint is available for equivalence verification."
+}

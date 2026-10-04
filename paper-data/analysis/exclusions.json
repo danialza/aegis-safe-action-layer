@@ -1,0 +1,99 @@
+{
+  "scope": "Transparent non-transport exclusions; sources preserved",
+  "screened": 96,
+  "included": 92,
+  "excluded": [
+    {
+      "run": "AEGIS-sensor-time_toA_4",
+      "campaign": "timed_compare",
+      "reason": "no carry decisions; run already near destination",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toA_4.json",
+      "sha256": "636cfd82a845e0926a7e2796af0694a8f23300b9c1b8f061828d5dda5e66a8cc",
+      "recorded_result": {
+        "termination_reason": "delivered",
+        "pick_succeeded": true,
+        "reached": true,
+        "place_succeeded": true,
+        "object_held": false,
+        "goal_occupied": false,
+        "goal_resumed": false,
+        "goal_resume_count": 0,
+        "goal_clear_confirmations": 0,
+        "depth_enabled": true,
+        "recovery_lifted": false,
+        "error": null
+      },
+      "excluded_from": "transport decision and transport-performance summaries only",
+      "source_preserved": true
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_10",
+      "campaign": "timed_compare",
+      "reason": "pre-transport pickup failure",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_10.json",
+      "sha256": "6e6170c5a6155725be2b95c601cdc7dc02f935bb68d491063710d261d59fc9b2",
+      "recorded_result": {
+        "termination_reason": "pick_failed",
+        "pick_succeeded": false,
+        "reached": false,
+        "place_succeeded": false,
+        "object_held": null,
+        "goal_occupied": false,
+        "goal_resumed": false,
+        "goal_resume_count": 0,
+        "goal_clear_confirmations": 0,
+        "depth_enabled": false,
+        "recovery_lifted": true,
+        "error": "Command MOVE_POSE KO : An error occured while executing the last command : Goal has been aborted : Command has been aborted due to a collision or a motor not able to follow the given trajectory"
+      },
+      "excluded_from": "transport decision and transport-performance summaries only",
+      "source_preserved": true
+    },
+    {
+      "run": "AEGIS-sensor-time_toB_3",
+      "campaign": "timed_compare",
+      "reason": "no carry decisions; run already near destination",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/AEGIS-sensor-time_toB_3.json",
+      "sha256": "9517e5212ce0e999e4d152cdc218dddaa445d9c6537ad6e3833eaeb408ad2715",
+      "recorded_result": {
+        "termination_reason": "delivered",
+        "pick_succeeded": true,
+        "reached": true,
+        "place_succeeded": true,
+        "object_held": false,
+        "goal_occupied": false,
+        "goal_resumed": false,
+        "goal_resume_count": 0,
+        "goal_clear_confirmations": 0,
+        "depth_enabled": true,
+        "recovery_lifted": false,
+        "error": null
+      },
+      "excluded_from": "transport decision and transport-performance summaries only",
+      "source_preserved": true
+    },
+    {
+      "run": "Trust-sensor-time_toB_14",
+      "campaign": "timed_compare",
+      "reason": "no carry decisions; run already near destination",
+      "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_compare/logs/Trust-sensor-time_toB_14.json",
+      "sha256": "c762218d7dd91732b6923f58c3242bb20157cead5126a4bc09de79700380de81",
+      "recorded_result": {
+        "termination_reason": "delivered",
+        "pick_succeeded": true,
+        "reached": true,
+        "place_succeeded": true,
+        "object_held": false,
+        "goal_occupied": false,
+        "goal_resumed": false,
+        "goal_resume_count": 0,
+        "goal_clear_confirmations": 0,
+        "depth_enabled": true,
+        "recovery_lifted": false,
+        "error": null
+      },
+      "excluded_from": "transport decision and transport-performance summaries only",
+      "source_preserved": true
+    }
+  ]
+}

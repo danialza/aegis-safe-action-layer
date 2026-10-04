@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "tested_archive": "output/AEGIS_LaTeX_source.zip",
+  "tested_archive_sha256": "be7ea136e2a064d4864138551ee464ed024480debed6ff81af9215a75f51b44a",
+  "method": "Fresh local extraction; compile with Tectonic; compare page counts and complete extracted PDF text",
+  "overleaf_executed": false,
+  "external_submission_or_upload": false,
+  "main": {
+    "pages": 22,
+    "extracted_text_identical": true
+  },
+  "supplementary": {
+    "pages": 16,
+    "extracted_text_identical": true
+  }
+}

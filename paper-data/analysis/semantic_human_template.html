@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بررسی انسانی تصاویر دست</title>
+<style>
+*{box-sizing:border-box}body{font:16px Tahoma,Arial,sans-serif;background:#f3f6f9;color:#193047;margin:0;padding:20px;line-height:1.75}main{max-width:1160px;margin:auto}h1{font-size:25px;margin:0 0 6px}p{margin:8px 0}header,.toolbar,.viewer,.controls{background:white;border:1px solid #dbe4ec;border-radius:12px;padding:16px}.toolbar{margin:12px 0;display:flex;gap:12px;align-items:end;flex-wrap:wrap}.toolbar label{display:grid;gap:4px}input,select,textarea,button{font:inherit;border:1px solid #9cacbb;border-radius:7px;padding:9px;background:white;color:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button.selected{border:2px solid #21664c;background:#e6f6ed}.work{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px;direction:ltr}.viewer,.controls{direction:rtl}.viewer{display:flex;flex-direction:column;justify-content:center;min-height:420px}#frame{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain;margin:auto}.controls button{width:100%;margin:4px 0}.controls label{display:block;margin-top:9px}.controls select,.controls textarea{width:100%}textarea{resize:vertical;min-height:64px}.hint{font-size:13px;color:#506279}.notice{background:#fff7e6;border-right:4px solid #d29d36;padding:8px 14px;margin-top:12px}.nav{display:flex;gap:6px;margin-top:12px}.nav button{flex:1}.primary{background:#1d5c91;color:white;border-color:#1d5c91}#status{margin:8px 0}progress{width:100%;height:16px;direction:ltr}#message{min-height:26px;color:#8b3c13;font-weight:bold}.saved{color:#276347}#conditionBox[hidden]{display:none}#backupStatus{min-height:24px}.toolbar button{font-size:14px}details{font-size:14px}summary{cursor:pointer}a{color:#135c9e}@media(max-width:780px){body{padding:12px}.work{grid-template-columns:1fr}.viewer{min-height:240px}#frame{max-height:45vh}.toolbar{align-items:stretch}.toolbar label{width:100%}}
+</style>
+<main>
+<header><h1>آیا دست انسان در تصویر دیده می‌شود؟</h1>
+<p>پاسخ مدل‌ها و نام آزمایش پنهان‌اند. فقط تصویر را بررسی کنید؛ هیچ پاسخی از قبل انتخاب نشده است.</p>
+<details><summary>تعریف برچسب‌ها و راهنمای کوتاه</summary>
+<p>دستکشِ پوشیده‌شده روی دست هم «دست هست» است. بخشی واضح از دست یا انگشت کافی است. بازوی ربات، گریپر و جسم سبز دست انسان نیستند. اگر فقط ساعد دیده می‌شود و هیچ بخشی از دست/انگشت قابل تشخیص نیست، «دست نیست» را انتخاب کنید؛ این به معنی ایمن‌بودن محیط نیست. در ابهام از «نامشخص» استفاده کنید.</p>
+<p>«دست» در این سؤال یعنی از مچ تا نوک انگشت‌ها، نه ساعد و بازو. «کامل» یعنی خود دست در تصویر است و جسمی جلوی بخشی از آن را نگرفته. «فقط بخشی» یعنی مثلاً فقط چند انگشت از لبهٔ تصویر پیداست، یا جعبه بخشی از دست را پنهان کرده است.</p>
+<p>دستکش به‌تنهایی باعث انتخاب «فقط بخشی» نمی‌شود. بیرون‌بودن ساعد از تصویر هم مهم نیست. اگر چند دست می‌بینید و یکی کامل دیده می‌شود، «کامل» را بزنید؛ «فقط بخشی» زمانی است که هیچ دستی کامل دیده نمی‌شود. اگر نمی‌توانید تشخیص دهید، «از این عکس مشخص نیست» را انتخاب کنید. گزینهٔ «ترکیبی» برای دستکش فقط وقتی است که هم دستِ با دستکش و هم دستِ بدون دستکش می‌بینید.</p>
+<p>تا پایان، گزارش مدل‌ها را باز نکنید. اگر قبلاً آن را دیده‌اید صادقانه ثبت کنید؛ پنهان‌کردن فعلی پاسخ‌ها، مشاهدهٔ قبلی را پاک نمی‌کند.</p></details>
+</header>
+<div class="toolbar">
+<label>نام بررسی‌کننده<input id="who" placeholder="نام شما" autocomplete="off"></label>
+<label>قبلاً پاسخ مدل‌ها را دیده‌اید؟<select id="exposure"><option value="">انتخاب کنید</option><option value="yes">بله</option><option value="no">خیر</option><option value="unsure">مطمئن نیستم</option></select></label>
+<button id="download" onclick="save()">دانلود نسخهٔ پشتیبان JSON</button>
+<button onclick="document.getElementById('load').click()">ادامه از فایل ذخیره‌شده</button><input id="load" type="file" hidden accept=".json">
+<button onclick="newReviewer()">جلسهٔ مستقل برای همکار</button>
+</div>
+<div id="status" aria-live="polite"></div><progress id="progress" value="0" max="426"></progress>
+<div class="work">
+<section class="viewer"><img id="frame" alt="تصویر آزمایش برای بررسی انسانی"><div class="nav"><button onclick="move(-1)">قبلی</button><button onclick="nextPending()">بعدیِ بدون پاسخ</button><button onclick="move(1)">بعدی</button></div></section>
+<section class="controls">
+<button id="hand" onclick="choose('hand')">دست هست [۱]</button>
+<button id="no_hand" onclick="choose('no_hand')">دست نیست — ثبت و بعدی [۲]</button>
+<button id="uncertain" onclick="choose('uncertain')">نامشخص — ثبت و بعدی [۳]</button>
+<div id="conditionBox" hidden>
+<label>دستکش دارد؟<select id="cover"><option value="">انتخاب کنید</option><option value="bare">بدون دستکش</option><option value="glove">با دستکش</option><option value="mixed">ترکیبی: با دستکش و بدون دستکش</option><option value="uncertain">مشخص نیست</option></select></label>
+<label>خود دست چقدر دیده می‌شود؟<select id="visibility" aria-describedby="visibilityHelp"><option value="">انتخاب کنید</option><option value="full">کامل دیده می‌شود</option><option value="partial">فقط بخشی دیده می‌شود</option><option value="uncertain">از این عکس مشخص نیست</option></select></label>
+<div id="visibilityHelp" class="hint">
+<p><strong>کامل:</strong> دست از مچ تا انگشت‌ها در تصویر است و جسمی جلوی آن نیست؛ لازم نیست ساعد دیده شود.</p>
+<p><strong>فقط بخشی:</strong> مثلاً فقط چند انگشت پیداست، یا جعبه بخشی از دست را پنهان کرده است.</p>
+<p>دستکش ربطی به این سؤال ندارد. اگر چند دست هست، دیده‌شدنِ کاملِ یکی کافی است. اگر مبهم است، «از این عکس مشخص نیست» را بزنید.</p>
+</div>
+</div>
+<label>یادداشت اختیاری<textarea id="note" maxlength="2000" placeholder="مثلاً: انگشت در لبهٔ تصویر"></textarea></label>
+<button id="submit" class="primary" onclick="commit()">ثبت و بعدی</button>
+<div id="message" role="status"></div>
+<p class="hint">کلیدهای ۱، ۲، ۳ فارسی و انگلیسی کار می‌کنند. نام و سابقهٔ مشاهده پس از اولین ثبت قفل می‌شوند تا برچسب افراد مخلوط نشود.</p>
+</section></div>
+<p id="backupStatus" class="hint" aria-live="polite"></p>
+<p class="notice">ذخیرهٔ مرورگر خودکار است، اما جای فایل پشتیبان را نمی‌گیرد. می‌توانید فایل ناقص را دانلود و بعداً ادامه دهید. هیچ برچسبی از طرف مدل یا برنامه به جای شما ثبت نمی‌شود.</p>
+</main>
+<script>
+const frames=__FRAME_DATA__, manifest='__MANIFEST_SHA__';
+const validIds=new Set(frames.map(f=>f.id));
+const validLabels=new Set(['hand','no_hand','uncertain']), covers=new Set(['bare','glove','mixed','uncertain']), visibilities=new Set(['full','partial','uncertain']);
+const profile=new URLSearchParams(location.search).get('reviewer')||'main';
+const key='aegis-human-426-'+manifest+'-'+profile;
+let index=0, labels={}, imageReady=false, renderToken=0, draft=null, boundName='', boundExposure='', storageBlocked=false;
+const $=id=>document.getElementById(id);
+function message(text){$('message').textContent=text;}
+function isDate(s){return typeof s==='string'&&/^\d{4}-\d\d-\d\dT.*(?:Z|[+-]\d\d:\d\d)$/.test(s)&&Number.isFinite(Date.parse(s));}
+function checkRow(r){
+ if(!r||!validIds.has(r.id)||!validLabels.has(r.label))throw Error('شناسه یا برچسب نامعتبر است.');
+ if(typeof r.note!=='string'||r.note.length>2000||!isDate(r.reviewed_at))throw Error('یادداشت یا تاریخ بررسی نامعتبر است.');
+ if(r.label==='hand'){if(!covers.has(r.cover)||!visibilities.has(r.visibility))throw Error('مشخصات دست کامل نشده است.');}
+ else if(r.cover!==null||r.visibility!==null)throw Error('برای فریم بدون دست/نامشخص، مشخصات دست باید خالی باشد.');
+ return {id:r.id,label:r.label,cover:r.cover,visibility:r.visibility,note:r.note,reviewed_at:r.reviewed_at};
+}
+function validatedPayload(d){
+ if(!d||d.schema_version!=='aegis-human-review-v1'||d.label_source!=='human')throw Error('فقط فایل این بررسی با برچسب انسانی پذیرفته می‌شود.');
+ if(d.review_manifest_sha256!==manifest)throw Error('فایل متعلق به این مجموعه نیست.');
+ if(typeof d.annotator!=='string'||!d.annotator.trim()||!['yes','no','unsure'].includes(d.prior_model_exposure)||!isDate(d.saved_at))throw Error('نام، سابقهٔ مشاهده یا تاریخ فایل نامعتبر است.');
+ if(!Array.isArray(d.labels))throw Error('فهرست برچسب‌ها وجود ندارد.');
+ const checked={};for(const raw of d.labels){const r=checkRow(raw);if(Object.hasOwn(checked,r.id))throw Error('شناسهٔ تکراری در فایل.');checked[r.id]=r;}
+ return {labels:checked,annotator:d.annotator.trim(),exposure:d.prior_model_exposure};
+}
+function identityReady(){return $('who').value.trim()&&['yes','no','unsure'].includes($('exposure').value);}
+function requireIdentity(){if(!identityReady()){message('ابتدا نام و سابقهٔ مشاهدهٔ پاسخ مدل‌ها را وارد کنید.');return false;}
+ if(Object.keys(labels).length&&(boundName!==$('who').value.trim()||boundExposure!==$('exposure').value)){message('هویت بررسی‌کننده تغییر کرده؛ برای همکار جلسهٔ مستقل باز کنید.');return false;}return true;}
+function exportPayload(){if(!requireIdentity())return null;return {schema_version:'aegis-human-review-v1',label_source:'human',review_manifest_sha256:manifest,annotator:$('who').value.trim(),prior_model_exposure:$('exposure').value,labels:frames.filter(f=>labels[f.id]).map(f=>labels[f.id]),saved_at:new Date().toISOString()};}
+function lockIdentity(){const locked=Object.keys(labels).length>0;$('who').disabled=locked;$('exposure').disabled=locked;}
+function persist(){if(storageBlocked){$('backupStatus').textContent='ذخیرهٔ قبلی مرورگر ناسازگار است و دست‌نخورده مانده؛ فایل پشتیبان را وارد کنید یا پاسخ‌های جدید را دانلود کنید.';return;}try{localStorage.setItem(key,JSON.stringify({index,labels,annotator:$('who').value.trim(),exposure:$('exposure').value}));$('backupStatus').textContent='پیشرفت در این مرورگر ذخیره شد؛ مرتب نسخهٔ JSON را دانلود کنید.';}catch(e){$('backupStatus').textContent='ذخیرهٔ مرورگر انجام نشد؛ همین حالا نسخهٔ JSON را دانلود کنید.';}}
+function enableMarking(ready){imageReady=ready;for(const id of ['hand','no_hand','uncertain','submit'])$(id).disabled=!ready;}
+function syncDraft(){for(const label of validLabels)$(label).classList.toggle('selected',draft?.label===label);$('conditionBox').hidden=draft?.label!=='hand';$('cover').value=draft?.cover||'';$('visibility').value=draft?.visibility||'';$('note').value=draft?.note||'';}
+function show(){
+ const f=frames[index], token=++renderToken, im=$('frame');enableMarking(false);im.style.visibility='hidden';draft=labels[f.id]?{...labels[f.id]}:null;syncDraft();lockIdentity();
+ const n=Object.keys(labels).length, status=`تصویر ${index+1} از ${frames.length} — ثبت‌شده ${n} — باقی‌مانده ${frames.length-n}`;
+ $('progress').max=frames.length;$('progress').value=n;$('status').textContent=status+' — در حال بارگذاری';
+ im.onload=()=>{if(token!==renderToken||!im.complete||im.naturalWidth===0)return;im.style.visibility='visible';enableMarking(true);$('status').textContent=status;};
+ im.onerror=()=>{if(token!==renderToken)return;enableMarking(false);$('status').textContent=status+' — تصویر بارگذاری نشد؛ برچسب نزنید.';};im.src=f.image;persist();
+}
+function move(n){index=Math.max(0,Math.min(frames.length-1,index+n));message('');show();}
+function choose(label){if(!imageReady||!validLabels.has(label)||!requireIdentity())return;
+ draft={label,cover:label==='hand'?(draft?.cover||null):null,visibility:label==='hand'?(draft?.visibility||null):null,note:$('note').value};syncDraft();message('');
+ if(label!=='hand')commit();else message('پوشش و میزان دیده‌شدن دست را انتخاب و سپس ثبت کنید.');
+}
+function commit(){if(!imageReady||!requireIdentity())return;if(!draft){message('یکی از سه برچسب را انتخاب کنید.');return;}
+ const r={id:frames[index].id,label:draft.label,cover:draft.label==='hand'?$('cover').value:null,visibility:draft.label==='hand'?$('visibility').value:null,note:$('note').value,reviewed_at:new Date().toISOString()};
+ try{checkRow(r);}catch(e){message(e.message);return;}
+ labels[r.id]=r;boundName=$('who').value.trim();boundExposure=$('exposure').value;persist();
+ if(Object.keys(labels).length===frames.length){show();message('همهٔ تصاویر بررسی شدند. اکنون نسخهٔ پشتیبان JSON را دانلود کنید.');return;}
+ if(index<frames.length-1)move(1);else nextPending();
+}
+function nextPending(){let j=frames.findIndex((f,i)=>i>index&&!labels[f.id]);if(j<0)j=frames.findIndex(f=>!labels[f.id]);if(j>=0){index=j;message('');show();}else message('همهٔ تصاویر ثبت شده‌اند؛ فایل JSON را دانلود کنید.');}
+function save(){const payload=exportPayload();if(!payload)return;const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=url;a.download='human_review_426_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);persist();message('فایل پشتیبان دانلود شد. پس از تکمیل، همین JSON را برای تحلیل ارسال کنید.');}
+function importPayload(d){const checked=validatedPayload(d);labels=checked.labels;$('who').value=checked.annotator;$('exposure').value=checked.exposure;boundName=checked.annotator;boundExposure=checked.exposure;storageBlocked=false;index=0;const pending=frames.findIndex(f=>!labels[f.id]);if(pending>=0)index=pending;show();message('فایل بازیابی شد.');}
+function newReviewer(){const u=new URL(location.href);u.searchParams.set('reviewer',crypto.randomUUID());window.open(u.toString(),'_blank','noopener');}
+$('load').onchange=async e=>{try{if(!e.target.files.length)return;const d=JSON.parse(await e.target.files[0].text());validatedPayload(d);if(Object.keys(labels).length&&!confirm('برچسب‌های این صفحه با فایل انتخابی جایگزین می‌شوند. ابتدا نسخهٔ پشتیبان گرفته‌اید؟'))return;importPayload(d);}catch(e){message(e.message);}};
+for(const id of ['who','exposure'])$(id).addEventListener('input',persist);
+document.addEventListener('keydown',e=>{if(e.repeat||['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName)||e.target.isContentEditable||e.ctrlKey||e.metaKey||e.altKey)return;const choice={'1':'hand','2':'no_hand','3':'uncertain','۱':'hand','۲':'no_hand','۳':'uncertain'}[e.key];if(choice){e.preventDefault();choose(choice);}else if(e.key==='Enter'){e.preventDefault();commit();}});
+try{const s=JSON.parse(localStorage.getItem(key)||'null');if(s){const checked={};for(const [id,row] of Object.entries(s.labels||{})){if(row.id!==id)throw Error('ذخیرهٔ مرورگر ناسازگار است');checked[id]=checkRow(row);}if(Object.keys(checked).length&&(!s.annotator||!['yes','no','unsure'].includes(s.exposure)))throw Error('هویت ذخیره‌شده ناقص است');labels=checked;$('who').value=s.annotator||'';$('exposure').value=s.exposure||'';boundName=s.annotator||'';boundExposure=s.exposure||'';index=Number.isInteger(s.index)?Math.max(0,Math.min(frames.length-1,s.index)):0;}}catch(e){storageBlocked=true;message('بازیابی مرورگر ناموفق بود؛ فایل پشتیبان JSON را وارد کنید.');}
+show();
+</script></html>

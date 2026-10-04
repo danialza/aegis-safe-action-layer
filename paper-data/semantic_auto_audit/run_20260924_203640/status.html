@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>وضعیت ممیزی خودکار دست</title>
+<style>
+body{font-family:Tahoma,Arial,sans-serif;background:#f4f6f9;color:#17263a;max-width:900px;margin:48px auto;padding:0 22px;line-height:1.9}
+main{background:white;border:1px solid #dce2ec;border-radius:16px;padding:30px}h1{font-size:25px;margin-top:0}.note{background:#fff5df;border-right:4px solid #d39320;padding:14px 18px}.card{margin-top:22px;padding:18px;background:#f4f7fb;border-radius:10px}progress{width:100%;height:22px;direction:ltr}small{color:#576475}a{color:#174d99}.pending{color:#64748b}#error{color:#b42626}
+</style>
+<main><h1>ممیزی خودکار تشخیص دست</h1>
+<p>نیازی به کلیک یا برچسب‌گذاری دستی نیست. همهٔ تصاویر روی همین مک بررسی می‌شوند؛ فایل‌های اصلی و برچسب‌های انسانی دست‌نخورده‌اند.</p>
+<p class="note"><strong>حدود نتیجه:</strong> این آزمایش توافق مدل‌ها را اندازه می‌گیرد، نه دقت تأییدشده با حقیقت انسانی. دستکش و پوشیدگی نیز دسته‌بندی خودکارند. توافق به‌تنهایی اثبات ایمنی نیست.</p>
+<section class="card"><b>۱. ارزیاب تصویری جداگانه — Qwen</b><p id="refText">در حال خواندن وضعیت…</p><progress id="ref" value="0" max="2158"></progress></section>
+<section class="card"><b>۲. بازپخش FastVLM</b><p id="monText">بعد از تکمیل مرحلهٔ اول</p><progress id="mon" value="0" max="2158"></progress></section>
+<p id="state" class="pending"></p><p id="error"></p>
+<p id="report" class="pending">گزارش نهایی هنوز آماده نیست. نتیجهٔ ناقص به‌عنوان نتیجهٔ کامل نمایش داده نمی‌شود.</p>
+<small id="updated"></small><p><small>صفحه هر ۵ ثانیه وضعیت فایل‌های واقعی را می‌خواند. بسته‌شدن این صفحه پردازش را متوقف نمی‌کند؛ مک باید روشن بماند.</small></p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+async function get(name){const r=await fetch(name+'?t='+Date.now(),{cache:'no-store'});return r.ok?r.json():null;}
+async function refresh(){try{
+const [s,p,rs,ms]=await Promise.all(['spec.json','progress.json','reference.sealed.json','monitor.sealed.json'].map(get));
+if(!s||!p)throw Error('فایل وضعیت فعلاً در دسترس نیست.');
+const n=s.total_frames, rn=rs?rs.rows:(p.stage==='reference'?p.completed||0:0), mn=ms?ms.rows:(p.stage==='monitor'?p.completed||0:0);
+for(const [id,v] of [['ref',rn],['mon',mn]]){$(id).max=n;$(id).value=v;}
+$('refText').textContent=rn+' / '+n+(rs?' — تکمیل و هش خروجی ثبت شد':' تصویر پردازش شده');
+$('monText').textContent=mn+' / '+n+(ms?' — تکمیل و هش خروجی ثبت شد':rs?' تصویر پردازش شده':' — در انتظار پایان مرحلهٔ اول');
+$('state').textContent=p.stage==='complete'?'پردازش و گزارش نهایی تکمیل شد.':p.stage==='reference'?'مدل مرجع در حال بررسی همهٔ تصاویر است.':p.stage==='monitor'?'FastVLM در حال بازپخش روی همان تصاویر است.':'در حال آماده‌سازی یا نهایی‌سازی…';
+$('updated').textContent='آخرین ثبت پردازش: '+new Date(p.utc).toLocaleString('fa-IR');
+$('error').textContent=(Date.now()-Date.parse(p.utc)>180000&&p.stage!=='complete')?'بیش از سه دقیقه از آخرین ثبت گذشته است؛ ممکن است پردازش متوقف شده باشد. این صفحه ادامهٔ اجرا را تضمین نمی‌کند.':'';
+if(rs&&ms){const r=await fetch('summary.json?t='+Date.now(),{cache:'no-store'});if(r.ok){$('report').innerHTML='<a href="report.html">باز کردن گزارش کامل و تصاویر اختلاف‌ها</a> · <a href="report_FA.md">گزارش فارسی</a> · <a href="summary.json">داده‌های خلاصه</a>';}}
+}catch(e){$('error').textContent='خطای خواندن وضعیت: '+e.message;}}
+refresh();setInterval(refresh,5000);
+</script></html>

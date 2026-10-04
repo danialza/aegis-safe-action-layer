@@ -1,0 +1,35 @@
+% Generated hypothetical proxy-offset sensitivity; existing observed movement mask frozen.
+\begin{table}[H]
+\centering\footnotesize
+\caption{Hypothetical timing-offset sensitivity on frozen observed moving decisions. Entries in the upper panels are equal-run mean age (ms) / percentage of moving decisions with age strictly above 0.6~s, averaged across four runs per cell. Added offsets are unmeasured assumptions, not exposure timestamps or empirical error bounds. A common constant preserves mean differences but changes threshold fractions. The lower panel gives signed break-even $\Delta^*=\overline a_{\rm ref}-\overline a_{\rm AEGIS}$ for $\Delta=\delta_{\rm AEGIS}-\delta_{\rm ref}$; larger $\Delta$ makes AEGIS mean age higher. Nominal-block minima are descriptive only. No controller or physical trajectory is rerun.}\label{tab:proxy-offset}
+\begin{tabular}{llrrr}
+\toprule
+Cohort / cadence & Added $c$ (ms) & AEGIS & Trust12 & Trust32\\
+\midrule
+Primary, normal & 0 & 432.7 / 0.0 & 448.1 / 1.9 & 421.6 / 0.3\\
+Primary, normal & 50 & 482.7 / 9.8 & 498.1 / 10.0 & 471.6 / 3.7\\
+Primary, normal & 100 & 532.7 / 26.2 & 548.1 / 31.6 & 521.6 / 24.1\\
+Primary, normal & 200 & 632.7 / 61.0 & 648.1 / 68.4 & 621.6 / 55.9\\
+Primary, normal & 300 & 732.7 / 97.2 & 748.1 / 97.3 & 721.6 / 94.8\\
+Primary, slow & 0 & 423.5 / 4.8 & 682.6 / 60.8 & 687.6 / 61.3\\
+Primary, slow & 50 & 473.5 / 15.2 & 732.6 / 65.4 & 737.6 / 66.8\\
+Primary, slow & 100 & 523.5 / 25.4 & 782.6 / 73.3 & 787.6 / 73.0\\
+Primary, slow & 200 & 623.5 / 38.7 & 882.6 / 85.2 & 887.6 / 86.3\\
+Primary, slow & 300 & 723.5 / 97.5 & 982.6 / 99.7 & 987.6 / 99.3\\
+\midrule
+Pilot (separate), slow & 0 & 430.0 / 4.2 & 709.6 / 62.4 & ---\\
+Pilot (separate), slow & 50 & 480.0 / 16.5 & 759.6 / 68.5 & ---\\
+Pilot (separate), slow & 100 & 530.0 / 25.7 & 809.6 / 75.9 & ---\\
+Pilot (separate), slow & 200 & 630.0 / 47.2 & 909.6 / 88.5 & ---\\
+Pilot (separate), slow & 300 & 730.0 / 98.4 & 1009.6 / 99.0 & ---\\
+\midrule
+Cohort / cadence & Reference & $\Delta^*$ (ms) & Min. block (ms) & All four $>0$?\\
+\midrule
+Primary, normal & Trust12 & +15.3 & -8.1 & No\\
+Primary, normal & Trust32 & -11.1 & -34.3 & No\\
+Primary, slow & Trust12 & +259.1 & +188.8 & Yes\\
+Primary, slow & Trust32 & +264.1 & +195.0 & Yes\\
+Pilot (separate), slow & Trust12 & +279.7 & +245.4 & Yes\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,10 @@
+{
+  "builder_sha256": "2cadda3cc2e12708f964d4c39324cc45901f3fcf7223966571113c8f5aff3644",
+  "source_manifest_sha256": "e518f90f0495438b8c48eee9d83979aff92234dc1fcca0303fac7856ad967329",
+  "outputs": {
+    "semantic_presence_rows.tex": "b70f7796c2e874048f16e60741cd51077b4ca3b00ac034c4801a85aa09b131ac",
+    "semantic_condition_rows.tex": "d09458a90324c8f481684c004156b663ac72cac205c0edc1d03880d45c706636",
+    "semantic_stratum_rows.tex": "a39a980b86457f8ad8765f3b0cbd2317ec73f85fedffb1979695422f00807057",
+    "semantic_paper_results.json": "679257aeee3ab66fc658ee5e87f41249d14c535ddf004955852c275702d12d25"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "timed_compare_slow": {
+    "AEGIS_runs": 4,
+    "decisions": 272,
+    "median_margin_mm": 31.42082433028273,
+    "mean_margin_mm": 31.781187182818588
+  },
+  "timed_compare": {
+    "AEGIS_runs": 32,
+    "decisions": 1424,
+    "median_margin_mm": 32.3935117531919,
+    "mean_margin_mm": 32.24113307783541
+  },
+  "timed_margin_compare": {
+    "AEGIS_runs": 8,
+    "decisions": 571,
+    "median_margin_mm": 31.620782026799603,
+    "mean_margin_mm": 31.958126010898187
+  }
+}

@@ -9,7 +9,7 @@ eligible hazard-present OBJECT intervals are counted and excluded.
 Two sampled forms are reported. phi_s(own) uses each held-out run's own decision intervals, which are
 realized behaviour of that run. phi_s(fixed) uses the primary-campaign mean intervals for the same
 cadence, so the only inputs taken from a held-out run are its update period P and latency L; this is
-the pre-specified conditional prediction. The half-interval terms assume that the onset crossing is
+the fixed-interval conditional check, chosen after the primary analysis rather than registered in advance. The half-interval terms assume that the onset crossing is
 uniformly distributed within a decision interval and independent of decision timing.
 """
 import glob, json, statistics as st

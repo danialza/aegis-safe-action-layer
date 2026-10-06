@@ -59,8 +59,10 @@ Run the two figure scripts in `revision_2026-10-04/` last: earlier scripts also 
 in their previous style.
 
 **What is not public.** The controller source code is not public; `provenance_code/` holds the session
-calibration record and the controller constants with the SHA-256 of the archived source files, which
-the analyses check against the hashes recorded in every run log. Raw and annotated videos and model
+calibration record and the controller constants with the SHA-256 of the archived source files. These
+match the hashes recorded in all 24 primary and 8 pilot run logs, and the timeout assay rechecks them
+for its 12 AEGIS runs; one exploratory log records a different variant-file hash and the initial pilot
+records none (Supplementary Section S11). Raw and annotated videos and model
 checkpoints are not included, so the photographs and camera frame in Figure 2, the qualitative video
 fields of `first_detection_audit.json`, and the model replays in `semantic_auto_audit/` are provided as
 recorded outputs rather than regenerated.

@@ -23,9 +23,9 @@ def t_event(events, pat):
             return float(m.group(1)) if m else None
 runs = {}
 for f in sorted(glob.glob(str(_find("data/timed_margin_compare/logs") / "AEGIS*.json"))):
-    D = json.load(open(f)); t0 = t_event(D["events"], "carrying")
+    D = json.load(open(f))  # every logged decision is a carry decision, as in the run-level audit
     hs = [P0 + (e["p"] - P0) * math.exp(max(0.0, e["age_used"]) / TD) for e in D["log"]
-          if e["t"] >= t0 and e.get("vlm") == "object" and e.get("clr") is not None and e.get("p") is not None
+          if e.get("vlm") == "object" and e.get("clr") is not None and e.get("p") is not None
           and e.get("age_used") is not None and e["p"] < P0 - 1e-9]
     post_human = [h for h in hs if h >= 0.045]
     runs[Path(f).stem] = {"max_implied_anchor": max(hs), "post_HUMAN_anchor_present": bool(post_human),

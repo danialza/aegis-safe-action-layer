@@ -4,16 +4,16 @@
     "runs": 92,
     "span_h": 2.934068399733967,
     "basis": "run-level means",
-    "inference_mean_ms": 247.74993554038224,
-    "inference_sd_ms": 8.558236932473934,
+    "inference_mean_ms": 247.72998157227283,
+    "inference_sd_ms": 8.56318370512993,
     "inference_range_ms": [
       239.26951551773385,
       279.9838402195636
     ],
-    "slope_ms_per_h": 3.03371895207576,
-    "proxy_to_inference_end_mean_ms": 292.5708415484328,
-    "proxy_to_inference_end_sd_ms": 9.686445350782144,
-    "proxy_to_inference_end_slope_ms_per_h": 4.601572367474637
+    "slope_ms_per_h": 3.0452370304656236,
+    "proxy_to_inference_end_mean_ms": 292.560411968581,
+    "proxy_to_inference_end_sd_ms": 9.682913594552701,
+    "proxy_to_inference_end_slope_ms_per_h": 4.605779288531942
   },
   "obstruction_timing": {
     "runs": 24,
@@ -30,7 +30,7 @@
     "note": "Detection timing only; the physical entry time of the obstruction was not recorded."
   },
   "carry_start_resolution": {
-    "note": "The decision log stores the carrying event at 0.1 s resolution. Decisions after the precise sidecar time but before the rounded time are not counted as carry decisions by the analyses.",
+    "note": "All analyses use every logged decision and the precise sidecar carry-start time. For information: the decision log's own copy of the carrying event is rounded to 0.1 s; a window taken from that copy would omit the decisions counted here, which would change no moving-decision statistic.",
     "primary_boundary_decisions": 10,
     "primary_boundary_moving_decisions": 0,
     "max_abs_change_in_run_mean_moving_age_ms": 0.0

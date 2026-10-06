@@ -35,8 +35,15 @@ clamp = lambda x: min(1.0, max(0.0, x))
 
 def analyse_run(f, method, rate):
     """Per-run inputs, predictions and observed hold share; identical for primary and hold-out runs."""
-    D = json.load(open(f)); t0 = t_event(D["events"], "carrying")
-    car = [e for e in D["log"] if e["t"] >= t0]
+    D = json.load(open(f))
+    side = [json.loads(l) for l in open(f[:-5] + "_timing.jsonl")]
+    events = [r for r in side if r.get("type") == "event"]
+    start = next(r["t"] for r in events if r.get("text", "").startswith("carrying"))
+    end = next(r["t"] for r in reversed(events) if r.get("text") == "object delivered at goal")
+    # Same carry window as the run-level audit: every decision in the decision log (the log holds only
+    # carry decisions) and the precise carry-start and delivery events of the timing sidecar.
+    car = D["log"]
+    assert all(start <= e["t_decision"] for e in car)
     bundles = {}
     for e in car:
         if e.get("ev_t_infer_start") is not None:
@@ -45,6 +52,12 @@ def analyse_run(f, method, rate):
     if len(starts) < 3:
         return None
     ends = sorted(v[1] for v in bundles.values())
+    # Every verdict completed while the controller was making carry decisions, whether or not a decision
+    # consumed it (verdicts that arrive during final placement, after the last decision, are excluded).
+    t_first, t_last = car[0]["t_decision"], car[-1]["t_decision"]
+    done = [r for r in side if r.get("type") == "vlm" and not r.get("error") and t_first <= r["t_infer_end"] <= t_last]
+    arrivals = sorted(r["t_infer_end"] for r in done)
+    all_starts = sorted(r["t_infer_start"] for r in done)
     P = st.median(b - a for a, b in zip(starts, starts[1:]))
     L = st.mean(v[1] - v[2] for v in bundles.values())
     hold = move = 0.0; dms = []; dhs = []
@@ -61,7 +74,11 @@ def analyse_run(f, method, rate):
             "predicted_hold_fraction_sampled": clamp((P + L - T_INF - dm / 2 + (dh or 0.0) / 2) / P) if method == "AEGIS" else 0.0,
             "observed_hold_fraction": hold / (hold + move) if hold + move else None,
             "start_intervals_s": [b - a for a, b in zip(starts, starts[1:])],
-            "completion_intervals_s": [b - a for a, b in zip(ends, ends[1:])],
+            "consumed_completion_intervals_s": [b - a for a, b in zip(ends, ends[1:])],
+            "arrival_intervals_s": [b - a for a, b in zip(arrivals, arrivals[1:])],
+            "completed_verdicts": len(done), "unconsumed_verdicts": len({r["seq"] for r in done} - set(bundles)),
+            "P_all_verdicts_s": st.median(b - a for a, b in zip(all_starts, all_starts[1:])),
+            "L_all_verdicts_s": st.mean(r["t_infer_end"] - r["t_capture"] for r in done),
             "hold_s": hold, "move_s": move, "source_sha256": hashlib.sha256(Path(f).read_bytes()).hexdigest()}
 
 
@@ -89,8 +106,14 @@ def main():
                    "predicted_hold_fraction_sampled": st.mean(r["predicted_hold_fraction_sampled"] for r in v),
                    "observed_hold_fraction_equal_run": st.mean(r["observed_hold_fraction"] for r in v),
                    "observed_hold_fraction_range": [min(r["observed_hold_fraction"] for r in v), max(r["observed_hold_fraction"] for r in v)],
-               "completion_interval_ms": _interval_stats([x for r in v for x in r["completion_intervals_s"]]),
-               "start_interval_ms": _interval_stats([x for r in v for x in r["start_intervals_s"]])}
+               "arrival_interval_ms": _interval_stats([x for r in v for x in r["arrival_intervals_s"]]),
+               "consumed_completion_interval_ms": _interval_stats([x for r in v for x in r["consumed_completion_intervals_s"]]),
+               "start_interval_ms": _interval_stats([x for r in v for x in r["start_intervals_s"]]),
+               "completed_verdicts": sum(r["completed_verdicts"] for r in v),
+               "unconsumed_verdicts": sum(r["unconsumed_verdicts"] for r in v),
+               "max_abs_P_difference_all_vs_consumed_ms": 1000 * max(abs(r["P_all_verdicts_s"] - r["P_s"]) for r in v),
+               "max_abs_L_difference_all_vs_consumed_ms": 1000 * max(abs(r["L_all_verdicts_s"] - r["L_s"]) for r in v),
+               "max_abs_phi_difference_all_vs_consumed": max(abs(clamp((r["P_all_verdicts_s"] + r["L_all_verdicts_s"] - T_INF) / r["P_all_verdicts_s"]) - r["predicted_hold_fraction"]) for r in v) if v[0]["method"] == "AEGIS" else 0.0}
                for k, v in sorted(cells.items())}
     out = {"T_inf_s": T_INF, "model": __doc__, "cells": summary, "runs": runs}
     (HERE / "duty_cycle_results.json").write_text(json.dumps(out, indent=2) + "\n")

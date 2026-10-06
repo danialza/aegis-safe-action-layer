@@ -45,7 +45,7 @@ for f in glob.glob(str(DATA / "*" / "logs" / "*.json")):
     D = json.load(open(f)); t0 = t_event(D.get("events", []), "carrying")
     if t0 is None: continue
     wall = json.loads(open(f[:-5] + "_timing.jsonl").readline())["wall"]
-    car = [e for e in D["log"] if e["t"] >= t0]
+    car = D["log"]  # every logged decision is a carry decision, as in the run-level audit
     b = {e.get("ev_seq", e["ev_t_infer_start"]): (e["ev_t_infer_start"], e["ev_t_infer_end"], e["ev_t_capture"]) for e in car if e.get("ev_t_infer_start") is not None}
     if len(b) < 3: continue
     has = lambda e: e.get("clr") is not None or bool(e.get("haz"))
@@ -54,13 +54,14 @@ for f in glob.glob(str(DATA / "*" / "logs" / "*.json")):
     carp = [e for e in D["log"] if e["t_decision"] >= cp]
     k = next((i for i, e in enumerate(carp) if has(e)), None)
     mv = lambda rows_: [e["age_used"] for e in rows_ if e.get("mode") != "stop" and e.get("age_used") is not None]
+    rounded = [e for e in D["log"] if e["t"] >= t0]   # window implied by the 0.1 s copy of the event in the log
     boundary = [e for e in carp if e["t"] < t0]
     rows.append({"campaign": camp, "run": name, "method": method(name), "wall": wall,
                  "inference_ms": 1000 * st.mean(v[1] - v[0] for v in b.values()),
                  "proxy_to_inference_end_ms": 1000 * st.mean(v[1] - v[2] for v in b.values()),
                  "first_hazard_decision_index": k, "first_hazard_s": None if k is None else carp[k]["t_decision"] - cp,
                  "boundary_decisions": len(boundary), "boundary_moving_decisions": len(mv(boundary)),
-                 "mean_moving_age_change_ms": (1000 * (st.mean(mv(carp)) - st.mean(mv(car)))) if mv(car) else None})
+                 "mean_moving_age_change_ms": (1000 * (st.mean(mv(carp)) - st.mean(mv(rounded)))) if mv(rounded) else None})
 rows.sort(key=lambda r: r["wall"]); w0 = rows[0]["wall"]
 x = [(r["wall"] - w0) / 3600 for r in rows]; mx = st.mean(x)
 slope = lambda y: sum((a - mx) * (b - st.mean(y)) for a, b in zip(x, y)) / sum((a - mx) ** 2 for a in x)
@@ -80,7 +81,7 @@ out["obstruction_timing"] = {"runs": len(prim),
                              "clock": "precise carry-start event in the timing sidecar and decision perf-clock times",
                              "note": "Detection timing only; the physical entry time of the obstruction was not recorded."}
 out["carry_start_resolution"] = {
-    "note": "The decision log stores the carrying event at 0.1 s resolution. Decisions after the precise sidecar time but before the rounded time are not counted as carry decisions by the analyses.",
+    "note": "All analyses use every logged decision and the precise sidecar carry-start time. For information: the decision log's own copy of the carrying event is rounded to 0.1 s; a window taken from that copy would omit the decisions counted here, which would change no moving-decision statistic.",
     "primary_boundary_decisions": sum(r["boundary_decisions"] for r in prim),
     "primary_boundary_moving_decisions": sum(r["boundary_moving_decisions"] for r in prim),
     "max_abs_change_in_run_mean_moving_age_ms": max(abs(r["mean_moving_age_change_ms"]) for r in prim)}

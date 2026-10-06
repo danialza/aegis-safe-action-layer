@@ -21,11 +21,11 @@ out = {}
 for camp in ("timed_compare_slow", "timed_compare", "timed_margin_compare"):
     vals, runs = [], 0
     for f in sorted(glob.glob(str(DATA / camp / "logs" / "AEGIS*.json"))):
-        D = json.load(open(f)); t0 = t_event(D.get("events", []), "carrying")
-        if t0 is None:
+        D = json.load(open(f))  # every logged decision is a carry decision, as in the run-level audit
+        if not D.get("log"):
             continue
         runs += 1
-        vals += [1000 * e["margin"] for e in D["log"] if e["t"] >= t0 and e.get("vlm") == "object"
+        vals += [1000 * e["margin"] for e in D["log"] if e.get("vlm") == "object"
                  and e.get("clr") is not None and e.get("margin") is not None
                  and e.get("ev_status") == "ok" and e.get("mode") != "stop"]
     out[camp] = {"AEGIS_runs": runs, "decisions": len(vals), "median_margin_mm": st.median(vals), "mean_margin_mm": st.mean(vals)}

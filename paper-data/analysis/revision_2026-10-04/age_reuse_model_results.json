@@ -8,15 +8,15 @@
       "run_level_max_abs_difference_ms": 30.899038307585215
     },
     "Trust12-normal": {
-      "L_plus_half_P_ms": 438.8628673445483,
+      "L_plus_half_P_ms": 438.83750724566784,
       "observed_mean_moving_age_ms": 448.0689486486469,
-      "difference_ms": 9.206081304098575,
-      "run_level_max_abs_difference_ms": 27.668810041461086
+      "difference_ms": 9.231441402979044,
+      "run_level_max_abs_difference_ms": 27.770250436982963
     },
     "Trust32-normal": {
-      "L_plus_half_P_ms": 424.50029228322023,
+      "L_plus_half_P_ms": 424.5231439482389,
       "observed_mean_moving_age_ms": 421.5843766792356,
-      "difference_ms": -2.9159156039846152,
+      "difference_ms": -2.9387672690032787,
       "run_level_max_abs_difference_ms": 18.039560295688375
     },
     "AEGIS-slow": {

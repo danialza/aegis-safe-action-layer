@@ -1,5 +1,5 @@
 {
-  "note": "Checks on the existing records that bound single-session risks (no new trials).\n\n1. Session drift: per-run mean VLM inference duration and capture-proxy-to-inference-end latency across all\n   92 eligible transports versus wall-clock time (run-level means; exposure-to-server delay is not measured).\n2. Obstruction detection timing: index and time of the first carry decision with a detected hazard (primary).\n   This does not record when the object physically entered the scene.\n3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).\n4. Hand appearances: human-verdict hold occupancy per run by policy (primary).\n5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.\n6. Annotation stability: presence labels of the 115 rechecked frames, first versus second pass.\n",
+  "note": "Checks on the existing records that bound single-session risks (no new trials).\n\n1. Session drift: per-run mean VLM inference duration and capture-proxy-to-inference-end latency across all\n   92 eligible transports versus wall-clock time (run-level means; exposure-to-server delay is not measured).\n2. Obstruction detection timing: index and time of the first carry decision with a detected hazard (primary),\n   measured from the precise carry-start event in the timing sidecar (the decision log stores that event at\n   0.1 s resolution). Also counts decisions that fall between the precise and the rounded carry start and\n   their effect on mean moving age. This does not record when the object physically entered the scene.\n3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).\n4. Hand appearances: human-verdict hold occupancy per run by policy (primary).\n5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.\n6. Annotation stability: presence labels of the 115 rechecked frames, first versus second pass.\n",
   "session_drift": {
     "runs": 92,
     "span_h": 2.934068399733967,
@@ -25,8 +25,15 @@
       "Trust32-normal_toA_2",
       "Trust12-slow_toB_2"
     ],
-    "max_first_hazard_s": 0.34299999999999997,
+    "max_first_hazard_s": 0.29488737508654594,
+    "clock": "precise carry-start event in the timing sidecar and decision perf-clock times",
     "note": "Detection timing only; the physical entry time of the obstruction was not recorded."
+  },
+  "carry_start_resolution": {
+    "note": "The decision log stores the carrying event at 0.1 s resolution. Decisions after the precise sidecar time but before the rounded time are not counted as carry decisions by the analyses.",
+    "primary_boundary_decisions": 10,
+    "primary_boundary_moving_decisions": 0,
+    "max_abs_change_in_run_mean_moving_age_ms": 0.0
   },
   "operator_placement": {
     "x": {
@@ -34,6 +41,12 @@
         "AEGIS": 0.8912500000000101,
         "Trust12": -0.6399999999999899,
         "Trust32": -0.2512499999999953
+      },
+      "single_run_max_between_policy_difference_mm": 11.460000000000008,
+      "within_policy_sd_mm": {
+        "AEGIS": 2.5753710242794967,
+        "Trust12": 3.3161275584824805,
+        "Trust32": 3.244986639980325
       },
       "max_between_method_difference_mm": 1.53125,
       "p": {
@@ -48,6 +61,12 @@
         "Trust12": -0.8741666666666654,
         "Trust32": 0.0008333333333343518
       },
+      "single_run_max_between_policy_difference_mm": 14.649999999999999,
+      "within_policy_sd_mm": {
+        "AEGIS": 2.806982506830207,
+        "Trust12": 5.841517727875125,
+        "Trust32": 3.379006029297928
+      },
       "max_between_method_difference_mm": 1.7475,
       "p": {
         "AEGIS vs Trust12": 0.45376845376845376,
@@ -60,6 +79,12 @@
         "AEGIS": -0.007916666666665684,
         "Trust12": 0.07833333333333403,
         "Trust32": -0.07041666666666746
+      },
+      "single_run_max_between_policy_difference_mm": 1.7366666666666646,
+      "within_policy_sd_mm": {
+        "AEGIS": 0.2581277984205882,
+        "Trust12": 0.4940631667088857,
+        "Trust32": 0.4626800378883
       },
       "max_between_method_difference_mm": 0.1487500000000015,
       "p": {

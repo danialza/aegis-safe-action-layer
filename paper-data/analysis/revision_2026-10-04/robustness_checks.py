@@ -2,8 +2,10 @@
 
 1. Session drift: per-run mean VLM inference duration and capture-proxy-to-inference-end latency across all
    92 eligible transports versus wall-clock time (run-level means; exposure-to-server delay is not measured).
-2. Obstruction detection timing: index and time of the first carry decision with a detected hazard (primary).
-   This does not record when the object physically entered the scene.
+2. Obstruction detection timing: index and time of the first carry decision with a detected hazard (primary),
+   measured from the precise carry-start event in the timing sidecar (the decision log stores that event at
+   0.1 s resolution). Also counts decisions that fall between the precise and the rounded carry start and
+   their effect on mean moving age. This does not record when the object physically entered the scene.
 3. Operator placement: direction-adjusted per-run obstacle position and radius by policy (primary).
 4. Hand appearances: human-verdict hold occupancy per run by policy (primary).
 5. Replication: slow-update pilot, AEGIS versus Trust12, exact permutation tests.
@@ -47,11 +49,18 @@ for f in glob.glob(str(DATA / "*" / "logs" / "*.json")):
     b = {e.get("ev_seq", e["ev_t_infer_start"]): (e["ev_t_infer_start"], e["ev_t_infer_end"], e["ev_t_capture"]) for e in car if e.get("ev_t_infer_start") is not None}
     if len(b) < 3: continue
     has = lambda e: e.get("clr") is not None or bool(e.get("haz"))
-    k = next((i for i, e in enumerate(car) if has(e)), None)
+    side = [json.loads(l) for l in open(f[:-5] + "_timing.jsonl")]
+    cp = next(r["t"] for r in side if r.get("type") == "event" and "carrying" in r.get("text", ""))
+    carp = [e for e in D["log"] if e["t_decision"] >= cp]
+    k = next((i for i, e in enumerate(carp) if has(e)), None)
+    mv = lambda rows_: [e["age_used"] for e in rows_ if e.get("mode") != "stop" and e.get("age_used") is not None]
+    boundary = [e for e in carp if e["t"] < t0]
     rows.append({"campaign": camp, "run": name, "method": method(name), "wall": wall,
                  "inference_ms": 1000 * st.mean(v[1] - v[0] for v in b.values()),
                  "proxy_to_inference_end_ms": 1000 * st.mean(v[1] - v[2] for v in b.values()),
-                 "first_hazard_decision_index": k, "first_hazard_s": None if k is None else car[k]["t"] - t0})
+                 "first_hazard_decision_index": k, "first_hazard_s": None if k is None else carp[k]["t_decision"] - cp,
+                 "boundary_decisions": len(boundary), "boundary_moving_decisions": len(mv(boundary)),
+                 "mean_moving_age_change_ms": (1000 * (st.mean(mv(carp)) - st.mean(mv(car)))) if mv(car) else None})
 rows.sort(key=lambda r: r["wall"]); w0 = rows[0]["wall"]
 x = [(r["wall"] - w0) / 3600 for r in rows]; mx = st.mean(x)
 slope = lambda y: sum((a - mx) * (b - st.mean(y)) for a, b in zip(x, y)) / sum((a - mx) ** 2 for a in x)
@@ -68,7 +77,13 @@ out["obstruction_timing"] = {"runs": len(prim),
                              "later": sum(r["first_hazard_decision_index"] > 1 for r in prim),
                              "runs_not_at_first_decision": [r["run"] for r in prim if r["first_hazard_decision_index"] > 0],
                              "max_first_hazard_s": max(r["first_hazard_s"] for r in prim),
+                             "clock": "precise carry-start event in the timing sidecar and decision perf-clock times",
                              "note": "Detection timing only; the physical entry time of the obstruction was not recorded."}
+out["carry_start_resolution"] = {
+    "note": "The decision log stores the carrying event at 0.1 s resolution. Decisions after the precise sidecar time but before the rounded time are not counted as carry decisions by the analyses.",
+    "primary_boundary_decisions": sum(r["boundary_decisions"] for r in prim),
+    "primary_boundary_moving_decisions": sum(r["boundary_moving_decisions"] for r in prim),
+    "max_abs_change_in_run_mean_moving_age_ms": max(abs(r["mean_moving_age_change_ms"]) for r in prim)}
 
 # 3 operator placement (direction-adjusted), from the per-run geometry table
 geo = []
@@ -81,6 +96,8 @@ place = {}
 for k in "xyr":
     adj = {m: [g[k] - dmean[g["to"]][k] for g in geo if g["method"] == m] for m in ("AEGIS", "Trust12", "Trust32")}
     place[k] = {"method_means_mm": {m: st.mean(v) for m, v in adj.items()},
+                "single_run_max_between_policy_difference_mm": max(abs(a - b) for m1, m2 in itertools.combinations(adj, 2) for a in adj[m1] for b in adj[m2]),
+                "within_policy_sd_mm": {m: st.stdev(v) for m, v in adj.items()},
                 "max_between_method_difference_mm": max(st.mean(a) for a in adj.values()) - min(st.mean(a) for a in adj.values()),
                 "p": {f"{a} vs {b}": exact(adj[a], adj[b]) for a, b in (("AEGIS", "Trust12"), ("AEGIS", "Trust32"), ("Trust12", "Trust32"))}}
 out["operator_placement"] = place
@@ -107,14 +124,16 @@ out["annotation_stability"] = {"rechecked": len(pairs), "unchanged": sum(a == b 
 
 sd = out["session_drift"]; pl = out["operator_placement"]; hh = out["human_hold_s"]; an = out["annotation_stability"]
 fmtp = lambda d: min(d.values())
+import math
+up1 = lambda v: f"{math.ceil(v * 10 - 1e-9) / 10:.1f}"   # round an upper bound up, never down
 sg = lambda v: f"{v:+.1f}".replace("-", "$-$")
 T = [r"% Generated by robustness_checks.py; no new trials.",
      r"\begin{table}[H]\centering\small",
      r"\caption{Checks on the existing records relevant to single-session risks. They are consistent with the absence of large drift or systematic placement differences, but do not rule out unmeasured factors and do not replace a randomized, blinded, multi-session design.}\label{tab:robustness}",
      r"\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.27\linewidth}X}", r"\toprule Concern & Result\\ \midrule",
      f"Drift of the recorded pipeline during the session & Run-level means over {sd['runs']} transports and {sd['span_h']:.1f} h: VLM inference {sd['inference_mean_ms']:.1f} ms (SD {sd['inference_sd_ms']:.1f} ms, drift {sd['slope_ms_per_h']:.1f} ms per hour); capture proxy to inference end {sd['proxy_to_inference_end_mean_ms']:.1f} ms (SD {sd['proxy_to_inference_end_sd_ms']:.1f} ms, drift {sd['proxy_to_inference_end_slope_ms_per_h']:.1f} ms per hour). Exposure-to-server delay is not measured\\\\",
-     f"Obstruction detection timing & Detected at the first carry decision in {out['obstruction_timing']['first_decision_with_hazard']} of {out['obstruction_timing']['runs']} primary runs and at the second in {out['obstruction_timing']['second_decision_with_hazard']}, at most {out['obstruction_timing']['max_first_hazard_s']:.3f} s after carry start; the physical entry time was not recorded\\\\",
-     f"Obstruction placement by the operator & Direction-adjusted policy means differ by at most {pl['x']['max_between_method_difference_mm']:.1f} mm in $x$, {pl['y']['max_between_method_difference_mm']:.1f} mm in $y$ and {pl['r']['max_between_method_difference_mm']:.1f} mm in radius; exact $p\\ge{min(fmtp(pl[k]['p']) for k in 'xyr'):.2f}$ for every pairwise contrast (8 runs per policy)\\\\",
+     f"Obstruction detection timing & Detected at the first carry decision in {out['obstruction_timing']['first_decision_with_hazard']} of {out['obstruction_timing']['runs']} primary runs and at the second in {out['obstruction_timing']['second_decision_with_hazard']}; the largest time from carry start was {out['obstruction_timing']['max_first_hazard_s']:.3f} s on the sidecar clock; the physical entry time was not recorded\\\\",
+     f"Obstruction placement by the operator & Largest differences between direction-adjusted policy means: {pl['x']['max_between_method_difference_mm']:.2f} mm in $x$, {pl['y']['max_between_method_difference_mm']:.2f} mm in $y$ and {pl['r']['max_between_method_difference_mm']:.2f} mm in radius; smallest exact pairwise $p={min(fmtp(pl[k]['p']) for k in 'xyr'):.3f}$ (8 runs per policy). Single runs of different policies differed by up to {up1(pl['x']['single_run_max_between_policy_difference_mm'])} mm in $x$ and {up1(pl['y']['single_run_max_between_policy_difference_mm'])} mm in $y$\\\\",
      f"Hand appearances & Human-verdict holds averaged {min(hh.values()):.2f}--{max(hh.values()):.2f} s per run in every policy--cadence cell\\\\",
      "Replication in a separate block & Slow-update pilot, AEGIS minus Trust12: mean moving age " + sg(rep['mean_moving_age_ms']['AEGIS_minus_Trust12']) + f" ms ($p={rep['mean_moving_age_ms']['p']:.3f}$), separation " + sg(rep['minimum_command_estimated_separation_mm']['AEGIS_minus_Trust12']) + f" mm ($p={rep['minimum_command_estimated_separation_mm']['p']:.3f}$), time " + sg(rep['carry_to_delivery_s']['AEGIS_minus_Trust12']) + f" s ($p={rep['carry_to_delivery_s']['p']:.3f}$), all with the same sign as in the primary campaign" + "\\\\",
      f"Stability of the single annotator & Of {an['rechecked']} targeted rechecks, {an['unchanged']} presence labels unchanged, {an['definite_reversals']} definite hand/no-hand reversals, {an['to_or_from_uncertain']} moved to or from uncertain\\\\",

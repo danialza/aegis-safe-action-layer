@@ -50,6 +50,7 @@ python robustness_checks.py      # Table S22
 python buffer_rationale.py       # 32 mm buffer rationale, Section S2
 python age_reuse_model.py        # L + P/2 sweep account, Table S16
 python parser_replay_check.py    # permissive-parser use in the replay, Section S13
+python anchor_check.py           # post-HUMAN anchors and onsets, Section S16
 python build_supp_tables.py
 python build_primary_figure_legend.py   # Figure 3 (supersedes the earlier unlabelled version)
 python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)

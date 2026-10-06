@@ -4,8 +4,8 @@
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.27\linewidth}X}
 \toprule Concern & Result\\ \midrule
 Drift of the recorded pipeline during the session & Run-level means over 92 transports and 2.9 h: VLM inference 247.7 ms (SD 8.6 ms, drift 3.0 ms per hour); capture proxy to inference end 292.6 ms (SD 9.7 ms, drift 4.6 ms per hour). Exposure-to-server delay is not measured\\
-Obstruction detection timing & Detected at the first carry decision in 21 of 24 primary runs and at the second in 3, at most 0.343 s after carry start; the physical entry time was not recorded\\
-Obstruction placement by the operator & Direction-adjusted policy means differ by at most 1.5 mm in $x$, 1.7 mm in $y$ and 0.1 mm in radius; exact $p\ge0.32$ for every pairwise contrast (8 runs per policy)\\
+Obstruction detection timing & Detected at the first carry decision in 21 of 24 primary runs and at the second in 3; the largest time from carry start was 0.295 s on the sidecar clock; the physical entry time was not recorded\\
+Obstruction placement by the operator & Largest differences between direction-adjusted policy means: 1.53 mm in $x$, 1.75 mm in $y$ and 0.15 mm in radius; smallest exact pairwise $p=0.317$ (8 runs per policy). Single runs of different policies differed by up to 11.5 mm in $x$ and 14.7 mm in $y$\\
 Hand appearances & Human-verdict holds averaged 0.36--0.68 s per run in every policy--cadence cell\\
 Replication in a separate block & Slow-update pilot, AEGIS minus Trust12: mean moving age $-$279.7 ms ($p=0.029$), separation +18.0 mm ($p=0.029$), time +21.0 s ($p=0.057$), all with the same sign as in the primary campaign\\
 Stability of the single annotator & Of 115 targeted rechecks, 111 presence labels unchanged, 0 definite hand/no-hand reversals, 4 moved to or from uncertain\\

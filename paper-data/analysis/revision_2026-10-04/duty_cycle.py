@@ -44,6 +44,7 @@ def analyse_run(f, method, rate):
     starts = sorted(v[0] for v in bundles.values())
     if len(starts) < 3:
         return None
+    ends = sorted(v[1] for v in bundles.values())
     P = st.median(b - a for a, b in zip(starts, starts[1:]))
     L = st.mean(v[1] - v[2] for v in bundles.values())
     hold = move = 0.0; dms = []; dhs = []
@@ -59,7 +60,16 @@ def analyse_run(f, method, rate):
             "d_move_s": dm, "d_hold_s": dh,
             "predicted_hold_fraction_sampled": clamp((P + L - T_INF - dm / 2 + (dh or 0.0) / 2) / P) if method == "AEGIS" else 0.0,
             "observed_hold_fraction": hold / (hold + move) if hold + move else None,
+            "start_intervals_s": [b - a for a, b in zip(starts, starts[1:])],
+            "completion_intervals_s": [b - a for a, b in zip(ends, ends[1:])],
             "hold_s": hold, "move_s": move, "source_sha256": hashlib.sha256(Path(f).read_bytes()).hexdigest()}
+
+
+def _interval_stats(xs):
+    """Median, interquartile range and coefficient of variation of verdict start or completion intervals."""
+    xs = sorted(xs); q = lambda f: xs[int(f * (len(xs) - 1))]
+    return {"n": len(xs), "median": 1000 * st.median(xs), "q25": 1000 * q(.25), "q75": 1000 * q(.75),
+            "cv": st.pstdev(xs) / st.mean(xs)}
 
 
 def main():
@@ -78,7 +88,9 @@ def main():
                    "d_move_ms": 1000 * st.mean(r["d_move_s"] for r in v), "d_hold_ms": (1000 * st.mean(r["d_hold_s"] for r in v if r["d_hold_s"] is not None)) if any(r["d_hold_s"] is not None for r in v) else None,
                    "predicted_hold_fraction_sampled": st.mean(r["predicted_hold_fraction_sampled"] for r in v),
                    "observed_hold_fraction_equal_run": st.mean(r["observed_hold_fraction"] for r in v),
-                   "observed_hold_fraction_range": [min(r["observed_hold_fraction"] for r in v), max(r["observed_hold_fraction"] for r in v)]}
+                   "observed_hold_fraction_range": [min(r["observed_hold_fraction"] for r in v), max(r["observed_hold_fraction"] for r in v)],
+               "completion_interval_ms": _interval_stats([x for r in v for x in r["completion_intervals_s"]]),
+               "start_interval_ms": _interval_stats([x for r in v for x in r["start_intervals_s"]])}
                for k, v in sorted(cells.items())}
     out = {"T_inf_s": T_INF, "model": __doc__, "cells": summary, "runs": runs}
     (HERE / "duty_cycle_results.json").write_text(json.dumps(out, indent=2) + "\n")

@@ -1,0 +1,78 @@
+{
+  "note": "Stored anchors implied by the logged AEGIS scores, and the hold onsets they imply.\n\nFor a hazard-present OBJECT decision with logged score p and proxy age tau, Equation (6) gives the stored\nanchor h = P0 + (p - P0) exp(tau / T_d). An OBJECT verdict that follows a HUMAN verdict leaves h near\n(1 - eta) h_prev with h_prev close to one, i.e. about 0.048-0.05, whose onset tau_H is about 0.555 s.\nThis script reports, per primary AEGIS run, the largest implied anchor and whether such post-HUMAN\nanchors (h >= 0.045) occur. No parameter is fitted.\n",
+  "onset_first_OBJECT_from_prior_s": 0.5660175097623504,
+  "onset_anchor_0.05_s": 0.5545177444479562,
+  "onset_limit_s": 0.5865348275173708,
+  "runs_with_post_HUMAN_anchor": 7,
+  "runs": {
+    "AEGIS-normal_toA_1": {
+      "max_implied_anchor": 0.049125000000000085,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.04912499999999975,
+        0.049125000000000085
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471476
+    },
+    "AEGIS-normal_toA_2": {
+      "max_implied_anchor": 0.04912499999999986,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.04912499999999986,
+        0.04912499999999986
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471477
+    },
+    "AEGIS-normal_toB_1": {
+      "max_implied_anchor": 0.049956250000000146,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.049956249999999924,
+        0.049956250000000146
+      ],
+      "onset_s_at_max_anchor": 0.5545469100513064
+    },
+    "AEGIS-normal_toB_2": {
+      "max_implied_anchor": 0.049124999999999974,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.049124999999999974,
+        0.049124999999999974
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471477
+    },
+    "AEGIS-slow_toA_1": {
+      "max_implied_anchor": 0.049125000000000196,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.04912499999999942,
+        0.049125000000000196
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471475
+    },
+    "AEGIS-slow_toA_2": {
+      "max_implied_anchor": 0.03249999999999986,
+      "post_HUMAN_anchor_present": false,
+      "post_HUMAN_anchor_range": null,
+      "onset_s_at_max_anchor": 0.5660175097623507
+    },
+    "AEGIS-slow_toB_1": {
+      "max_implied_anchor": 0.04912500000000042,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.0491249999999992,
+        0.04912500000000042
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471473
+    },
+    "AEGIS-slow_toB_2": {
+      "max_implied_anchor": 0.049125000000000196,
+      "post_HUMAN_anchor_present": true,
+      "post_HUMAN_anchor_range": [
+        0.049124999999998975,
+        0.049125000000000196
+      ],
+      "onset_s_at_max_anchor": 0.5551006528471475
+    }
+  }
+}

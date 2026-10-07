@@ -1,0 +1,125 @@
+{
+  "note": "Agreement between the second annotator and the merged first-annotator labels on the frozen 426-frame sample.\n\nThe second annotator labelled the same frozen manifest once, in an isolated browser profile, with the clarified\ndefinitions used for the first annotator's recheck. Presence agreement is summarized by Cohen's kappa on frames that\nboth annotators labelled definitely (hand or no_hand); uncertain labels are counted separately. The script also\nrepeats the FastVLM replay counts with the second annotator's labels as reference and checks the two claims of\nSection S13 that depend on the human labels (the joint-negative stratum and the parser's no-numeral replies).\nNo model output is used as a label, and no input file is modified.\n",
+  "second_annotator": {
+    "prior_model_exposure": "no",
+    "review_manifest_sha256": "b62a451ddfc5347d2ae8f75f361e6a5c8ef9573a3a37fed961099ecefcac7a44",
+    "first_reviewed_at": "2026-10-06T23:43:43.516Z",
+    "last_reviewed_at": "2026-10-07T00:05:48.693Z",
+    "labels": {
+      "no_hand": 322,
+      "hand": 104
+    }
+  },
+  "first_annotator_merged_labels": {
+    "no_hand": 322,
+    "uncertain": 3,
+    "hand": 101
+  },
+  "confusion_first_to_second": {
+    "hand->hand": 101,
+    "hand->no_hand": 0,
+    "hand->uncertain": 0,
+    "no_hand->hand": 1,
+    "no_hand->no_hand": 321,
+    "no_hand->uncertain": 0,
+    "uncertain->hand": 2,
+    "uncertain->no_hand": 1,
+    "uncertain->uncertain": 0
+  },
+  "definite_both": 423,
+  "definite_agree": 422,
+  "observed_agreement_definite": 0.9976359338061466,
+  "cohen_kappa_definite": 0.9935187313261319,
+  "observed_agreement_three_category": 0.9906103286384976,
+  "cohen_kappa_three_category": 0.974676019498276,
+  "frames_with_different_presence_labels": [
+    {
+      "case_id": "case_3443325d8c5cf28584ad",
+      "run": "Trust-sensor-time_toB_11",
+      "container_time_s": 25.75,
+      "stratum": "disagreement",
+      "first": "uncertain",
+      "second": "hand",
+      "second_cover": "bare",
+      "second_visibility": "partial",
+      "fastvlm": "HUMAN",
+      "qwen": "no_hand"
+    },
+    {
+      "case_id": "case_4cb1a5b776241bf5417c",
+      "run": "AEGIS-slow_toA_2",
+      "container_time_s": 16.083333333333332,
+      "stratum": "disagreement",
+      "first": "no_hand",
+      "second": "hand",
+      "second_cover": "bare",
+      "second_visibility": "uncertain",
+      "fastvlm": "HUMAN",
+      "qwen": "no_hand"
+    },
+    {
+      "case_id": "case_61efeefabd98b1341d94",
+      "run": "AEGIS-sensor-time_toA_13",
+      "container_time_s": 33.75,
+      "stratum": "disagreement",
+      "first": "uncertain",
+      "second": "no_hand",
+      "second_cover": null,
+      "second_visibility": null,
+      "fastvlm": "HUMAN",
+      "qwen": "no_hand"
+    },
+    {
+      "case_id": "case_aa978340c8dce9285f83",
+      "run": "AEGIS-sensor-time_toA_8",
+      "container_time_s": 27.083333333333332,
+      "stratum": "disagreement",
+      "first": "uncertain",
+      "second": "hand",
+      "second_cover": "bare",
+      "second_visibility": "partial",
+      "fastvlm": "HUMAN",
+      "qwen": "no_hand"
+    }
+  ],
+  "conditions_on_frames_both_labelled_hand": {
+    "n": 101,
+    "cover_agree": 99,
+    "visibility_agree": 89,
+    "cover_first_to_second": {
+      "bare->bare": 89,
+      "glove->glove": 10,
+      "bare->glove": 2
+    },
+    "visibility_first_to_second": {
+      "full->full": 63,
+      "partial->partial": 26,
+      "partial->full": 12
+    }
+  },
+  "fastvlm_replay_first_labels": {
+    "hand_positive": 101,
+    "fastvlm_human_on_positive": 101,
+    "hand_negative": 322,
+    "fastvlm_human_on_negative": 22,
+    "uncertain": 3
+  },
+  "fastvlm_replay_second_labels": {
+    "hand_positive": 104,
+    "fastvlm_human_on_positive": 104,
+    "hand_negative": 322,
+    "fastvlm_human_on_negative": 22,
+    "uncertain": 0
+  },
+  "joint_negative_stratum_second_labels": {
+    "no_hand": 300
+  },
+  "parser_no_numeral_sampled_second_labels": {
+    "parsed_as_0": {
+      "no_hand": 107
+    },
+    "parsed_as_1": {
+      "hand": 13
+    }
+  }
+}

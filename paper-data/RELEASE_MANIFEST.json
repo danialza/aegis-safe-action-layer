@@ -1,7 +1,7 @@
 {
  "release": "paper-data for the October 2026 Sensors submission",
  "files": {
-  "README.md": "b7f3ad4865a231df58943312e511742c52b92f50c5cec8384593bd88398b4004",
+  "README.md": "2506f7b392fe75e7f97c08bba4d6b1b834debf5cb05ff9cc5f4c4785a13e1c99",
   "analysis/ADDITIONAL_ANALYSES_README.md": "bc50479fbb5b75522cf30b380a978e0e8da957fa0e54525116bbe6dbc2d6500f",
   "analysis/README.md": "1653d356f977997f8c4b0ed6649468b09fcde6b680c958808c1d9fe8c72748e3",
   "analysis/additional_analyses.json": "f00a7fe112cf3bd86e97cd06a308924e61ac402e61f79c9ce1147110ce7a2a38",
@@ -91,6 +91,8 @@
   "analysis/revision_2026-10-04/robustness_checks.py": "3f784a88f27ca5d75aaa7697a636baa57b7b43c740c88b668a6c03bc3797501d",
   "analysis/revision_2026-10-04/robustness_checks_results.json": "27d14b6ee155dd3af857dfa0d306f17078f28b9845d8be388636755f8f18c922",
   "analysis/revision_2026-10-04/robustness_table.tex": "1863f613b3a86e554ba5c88de3d9770adea1830e3744b89e1825009b1d0575eb",
+  "analysis/revision_2026-10-04/second_rater_agreement.py": "b2f400352b91c359e8dea99ad917947c0658ae4d1673631047a62ad16202adae",
+  "analysis/revision_2026-10-04/second_rater_agreement_results.json": "8213ecaa254dc2da46ec3951569a18c79e33c901517d1e88c749ce2432a8f636",
   "analysis/revision_2026-10-04/supp_exact_full_table.tex": "400005cf456643ab393b5c79992a1919e76c0dc6c2ddea32bffee23f915b42dc",
   "analysis/run_semantic_hand_pose_audit.py": "ee18559e3889fc1420a547d38d41fd2e478f21df91fe8929bedd81c7bc7826aa",
   "analysis/semantic_auto_audit.py": "5fa08528a53524f705344ec8ddcd9babdda9a55ce01967f563117c06d8c28f89",
@@ -2541,6 +2543,9 @@
   "semantic_human_review/review_426_v1/label_review.html": "24e35507790cd4a9d0fcbf7088b8f380e8ec5c6950e737ac626ee06b50780609",
   "semantic_human_review/review_426_v1/manifest.json": "b62a451ddfc5347d2ae8f75f361e6a5c8ef9573a3a37fed961099ecefcac7a44",
   "semantic_human_review/review_426_v1/ui_frames.json": "67ee3b9e83ceeacc9359d1c36fcdc9ef878d05b2ddba47f3a7483e16b1e4748a",
+  "semantic_human_review/second_rater_426_v1/README.md": "1937342e346d899ab41c17420d5a69e26593f49581cc2102e792df0dfe6beb89",
+  "semantic_human_review/second_rater_426_v1/human_review_426_second_rater.json": "8dffc5edeb2b37fc557ff49373e76203f45eb991cb0da57b53e2b9ab5763772a",
+  "semantic_human_review/second_rater_426_v1/label_review.html": "b44345fc5f2cf679b085aa30a7b5a0cf6373bdecd6af9f00fec07e6bd1dfe97e",
   "verify_release.py": "22ab762acf6dd644d3d81ca939456d228f343b44c135509d0c8a8dd79b173832"
  }
 }

@@ -1,0 +1,199 @@
+{
+  "note": "Checks added in response to the pre-submission audit of 11 October 2026.\n\nAll quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-assay\ndecision ledger; no input file is modified and no model output is used as a label.\n\n1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had\n   already been captured (capture proxy before the decision) but its verdict was still pending\n   (inference end after the decision). Frames the monitor never processed are not covered, so the\n   count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.\n2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision\n   period (first to last carry decision).\n3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score\n   hold (belief>=P_STOP).\n4. Stored anchors on the eligible timeout-assay decisions, reconstructed from the logged score and\n   age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their\n   anchor-specific hold onset and the limiting timeout.\n5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.\n6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.\n7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence\n   block to its slow-cadence block).\n8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).\n",
+  "constants": {
+    "P0": 0.65,
+    "T_d_s": 0.4,
+    "P_stop": 0.5,
+    "T_inf_s": 0.5865348275173708
+  },
+  "stale_permissions": {
+    "definition": "moving decision while a later-HUMAN frame was captured and its verdict pending",
+    "moving_decisions": {
+      "timed_margin_compare|AEGIS": 612,
+      "timed_margin_compare|Trust12": 529,
+      "timed_margin_compare|Trust32": 601,
+      "timed_compare_slow|AEGIS": 289,
+      "timed_compare_slow|Trust12": 283
+    },
+    "count": {
+      "timed_margin_compare|AEGIS": 0,
+      "timed_margin_compare|Trust12": 1,
+      "timed_margin_compare|Trust32": 0,
+      "timed_compare_slow|AEGIS": 0,
+      "timed_compare_slow|Trust12": 0
+    },
+    "total_moving": 2314,
+    "total_stale": 1,
+    "rows": [
+      {
+        "run": "Trust12-normal_toB_1",
+        "t_s": 16.649,
+        "hazard_present": false
+      }
+    ]
+  },
+  "human_verdicts_primary": {
+    "AEGIS": {
+      "human": 23,
+      "completed": 756,
+      "runs_with_human": 8,
+      "human_in_decision_period": 11,
+      "completed_in_decision_period": 559
+    },
+    "Trust12": {
+      "human": 20,
+      "completed": 578,
+      "runs_with_human": 8,
+      "human_in_decision_period": 14,
+      "completed_in_decision_period": 382
+    },
+    "Trust32": {
+      "human": 24,
+      "completed": 652,
+      "runs_with_human": 8,
+      "human_in_decision_period": 13,
+      "completed_in_decision_period": 452
+    }
+  },
+  "score_hold_episodes": {
+    "per_run": {
+      "AEGIS-normal_toA_1": 1,
+      "AEGIS-normal_toA_2": 0,
+      "AEGIS-normal_toB_1": 2,
+      "AEGIS-normal_toB_2": 7,
+      "AEGIS-slow_toA_1": 61,
+      "AEGIS-slow_toA_2": 37,
+      "AEGIS-slow_toB_1": 56,
+      "AEGIS-slow_toB_2": 57,
+      "Trust12-normal_toA_1": 0,
+      "Trust12-normal_toA_2": 0,
+      "Trust12-normal_toB_1": 0,
+      "Trust12-normal_toB_2": 0,
+      "Trust12-slow_toA_1": 0,
+      "Trust12-slow_toA_2": 0,
+      "Trust12-slow_toB_1": 0,
+      "Trust12-slow_toB_2": 0,
+      "Trust32-normal_toA_1": 0,
+      "Trust32-normal_toA_2": 0,
+      "Trust32-normal_toB_1": 0,
+      "Trust32-normal_toB_2": 0,
+      "Trust32-slow_toA_1": 0,
+      "Trust32-slow_toA_2": 0,
+      "Trust32-slow_toB_1": 0,
+      "Trust32-slow_toB_2": 0,
+      "AEGIS-slowupdates-0.8s_toA_1": 64,
+      "AEGIS-slowupdates-0.8s_toA_2": 59,
+      "AEGIS-slowupdates-0.8s_toB_1": 33,
+      "AEGIS-slowupdates-0.8s_toB_2": 53,
+      "Trust-slowupdates-0.8s_toA_1": 0,
+      "Trust-slowupdates-0.8s_toA_2": 0,
+      "Trust-slowupdates-0.8s_toB_1": 0,
+      "Trust-slowupdates-0.8s_toB_2": 0
+    },
+    "primary_slow_AEGIS_range": [
+      37,
+      61
+    ],
+    "pilot_slow_AEGIS_range": [
+      33,
+      64
+    ],
+    "primary_normal_AEGIS_range": [
+      0,
+      7
+    ],
+    "fixed_buffer_max": 0
+  },
+  "anchors": {
+    "timed_margin_compare": {
+      "eligible": 1302,
+      "anchor_below_0.01": 1275,
+      "anchor_0.01_to_0.5": 25,
+      "anchor_reset_to_prior": 2,
+      "max_onset_gap_below_0.01_ms": 1.5144016124034598,
+      "age_between_onset_and_T_inf": 0
+    },
+    "timed_compare_slow": {
+      "eligible": 987,
+      "anchor_below_0.01": 967,
+      "anchor_0.01_to_0.5": 20,
+      "anchor_reset_to_prior": 0,
+      "max_onset_gap_below_0.01_ms": 1.5144016124031268,
+      "age_between_onset_and_T_inf": 1
+    }
+  },
+  "separation_minus_margin_primary": {
+    "AEGIS": {
+      "min_mm": 33.72018402223291,
+      "run": "AEGIS-slow_toA_2",
+      "hazard_present_moving_decisions": 571
+    },
+    "Trust12": {
+      "min_mm": 39.63754549563758,
+      "run": "Trust12-slow_toA_1",
+      "hazard_present_moving_decisions": 454
+    },
+    "Trust32": {
+      "min_mm": 34.12543771525128,
+      "run": "Trust32-normal_toA_2",
+      "hazard_present_moving_decisions": 531
+    }
+  },
+  "radius_clamp_rows_primary": {
+    "radius_m": 0.1,
+    "rows": 288,
+    "runs": 21,
+    "by_state": {
+      "hold_human|human|moving=False": 33,
+      "hold_goal|goal_occupied|moving=False": 250,
+      "hold_obj|geometry|moving=False": 3,
+      "hold_obj|belief>=P_STOP|moving=False": 2
+    }
+  },
+  "block_order_primary": {
+    "run_order": [
+      "AEGIS-normal_toB_1",
+      "AEGIS-normal_toA_1",
+      "Trust12-normal_toB_1",
+      "Trust12-normal_toA_1",
+      "Trust32-normal_toB_1",
+      "Trust32-normal_toA_1",
+      "Trust32-slow_toB_1",
+      "Trust32-slow_toA_1",
+      "Trust12-slow_toB_1",
+      "Trust12-slow_toA_1",
+      "AEGIS-slow_toB_1",
+      "AEGIS-slow_toA_1",
+      "AEGIS-normal_toB_2",
+      "AEGIS-normal_toA_2",
+      "Trust12-normal_toB_2",
+      "Trust12-normal_toA_2",
+      "Trust32-normal_toB_2",
+      "Trust32-normal_toA_2",
+      "Trust32-slow_toB_2",
+      "Trust32-slow_toA_2",
+      "Trust12-slow_toB_2",
+      "Trust12-slow_toA_2",
+      "AEGIS-slow_toB_2",
+      "AEGIS-slow_toA_2"
+    ],
+    "normal_to_slow_minutes": {
+      "AEGIS|pass1": 12.134547130266826,
+      "AEGIS|pass2": 11.843194464842478,
+      "Trust12|pass1": 6.6600526690483095,
+      "Trust12|pass2": 7.1468512694040935,
+      "Trust32|pass1": 2.2946967840194703,
+      "Trust32|pass2": 2.000305914878845
+    }
+  },
+  "T_inf_sensitivity_s": {
+    "note": "T_inf = T_d ln(P0 / (P0 - P_stop)) at T_d = 0.40 s; proportional to T_d",
+    "by_P0": {
+      "0.55": 0.959158109119348,
+      "0.60": 0.7167037876912221,
+      "0.65": 0.5865348275173708,
+      "0.70": 0.5011051873981472,
+      "0.75": 0.43944491546724396
+    }
+  }
+}

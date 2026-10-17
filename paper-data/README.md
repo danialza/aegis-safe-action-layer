@@ -52,6 +52,7 @@ python age_reuse_model.py        # L + P/2 sweep account, Table S16
 python parser_replay_check.py    # permissive-parser use in the replay, Section S13
 python anchor_check.py           # post-HUMAN anchors and onsets, Section S16
 python second_rater_agreement.py # second-annotator agreement, Section S13
+python audit_checks.py           # stale permissions, anchors, HUMAN counts, hold episodes, Sections S5, S7, S11, S16, S20
 python build_supp_tables.py
 python build_primary_figure_legend.py   # Figure 3 (supersedes the earlier unlabelled version)
 python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)
@@ -60,8 +61,9 @@ python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)
 Run the two figure scripts in `revision_2026-10-04/` last: earlier scripts also write Figures 3 and 4
 in their previous style.
 
-**What is not public.** The controller source code is not public; `provenance_code/` holds the session
-calibration record and the controller constants with the SHA-256 of the archived source files. These
+**What is not public.** Most of the controller source is not public; `provenance_code/` holds the session
+calibration record, the controller constants with the SHA-256 of the archived source files, and three of
+those files (the score-and-hold rule, the evidence clock and the policy variants). These
 match the hashes recorded in all 24 primary and 8 pilot run logs, and the timeout assay rechecks them
 for its 12 AEGIS runs; one exploratory log records a different variant-file hash and the initial pilot
 records none (Supplementary Section S11). Raw and annotated videos and model

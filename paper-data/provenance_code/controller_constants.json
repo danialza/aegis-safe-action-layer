@@ -1,5 +1,6 @@
 {
   "note": "Module-level literal constants of the four archived controller files used by the analyses, and the SHA-256 of each file. The hashes equal the values recorded in every primary and pilot run log (provenance.files_sha256). The controller source itself is not public; it is available from the corresponding author.",
+  "deployed_values_note": "The R_HUMAN, D_MECH and EPI values listed below are module defaults. The deployed values, 0.06, 0.012 and 0.012 m, were set per run and are recorded in clasp_params of every run log; the timeout assay checks them.",
   "files": {
     "safebench/clasp_policy.py": {
       "sha256": "e3aac5c1fce5349dd54d98d2295c6948da224c7c3e829641ccf3a2d0c4957929",

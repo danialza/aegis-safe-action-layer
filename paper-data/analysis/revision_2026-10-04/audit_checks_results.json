@@ -1,5 +1,5 @@
 {
-  "note": "Checks added in response to the pre-submission audit of 11 October 2026.\n\nAll quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-assay\ndecision ledger; no input file is modified and no model output is used as a label.\n\n1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had\n   already been captured (capture proxy before the decision) but its verdict was still pending\n   (inference end after the decision). Frames the monitor never processed are not covered, so the\n   count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.\n2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision\n   period (first to last carry decision).\n3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score\n   hold (belief>=P_STOP).\n4. Stored anchors on the eligible timeout-assay decisions, reconstructed from the logged score and\n   age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their\n   anchor-specific hold onset and the limiting timeout.\n5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.\n6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.\n7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence\n   block to its slow-cadence block).\n8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).\n",
+  "note": "Checks added in response to the pre-submission audit of 11 October 2026.\n\nAll quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-assay\ndecision ledger; no input file is modified and no model output is used as a label.\n\n1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had\n   already been captured (capture proxy before the decision) but its verdict was still pending\n   (inference end after the decision). Frames the monitor never processed are not covered, so the\n   count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.\n2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision\n   period (first to last carry decision).\n3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score\n   hold (belief>=P_STOP).\n4. Stored anchors on the eligible timeout-assay decisions, reconstructed from the logged score and\n   age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their\n   anchor-specific hold onset and the limiting timeout.\n5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.\n6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.\n7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence\n   block to its slow-cadence block).\n8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).\n9. Commanded tool speed while moving: command-state distance advanced over the intervals that follow a\n   moving decision, divided by their duration, per primary run.\n",
   "constants": {
     "P0": 0.65,
     "T_d_s": 0.4,
@@ -195,5 +195,36 @@
       "0.70": 0.5011051873981472,
       "0.75": 0.43944491546724396
     }
+  },
+  "commanded_tool_speed_mm_s": {
+    "per_run": {
+      "AEGIS-normal_toA_1": 18.466098118017623,
+      "AEGIS-normal_toA_2": 20.958303546868258,
+      "AEGIS-normal_toB_1": 15.930239770585857,
+      "AEGIS-normal_toB_2": 15.596787448633586,
+      "AEGIS-slow_toA_1": 16.87180449447218,
+      "AEGIS-slow_toA_2": 20.207379233769856,
+      "AEGIS-slow_toB_1": 17.328490296782142,
+      "AEGIS-slow_toB_2": 16.6747300211533,
+      "Trust12-normal_toA_1": 21.725793154526666,
+      "Trust12-normal_toA_2": 20.995592737462218,
+      "Trust12-normal_toB_1": 16.477827620742076,
+      "Trust12-normal_toB_2": 15.916188538023635,
+      "Trust12-slow_toA_1": 20.544479566342368,
+      "Trust12-slow_toA_2": 21.39809109764189,
+      "Trust12-slow_toB_1": 16.98818379460759,
+      "Trust12-slow_toB_2": 26.551527617157998,
+      "Trust32-normal_toA_1": 20.673539499330833,
+      "Trust32-normal_toA_2": 19.711914325742903,
+      "Trust32-normal_toB_1": 15.049139682985402,
+      "Trust32-normal_toB_2": 16.731692839542625,
+      "Trust32-slow_toA_1": 20.196025345709,
+      "Trust32-slow_toA_2": 20.320913164493543,
+      "Trust32-slow_toB_1": 17.245843156497056,
+      "Trust32-slow_toB_2": 22.386091665621155
+    },
+    "min": 15.049139682985402,
+    "median": 19.08900622188026,
+    "max": 26.551527617157998
   }
 }

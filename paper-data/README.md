@@ -34,7 +34,7 @@ cd analysis
 python build_hardware_figures.py                       # hardware_summary.json, Tables S4-S5
 python exploratory_patterns_2026-10-02/pattern_audit.py  # run-level audit (pattern_results.json)
 python offline_review_2026-10-03/stage_age_audit.py      # Table 4, Tables S14-S15
-python offline_review_2026-10-03/shadow_timeout.py       # timeout assay, Section 6.6, Table S17
+python offline_review_2026-10-03/shadow_timeout.py       # timeout comparison, Section 6.6, Table S17
 python offline_review_2026-10-03/proxy_sensitivity.py    # clock-offset sensitivity, Table S18
 python build_additional_analyses.py                      # Tables S3, S6, S7, S8
 python build_motion_freshness_tables.py                  # Table 2, Tables S9 and S13, Figure S2

@@ -76,7 +76,7 @@ box(21, 142, 202, 40, "blue", "Table homography + tracker\nSelected disc: centre
 arrow(122, 75, 122, 89, COL["blue"][0])
 arrow(122, 128, 122, 142, COL["blue"][0])
 box(259, 39, 202, 36, "purple", "FastVLM-0.5B on laptop\nCount visible human hands")
-box(259, 89, 202, 39, "purple", "Parsed count: 0 = OBJECT\nCount >= 1 = HUMAN")
+box(259, 89, 202, 39, "purple", "Parsed count: 0 = OBJECT\nCount ≥ 1 = HUMAN")
 box(259, 142, 202, 40, "purple", "Atomic frame-verdict bundle\nFrame ID; proxy; inference times")
 arrow(223, 57, 259, 57, "#303A44")
 arrow(360, 75, 360, 89, COL["purple"][0])
@@ -100,7 +100,7 @@ txt(353.5, 293, r"$R=60,\ d=12,\ \beta=12\ \mathrm{mm}$", size=9.2)
 txt(353.5, 313, r"AEGIS hold when $p\geq0.50$", size=9.2)
 txt(353.5, 337, "Blob jump >50 mm: reset anchor;\ncached semantic verdict is retained", size=9)
 txt(353.5, 360, "No detected hazard: score/margin = 0", size=9)
-txt(241, 382, "Proxy = host request time - server-reported frame age", size=9,
+txt(241, 382, "Proxy = host request time − server-reported frame age", size=9,
     color=COL["orange"][0])
 arrow(241, 390, 241, 404, COL["orange"][0])
 

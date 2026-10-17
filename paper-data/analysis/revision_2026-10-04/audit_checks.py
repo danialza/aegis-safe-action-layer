@@ -19,6 +19,8 @@ decision ledger; no input file is modified and no model output is used as a labe
 7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence
    block to its slow-cadence block).
 8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).
+9. Commanded tool speed while moving: command-state distance advanced over the intervals that follow a
+   moving decision, divided by their duration, per primary run.
 """
 import collections, glob, json, math, os
 from pathlib import Path
@@ -128,6 +130,15 @@ out["block_order_primary"] = {"run_order": order, "normal_to_slow_minutes": gaps
 
 out["T_inf_sensitivity_s"] = {"note": "T_inf = T_d ln(P0 / (P0 - P_stop)) at T_d = 0.40 s; proportional to T_d",
                               "by_P0": {f"{p0:.2f}": T_D * math.log(p0 / (p0 - P_STOP)) for p0 in (0.55, 0.60, 0.65, 0.70, 0.75)}}
+speed = {}
+for name, d, side in runs("timed_margin_compare"):
+    L = d["log"]; dist = dur = 0.0
+    for e0, e1 in zip(L, L[1:]):
+        if e0["mode"] != "stop" and e1["t_decision"] > e0["t_decision"]:
+            dist += math.dist(e0["tool"], e1["tool"]); dur += e1["t_decision"] - e0["t_decision"]
+    speed[name] = 1000 * dist / dur
+vals = sorted(speed.values())
+out["commanded_tool_speed_mm_s"] = {"per_run": speed, "min": vals[0], "median": (vals[11] + vals[12]) / 2, "max": vals[-1]}
 (HERE / "audit_checks_results.json").write_text(json.dumps(out, indent=2) + "\n")
 print(json.dumps({k: v for k, v in out.items() if k not in ("note", "block_order_primary")}, indent=1)[:4000])
 print(json.dumps(out["block_order_primary"]["normal_to_slow_minutes"], indent=1))

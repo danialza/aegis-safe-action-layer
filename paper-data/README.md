@@ -64,7 +64,7 @@ in their previous style.
 **What is not public.** Most of the controller source is not public; `provenance_code/` holds the session
 calibration record, the controller constants with the SHA-256 of the archived source files, and three of
 those files (the score-and-hold rule, the evidence clock and the policy variants). These
-match the hashes recorded in all 24 primary and 8 pilot run logs, and the timeout assay rechecks them
+match the hashes recorded in all 24 primary and 8 pilot run logs, and the timeout comparison rechecks them
 for its 12 AEGIS runs; one exploratory log records a different variant-file hash and the initial pilot
 records none (Supplementary Section S11). Raw and annotated videos and model
 checkpoints are not included, so the photographs and camera frame in Figure 2, the qualitative video

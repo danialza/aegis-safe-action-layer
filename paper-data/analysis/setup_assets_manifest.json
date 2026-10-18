@@ -1,9 +1,9 @@
 {
   "apparatus_photo": {
     "source": "/Users/danial/Ned3 Pro - Mujuco/AEGIS_package/10_hardware_manuscript_2026-09-24/source_received/Danial___Safety_Awareness_Robot/figures/fig_setup_photo.png",
-    "sha256": "487f3a457844729d7badf1e050287e48adfe30bea48c4eecd3e3d5e32c1028c4",
-    "original_exif_datetime": "2026:07:30 13:11:23",
-    "role": "Representative historical apparatus photograph; not September scene ground truth."
+    "png_sha256": "9eadadb875c0efc097585d476c9b96ff2e40a06a77ec79d5fd07b88416547161",
+    "transformation": "Embedded metadata (EXIF, XMP, text and time chunks) removed; pixel data and colour profile unchanged.",
+    "role": "Representative apparatus photograph taken before the camera was remounted; not campaign scene ground truth."
   },
   "camera_frame": {
     "source": "/Users/danial/Ned3 Pro - Mujuco/vlm-codex/experiments/session_2026-09-18/timed_margin_compare/videos/AEGIS-normal_toB_1_raw.mp4",

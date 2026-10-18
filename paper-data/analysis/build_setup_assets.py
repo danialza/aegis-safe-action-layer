@@ -1,6 +1,7 @@
 """Restore apparatus context and document the current calibration, offline only.
 
-The photograph is copied unchanged. The camera image is an unannotated decoded
+The photograph is copied with its embedded metadata (EXIF, XMP, text and time
+chunks) removed; its pixel data and colour profile are unchanged. The camera image is an unannotated decoded
 video frame. Plot elements are schematic/calibration metadata, never invented
 physical measurements. No experimental log or video is modified.
 """
@@ -8,6 +9,7 @@ from pathlib import Path
 import hashlib
 import json
 import shutil
+import struct
 
 import cv2
 import matplotlib
@@ -26,6 +28,18 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def strip_metadata(path):
+    """Drop ancillary PNG metadata chunks in place; image chunks are kept byte for byte."""
+    data = path.read_bytes()
+    out, i = [data[:8]], 8
+    while i < len(data):
+        n, = struct.unpack(">I", data[i:i + 4])
+        if data[i + 4:i + 8] not in {b"eXIf", b"iTXt", b"tEXt", b"zTXt", b"tIME"}:
+            out.append(data[i:i + 12 + n])
+        i += 12 + n
+    path.write_bytes(b"".join(out))
+
+
 def main():
     FIG.mkdir(exist_ok=True)
     photo = SOURCE / "figures/fig_setup_photo.png"
@@ -33,6 +47,7 @@ def main():
     if photo.exists():
         shutil.copy2(photo, photo_copy)
     assert photo_copy.exists()
+    strip_metadata(photo_copy)
     cal_source = SESSION / "calibration/free_slab_calibration.json"
     cal_copy = ROOT / "analysis/setup_calibration_record.json"
     if cal_source.exists():
@@ -103,9 +118,9 @@ def main():
         fig.savefig(FIG / f"calibration_geometry.{ext}", dpi=220, facecolor="white")
     plt.close(fig)
     manifest = {
-        "apparatus_photo": {"source": str(photo), "sha256": sha(photo_copy),
-                            "original_exif_datetime": "2026:07:30 13:11:23",
-                            "role": "Representative historical apparatus photograph; not September scene ground truth."},
+        "apparatus_photo": {"source": str(photo), "png_sha256": sha(photo_copy),
+                            "transformation": "Embedded metadata (EXIF, XMP, text and time chunks) removed; pixel data and colour profile unchanged.",
+                            "role": "Representative apparatus photograph taken before the camera was remounted; not campaign scene ground truth."},
         "camera_frame": {**video_meta, "png_sha256": sha(frame_path)},
         "calibration_record": {"source": str(cal_source), "sha256": sha(cal_copy),
                                "role": "Recorded September fitting inputs; in-sample fit only, not external validation."},

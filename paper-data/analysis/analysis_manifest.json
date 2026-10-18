@@ -398,20 +398,20 @@
     "figures/hardware_primary_comparison.pdf": "5acf99a91c20700144992a73750dabb9de47acece21109670c800e6724f00a19",
     "figures/evidence_age_threshold_sensitivity.png": "e8248cb3a08cfa63948fcdfaabbd9be90447c35359578de9a49dfae780de77fb",
     "figures/hardware_primary_comparison.png": "9e2305a560125aeb06d8d17f66ce9b480a6ebea35f86e33cf17e6c339a8300f8",
-    "figures/aegis_workflow.pdf": "0e5a455f65a543ce97e15ed1b5757fdff0e12f3d29d0d682c9a19fe57011fbc0",
-    "figures/aegis_workflow.png": "1669b400fa263536ad41ad7d05287f1da08cb01f178ab8047e3892ea7340ff61",
+    "figures/aegis_workflow.pdf": "9104a35a45d86fd89c5829f8452e2799d39049431eace57b340799b3c032b214",
+    "figures/aegis_workflow.png": "5c1ba8e46e064e15bd2c056f4dd7be3c4df1a816f9758aea6e7c998928a6437c",
     "figures/calibration_geometry.pdf": "6e7f94f692aa9d78e4b89c866e559235a8b2aaf7bdf57fbf293928424bc45cf1",
     "figures/calibration_geometry.png": "c29f261f7ddc1e5fab1027ceb6407f2e38f24cd0adc7ec0996c208266f411b69",
-    "figures/laboratory_apparatus.png": "487f3a457844729d7badf1e050287e48adfe30bea48c4eecd3e3d5e32c1028c4",
+    "figures/laboratory_apparatus.png": "9eadadb875c0efc097585d476c9b96ff2e40a06a77ec79d5fd07b88416547161",
     "figures/primary_camera_frame.png": "aaef65915ac4b6711ce44df734fd71650bb1eef2937c224352610daf08677990",
     "figures/cadence_response_patterns.png": "8523dcabff1de92fecb04ed58e162e4455b578bfc7a2167541c7a328330308ca",
     "figures/hardware_primary_with_age.pdf": "bdf426158fa559e66cff3d1b314d8ae412e7a5fe4dddaad5466a24f0cb595937",
     "figures/hardware_primary_with_age.png": "f5473f4bd0bbd424dec582f55a76303b6e7b10996fb48f00940b6fd1d898733c"
   },
   "presentation_sources": {
-    "analysis/build_workflow.py": "c7854e1cca597adf7704d2f3b8cb50fdfce00746a4887771001abd7178ae467a",
-    "analysis/build_setup_assets.py": "829278c730328df96c7f6fe49c76c8e7e7088a71e3e102620239232e23cd0b17",
-    "analysis/setup_assets_manifest.json": "c01748fd85f2dea1e357ebb0d9bee1370d455e38a8197cce7c579d358cd9b174",
+    "analysis/build_workflow.py": "869b5a9cf03dbd99e8c6cc05cd103c27d500ba8ecf09c6fa02516e43d1ebdaf7",
+    "analysis/build_setup_assets.py": "244a100d61620e010c879252f95ea2b1a75cbc87388cfb7dd047492fb7089b3a",
+    "analysis/setup_assets_manifest.json": "5f74a484ac7a85f88a203042bf4b52eeb41317dca71988d068bbf20db7a32290",
     "analysis/setup_calibration_record.json": "df76b5086af5d853cb6448829cc4cd64c06118654e6697f649923f76b0cf57e2"
   },
   "presentation_revision": {

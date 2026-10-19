@@ -104,7 +104,7 @@ txt(241, 382, "Proxy = host request time − server-reported frame age", size=9,
     color=COL["orange"][0])
 arrow(241, 390, 241, 404, COL["orange"][0])
 
-# Shared planner and holds; output represents requested commands, not TCP sensing.
+# Shared planner and holds; output represents requested commands, not measured tool positions.
 panel(8, 404, 466, 174, "green", "D  Shared carry controller: motion or hold")
 box(21, 434, 215, 81, "green")
 box(246, 434, 215, 81, "green")
@@ -122,7 +122,7 @@ box(246, 529, 215, 29, "green", "If permitted: jog / pose command", bold=True)
 arrow(128.5, 515, 128.5, 529, "#B34C43")
 arrow(353.5, 515, 353.5, 529, COL["green"][0])
 txt(241, 568, "Log: frame + evidence, age, score, command-state and decision", size=9)
-txt(241, 590, "Monitored carry only; command-state is not a measured TCP trajectory.", size=9)
+txt(241, 590, "Monitored carry only; command-state is not a measured tool trajectory.", size=9)
 
 
 def main():

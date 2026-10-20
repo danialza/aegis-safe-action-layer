@@ -1,19 +1,21 @@
 """Checks added in response to the pre-submission audit of 11 October 2026.
 
-All quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-assay
+All quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-comparison
 decision ledger; no input file is modified and no model output is used as a label.
 
 1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had
    already been captured (capture proxy before the decision) but its verdict was still pending
    (inference end after the decision). Frames the monitor never processed are not covered, so the
    count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.
+   Counts are also given per policy and cadence cell, with their moving-decision denominators.
 2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision
    period (first to last carry decision).
 3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score
    hold (belief>=P_STOP).
-4. Stored anchors on the eligible timeout-assay decisions, reconstructed from the logged score and
+4. Stored anchors on the eligible timeout-comparison decisions, reconstructed from the logged score and
    age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their
-   anchor-specific hold onset and the limiting timeout.
+   anchor-specific hold onset and the limiting timeout; repeated without the decisions held by the
+   geometric pre-command check.
 5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.
 6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.
 7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence
@@ -51,6 +53,7 @@ def runs(campaign):
 out = {"note": __doc__, "constants": {"P0": P0, "T_d_s": T_D, "P_stop": P_STOP, "T_inf_s": T_INF}}
 
 stale = collections.Counter(); moving = collections.Counter(); stale_rows = []
+stale_cell = collections.Counter(); moving_cell = collections.Counter()
 human = collections.Counter(); completed = collections.Counter()
 human_dp = collections.Counter(); completed_dp = collections.Counter(); human_runs = collections.Counter()
 episodes = {}; sep_minus_margin = collections.defaultdict(list); hazard_moving = collections.Counter()
@@ -71,9 +74,10 @@ for campaign in ("timed_margin_compare", "timed_compare_slow"):
         for e in log:
             if e["mode"] != "stop":
                 moving[(campaign, pol)] += 1
+                cell = (campaign, pol, "slow" if "slow" in name else "normal"); moving_cell[cell] += 1
                 for v in hum:
                     if v["t_capture"] < e["t_decision"] < v["t_infer_end"]:
-                        stale[(campaign, pol)] += 1
+                        stale[(campaign, pol)] += 1; stale_cell[cell] += 1
                         stale_rows.append({"run": name, "t_s": e["t"], "hazard_present": e["haz"] is not None})
                         break
                 if campaign == "timed_margin_compare" and e["haz"] is not None and e.get("clr") is not None:
@@ -88,6 +92,8 @@ for campaign in ("timed_margin_compare", "timed_compare_slow"):
 out["stale_permissions"] = {"definition": "moving decision while a later-HUMAN frame was captured and its verdict pending",
                             "moving_decisions": {f"{c}|{p}": n for (c, p), n in moving.items()},
                             "count": {f"{c}|{p}": stale.get((c, p), 0) for (c, p) in moving},
+                            "by_cell": {f"{c}|{p}|{r}": {"stale": stale_cell.get((c, p, r), 0), "moving": n}
+                                        for (c, p, r), n in sorted(moving_cell.items())},
                             "total_moving": sum(moving.values()), "total_stale": sum(stale.values()), "rows": stale_rows}
 out["human_verdicts_primary"] = {p: {"human": human[p], "completed": completed[p], "runs_with_human": human_runs[p],
                                      "human_in_decision_period": human_dp[p], "completed_in_decision_period": completed_dp[p]}
@@ -103,11 +109,18 @@ anchors = {}
 rows = [json.loads(l) for l in LEDGER.read_text().splitlines() if l.strip()]
 for campaign in ("timed_margin_compare", "timed_compare_slow"):
     el = [r for r in rows if r["campaign"] == campaign and r["comparisons"]["Trust12+timeout-analytic"]["eligible_object_hazard"]]
-    rec = []
+    rec = []; rec_ng = []
     for r in el:
         tau = max(0.0, r["age_used_s"]); h = P0 + (r["logged_score"] - P0) * math.exp(tau / T_D)
         onset = T_D * math.log((P0 - h) / (P0 - P_STOP)) if h < P_STOP else 0.0
         rec.append((h, onset, tau))
+        if not (r["logged_mode"] == "stop" and r["logged_stop_reason"] == "geometry"):
+            rec_ng.append((h, onset, tau))
+    anchors[campaign + "|excluding_geometry_holds"] = {
+        "eligible": len(rec_ng), "anchor_below_0.01": sum(h < 0.01 for h, _, _ in rec_ng),
+        "anchor_0.01_to_0.5": sum(0.01 <= h < P_STOP for h, _, _ in rec_ng),
+        "anchor_reset_to_prior": sum(h >= P_STOP for h, _, _ in rec_ng),
+        "age_between_onset_and_T_inf": sum(h < P_STOP and o <= t < T_INF for h, o, t in rec_ng)}
     anchors[campaign] = {"eligible": len(rec), "anchor_below_0.01": sum(h < 0.01 for h, _, _ in rec),
                          "anchor_0.01_to_0.5": sum(0.01 <= h < P_STOP for h, _, _ in rec),
                          "anchor_reset_to_prior": sum(h >= P_STOP for h, _, _ in rec),

@@ -47,7 +47,7 @@ def build():
                 footer + r'\bottomrule' + '\n' + r'\end{tabularx}' + '\n')
         (ROOT/'analysis'/name).write_text(text)
     write_table('semantic_presence_rows.tex', 'Xrrrr',
-                r'Human label & \multicolumn{2}{c}{FastVLM} & \multicolumn{2}{c}{Qwen reference}\\' + '\n' +
+                r'Human label & \multicolumn{2}{c}{FastVLM} & \multicolumn{2}{c}{Qwen sampling}\\' + '\n' +
                 r' & Hand & No hand & Hand & No hand\\', rows)
     condition_rows=[]
     for group, labels in [('by_human_hand_cover', [('bare','Bare hand'),('glove','Worn glove')]),

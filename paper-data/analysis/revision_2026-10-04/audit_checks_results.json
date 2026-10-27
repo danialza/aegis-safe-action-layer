@@ -1,5 +1,5 @@
 {
-  "note": "Checks added in response to the pre-submission audit of 11 October 2026.\n\nAll quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-comparison\ndecision ledger; no input file is modified and no model output is used as a label.\n\n1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had\n   already been captured (capture proxy before the decision) but its verdict was still pending\n   (inference end after the decision). Frames the monitor never processed are not covered, so the\n   count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.\n   Counts are also given per policy and cadence cell, with their moving-decision denominators.\n2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision\n   period (first to last carry decision).\n3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score\n   hold (belief>=P_STOP).\n4. Stored anchors on the eligible timeout-comparison decisions, reconstructed from the logged score and\n   age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their\n   anchor-specific hold onset and the limiting timeout; repeated without the decisions held by the\n   geometric pre-command check.\n5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.\n6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.\n7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence\n   block to its slow-cadence block).\n8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).\n9. Commanded tool speed while moving: command-state distance advanced over the intervals that follow a\n   moving decision, divided by their duration, per primary run.\n",
+  "note": "Checks added in response to the pre-submission audit of 11 October 2026.\n\nAll quantities are recomputed from the frozen decision logs, timing sidecars and the timeout-comparison\ndecision ledger; no input file is modified and no model output is used as a label.\n\n1. Stale permissions: moving decisions issued while a frame that later returned a HUMAN verdict had\n   already been captured (capture proxy before the decision) but its verdict was still pending\n   (inference end after the decision). Frames the monitor never processed are not covered, so the\n   count is a lower bound on motion permitted on evidence that a pending verdict would have revoked.\n   Counts are also given per policy and cadence cell, with their moving-decision denominators.\n2. HUMAN verdicts among completed inferences, per policy, over the whole run and over the decision\n   period (first to last carry decision).\n3. Score-hold episodes: maximal runs of consecutive carry decisions whose stop reason is the score\n   hold (belief>=P_STOP).\n4. Stored anchors on the eligible timeout-comparison decisions, reconstructed from the logged score and\n   age as h = P0 + (p - P0) exp(tau / T_d), and the number of decisions whose age lay between their\n   anchor-specific hold onset and the limiting timeout; repeated without the decisions held by the\n   geometric pre-command check.\n5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.\n6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason; for destination holds, the runs and\n   the distance from the logged hazard centre to the goal; for the other rows, the runs and their position in the carry.\n7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence\n   block to its slow-cadence block).\n8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).\n9. Commanded tool speed while moving: command-state distance advanced over the intervals that follow a\n   moving decision, divided by their duration, per primary run.\n",
   "constants": {
     "P0": 0.65,
     "T_d_s": 0.4,
@@ -196,6 +196,44 @@
       "hold_goal|goal_occupied|moving=False": 250,
       "hold_obj|geometry|moving=False": 3,
       "hold_obj|belief>=P_STOP|moving=False": 2
+    },
+    "destination_holds": {
+      "rows": 250,
+      "runs": [
+        "AEGIS-normal_toB_1",
+        "AEGIS-normal_toB_2",
+        "AEGIS-slow_toB_1",
+        "Trust12-normal_toB_1",
+        "Trust12-slow_toB_1",
+        "Trust12-slow_toB_2",
+        "Trust32-normal_toB_1",
+        "Trust32-slow_toB_1",
+        "Trust32-slow_toB_2"
+      ],
+      "hazard_centre_to_goal_mm": [
+        107.96997191764656,
+        119.85984169436692
+      ]
+    },
+    "other_rows": {
+      "rows": 38,
+      "runs": [
+        "AEGIS-normal_toA_1",
+        "AEGIS-slow_toA_1",
+        "AEGIS-slow_toA_2",
+        "AEGIS-slow_toB_2",
+        "Trust12-normal_toA_1",
+        "Trust12-normal_toA_2",
+        "Trust12-normal_toB_2",
+        "Trust12-slow_toA_2",
+        "Trust12-slow_toB_2",
+        "Trust32-normal_toA_1",
+        "Trust32-normal_toA_2",
+        "Trust32-normal_toB_2",
+        "Trust32-slow_toA_1"
+      ],
+      "max_decision_index": 6,
+      "max_s_after_first_decision": 0.9242702089250088
     }
   },
   "block_order_primary": {

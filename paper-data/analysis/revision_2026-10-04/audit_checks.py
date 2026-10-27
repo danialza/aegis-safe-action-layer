@@ -17,7 +17,8 @@ decision ledger; no input file is modified and no model output is used as a labe
    anchor-specific hold onset and the limiting timeout; repeated without the decisions held by the
    geometric pre-command check.
 5. Separation minus margin at hazard-present moving decisions, and the number of such decisions.
-6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason.
+6. Hazard rows at the detector's 100 mm radius clamp, by state and stop reason; for destination holds, the runs and
+   the distance from the logged hazard centre to the goal; for the other rows, the runs and their position in the carry.
 7. Block timing within each pass of the primary campaign (minutes from a method's normal-cadence
    block to its slow-cadence block).
 8. Sensitivity of the limiting timeout T_inf to the prior P0 (and its proportionality to T_d).
@@ -58,6 +59,7 @@ human = collections.Counter(); completed = collections.Counter()
 human_dp = collections.Counter(); completed_dp = collections.Counter(); human_runs = collections.Counter()
 episodes = {}; sep_minus_margin = collections.defaultdict(list); hazard_moving = collections.Counter()
 clamp_rows = collections.Counter(); clamp_runs = set(); block_start = {}
+clamp_goal_runs = set(); clamp_goal_dist = []; clamp_carry_runs = set(); clamp_carry = []
 for campaign in ("timed_margin_compare", "timed_compare_slow"):
     for name, d, side in runs(campaign):
         pol = policy(name); log = d["log"]
@@ -71,7 +73,7 @@ for campaign in ("timed_margin_compare", "timed_compare_slow"):
             header = json.loads(next(l for l in Path(str(DATA / campaign / "logs" / (name + "_timing.jsonl"))).read_text().splitlines()))
             block_start[name] = header["wall"]
         n_ep, prev = 0, False
-        for e in log:
+        for i, e in enumerate(log):
             if e["mode"] != "stop":
                 moving[(campaign, pol)] += 1
                 cell = (campaign, pol, "slow" if "slow" in name else "normal"); moving_cell[cell] += 1
@@ -87,6 +89,10 @@ for campaign in ("timed_margin_compare", "timed_compare_slow"):
             n_ep += held and not prev; prev = held
             if campaign == "timed_margin_compare" and e["haz"] is not None and abs(e["haz"][2] - 0.10) < 1e-9:
                 clamp_runs.add(name); clamp_rows[f"{e['state']}|{e.get('stop_reason')}|moving={e['mode'] != 'stop'}"] += 1
+                if e["state"] == "hold_goal":
+                    clamp_goal_runs.add(name); clamp_goal_dist.append(math.hypot(e["haz"][0] - d["goal"][0], e["haz"][1] - d["goal"][1]))
+                else:
+                    clamp_carry_runs.add(name); clamp_carry.append((i, e["t_decision"] - t_first))
         episodes[name] = n_ep
 
 out["stale_permissions"] = {"definition": "moving decision while a later-HUMAN frame was captured and its verdict pending",
@@ -130,7 +136,12 @@ out["anchors"] = anchors
 
 out["separation_minus_margin_primary"] = {p: {"min_mm": 1000 * min(v)[0], "run": min(v)[1], "hazard_present_moving_decisions": hazard_moving[p]}
                                           for p, v in sep_minus_margin.items()}
-out["radius_clamp_rows_primary"] = {"radius_m": 0.10, "rows": sum(clamp_rows.values()), "runs": len(clamp_runs), "by_state": dict(clamp_rows)}
+out["radius_clamp_rows_primary"] = {"radius_m": 0.10, "rows": sum(clamp_rows.values()), "runs": len(clamp_runs), "by_state": dict(clamp_rows),
+                                    "destination_holds": {"rows": len(clamp_goal_dist), "runs": sorted(clamp_goal_runs),
+                                                          "hazard_centre_to_goal_mm": [1000 * min(clamp_goal_dist), 1000 * max(clamp_goal_dist)]},
+                                    "other_rows": {"rows": len(clamp_carry), "runs": sorted(clamp_carry_runs),
+                                                   "max_decision_index": max(i for i, _ in clamp_carry),
+                                                   "max_s_after_first_decision": max(t for _, t in clamp_carry)}}
 
 order = sorted(block_start, key=block_start.get)
 gaps = {}

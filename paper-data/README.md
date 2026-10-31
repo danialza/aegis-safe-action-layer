@@ -1,8 +1,8 @@
 # Paper data — Evidence Age Versus Spatial Margin in Vision–Language-Gated Robotic Transport
 
 Data and analysis code for the hardware study submitted to *Sensors* (MDPI). Everything here comes from
-one physical campaign on a Niryo NED3 Pro with a fixed Intel RealSense D435i and an on-device
-FastVLM-0.5B hand monitor, recorded on 18 September 2026. The earlier simulation and July hardware
+one physical campaign on a Niryo NED3 Pro with a fixed Intel RealSense D435i and a
+FastVLM-0.5B hand monitor running locally on the laptop, recorded on 18 September 2026. The earlier simulation and July hardware
 material elsewhere in this repository is not part of this paper's evidence.
 
 ## Contents
@@ -13,7 +13,7 @@ material elsewhere in this repository is not part of this paper's evidence.
 | `analysis/` | Offline analysis scripts, full-precision results, calibration inputs, exclusion reasons and source hashes. `analysis/revision_2026-10-04/` adds the exact permutation tests and the duty-cycle analysis. |
 | `figures/` | Figures generated from the run-level results. |
 | `semantic_audit/` | The 2158 frames extracted for the monitor audit, with manifest and hashes. |
-| `semantic_auto_audit/` | Frozen FastVLM and Qwen2.5-VL replay outputs (model outputs, not labels). |
+| `semantic_auto_audit/` | Frozen FastVLM, Qwen2.5-VL and Apple Vision hand-pose replay outputs (model and detector outputs, not labels). |
 | `semantic_human_review/` | The first annotator's two exports (426 frames, 115 rechecks), the merged review, and an independent second annotator's 426-frame export (`second_rater_426_v1/`). |
 
 Raw and annotated videos are indexed by path and hash in the run records and are available from the
@@ -53,6 +53,10 @@ python parser_replay_check.py    # permissive-parser use in the replay, Section 
 python anchor_check.py           # post-HUMAN anchors and onsets, Section S16
 python second_rater_agreement.py # second-annotator agreement, Section S13
 python audit_checks.py           # stale permissions, anchors, HUMAN counts, hold episodes, Sections S5, S7, S11, S16, S20
+python stratified_replication.py # primary and pilot as two strata, Section S22, Table S23
+python semantic_blind_window.py  # counterfactual semantic blind window, Section S23, Table S24
+python pipeline_age_all_runs.py  # L + P/2 on all 92 transports, Section S24, Table S25
+python hand_detector_comparison.py  # dedicated hand detector vs human labels, Section S25, Table S26
 python build_supp_tables.py
 python build_primary_figure_legend.py   # Figure 3 (supersedes the earlier unlabelled version)
 python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)

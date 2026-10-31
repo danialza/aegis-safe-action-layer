@@ -1,0 +1,96 @@
+{
+  "note": "Stratified exact permutation test: primary campaign and slow-update pilot as two strata (post hoc).\n\nThe eight-run slow-update pilot repeated the slow-cadence AEGIS-versus-Trust12 comparison in a separate\nblock before the primary campaign. Runs are not pooled: labels are permuted only within each stratum\n(70 x 70 = 4900 joint reassignments), and the statistic is the sum over strata of the AEGIS-minus-Trust12\ndifference of run means, so each stratum keeps its own level. The two-sided p is the share of joint\nreassignments whose absolute statistic is at least the observed one. Holm adjustment is over the four\noutcomes. Only this contrast has a replicate stratum: the pilot has no Trust32 runs and no normal cadence.\nThe stratified test was chosen after the primary analysis and is reported as a secondary analysis.\n",
+  "source": "pattern_results.json",
+  "source_sha256": "c6c9223067f2d31351bf1f5b8a6a30951df57e5ec5443a897854570afeb69af2",
+  "minimum_attainable_p": 0.00040816326530612246,
+  "results": [
+    {
+      "outcome": "Mean moving age (ms)",
+      "key": "mean_moving_age_ms",
+      "mean_of_stratum_differences": -269.39659442774496,
+      "stratified_p": 0.00040816326530612246,
+      "reassignments": 4900,
+      "strata": [
+        {
+          "stratum": "Primary",
+          "AEGIS_minus_Trust12": -259.1291841151936,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        },
+        {
+          "stratum": "Pilot",
+          "AEGIS_minus_Trust12": -279.6640047402963,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        }
+      ],
+      "holm_p": 0.0016326530612244899
+    },
+    {
+      "outcome": "Separation (mm)",
+      "key": "minimum_command_estimated_separation_mm",
+      "mean_of_stratum_differences": 20.5833942569348,
+      "stratified_p": 0.00040816326530612246,
+      "reassignments": 4900,
+      "strata": [
+        {
+          "stratum": "Primary",
+          "AEGIS_minus_Trust12": 23.170499480162498,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        },
+        {
+          "stratum": "Pilot",
+          "AEGIS_minus_Trust12": 17.9962890337071,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        }
+      ],
+      "holm_p": 0.0016326530612244899
+    },
+    {
+      "outcome": "Carry-to-delivery (s)",
+      "key": "carry_to_delivery_s",
+      "mean_of_stratum_differences": 23.669415145297535,
+      "stratified_p": 0.0008163265306122449,
+      "reassignments": 4900,
+      "strata": [
+        {
+          "stratum": "Primary",
+          "AEGIS_minus_Trust12": 26.353036624845117,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        },
+        {
+          "stratum": "Pilot",
+          "AEGIS_minus_Trust12": 20.985793665749952,
+          "p": 0.05714285714285714,
+          "complete_separation": false
+        }
+      ],
+      "holm_p": 0.0016326530612244899
+    },
+    {
+      "outcome": "Age $>0.6$ s (\\%)",
+      "key": "moving_old_evidence_percent",
+      "mean_of_stratum_differences": -57.08797122507077,
+      "stratified_p": 0.00040816326530612246,
+      "reassignments": 4900,
+      "strata": [
+        {
+          "stratum": "Primary",
+          "AEGIS_minus_Trust12": -56.055939394344755,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        },
+        {
+          "stratum": "Pilot",
+          "AEGIS_minus_Trust12": -58.12000305579678,
+          "p": 0.02857142857142857,
+          "complete_separation": true
+        }
+      ],
+      "holm_p": 0.0016326530612244899
+    }
+  ]
+}

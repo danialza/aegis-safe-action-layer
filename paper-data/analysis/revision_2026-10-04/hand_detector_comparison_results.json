@@ -1,0 +1,77 @@
+{
+  "note": "A dedicated hand detector against the same human labels as the VLM monitor (post hoc, offline replay).\n\nThe frozen 2158-frame pool was also processed, before any human label existed, by Apple Vision's\nbuilt-in hand-pose request (VNDetectHumanHandPoseRequest, OS-managed weights; OS build and request\nrevision recorded in its metadata). Here a frame counts as a detector hand report when the request\nreturned at least one hand observation. Its reports and FastVLM's replay verdicts are compared with\nthe merged first-annotator labels and, separately, with the second annotator's labels on the frozen\n426-frame sample; uncertain human labels are excluded from the counts. Processing times are the\nper-frame elapsed times recorded by each offline replay on all 2158 frames, on the same laptop; they\nare not live pipeline latencies. Detector outputs are model outputs and are never used as labels.\n",
+  "detector_metadata": {
+    "detector": "Apple Vision VNDetectHumanHandPoseRequest",
+    "os_version": "Version 27.0 (Build 26A428)",
+    "request_revision": 1,
+    "weight_provenance_limit": "OS-managed Vision model weights are not separately fingerprinted. Pin OS build and request revision."
+  },
+  "reference_first_annotator": {
+    "FastVLM": {
+      "no_hand": 322,
+      "no_hand_reported": 22,
+      "hand": 101,
+      "hand_reported": 101,
+      "hand_bare": 91,
+      "hand_bare_reported": 91,
+      "hand_glove": 10,
+      "hand_glove_reported": 10
+    },
+    "Apple Vision": {
+      "no_hand": 322,
+      "no_hand_reported": 0,
+      "hand": 101,
+      "hand_reported": 77,
+      "hand_bare": 91,
+      "hand_bare_reported": 77,
+      "hand_glove": 10,
+      "hand_glove_reported": 0
+    }
+  },
+  "reference_second_annotator": {
+    "FastVLM": {
+      "no_hand": 322,
+      "no_hand_reported": 22,
+      "hand": 104,
+      "hand_reported": 104,
+      "hand_bare": 92,
+      "hand_bare_reported": 92,
+      "hand_glove": 12,
+      "hand_glove_reported": 12
+    },
+    "Apple Vision": {
+      "no_hand": 322,
+      "no_hand_reported": 0,
+      "hand": 104,
+      "hand_reported": 78,
+      "hand_bare": 92,
+      "hand_bare_reported": 78,
+      "hand_glove": 12,
+      "hand_glove_reported": 0
+    }
+  },
+  "hand_frames_missed_by_detector_but_flagged_by_FastVLM": 24,
+  "processing_time_ms": {
+    "Apple Vision": {
+      "frames": 2158,
+      "median": 3.6536875122692436,
+      "p95": 3.9927916950546205
+    },
+    "FastVLM": {
+      "frames": 2158,
+      "median": 238.86279200087301,
+      "p95": 250.74145896360278
+    }
+  },
+  "pool_reports": {
+    "Apple Vision": 78,
+    "FastVLM": 126,
+    "frames": 2158
+  },
+  "sources_sha256": {
+    "hand_pose_all.jsonl": "0a0ef3a921fd494a8416c5f7d975079dcef11642e14578c8077f7ba2cb74117c",
+    "joined_records.json": "b205d5fb04401139cc61a2937f8c0cf70a8f820224f4c2bcb188a7305705f1e8",
+    "human_review_426_second_rater.json": "8dffc5edeb2b37fc557ff49373e76203f45eb991cb0da57b53e2b9ab5763772a",
+    "monitor.jsonl": "4bb1cd14f87c6b6a9001616eb0f1ff720c2706ed233d07855db508c0dfe744f3"
+  }
+}

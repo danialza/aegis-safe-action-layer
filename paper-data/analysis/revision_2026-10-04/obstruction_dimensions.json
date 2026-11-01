@@ -1,8 +1,7 @@
 {
   "source": "Measured with a ruler by the first author on 1 November 2026, after the campaign, on the objects used in the recorded runs; values reported in cm and converted to mm. Identity of each object was matched to campaign video frames.",
   "primary_and_pilot_obstruction": {
-    "description": "thick-glass rectangular block with a gold-coloured cylindrical cap",
-    "material": "thick glass (body)",
+    "description": "rectangular block with a cylindrical cap",
     "footprint_length_mm": 62,
     "footprint_width_mm": 35,
     "height_including_cap_mm": 95,

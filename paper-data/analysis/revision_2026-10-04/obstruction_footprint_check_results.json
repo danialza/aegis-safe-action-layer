@@ -1,0 +1,25 @@
+{
+  "note": "Compare the detector's representative obstacle radius with the measured footprint of the obstruction.\n\nThe detector reports each hazard as an enclosing circle in the table plane. The smallest circle that\nencloses a rectangular footprint of length a and width b has radius sqrt(a^2 + b^2) / 2. This script\ncompares that value, from the obstruction's dimensions measured after the campaign\n(obstruction_dimensions.json), with the per-run representative radii of the 24 primary runs\n(additional_analyses.json, geometry). It is a consistency check of the detection and image-to-table\nmapping against one physical dimension, not a validation of clearance: the camera sees the object\nobliquely, so side faces and perspective can enlarge the detected footprint.\n",
+  "footprint_mm": [
+    62,
+    35
+  ],
+  "enclosing_circle_radius_mm": 35.59845502265512,
+  "detected_representative_radius_mm": {
+    "n": 24,
+    "mean": 36.746715352075476,
+    "median": 36.64390446653397,
+    "min": 35.79857926328393,
+    "max": 38.17671979561923,
+    "sample_sd": 0.5202863827171403
+  },
+  "detected_minus_enclosing_mm": {
+    "min": 0.20012424062880996,
+    "max": 2.578264772964104,
+    "mean": 1.1482603294203528
+  },
+  "sources_sha256": {
+    "obstruction_dimensions.json": "0fd09218ecc9e33c44ffb418d8c915624e3d32fd3f2c92212f1c4f8f84152fc4",
+    "additional_analyses.json": "f00a7fe112cf3bd86e97cd06a308924e61ac402e61f79c9ce1147110ce7a2a38"
+  }
+}

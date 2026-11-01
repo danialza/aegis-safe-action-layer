@@ -57,6 +57,7 @@ python stratified_replication.py # primary and pilot as two strata, Section S22,
 python semantic_blind_window.py  # counterfactual semantic blind window, Section S23, Table S24
 python pipeline_age_all_runs.py  # L + P/2 on all 92 transports, Section S24, Table S25
 python hand_detector_comparison.py  # dedicated hand detector vs human labels, Section S25, Table S26
+python obstruction_footprint_check.py  # measured obstruction footprint vs detected radius, Section S6
 python build_supp_tables.py
 python build_primary_figure_legend.py   # Figure 3 (supersedes the earlier unlabelled version)
 python build_sensitivity_figure.py      # Figure 4 (onset band 0.555-0.587 s)

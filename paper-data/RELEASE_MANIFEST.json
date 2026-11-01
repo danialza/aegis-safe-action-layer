@@ -1,7 +1,7 @@
 {
  "release": "paper-data for the October 2026 Sensors submission",
  "files": {
-  "README.md": "1e92989fd58fb04eda614e17d62e26b5e055f8e30808ee9863f89a12041c4245",
+  "README.md": "571cc22d02a31d930cba3008a06832fece227c454ec108ee8167530cb4e92b1a",
   "analysis/ADDITIONAL_ANALYSES_README.md": "bc50479fbb5b75522cf30b380a978e0e8da957fa0e54525116bbe6dbc2d6500f",
   "analysis/README.md": "868379a827afce00ad5c6b4194ddc4c370cab42620f6dcd6c9636087a57defbd",
   "analysis/additional_analyses.json": "f00a7fe112cf3bd86e97cd06a308924e61ac402e61f79c9ce1147110ce7a2a38",
@@ -90,6 +90,9 @@
   "analysis/revision_2026-10-04/hand_detector_comparison.py": "8a7a353839e1cf030d60addf611ceec9fb1c24e1be93f6a396df6009f9f89372",
   "analysis/revision_2026-10-04/hand_detector_comparison_results.json": "202cb1d924f5ead918b3ef7b1a163a7d303b3a80320b3acd15e26358bc69e7fc",
   "analysis/revision_2026-10-04/hand_detector_comparison_table.tex": "49f7eacfb4b1862afe551fcf84feaecb4e19ce6cc2d170e981bcf548fa1f03ec",
+  "analysis/revision_2026-10-04/obstruction_dimensions.json": "0fd09218ecc9e33c44ffb418d8c915624e3d32fd3f2c92212f1c4f8f84152fc4",
+  "analysis/revision_2026-10-04/obstruction_footprint_check.py": "41a345345af914fe1c93950ba2a5b9e9a8feabcc0d6299bca0f1727b86442f87",
+  "analysis/revision_2026-10-04/obstruction_footprint_check_results.json": "69c8ee37e951724767e39052b413f2e7fca4da36e5d48e6ea3e5c08a48d61f34",
   "analysis/revision_2026-10-04/parser_replay_check.py": "b693e974fe1ae640f6625b24b2871e759b9f4057e9a5d8da73fa2496cf904d14",
   "analysis/revision_2026-10-04/parser_replay_check_results.json": "309c2175180d07468f5b5e103f9a6ed11b15860f5eb99785f212d2704a841cb0",
   "analysis/revision_2026-10-04/pipeline_age_all_runs.py": "fdeabd584503f711cd649e750b54cd023f1e4caeb29655f3a519288f0fef97ed",

@@ -1,0 +1,16 @@
+{
+  "source": "Measured with a ruler by the first author on 1 November 2026, after the campaign, on the objects used in the recorded runs; values reported in cm and converted to mm. Identity of each object was matched to campaign video frames.",
+  "primary_and_pilot_obstruction": {
+    "description": "thick-glass rectangular block with a gold-coloured cylindrical cap",
+    "material": "thick glass (body)",
+    "footprint_length_mm": 62,
+    "footprint_width_mm": 35,
+    "height_including_cap_mm": 95,
+    "used_in": "all 24 primary and 8 slow-update pilot runs, and exploratory runs"
+  },
+  "other_exploratory_objects": [
+    {"description": "red disc", "diameter_mm": 40, "height_mm": 10},
+    {"description": "blue-green box", "length_mm": 90, "width_mm": 65, "height_mm": 40},
+    {"description": "computer mouse", "length_mm": 100, "width_mm": 60, "height_mm": 38}
+  ]
+}

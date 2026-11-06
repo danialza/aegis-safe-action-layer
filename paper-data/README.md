@@ -55,6 +55,7 @@ python second_rater_agreement.py # second-annotator agreement, Section S13
 python audit_checks.py           # stale permissions, anchors, HUMAN counts, hold episodes, Sections S5, S7, S11, S16, S20
 python stratified_replication.py # primary and pilot as two strata, Section S22, Table S23
 python semantic_blind_window.py  # counterfactual semantic blind window, Section S23, Table S24
+python blind_window_speed_scaling.py  # blind windows scaled to 250 mm/s (arithmetic), Section S23
 python pipeline_age_all_runs.py  # L + P/2 on all 92 transports, Section S24, Table S25
 python hand_detector_comparison.py  # dedicated hand detector vs human labels, Section S25, Table S26
 python obstruction_footprint_check.py  # measured obstruction footprint vs detected radius, Section S6

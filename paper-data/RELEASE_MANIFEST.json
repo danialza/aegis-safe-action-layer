@@ -1,7 +1,7 @@
 {
  "release": "paper-data for the October 2026 Sensors submission",
  "files": {
-  "README.md": "571cc22d02a31d930cba3008a06832fece227c454ec108ee8167530cb4e92b1a",
+  "README.md": "e0c9d154c6e5c72840cb94c7a312e4ebfacb3604b73bdacc5da2d786f7ed3ed1",
   "analysis/ADDITIONAL_ANALYSES_README.md": "bc50479fbb5b75522cf30b380a978e0e8da957fa0e54525116bbe6dbc2d6500f",
   "analysis/README.md": "868379a827afce00ad5c6b4194ddc4c370cab42620f6dcd6c9636087a57defbd",
   "analysis/additional_analyses.json": "f00a7fe112cf3bd86e97cd06a308924e61ac402e61f79c9ce1147110ce7a2a38",
@@ -73,6 +73,8 @@
   "analysis/revision_2026-10-04/anchor_check_results.json": "33ae7fd1a1895a0900ff4aef39a62853150d7ef9fd72849681da004fa7835f24",
   "analysis/revision_2026-10-04/audit_checks.py": "8724036ea96202d35ffc9a259666521b48d51bbf3cdf0bd36d763e95f63f281f",
   "analysis/revision_2026-10-04/audit_checks_results.json": "e456fd1deee19dc613f0b0b38c4a1596edd292b93c941df480a93ac69c901a5a",
+  "analysis/revision_2026-10-04/blind_window_speed_scaling.py": "8ddd123fe7a83708e849bb2d573eb418fd61f05afd70ae892120ac47010b39b4",
+  "analysis/revision_2026-10-04/blind_window_speed_scaling_results.json": "bd73d358c3e0223a82cc638641345bd2ef145ad124fc122c2b7b8935f5162107",
   "analysis/revision_2026-10-04/buffer_rationale.py": "d91d2f74f48213544e8b38bce1500ec82de99fb5090d70c8e5c1f9b6d204ec79",
   "analysis/revision_2026-10-04/buffer_rationale_results.json": "86b4b0837755957a198a888e33e8e4a11058040c8ede0d553924f26ba6e18073",
   "analysis/revision_2026-10-04/build_primary_figure_legend.py": "c2c59cf6d082c6235d5dcec191baf494b49b566154408a781ca988e65d8a6f24",

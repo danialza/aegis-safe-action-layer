@@ -1,0 +1,50 @@
+{
+  "note": "Scale the measured semantic blind windows to a higher tool speed (arithmetic, not a measurement).\n\nThe semantic blind window (semantic_blind_window.py, Supplementary Section S23) gives, for each\npolicy-cadence cell, the mean moving time on pre-change semantic evidence. The runs moved at\ncommanded tool speeds of 15-27 mm/s. This script multiplies the cell mean blind moving times\n(scope: robot moving with a detected hazard) by an example speed of 250 mm/s to show the travel the\nsame durations would correspond to at that speed. It assumes that the blind durations would not\nchange with speed and that motion during them is at the stated speed. Neither assumption was tested;\nno run was made at 250 mm/s.\n",
+  "example_speed_mm_s": 250.0,
+  "scope": "moving_with_hazard",
+  "cells": {
+    "Primary | AEGIS | normal": {
+      "measured_mean_s": 0.5703662844042345,
+      "measured_mean_mm": 8.722801779625168,
+      "travel_at_example_speed_mm": 142.59157110105863
+    },
+    "Primary | AEGIS | slow": {
+      "measured_mean_s": 0.23493360582572365,
+      "measured_mean_mm": 3.6343856251354882,
+      "travel_at_example_speed_mm": 58.73340145643091
+    },
+    "Primary | Trust12 | normal": {
+      "measured_mean_s": 0.5794131306229421,
+      "measured_mean_mm": 9.086085903263063,
+      "travel_at_example_speed_mm": 144.8532826557355
+    },
+    "Primary | Trust12 | slow": {
+      "measured_mean_s": 0.7967357889219915,
+      "measured_mean_mm": 13.945685373983544,
+      "travel_at_example_speed_mm": 199.18394723049786
+    },
+    "Primary | Trust32 | normal": {
+      "measured_mean_s": 0.557341500518377,
+      "measured_mean_mm": 8.72448943589206,
+      "travel_at_example_speed_mm": 139.33537512959427
+    },
+    "Primary | Trust32 | slow": {
+      "measured_mean_s": 0.7925663789763582,
+      "measured_mean_mm": 13.209945365028057,
+      "travel_at_example_speed_mm": 198.14159474408953
+    },
+    "Slow-update pilot | AEGIS | slow": {
+      "measured_mean_s": 0.22588917536710904,
+      "measured_mean_mm": 3.5195814570741644,
+      "travel_at_example_speed_mm": 56.47229384177726
+    },
+    "Slow-update pilot | Trust12 | slow": {
+      "measured_mean_s": 0.8046081876772271,
+      "measured_mean_mm": 13.851691840454803,
+      "travel_at_example_speed_mm": 201.15204691930677
+    }
+  },
+  "sources_sha256": {
+    "semantic_blind_window_results.json": "af99b1f7806587a744bd95e1a08f6d5f9feb8953b42e43ad8e72924d635d8750"
+  }
+}
